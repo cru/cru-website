@@ -1,0 +1,83 @@
+---
+import { Picture } from 'astro:assets'
+import avatar1 from '../assets/avatar1.jpg'
+import avatar2 from '../assets/avatar2.jpg'
+import avatar3 from '../assets/avatar3.jpg'
+import avatar4 from '../assets/avatar4.jpg'
+import avatar5 from '../assets/avatar5.jpg'
+import avatar6 from '../assets/avatar6.jpg'
+import Container from './ui/Container.astro'
+import Button from './ui/Button.astro'
+---
+
+<div class='relative py-16'>
+  <div
+    aria-hidden='true'
+    class='absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20'
+  >
+    <div
+      class='blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700'
+    >
+    </div>
+    <div
+      class='blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600'
+    >
+    </div>
+  </div>
+  <Container>
+    <div class='relative'>
+      <div class='flex items-center justify-center -space-x-2'>
+        <Picture
+          src={avatar1}
+          formats={['avif', 'webp']}
+          width={100}
+          alt='avatar1'
+          class='w-8 h-8 rounded-full object-cover'
+        />
+        <Picture
+          src={avatar2}
+          formats={['avif', 'webp']}
+          width={100}
+          alt='avatar2'
+          class='w-12 h-12 rounded-full object-cover'
+        />
+        <Picture
+          src={avatar3}
+          formats={['avif', 'webp']}
+          width={100}
+          alt='avatar3'
+          class='relative z-10 w-16 h-16 rounded-full object-cover'
+        />
+        <Picture
+          src={avatar4}
+          formats={['avif', 'webp']}
+          width={100}
+          alt='avatar4'
+          class='w-12 h-12 rounded-full object-cover'
+        />
+        <Picture
+          src={avatar5}
+          formats={['avif', 'webp']}
+          width={100}
+          alt='avatar5'
+          class='w-8 h-8 rounded-full object-cover'
+        />
+      </div>
+      <div class='mt-6 m-auto space-y-6 md:w-8/12 lg:w-7/12'>
+        <h1
+          class='text-center text-4xl font-bold text-gray-800 dark:text-white md:text-5xl'
+        >
+          Get Started now
+        </h1>
+        <p class='text-center text-xl text-gray-600 dark:text-gray-300'>
+          Be part of millions people around the world using tailus in modern User
+          Interfaces.
+        </p>
+        <div class='flex flex-wrap justify-center gap-6'>
+          <Button text='Get started' type='primary' href='#' />
+          <Button text='More about' href='#' />
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>
