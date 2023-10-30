@@ -2,9 +2,7 @@ name: auto-format-js
 
 on:
   push:
-    branches: [master, development]
   pull_request:
-    branches: [master, development]
 
 jobs:
   format:
@@ -17,7 +15,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts/*'
+          node-version: "lts/*"
       - name: Install Prettier
         run: |
           yarn install
