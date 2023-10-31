@@ -1,0 +1,70 @@
+---
+import { Picture } from 'astro:assets'
+import uofcLogo from '../assets/partners/uofc.png'
+import ahsLogo from '../assets/partners/ahs.png'
+import nonoLogo from '../assets/partners/nono.png'
+import chrLogo from '../assets/partners/chr.png'
+import redcapLogo from '../assets/partners/redcap.png'
+
+interface Props {}
+
+const {} = Astro.props
+---
+
+<div class='flex space-x-2 items-center justify-center mx-auto max-w-7xl px-6 lg:px-8'>
+  <div
+    class='rounded-xl border border-gray-200 dark:border-gray-600 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
+  >
+    <Picture
+      src={uofcLogo}
+      formats={['avif', 'webp']}
+      height={100}
+      alt='uofc-logo'
+      class='contrast-0 transition hover:contrast-100'
+    />
+  </div>
+  <div
+    class='rounded-xl border border-gray-200 dark:border-gray-600 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
+  >
+    <Picture
+      src={ahsLogo}
+      formats={['avif', 'webp']}
+      height={100}
+      alt='ahs-logo'
+      class='contrast-0 transition hover:contrast-100'
+    />
+  </div>
+  <div
+    class='rounded-xl border border-gray-200 dark:border-gray-600 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
+  >
+    <Picture
+      src={redcapLogo}
+      formats={['avif', 'webp']}
+      height={100}
+      alt='redcap-logo'
+      class='contrast-0 transition hover:contrast-100'
+    />
+  </div>
+  <div
+    class='rounded-xl border border-gray-200 dark:border-gray-600 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
+  >
+    <Picture
+      src={nonoLogo}
+      formats={['avif', 'webp']}
+      height={100}
+      alt='nono-logo'
+      class='align-middle contrast-0 transition hover:contrast-100'
+    />
+  </div>
+  <div
+    class='rounded-xl border border-gray-200 dark:border-gray-600 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
+  >
+    <Picture
+      src={chrLogo}
+      formats={['avif', 'webp']}
+      height={100}
+      alt='chr-logo'
+      class='contrast-0 transition hover:contrast-100'
+    />
+  </div>
+</div>
