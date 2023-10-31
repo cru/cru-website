@@ -45,7 +45,7 @@ const {} = Astro.props
         </button>
       </div>
       <div class='hidden lg:flex lg:gap-x-12'>
-        <a href='/redcap' class='text-sm font-semibold leading-6 text-gray-900'
+        <a href='/data-capture' class='text-sm font-semibold leading-6 text-gray-900'
           >Data Capture</a
         >
         <a
@@ -77,7 +77,7 @@ const {} = Astro.props
       >
         <div class='flex items-center justify-between'>
           <a href='/' class='-m-1.5 p-1.5'>
-            <span class='sr-only'>Your Company</span>
+            <span class='sr-only'>Clinical Research Unit</span>
             <Picture
               src={logoImage}
               formats={['avif', 'webp']}
@@ -111,33 +111,25 @@ const {} = Astro.props
           <div class='-my-6 divide-y divide-gray-500/10'>
             <div class='space-y-2 py-6'>
               <a
-                href='/products'
+                href='/data-capture'
                 class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                >Products</a
+                >Data Capture</a
               >
               <a
-                href='/features'
+                href='/methods-and-analytics'
                 class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                >Features</a
+                >Methods & Analytics</a
               >
               <a
-                href='/company'
+                href='/custom-software'
                 class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                >Company</a
+                >Custom Software</a
               >
               <a
-                href='/contact'
+                href='/about-us'
                 class='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-                >Contact</a
+                >About Us</a
               >
-            </div>
-            <div class='py-6'>
-              <a
-                href='/login'
-                class='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
-              >
-                Log in
-              </a>
             </div>
           </div>
         </div>
