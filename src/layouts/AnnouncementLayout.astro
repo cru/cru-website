@@ -1,0 +1,32 @@
+---
+import type { MarkdownLayoutProps } from 'astro'
+import BaseLayout from './BaseLayout.astro'
+
+type Props = MarkdownLayoutProps<{
+  title: string
+  pubDate: Date
+  tags: Array<string>
+}>
+
+const { frontmatter } = Astro.props
+---
+
+<BaseLayout title={frontmatter.title}>
+  <main
+    class='space-y-16 bg-white mt-20 mx-auto px-4 pb-24 pt-14 sm:px-6 sm:pb-32 sm:pt-16 lg:max-w-7xl lg:px-8'
+  >
+    <div>
+      <span class='text-gray-500'
+        >{
+          frontmatter.pubDate.toLocaleString('en-us', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })
+        }</span
+      >
+      <h1>{frontmatter.title}</h1>
+    </div>
+    <slot />
+  </main>
+</BaseLayout>
