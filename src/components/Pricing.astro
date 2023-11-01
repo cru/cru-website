@@ -1,6 +1,7 @@
 ---
 import Background from './ui/Background.astro'
 import Button from './ui/Button.astro'
+import InternalLink from './ui/InternalLink.astro'
 import SectionHeading from './ui/SectionHeading.astro'
 ---
 
@@ -184,11 +185,6 @@ import SectionHeading from './ui/SectionHeading.astro'
     </div>
   </div>
   <div class='text-center'>
-    <a
-      href='#'
-      class='text-2xl cursor-pointer hover:underline hover:decoration-2 hover:decoration-brand-primary-500'
-    >
-      Compare all plans →</a
-    >
+    <InternalLink href='#' className='text-2xl'>Compare all plans →</InternalLink>
   </div>
 </div>

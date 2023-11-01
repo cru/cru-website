@@ -7,6 +7,7 @@ import cloudIcon from '../assets/cloud.svg'
 import apiIcon from '../assets/api.svg'
 import securityIcon from '../assets/security.svg'
 import reportIcon from '../assets/reports.svg'
+import InternalLink from './ui/InternalLink.astro'
 interface Props {}
 
 const {} = Astro.props
@@ -37,7 +38,7 @@ const {} = Astro.props
           >
             <figure id='lottieCloudIcon'></figure>
           </div>
-           Data Capture
+          <InternalLink href='data-capture'>Data Capture</InternalLink>
         </dt>
         <dd class='mt-2 text-base leading-7 text-gray-600'>
           Using the leading data capture tool for research, we offer a sophisticated and
@@ -51,7 +52,7 @@ const {} = Astro.props
           >
             <figure id='lottieReportIcon'></figure>
           </div>
-           Methods & Analytics
+          <InternalLink href='/methods-and-analytics'>Methods & Analytics</InternalLink>
         </dt>
         <dd class='mt-2 text-base leading-7 text-gray-600'>
           Use our in-house expertise to analyze your data for best outcomes.
@@ -64,7 +65,7 @@ const {} = Astro.props
           >
             <figure id='lottieApiIcon'></figure>
           </div>
-           Custom Software
+          <InternalLink href='/custom-software'>Custom Software</InternalLink>
         </dt>
         <dd class='mt-2 text-base leading-7 text-gray-600'>
           Sometimes off-the-shelf isn't enough. We can help develop completely custom
@@ -78,7 +79,7 @@ const {} = Astro.props
           >
             <figure id='lottieSecurityIcon'></figure>
           </div>
-           Advanced Security
+          <InternalLink href='#'>Advanced Security</InternalLink>
         </dt>
         <dd class='mt-2 text-base leading-7 text-gray-600'>
           All data captured is secured using the latest industry standards. We meet or
