@@ -10,7 +10,7 @@ module.exports = {
         primary: ['Roboto', 'sans-serif'],
       },
       colors: {
-        'brand-primary': colors.violet
+        'brand-primary': colors.amber
       }
     },
   },

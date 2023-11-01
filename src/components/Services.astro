@@ -30,12 +30,12 @@ const {} = Astro.props
     <dl
       class='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'
     >
-      <div class='relative pl-16'>
+      <div id='dataCapture' class='relative pl-16'>
         <dt class='text-base font-semibold leading-7 text-gray-900'>
           <div
             class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black'
           >
-            <Image src={cloudIcon} alt='cloud-icon' />
+            <figure id='lottieCloudIcon'></figure>
           </div>
            Data Capture
         </dt>
@@ -44,12 +44,12 @@ const {} = Astro.props
           robust solution for collecting the data you need.
         </dd>
       </div>
-      <div class='relative pl-16'>
+      <div id='methodsAnalytics' class='relative pl-16'>
         <dt class='text-base font-semibold leading-7 text-gray-900'>
           <div
             class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black'
           >
-            <Image src={reportIcon} alt='report-icon' />
+            <figure id='lottieReportIcon'></figure>
           </div>
            Methods & Analytics
         </dt>
@@ -57,12 +57,12 @@ const {} = Astro.props
           Use our in-house expertise to analyze your data for best outcomes.
         </dd>
       </div>
-      <div class='relative pl-16'>
+      <div id='customSoftware' class='relative pl-16'>
         <dt class='text-base font-semibold leading-7 text-gray-900'>
           <div
             class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black'
           >
-            <Image src={apiIcon} alt='api-icon' />
+            <figure id='lottieApiIcon'></figure>
           </div>
            Custom Software
         </dt>
@@ -71,12 +71,12 @@ const {} = Astro.props
           software solutions to meet your unique needs.
         </dd>
       </div>
-      <div class='relative pl-16'>
+      <div id='advancedSecurity' class='relative pl-16'>
         <dt class='text-base font-semibold leading-7 text-gray-900'>
           <div
             class='absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black'
           >
-            <Image src={securityIcon} alt='security-icon' />
+            <figure id='lottieSecurityIcon'></figure>
           </div>
            Advanced Security
         </dt>
@@ -87,4 +87,69 @@ const {} = Astro.props
       </div>
     </dl>
   </div>
+  <script>
+    import lottie from 'lottie-web'
+
+    const lottieCloudIcon = document.getElementById('lottieCloudIcon')
+    const lottieReportIcon = document.getElementById('lottieReportIcon')
+    const lottieApiIcon = document.getElementById('lottieApiIcon')
+    const lottieSecurityIcon = document.getElementById('lottieSecurityIcon')
+
+    if (lottieCloudIcon) {
+      lottie.loadAnimation({
+        name: 'dataCapture',
+        container: lottieCloudIcon,
+        renderer: 'svg',
+        loop: true,
+        autoplay: false,
+        path: 'lottie-cloud.json',
+      })
+
+      const dc = document.getElementById('dataCapture')
+      dc?.addEventListener('mouseover', () => lottie.play('dataCapture'))
+      dc?.addEventListener('mouseout', () => lottie.stop('dataCapture'))
+    }
+    if (lottieReportIcon) {
+      lottie.loadAnimation({
+        name: 'methodsAnalytics',
+        container: lottieReportIcon,
+        renderer: 'svg',
+        loop: true,
+        autoplay: false,
+        path: 'lottie-report.json',
+      })
+
+      const ma = document.getElementById('methodsAnalytics')
+      ma?.addEventListener('mouseover', () => lottie.play('methodsAnalytics'))
+      ma?.addEventListener('mouseout', () => lottie.stop('methodsAnalytics'))
+    }
+    if (lottieApiIcon) {
+      lottie.loadAnimation({
+        name: 'customSoftware',
+        container: lottieApiIcon,
+        renderer: 'svg',
+        loop: true,
+        autoplay: false,
+        path: 'lottie-api.json',
+      })
+
+      const cs = document.getElementById('customSoftware')
+      cs?.addEventListener('mouseover', () => lottie.play('customSoftware'))
+      cs?.addEventListener('mouseout', () => lottie.stop('customSoftware'))
+    }
+    if (lottieSecurityIcon) {
+      lottie.loadAnimation({
+        name: 'advancedSecurity',
+        container: lottieSecurityIcon,
+        renderer: 'svg',
+        loop: true,
+        autoplay: false,
+        path: 'lottie-security.json',
+      })
+
+      const as = document.getElementById('advancedSecurity')
+      as?.addEventListener('mouseover', () => lottie.play('advancedSecurity'))
+      as?.addEventListener('mouseout', () => lottie.stop('advancedSecurity'))
+    }
+  </script>
 </div>
