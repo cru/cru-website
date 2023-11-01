@@ -7,11 +7,11 @@
   "customizations": {
     "vscode": {
       "extensions": [
-		"ecmel.vscode-html-css",
-		"bradlc.vscode-tailwindcss",
-		"astro-build.astro-vscode",
-		"esbenp.prettier-vscode"
-	]
+        "ecmel.vscode-html-css",
+        "bradlc.vscode-tailwindcss",
+        "astro-build.astro-vscode",
+        "esbenp.prettier-vscode"
+      ]
     }
   },
   "mounts": [
