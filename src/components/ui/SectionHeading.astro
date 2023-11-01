@@ -7,10 +7,10 @@ interface Props {
 const { heading, sup } = Astro.props
 ---
 
-<section class='space-y-4'>
+<section class='space-y-2'>
   <span class='text-brand-primary-500 text-lg font-bold'>{sup}</span>
   <h2>{heading}</h2>
-  <div class='text-gray-600 text-sm'>
+  <p class='text-gray-600 text-sm'>
     <slot />
-  </div>
+  </p>
 </section>

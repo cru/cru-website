@@ -12,10 +12,10 @@ const { frontmatter } = Astro.props
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <main
-    class='space-y-16 bg-white mt-20 mx-auto px-4 pb-24 pt-14 sm:px-6 sm:pb-32 sm:pt-16 lg:max-w-7xl lg:px-8'
+  <section
+    class='bg-white mt-20 mx-auto px-4 pb-24 pt-14 sm:px-6 sm:pb-32 sm:pt-16 lg:max-w-7xl lg:px-8'
   >
-    <div>
+    <div class='pb-12'>
       <span class='text-gray-500'
         >{
           frontmatter.pubDate.toLocaleString('en-us', {
@@ -27,6 +27,8 @@ const { frontmatter } = Astro.props
       >
       <h1>{frontmatter.title}</h1>
     </div>
-    <slot />
-  </main>
+    <article class='space-y-4'>
+      <slot />
+    </article>
+  </section>
 </BaseLayout>
