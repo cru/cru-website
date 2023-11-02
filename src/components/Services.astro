@@ -1,12 +1,6 @@
 ---
-import { Image } from 'astro:assets'
-
 import SectionHeading from './ui/SectionHeading.astro'
 import Background from './ui/Background.astro'
-import cloudIcon from '../assets/cloud.svg'
-import apiIcon from '../assets/api.svg'
-import securityIcon from '../assets/security.svg'
-import reportIcon from '../assets/reports.svg'
 import InternalLink from './ui/InternalLink.astro'
 interface Props {}
 
@@ -27,7 +21,7 @@ const {} = Astro.props
       </p>
     </SectionHeading>
   </div>
-  <div class='mx-auto max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
+  <div class='mx-auto max-w-2xl lg:max-w-4xl'>
     <dl
       class='grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'
     >
