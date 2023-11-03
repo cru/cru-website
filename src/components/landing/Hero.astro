@@ -1,8 +1,8 @@
 ---
 import { Picture } from 'astro:assets'
-import heroImage from '../assets/hero.svg'
-import ExternalLink from '../components/ui/ExternalLink.astro'
-import Button from '../components/ui/Button.astro'
+import heroImage from '../../assets/hero.svg'
+import ExternalLink from '../ui/ExternalLink.astro'
+import Button from '../ui/Button.astro'
 
 interface Props {}
 
@@ -24,7 +24,7 @@ const {} = Astro.props
             School of Medicine.
           </p>
           <div class='mt-10 flex items-center gap-x-6'>
-            <Button text='Get started today' type='primary' href='#' />
+            <Button primary href='#'>Get started today</Button>
             <ExternalLink
               href='https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D'
               target='_blank'
