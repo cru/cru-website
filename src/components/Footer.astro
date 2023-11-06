@@ -2,7 +2,7 @@
 import { Picture } from 'astro:assets'
 import logoImage from '../assets/logo.png'
 import uofcLogo from '../assets/partners/uofc.png'
-import ctaImage from '../assets/cta.jpg'
+import ctaImage from '../assets/cta.svg'
 import Button from './ui/Button.astro'
 import ExternalLink from './ui/ExternalLink.astro'
 interface Props {}
@@ -13,6 +13,7 @@ const {} = Astro.props
 <footer class='relative'>
   <div class='mx-auto absolute inset-0 -top-40 max-w-4xl sm:px-6 lg:px-8'>
     <div class='relative overflow-hidden p-10 sm:shadow-2xl sm:rounded-3xl'>
+      <div class='absolute inset-0 bg-gradient-to-br from-black to-gray-900/80'></div>
       <Picture
         src={ctaImage}
         formats={['avif', 'webp']}
@@ -20,7 +21,6 @@ const {} = Astro.props
         alt='CTA image'
         class='absolute inset-0 h-full w-full object-cover'
       />
-      <div class='absolute inset-0 bg-gradient-to-r from-gray-900/90'></div>
       <div class='relative text-white text-left'>
         <div class='max-w-xl space-y-8'>
           <h2>Supercharge your research</h2>

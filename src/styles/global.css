@@ -19,10 +19,6 @@
     @apply text-base md:text-lg font-bold leading-10 tracking-tight;
   }
 
-  a {
-    @apply underline;
-  }
-
   p {
     @apply text-gray-900 pb-1;
   }
