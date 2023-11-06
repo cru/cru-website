@@ -2,6 +2,7 @@
 import { Picture } from 'astro:assets'
 import logoImage from '../assets/logo.png'
 import ExternalLink from './ui/ExternalLink.astro'
+import Button from './ui/Button.astro'
 
 interface Props {}
 
@@ -60,13 +61,15 @@ const {} = Astro.props
         >
       </div>
       <div class='hidden lg:flex lg:flex-1 lg:justify-end'>
-        <ExternalLink
+        <Button
           href='https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D'
           target='_blank'
           rel='noopener noreferrer'
+          primary
+          className='mr-0 mb-0'
         >
-          Contact us
-        </ExternalLink>
+          Get started today
+        </Button>
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->

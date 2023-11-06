@@ -3,6 +3,7 @@ import { Picture } from 'astro:assets'
 import heroImage from '../../assets/hero.svg'
 import ExternalLink from '../ui/ExternalLink.astro'
 import Button from '../ui/Button.astro'
+import InternalLink from '../ui/InternalLink.astro'
 
 interface Props {}
 
@@ -27,13 +28,7 @@ const {} = Astro.props
       </p>
       <div class='mt-10 flex items-center gap-x-6'>
         <Button primary href='#'>Get started today</Button>
-        <ExternalLink
-          href='https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Contact us
-        </ExternalLink>
+        <InternalLink href='/data-capture/pricing'>See pricing</InternalLink>
       </div>
     </div>
   </div>
