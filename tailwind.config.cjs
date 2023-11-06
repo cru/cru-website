@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Roboto', 'sans-serif'],
+        display: 'Ubuntu, ui-serif', // Adds a new `font-display` class
       },
       colors: {
         'brand-primary': colors.violet,
