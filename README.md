@@ -1,10 +1,8 @@
-# Astro TEMPLATE
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9d2d86a6-24db-4ee8-97f1-be76e957f775/deploy-status)](https://app.netlify.com/sites/cru-website/deploys)
 
-Heavily inspired by: https://github.com/eavinti/astro-landing
+# cru.ucalgary.ca
 
-> ### [LIVE DEMO](https://cru-template-planetario.netlify.app/)
-> [![Netlify Status](https://api.netlify.com/api/v1/badges/4e11ec44-d664-4c3b-a394-3ab39893635f/deploy-status)](https://app.netlify.com/sites/cru-template-planetario/deploys)
-***
+Inspired by: https://github.com/eavinti/astro-landing and https://tailus.io/blocks
 
 ## 🚀 Project Structure
 
