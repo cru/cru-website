@@ -9,6 +9,10 @@ interface Props extends HTMLAttributes<'a'> {
 const { href, className = '', ...attrs } = Astro.props
 ---
 
-<a href={href} class={`'inline-flex after:content-['_↗'] ${className}`} {...attrs}>
+<a
+  href={href}
+  class={`text-brand-primary-500 after:content-['_↗'] ${className}`}
+  {...attrs}
+>
   <slot />
 </a>

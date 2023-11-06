@@ -1,0 +1,91 @@
+---
+import { Picture } from 'astro:assets'
+import chairPortrait from '../assets/people/chair.jpg'
+import directorPortrait from '../assets/people/director.jpg'
+import technicalPortrait from '../assets/people/technical-solutions.jpg'
+import Layout from '../layouts/Layout.astro'
+import ExternalLink from '../components/ui/ExternalLink.astro'
+---
+
+<Layout title='CRU - Our Story'>
+  <h1 class='text-center'>Our Story</h1>
+  <div class='mt-32 space-y-32 mx-auto text-center'>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam
+      faucibus purus. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in
+      dictum. Sit amet mauris commodo quis imperdiet massa tincidunt. Velit laoreet id
+      donec ultrices tincidunt arcu non. Ipsum dolor sit amet consectetur adipiscing elit
+      ut. Enim blandit volutpat maecenas volutpat blandit aliquam. Sollicitudin ac orci
+      phasellus egestas tellus rutrum. Lectus proin nibh nisl condimentum id. Odio ut sem
+      nulla pharetra. Nam at lectus urna duis convallis. Auctor elit sed vulputate mi sit
+      amet. Viverra justo nec ultrices dui sapien eget mi proin sed. Risus quis varius
+      quam quisque. Id nibh tortor id aliquet lectus proin nibh.
+    </p>
+    <div class='space-y-16'>
+      <h2>Meet our leadership</h2>
+      <div class='grid gap-28 py-20 md:grid-cols-3 md:gap-12'>
+        <div class='group space-y-8 border-t-4 border-gray-100 dark:border-gray-800'>
+          <div class='mx-auto -mt-16 h-32 w-32 rotate-45 overflow-hidden rounded-[2rem]'>
+            <Picture
+              src={chairPortrait}
+              formats={['avif', 'webp']}
+              height={500}
+              alt='chair-portrait'
+              class='mx-auto h-full w-full -rotate-45 scale-125 object-cover transition duration-300 group-hover:scale-[1.4]'
+            />
+          </div>
+          <div class='space-y-4 text-center'>
+            <div>
+              <h4 class='text-2xl text-gray-700 dark:text-white'>Dr. Sam Wiebe</h4>
+              <span class='block text-sm text-gray-500'>Chair</span>
+            </div>
+            <ExternalLink href='#' className='text-xs'>Get in touch</ExternalLink>
+          </div>
+        </div>
+
+        <div class='group space-y-8 border-t-4 border-gray-100 dark:border-gray-800'>
+          <div class='mx-auto -mt-16 h-32 w-32 rotate-45 overflow-hidden rounded-[2rem]'>
+            <Picture
+              src={directorPortrait}
+              formats={['avif', 'webp']}
+              height={500}
+              alt='director-portrait'
+              class='mx-auto h-full w-full -rotate-45 scale-125 object-cover transition duration-300 group-hover:scale-[1.4]'
+            />
+          </div>
+          <div class='space-y-4 text-center'>
+            <div>
+              <h4 class='text-2xl text-gray-700 dark:text-white'>Tracy Wang</h4>
+              <span class='block text-sm text-gray-500'
+                >Director of Strategy and Operations</span
+              >
+            </div>
+            <ExternalLink href='#' className='text-xs'>Get in touch</ExternalLink>
+          </div>
+        </div>
+
+        <div class='group space-y-8 border-t-4 border-gray-100 dark:border-gray-800'>
+          <div class='mx-auto -mt-16 h-32 w-32 rotate-45 overflow-hidden rounded-[2rem]'>
+            <Picture
+              src={technicalPortrait}
+              formats={['avif', 'webp']}
+              height={500}
+              alt='technical-lead-portrait'
+              class='mx-auto h-full w-full -rotate-45 scale-125 object-cover transition duration-300 group-hover:scale-[1.4]'
+            />
+          </div>
+          <div class='space-y-4 text-center'>
+            <div>
+              <h4 class='text-2xl text-gray-700 dark:text-white'>Lennard Kuijten</h4>
+              <span class='block text-sm text-gray-500'
+                >Technical Solutions and Innovation</span
+              >
+            </div>
+            <ExternalLink href='#' className='text-xs'>Get in touch</ExternalLink>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
