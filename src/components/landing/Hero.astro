@@ -9,37 +9,32 @@ interface Props {}
 const {} = Astro.props
 ---
 
-<div class='relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20'>
-  <div
-    class='mx-auto max-w-7xl px-8 pt-40 lg:grid lg:grid-cols-2 lg:gap-x-8 align-middle'
-  >
-    <div class='px-6 lg:px-0 lg:pt-4'>
-      <div class='mx-auto max-w-2xl'>
-        <div class='max-w-lg'>
-          <h1 class='mt-10 primary tracking-tight text-gray-900 sm:text-6xl'>
-            Better Data <br />Better Research
-          </h1>
-          <p class='mt-4 text-lg text-gray-600'>
-            The Clinical Research Unit is a core research support centre of the Cumming
-            School of Medicine.
-          </p>
-          <div class='mt-10 flex items-center gap-x-6'>
-            <Button primary href='#'>Get started today</Button>
-            <ExternalLink
-              href='https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Contact us
-            </ExternalLink>
-          </div>
-        </div>
+<div class='relative isolate overflow-hidden'>
+  <div class='absolute bg-gradient-to-b from-brand-primary-100/20'></div>
+  <Picture
+    src={heroImage}
+    alt='Hero image'
+    class='absolute inset-0 h-full w-full object-cover -z-10'
+  />
+  <div class='mx-auto max-w-6xl pt-40'>
+    <div class='max-w-lg'>
+      <h1 class='mt-10 primary tracking-tight text-gray-900 sm:text-6xl'>
+        Better Data <br />Better Research
+      </h1>
+      <p class='mt-4 text-lg text-gray-600'>
+        The Clinical Research Unit is a core research support centre of the Cumming School
+        of Medicine.
+      </p>
+      <div class='mt-10 flex items-center gap-x-6'>
+        <Button primary href='#'>Get started today</Button>
+        <ExternalLink
+          href='https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Contact us
+        </ExternalLink>
       </div>
-    </div>
-    <div
-      class='mt-20 sm:mt-24 hidden lg:block md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen relative'
-    >
-      <Picture src={heroImage} width={2000} alt='Hero image' class='rounded-xl' />
     </div>
   </div>
   <div class='absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32'>
