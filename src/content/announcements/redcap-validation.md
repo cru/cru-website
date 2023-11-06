@@ -1,7 +1,9 @@
 ---
+draft: false
 title: 'Validated REDCap is now available at Cumming School of Medicine!'
-pubDate: 2022-03-01
+publishDate: 2022-03-01
 description: 'CRU launches a validated REDCap instance'
+image: {src: 'https://images.unsplash.com/photo-1580894912989-0bc892f4efd0?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==', alt: 'redcap validation image'}
 tags: ['redcap', 'security']
 ---
 

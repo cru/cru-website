@@ -1,7 +1,9 @@
 ---
+draft: false
 title: 'Launching: DataXplor!'
-pubDate: 2023-07-16
+publishDate: 2023-07-16
 description: 'CRU launches a new product offering!'
+image: {src: 'https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=500&auto=format&fit=crop&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==', alt: 'dx-launch-image'}
 tags: ['custom', 'data', 'redcap']
 ---
 

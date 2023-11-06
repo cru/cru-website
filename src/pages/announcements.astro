@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../layouts/Layout.astro'
+import InternalLink from '../components/ui/InternalLink.astro'
+import { Image } from 'astro:assets'
+
+// Filter entries with 'draft: false' & date before current date
+const announcementEntries = await getCollection('announcements', ({ data }) => {
+  return !data.draft && data.publishDate < new Date()
+})
+
+// Sort content entries by publication date
+announcementEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+})
+---
+
+<Layout title='CRU - Announcements'>
+  <h1>Announcements</h1>
+  <div class='py-20'>
+    <ul class='grid gap-16 mx-auto list-none'>
+      {
+        announcementEntries.map((announcement, index) => (
+          <li>
+            <InternalLink
+              href={`/announcements/${announcement.slug}`}
+              className='group no-underline'
+            >
+              <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
+                {announcement.data.image?.src && (
+                  <Image
+                    src={announcement.data.image.src}
+                    alt={announcement.data.image.alt}
+                    width={800}
+                    height={400}
+                    class='w-full rounded-3xl shadow-lg'
+                  />
+                )}
+                <div>
+                  <time
+                    class='text-gray-400'
+                    datetime={announcement.data.publishDate.toISOString()}
+                  >
+                    {announcement.data.publishDate.toDateString()}
+                  </time>
+
+                  <h2 class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'>
+                    {announcement.data.title}
+                  </h2>
+
+                  <div class='flex gap-2 mt-3'>
+                    <p>{announcement.data.description}</p>
+                  </div>
+                </div>
+              </div>
+            </InternalLink>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

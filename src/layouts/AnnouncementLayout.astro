@@ -4,7 +4,7 @@ import BaseLayout from './BaseLayout.astro'
 
 type Props = MarkdownLayoutProps<{
   title: string
-  pubDate: Date
+  publishDate: Date
   tags: Array<string>
 }>
 
@@ -18,7 +18,7 @@ const { frontmatter } = Astro.props
     <div class='pb-12'>
       <span class='text-gray-500'
         >{
-          frontmatter.pubDate.toLocaleString('en-us', {
+          frontmatter.publishDate.toLocaleString('en-us', {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
