@@ -5,23 +5,45 @@ import directorPortrait from '../assets/people/director.jpg'
 import technicalPortrait from '../assets/people/technical-solutions.jpg'
 import Layout from '../layouts/Layout.astro'
 import ExternalLink from '../components/ui/ExternalLink.astro'
+import SectionHeading from '../components/ui/SectionHeading.astro'
 ---
 
 <Layout title='CRU - Our Story'>
-  <h1 class='text-center'>Our Story</h1>
+  <h1 class='text-center'>Our story</h1>
   <div class='mt-32 space-y-32 mx-auto text-center'>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Eget nunc lobortis mattis aliquam
-      faucibus purus. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in
-      dictum. Sit amet mauris commodo quis imperdiet massa tincidunt. Velit laoreet id
-      donec ultrices tincidunt arcu non. Ipsum dolor sit amet consectetur adipiscing elit
-      ut. Enim blandit volutpat maecenas volutpat blandit aliquam. Sollicitudin ac orci
-      phasellus egestas tellus rutrum. Lectus proin nibh nisl condimentum id. Odio ut sem
-      nulla pharetra. Nam at lectus urna duis convallis. Auctor elit sed vulputate mi sit
-      amet. Viverra justo nec ultrices dui sapien eget mi proin sed. Risus quis varius
-      quam quisque. Id nibh tortor id aliquet lectus proin nibh.
-    </p>
+    <div class='space-y-12'>
+      <p>something about how/why the cru was created in the first place</p>
+      <b>
+        With over 14 years of experience supporting a plethora of study types, we have the
+        expertise to provide data management guidance every step of the way.
+      </b>
+      <div class='grid grid-cols-2 gap-16 text-left'>
+        <section>
+          <h3>Unique mix of services</h3>
+          <p>
+            We offer a comprehensive suite of services to address all your research data
+            needs.
+          </p>
+        </section>
+        <section>
+          <h3>Value for research budgets</h3>
+          <p>
+            As a cost recovery unit, we offer competitive rates, particularly for custom
+            services.
+          </p>
+        </section>
+        <section class='col-span-2 w-3/4'>
+          <h3>Integration with U of C research ecosystem</h3>
+          <p>
+            We are integrated with the University of Calgary's research ecosystem,
+            providing you with peace of mind. We facilitate data transfers to Research
+            Computing Services (RCS), collaborate with Research Ethics for project-level
+            validation, and ensure compliance with university policies.
+          </p>
+        </section>
+      </div>
+    </div>
+
     <div class='space-y-16'>
       <h2>Meet our leadership</h2>
       <div class='grid gap-28 py-20 md:grid-cols-3 md:gap-12'>
