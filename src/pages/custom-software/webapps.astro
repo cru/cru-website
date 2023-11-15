@@ -1,0 +1,185 @@
+---
+import { Picture } from 'astro:assets'
+import webappImage from '../../assets/webapp.jpg'
+import Layout from '../../layouts/Layout.astro'
+import Button from '../../components/ui/Button.astro'
+---
+
+<Layout title='CRU - Service'>
+  <div class='lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16'>
+    <!-- Product image -->
+    <div class='lg:col-span-4 lg:row-end-1'>
+      <div class='aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100'>
+        <Picture
+          src={webappImage}
+          formats={['avif', 'webp']}
+          height={800}
+          alt='web-apps'
+          class='object-cover object-center bg-repeat'
+        />
+      </div>
+    </div>
+
+    <!-- Product details -->
+    <div
+      class='mx-auto max-w-2xl space-y-10 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none'
+    >
+      <div class='flex flex-col-reverse'>
+        <div>
+          <h1>Web apps</h1>
+          <h2 id='information-heading' class='sr-only'>Product information</h2>
+          <p class='mt-1 text-sm text-gray-600'>Custom applications developed in-house</p>
+        </div>
+      </div>
+      <p>
+        Unleash the power of your imagination and let our software development team create
+        tailor-made solutions to match your unique project needs. We can transform your
+        vision into a functional and user-friendly platform that simplifies your research
+        processes.
+      </p>
+      <div class='grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-1'>
+        <Button
+          primary
+          block
+          href='https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Get started today
+        </Button>
+      </div>
+
+      <div class='border-t border-gray-900/10 pt-8'>
+        <h4>The process</h4>
+        <div class='prose prose-sm mt-4 text-gray-600'>
+          <ul role='list' class='space-y-6'>
+            <li class='relative flex gap-x-4'>
+              <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
+                <div class='w-px bg-gray-200'></div>
+              </div>
+              <div
+                class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+              >
+                <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                </div>
+              </div>
+              <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
+                <span class='font-medium text-gray-900'>Intake</span>: lets sit down and
+                discuss your project requirements
+              </p>
+            </li>
+
+            <li class='relative flex gap-x-4'>
+              <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
+                <div class='w-px bg-gray-200'></div>
+              </div>
+              <div
+                class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+              >
+                <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                </div>
+              </div>
+              <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
+                <span class='font-medium text-gray-900'>Scoping</span>: we'll put together
+                a plan that can make your vision a reality
+              </p>
+            </li>
+            <li class='relative flex gap-x-4'>
+              <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
+                <div class='w-px bg-gray-200'></div>
+              </div>
+              <div
+                class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+              >
+                <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                </div>
+              </div>
+              <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
+                <span class='font-medium text-gray-900'>Development</span>: our team will
+                get to work building your project from the ground up
+              </p>
+            </li>
+            <li class='relative flex gap-x-4'>
+              <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
+                <div class='w-px bg-gray-200'></div>
+              </div>
+              <div
+                class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+              >
+                <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                </div>
+              </div>
+              <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
+                <span class='font-medium text-gray-900'>Testing</span>: we want you
+                involved every step of the way, you will have access to test during the
+                developemnt phase
+              </p>
+            </li>
+            <li class='relative flex gap-x-4'>
+              <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
+                <div class='w-px bg-gray-200'></div>
+              </div>
+              <div
+                class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+              >
+                <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                </div>
+              </div>
+              <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
+                <span class='font-medium text-gray-900'>Deployment</span>: we'll take care
+                of the details so you don't have to
+              </p>
+            </li>
+            <li class='relative flex gap-x-4'>
+              <div
+                class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+              >
+                <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                </div>
+              </div>
+              <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
+                <span class='font-medium text-gray-900'>Go live</span>! your site will be
+                published to the web making it available for you and your users
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class='lg:col-span-4 divide-y divide-gray-900/10'>
+      <h4>Frequently asked questions</h4>
+      <dl class='mt-10 space-y-8 divide-y divide-gray-900/10'>
+        <div class='pt-8 lg:grid lg:grid-cols-12 lg:gap-8'>
+          <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+            Why don't scientists trust atoms?
+          </dt>
+          <dd class='mt-4 lg:col-span-7 lg:mt-0'>
+            <p class='text-sm leading-7 text-gray-600'>
+              Because they make up everything!.
+            </p>
+          </dd>
+        </div>
+        <div class='pt-8 lg:grid lg:grid-cols-12 lg:gap-8'>
+          <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+            Did you hear about the mathematician who's afraid of negative numbers?
+          </dt>
+          <dd class='mt-4 lg:col-span-7 lg:mt-0'>
+            <p class='text-sm leading-7 text-gray-600'>
+              He'll stop at nothing to avoid them!
+            </p>
+          </dd>
+        </div>
+        <div class='pt-8 lg:grid lg:grid-cols-12 lg:gap-8'>
+          <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+            Why don't skeletons fight each other?
+          </dt>
+          <dd class='mt-4 lg:col-span-7 lg:mt-0'>
+            <p class='text-sm leading-7 text-gray-600'>They don't have the guts..</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</Layout>
