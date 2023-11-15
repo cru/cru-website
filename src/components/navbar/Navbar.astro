@@ -1,0 +1,100 @@
+---
+import { Picture } from 'astro:assets'
+import { Astronav, MenuItems, MenuIcon } from 'astro-navbar'
+import Dropdown from './Dropdown.astro'
+import logoImage from '../../assets/logo.png'
+import Button from '../ui/Button.astro'
+
+const menuitems = [
+  {
+    title: 'Electronic Data Capture',
+    path: '/data-capture',
+    children: [
+      { title: 'Overview', path: '/data-capture' },
+      { title: 'Pricing', path: '/data-capture/pricing' },
+    ],
+  },
+  {
+    title: 'Methods & Analytics',
+    path: '/methods-and-analytics',
+  },
+  {
+    title: 'Custom Software',
+    path: '/custom-software',
+  },
+  {
+    title: 'Our Story',
+    path: '/our-story',
+  },
+  {
+    title: 'Announcements',
+    path: '/announcements',
+    badge: true,
+  },
+]
+---
+
+<header class='absolute inset-x-0 top-0 z-50'>
+  <nav
+    class='flex flex-col lg:items-center justify-between p-6 bg-gray-100 lg:flex-row lg:px-8 lg:bg-transparent'
+  >
+    <div class='flex items-center justify-between lg:flex-1'>
+      <a href='/' class='-m-1.5 p-1.5'>
+        <span class='sr-only'>Clinical Research Unit</span>
+        <Picture
+          src={logoImage}
+          formats={['avif', 'webp']}
+          width={200}
+          alt='logo image'
+          class='h-8 w-auto'
+        />
+      </a>
+      <div class='flex flex-1 justify-end lg:hidden'>
+        <MenuIcon class='w-4 h-4 text-gray-900' />
+      </div>
+    </div>
+
+    <Astronav>
+      <MenuItems class='hidden lg:flex lg:space-x-6'>
+        {
+          menuitems.map((item, index) => (
+            <>
+              {item.children && (
+                <Dropdown
+                  title={item.title}
+                  children={item.children}
+                  lastItem={index === menuitems.length - 1}
+                />
+              )}
+
+              {!item.children && (
+                <a
+                  href={item.path}
+                  class='text-sm font-semibold leading-6 text-gray-900 block py-2'
+                >
+                  <span> {item.title}</span>
+                  {item.badge && (
+                    <span class='ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full'>
+                      New
+                    </span>
+                  )}
+                </a>
+              )}
+            </>
+          ))
+        }
+      </MenuItems>
+    </Astronav>
+    <div class='hidden lg:flex lg:flex-1 lg:justify-end'>
+      <Button
+        href='https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D'
+        target='_blank'
+        rel='noopener noreferrer'
+        primary
+        className='mr-0 mb-0'
+      >
+        Get started today
+      </Button>
+    </div>
+  </nav>
+</header>
