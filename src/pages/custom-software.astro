@@ -3,87 +3,95 @@ import { Picture } from 'astro:assets'
 import webappImage from '../assets/webapp.jpg'
 import marketingsiteImage from '../assets/marketingsite.jpg'
 import Layout from '../layouts/Layout.astro'
+import InternalLink from '../components/ui/InternalLink.astro'
 ---
 
 <Layout title='CRU - Custom Software'>
-  <div class='space-y-12'>
-    <h1>Custom Software</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dolor purus,
-      ullamcorper a mauris vitae, auctor dictum nisl. Duis auctor, metus vel rutrum
-      iaculis, sapien dolor placerat nisi, at blandit massa leo quis enim. Praesent in
-      ornare elit, vel ornare neque. Nulla bibendum, eros non molestie tincidunt, odio
-      augue condimentum dolor, rhoncus finibus orci nisl ut tellus.
-    </p>
-
-    <div class='mx-auto grid grid-cols-2 gap-16 pt-32'>
-      <div
-        class='relative isolate overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80'
-      >
-        <Picture
-          src={webappImage}
-          formats={['avif', 'webp']}
-          height={800}
-          alt='web-apps'
-          class='absolute inset-0 -z-10 h-full w-full object-cover'
-        />
-        <div
-          class='absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/20'
-        >
-        </div>
-        <div
-          class='absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10'
-        >
-        </div>
-
-        <div
-          class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-brand-primary-400'
-        >
-          <div class='flex items-center gap-x-4'>
-            <div class='flex gap-x-2.5'>Powerful web applications for any need</div>
-          </div>
-        </div>
-        <h2 class='text-white'>
-          <a href='/custom-software/webapps'>
-            <span class='absolute inset-0'></span>
-             Web apps
-          </a>
-        </h2>
-      </div>
-
-      <div
-        class='relative isolate overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80'
-      >
-        <Picture
-          src={marketingsiteImage}
-          formats={['avif', 'webp']}
-          height={800}
-          alt='web-apps'
-          class='absolute inset-0 -z-10 h-full w-full object-cover'
-        />
-        <div
-          class='absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40'
-        >
-        </div>
-        <div
-          class='absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10'
-        >
-        </div>
-
-        <div
-          class='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-brand-primary-400'
-        >
-          <div class='flex items-center gap-x-4'>
-            <div class='flex gap-x-2.5'>Simple websites for brand awareness</div>
-          </div>
-        </div>
-        <h2 class='text-white'>
-          <a href='/custom-software/marketing-sites'>
-            <span class='absolute inset-0'></span>
-             Marketing sites
-          </a>
-        </h2>
-      </div>
+  <div class='space-y-32'>
+    <div class='space-y-12'>
+      <h1>Discover the power of customization with our web solutions</h1>
+      <p class='text-lg leading-8'>
+        The CRU distinguishes itself by being able to build creative and custom solutions
+        to facilitate novel research workflows. We are dedicated to providing you with a
+        wide range of web solutions tailored to your unique needs. Whether you're looking
+        for a dynamic, interactive web application or a sleek, static website, we've got
+        you covered.
+      </p>
     </div>
+    <section>
+      <InternalLink href='/custom-software/webapps' className='group no-underline'>
+        <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
+          <Picture
+            src={webappImage}
+            formats={['avif', 'webp']}
+            width={800}
+            height={400}
+            class='w-full rounded-3xl shadow-lg'
+            alt='web-apps'
+          />
+          <div>
+            <span class='text-brand-primary-500'>
+              Powerful web applications for any need
+            </span>
+
+            <h2
+              class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
+            >
+              Web apps
+            </h2>
+
+            <div class='flex gap-2 mt-3'>
+              <p>
+                Our team of experienced developers specializes in creating custom web
+                applications. We understand that every project has unique requirements and
+                challenges. That's why we work closely with you to understand your needs
+                and develop a solution that helps you achieve your goals. Our custom web
+                applications are designed to be user-friendly, scalable, and secure,
+                helping you focus on what matters most without worrying about the details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </InternalLink>
+    </section>
+    <section>
+      <InternalLink
+        href='/custom-software/marketing-sites'
+        className='group no-underline'
+      >
+        <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
+          <div>
+            <span class='text-brand-primary-500'>
+              Simple websites for brand awareness
+            </span>
+
+            <h2
+              class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
+            >
+              Marketing sites
+            </h2>
+
+            <div class='flex gap-2 mt-3'>
+              <p>
+                We also offer simple static websites for projects that need a
+                straightforward, yet effective online presence. These websites are perfect
+                for showcasing your goals and achievements, sharing information, and
+                reaching out to your target audience. Despite their simplicity, our static
+                websites are designed with the same attention to detail and commitment to
+                quality as our custom web applications.
+              </p>
+            </div>
+          </div>
+          <Picture
+            src={marketingsiteImage}
+            formats={['avif', 'webp']}
+            width={800}
+            height={400}
+            class='w-full rounded-3xl shadow-lg'
+            alt='marketing-sites'
+          />
+        </div>
+      </InternalLink>
+    </section>
   </div>
 </Layout>
