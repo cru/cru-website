@@ -4,8 +4,6 @@ import BaseLayout from './BaseLayout.astro'
 
 type Props = MarkdownLayoutProps<{
   title: string
-  publishDate: Date
-  tags: Array<string>
 }>
 
 const { frontmatter } = Astro.props
@@ -13,18 +11,7 @@ const { frontmatter } = Astro.props
 
 <BaseLayout title={frontmatter.title}>
   <section class='space-y-12 mx-auto my-20 pt-16 lg:max-w-6xl'>
-    <div>
-      <span class='text-gray-500'
-        >{
-          frontmatter.publishDate.toLocaleString('en-us', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })
-        }</span
-      >
-      <h1>{frontmatter.title}</h1>
-    </div>
+    <h1>{frontmatter.title}</h1>
     <article class='space-y-4'>
       <slot />
     </article>
