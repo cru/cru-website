@@ -73,7 +73,8 @@ const {} = Astro.props
             <div class='flex gap-6'>
               <a
                 href='https://github.com/cru'
-                target='blank'
+                target='_blank'
+                rel='noopener noreferrer'
                 aria-label='github'
                 class='hover:text-brand-primary-600'
               >
@@ -91,8 +92,9 @@ const {} = Astro.props
                 </svg>
               </a>
               <a
-                href='#'
-                target='blank'
+                href='https://www.twitter.com/ucalgary'
+                target='_blank'
+                rel='noopener noreferrer'
                 aria-label='twitter'
                 class='hover:text-brand-primary-600'
               >
@@ -115,22 +117,15 @@ const {} = Astro.props
         <div class='col-span-8 md:col-span-6 lg:col-span-6'>
           <div class='grid grid-cols-2 gap-6 pb-16 sm:grid-cols-3 md:pl-16'>
             <div>
-              <h6 class='text-lg font-medium text-gray-800'>Company</h6>
+              <h6 class='text-lg font-medium text-gray-800'>Resources</h6>
               <ul class='mt-4 list-inside space-y-4'>
                 <li>
                   <InternalLink href='/publications'>Publications</InternalLink>
                 </li>
                 <li>
-                  <a href='#'>Customers</a>
-                </li>
-                <li>
-                  <a href='#'>Enterprise</a>
-                </li>
-                <li>
-                  <a href='#'>Partners</a>
-                </li>
-                <li>
-                  <a href='#'>Jobs</a>
+                  <InternalLink href='/docs/REDCapProjectValidation_GuidanceDocument.pdf'>
+                    Project Validation Guide
+                  </InternalLink>
                 </li>
               </ul>
             </div>
@@ -139,24 +134,23 @@ const {} = Astro.props
               <ul class='mt-4 list-inside space-y-4'>
                 <li>
                   <ExternalLink
+                    href='https://researchcalgary.atlassian.net/wiki/spaces/CCTSTRED/overview'
+                  >
+                    REDCap Resource Centre
+                  </ExternalLink>
+                </li>
+                <li>
+                  <ExternalLink
+                    href='https://researchcalgary.atlassian.net/servicedesk/customer/portal/7'
+                  >
+                    CRU Service Desk
+                  </ExternalLink>
+                </li>
+                <li>
+                  <ExternalLink
                     href='https://careers.ucalgary.ca/jobs/search?utf8=%3F&q=cru&c_keywords=cru#results'
                   >
                     Careers
-                  </ExternalLink>
-                </li>
-                <li>
-                  <ExternalLink href='https://cumming.ucalgary.ca/'>
-                    Cumming School of Medicine
-                  </ExternalLink>
-                </li>
-                <li>
-                  <ExternalLink href='https://www.ucalgary.ca/'>
-                    University of Calgary
-                  </ExternalLink>
-                </li>
-                <li>
-                  <ExternalLink href='https://www.albertahealthservices.ca/'>
-                    Alberta Health Services
                   </ExternalLink>
                 </li>
               </ul>
