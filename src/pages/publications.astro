@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../layouts/Layout.astro'
+import ExternalLink from '../components/ui/ExternalLink.astro'
+
+// Filter entries with 'draft: false' & date before current date
+const publicationEntries = await getCollection('publications', ({ data }) => {
+  return !data.draft && data.publishDate < new Date()
+})
+
+// Sort content entries by publication date
+publicationEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+})
+---
+
+<Layout title='CRU - Publications'>
+  <h1>Publications</h1>
+  <div class='py-20'>
+    <ul class='grid gap-16 mx-auto list-none'>
+      {
+        publicationEntries.map((publication, index) => (
+          <li>
+            <ExternalLink
+              href={publication.data.link}
+              arrow={false}
+              className='group no-underline'
+            >
+              <div>
+                <time
+                  class='text-gray-400'
+                  datetime={publication.data.publishDate.toISOString()}
+                >
+                  {publication.data.publishDate.toDateString()}
+                </time>
+                <h2 class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'>
+                  {publication.data.title}
+                </h2>
+                <p>{publication.data.authors?.join(', ')}</p>
+                <br />
+                <p>{publication.data.journal}</p>
+              </div>
+            </ExternalLink>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

@@ -3,15 +3,20 @@ import type { HTMLAttributes } from 'astro/types'
 
 interface Props extends HTMLAttributes<'a'> {
   href: string
+  arrow?: boolean
   className?: string
 }
 
-const { href, className = '', ...attrs } = Astro.props
+const { href, arrow = true, className = '', ...attrs } = Astro.props
 ---
 
 <a
   href={href}
-  class={`text-brand-primary-500 after:content-['_↗'] ${className}`}
+  target='_blank'
+  rel='noopener noreferrer'
+  class={`cursor-pointer text-brand-primary-500 ${
+    arrow && "after:content-['_↗']"
+  } ${className}`}
   {...attrs}
 >
   <slot />

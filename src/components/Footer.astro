@@ -5,6 +5,7 @@ import uofcLogo from '../assets/partners/uofc.png'
 import ctaImage from '../assets/cta.svg'
 import Button from './ui/Button.astro'
 import ExternalLink from './ui/ExternalLink.astro'
+import InternalLink from './ui/InternalLink.astro'
 interface Props {}
 
 const {} = Astro.props
@@ -24,12 +25,7 @@ const {} = Astro.props
           <h2>Supercharge your research</h2>
           <p class='text-white'>The data platform for research teams</p>
           <div class='mt-10'>
-            <Button
-              primary
-              href='https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <Button primary href='https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D'>
               Get started today
             </Button>
           </div>
@@ -122,22 +118,19 @@ const {} = Astro.props
               <h6 class='text-lg font-medium text-gray-800'>Company</h6>
               <ul class='mt-4 list-inside space-y-4'>
                 <li>
-                  <a href='#' class='transition hover:text-brand-primary-600'>About</a>
+                  <InternalLink href='/publications'>Publications</InternalLink>
                 </li>
                 <li>
-                  <a href='#' class='transition hover:text-brand-primary-600'>Customers</a
-                  >
+                  <a href='#'>Customers</a>
                 </li>
                 <li>
-                  <a href='#' class='transition hover:text-brand-primary-600'
-                    >Enterprise</a
-                  >
+                  <a href='#'>Enterprise</a>
                 </li>
                 <li>
-                  <a href='#' class='transition hover:text-brand-primary-600'>Partners</a>
+                  <a href='#'>Partners</a>
                 </li>
                 <li>
-                  <a href='#' class='transition hover:text-brand-primary-600'>Jobs</a>
+                  <a href='#'>Jobs</a>
                 </li>
               </ul>
             </div>
@@ -147,40 +140,22 @@ const {} = Astro.props
                 <li>
                   <ExternalLink
                     href='https://careers.ucalgary.ca/jobs/search?utf8=%3F&q=cru&c_keywords=cru#results'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
                   >
                     Careers
                   </ExternalLink>
                 </li>
                 <li>
-                  <ExternalLink
-                    href='https://cumming.ucalgary.ca/'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
-                  >
+                  <ExternalLink href='https://cumming.ucalgary.ca/'>
                     Cumming School of Medicine
                   </ExternalLink>
                 </li>
                 <li>
-                  <ExternalLink
-                    href='https://www.ucalgary.ca/'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
-                  >
+                  <ExternalLink href='https://www.ucalgary.ca/'>
                     University of Calgary
                   </ExternalLink>
                 </li>
                 <li>
-                  <ExternalLink
-                    href='https://www.albertahealthservices.ca/'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
-                  >
+                  <ExternalLink href='https://www.albertahealthservices.ca/'>
                     Alberta Health Services
                   </ExternalLink>
                 </li>
@@ -192,9 +167,6 @@ const {} = Astro.props
                 <li>
                   <ExternalLink
                     href='https://www.ucalgary.ca/legal-services/university-policies-procedures/privacy-policy'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
                   >
                     UofC Privacy Policy
                   </ExternalLink>
@@ -202,9 +174,6 @@ const {} = Astro.props
                 <li>
                   <ExternalLink
                     href='https://www.ucalgary.ca/legal-services/university-policies-procedures/acceptable-use-electronic-resources-and-information-policy'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
                   >
                     Acceptable Use of Electronic Resources and Information
                   </ExternalLink>
@@ -212,9 +181,6 @@ const {} = Astro.props
                 <li>
                   <ExternalLink
                     href='https://www.ucalgary.ca/legal-services/university-policies-procedures/information-asset-management-policy'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
                   >
                     Information Asset Management
                   </ExternalLink>
@@ -222,9 +188,6 @@ const {} = Astro.props
                 <li>
                   <ExternalLink
                     href='https://www.ucalgary.ca/legal-services/university-policies-procedures/health-information-management-policy'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
                   >
                     Health Information Management
                   </ExternalLink>
@@ -232,9 +195,6 @@ const {} = Astro.props
                 <li>
                   <ExternalLink
                     href='https://www.ucalgary.ca/legal-services/university-policies-procedures/storage-inactive-clinical-research-records-policy'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
                   >
                     Storage of Inactive Clinical Research Records
                   </ExternalLink>
@@ -242,9 +202,6 @@ const {} = Astro.props
                 <li>
                   <ExternalLink
                     href='https://www.ucalgary.ca/legal-services/access-information-privacy/operating-standards-guidelines-forms'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    class='transition hover:text-brand-primary-600'
                   >
                     UofC Operating Standards, Guidelines & Forms
                   </ExternalLink>

@@ -18,7 +18,20 @@ const announcementsCollection = defineCollection({
   }),
 })
 
+const publicationsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    draft: z.boolean(),
+    title: z.string(),
+    publishDate: z.date(),
+    journal: z.string(),
+    authors: z.array(z.string()).optional(),
+    link: z.string().url(),
+  }),
+})
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   announcements: announcementsCollection,
+  publications: publicationsCollection,
 }
