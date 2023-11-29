@@ -1,69 +1,60 @@
 ---
-import InternalLink from '../components/ui/InternalLink.astro'
 import Layout from '../layouts/Layout.astro'
+import EDCPricing from '../components/landing/EDCPricing.astro'
 ---
 
 <Layout title='CRU - Data Capture'>
-  <div class='space-y-12'>
-    <h1>Electronic data capture</h1>
-    <p class='text-lg leading-8'>
-      The CRU provides access and capacity building tools in the areas of <b
-        >data capture</b
-      >,
-      <b>databases</b>, and <b>data management</b>. We are the University of Calgary's
-      provider of REDCap access and value-add services, including database builds, setup
-      and configuration, and implementation of advanced features.
-    </p>
-
-    <p>
-      Our validated REDCap instance ensures compliance with the highest regulatory
-      requirements, including Health Canada, FDA, and CFR part 11 studies. Our EDC
-      developers build and configure projects to maximize the platform's capabilities.
-    </p>
-    <div class='text-center'>
-      <InternalLink href='/data-capture/pricing' className='text-2xl'>
-        See pricing →
-      </InternalLink>
+  <div class='space-y-32'>
+    <div class='space-y-12'>
+      <h1>Electronic data capture</h1>
+      <p class='text-lg leading-8'>
+        The CRU provides access and capacity building tools in the areas of <b
+          >data capture</b
+        >,
+        <b>databases</b>, and <b>data management</b>. We are the University of Calgary's
+        provider of REDCap access and value-add services, including database builds, setup
+        and configuration, and implementation of advanced features.
+      </p>
+      <div class='space-y-2'>
+        <blockquote class='border-l-8 border-l-brand-primary-500 pl-4 font-serif italic'>
+          "It was a great pleasure and experience to have my first project build with the
+          CRU REDCap team. The communication line was fantastic and I felt supported every
+          step of the way. The team is highly skilled, knowledgeable and extremely
+          professional.
+          <br />
+           They were quick to address my comments and feedback until I was completely
+          satisfied with the REDCap build. Specific to my project, I was thoroughly
+          impressed with the on-the-spot resolution by the CRU REDCap developer during the
+          walkthrough of the project.
+          <br />
+           Without a doubt, I would enlist the CRU REDCap team again for their assistance
+          on future studies."
+        </blockquote>
+        <h6 class='text-xs text-gray-500'>
+          Study team for an investigator-initiated Health Canada regulated Clinical Trial
+        </h6>
+      </div>
+      <div class='grid grid-cols-2 gap-16 text-left'>
+        <section>
+          <h4>Self-service projects</h4>
+          <p>
+            Research teams experienced in REDCap can complete the build and setup
+            themselves. The CRU provides users with access to REDCap and maintains the
+            REDCap platform, such as updates/patches, data backups, and system
+            administration.
+          </p>
+        </section>
+        <section>
+          <h4>CRU supported projects</h4>
+          <p>
+            We have specialized expertise in REDCap database development and are happy to
+            complete an end-to-end project build for research studies. This is ideal for
+            research teams who are new to REDCap, studies that need advanced or complex
+            features, or who want a convenient full service option.
+          </p>
+        </section>
+      </div>
     </div>
-    <div class='grid grid-cols-2 gap-16 text-left'>
-      <section>
-        <h4>Self-service projects</h4>
-        <p>
-          Research teams experienced in REDCap can complete the build and setup
-          themselves. The CRU provides users with access to REDCap and maintains the
-          REDCap platform, such as updates/patches, data backups, and system
-          administration.
-        </p>
-      </section>
-      <section>
-        <h4>CRU supported projects</h4>
-        <p>
-          We have specialized expertise in REDCap database development and are happy to
-          complete an end-to-end project build for research studies. This is ideal for
-          research teams who are new to REDCap, studies that need advanced or complex
-          features, or who want a convenient full service option.
-        </p>
-      </section>
-    </div>
-
-    <div class='space-y-2'>
-      <blockquote class='border-l-8 border-l-brand-primary-500 pl-4 font-serif italic'>
-        "It was a great pleasure and experience to have my first project build with the
-        CRU REDCap team. The communication line was fantastic and I felt supported every
-        step of the way. The team is highly skilled, knowledgeable and extremely
-        professional.
-        <br />
-         They were quick to address my comments and feedback until I was completely
-        satisfied with the REDCap build. Specific to my project, I was thoroughly
-        impressed with the on-the-spot resolution by the CRU REDCap developer during the
-        walkthrough of the project.
-        <br />
-         Without a doubt, I would enlist the CRU REDCap team again for their assistance on
-        future studies."
-      </blockquote>
-      <h6 class='text-xs text-gray-500'>
-        Study team for an investigator-initiated Health Canada regulated Clinical Trial
-      </h6>
-    </div>
+    <EDCPricing />
   </div>
 </Layout>
