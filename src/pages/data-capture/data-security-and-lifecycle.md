@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
-title: Data Security and Lifecycle Management
+title: Data security and lifecycle management
 ---
 
 The Clinical Research Unit (CRU) utilizes a standardized and repeatable policy-driven approach to manage your research data through its lifecycle within our organization. The Data Lifecycle Management (DLM) strategy summarizes the specific data management practices that ensure appropriate handling of data at all stages of the project.
@@ -9,7 +9,7 @@ Our approach ensures a secure, semi-automated, and client-friendly data manageme
 
 <div class="pt-12"></div>
 
-<h2>Data Lifecycle Management through Stages</h2>
+<h2>Data lifecycle management through stages</h2>
 
 <div class="pt-4"></div>
 
