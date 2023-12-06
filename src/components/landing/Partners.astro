@@ -1,9 +1,8 @@
 ---
 import { Picture } from 'astro:assets'
-import uofcLogo from '../../assets/partners/uofc.png'
+import csmLogo from '../../assets/partners/csm.png'
 import ahsLogo from '../../assets/partners/ahs.png'
-import uofaLogo from '../../assets/partners/uofa.png'
-import w21cLogo from '../../assets/partners/w21c.png'
+import impactLogo from '../../assets/partners/impact.png'
 import redcapLogo from '../../assets/partners/redcap.png'
 
 interface Props {}
@@ -11,12 +10,12 @@ interface Props {}
 const {} = Astro.props
 ---
 
-<section class='flex space-x-2 items-center justify-center mx-auto max-w-7xl'>
+<section class='flex space-x-2 items-center justify-center mx-auto max-w-5xl'>
   <div
     class='rounded-xl border border-gray-200 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
   >
     <Picture
-      src={uofcLogo}
+      src={csmLogo}
       formats={['avif', 'webp']}
       height={100}
       alt='uofc-logo'
@@ -38,21 +37,10 @@ const {} = Astro.props
     class='rounded-xl border border-gray-200 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
   >
     <Picture
-      src={uofaLogo}
+      src={redcapLogo}
       formats={['avif', 'webp']}
       height={100}
-      alt='nono-logo'
-      class='align-middle contrast-0 transition hover:contrast-100'
-    />
-  </div>
-  <div
-    class='rounded-xl border border-gray-200 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
-  >
-    <Picture
-      src={w21cLogo}
-      formats={['avif', 'webp']}
-      height={100}
-      alt='chr-logo'
+      alt='redcap-logo'
       class='contrast-0 transition hover:contrast-100'
     />
   </div>
@@ -60,10 +48,10 @@ const {} = Astro.props
     class='rounded-xl border border-gray-200 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
   >
     <Picture
-      src={redcapLogo}
+      src={impactLogo}
       formats={['avif', 'webp']}
       height={100}
-      alt='redcap-logo'
+      alt='impact-logo'
       class='contrast-0 transition hover:contrast-100'
     />
   </div>
