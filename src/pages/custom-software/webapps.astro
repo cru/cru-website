@@ -13,8 +13,16 @@ import spineImage3 from '../../assets/spine-screenshot3.jpg'
 import spineImage4 from '../../assets/spine-screenshot4.jpg'
 import spineImage5 from '../../assets/spine-screenshot5.jpg'
 import spineImage6 from '../../assets/spine-screenshot6.jpg'
-import planetarioImage from '../../assets/template-planetario.jpg'
-import astrowindImage from '../../assets/template-astrowind.jpg'
+import erpImage from '../../assets/erp-screenshot.jpg'
+import evolveImage from '../../assets/evolve.jpg'
+import tempo2Image from '../../assets/tempo2.jpg'
+import partumImage from '../../assets/partum.jpg'
+import recoverImage1 from '../../assets/recover-screenshot1.jpg'
+import recoverImage2 from '../../assets/recover-screenshot2.jpg'
+import recoverImage3 from '../../assets/recover-screenshot3.jpg'
+import recoverImage4 from '../../assets/recover-screenshot4.jpg'
+import recoverImage5 from '../../assets/recover-screenshot5.jpg'
+import recoverImage6 from '../../assets/recover-screenshot6.jpg'
 import Layout from '../../layouts/Layout.astro'
 import Button from '../../components/ui/Button.astro'
 import SectionHeading from '../../components/ui/SectionHeading.astro'
@@ -296,12 +304,13 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
         <li>
           <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
             <Picture
-              src={astrowindImage}
+              src={erpImage}
               formats={['avif', 'webp']}
-              height={400}
-              alt='astrolus-template'
-              class='w-full rounded-3xl shadow-lg'
+              height={300}
+              alt='erp-screen'
+              class='w-full rounded-lg shadow-sm'
             />
+
             <div>
               <ExternalLink href='https://erp.researchcalgary.ca/'>
                 https://erp.researchcalgary.ca/
@@ -417,32 +426,70 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
             </div>
           </div>
         </li>
-
         <li>
           <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
-            <Picture
-              src={planetarioImage}
-              formats={['avif', 'webp']}
-              height={400}
-              alt='astrolus-template'
-              class='w-full rounded-3xl shadow-lg'
-            />
+            <div class='grid grid-cols-3 gap-2'>
+              <Picture
+                src={recoverImage1}
+                formats={['avif', 'webp']}
+                height={300}
+                alt='dx-screen1'
+                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+              />
+              <Picture
+                src={recoverImage2}
+                formats={['avif', 'webp']}
+                height={300}
+                alt='dx-screen2'
+                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+              />
+              <Picture
+                src={recoverImage3}
+                formats={['avif', 'webp']}
+                height={300}
+                alt='dx-screen3'
+                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+              />
+              <Picture
+                src={recoverImage4}
+                formats={['avif', 'webp']}
+                height={300}
+                alt='dx-screen3'
+                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+              />
+              <Picture
+                src={recoverImage5}
+                formats={['avif', 'webp']}
+                height={300}
+                alt='dx-screen3'
+                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+              />
+              <Picture
+                src={recoverImage6}
+                formats={['avif', 'webp']}
+                height={300}
+                alt='dx-screen3'
+                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+              />
+            </div>
+
             <div>
-              <ExternalLink href='https://dataxplor.researchcalgary.ca/'>
-                https://dataxplor.researchcalgary.ca/
+              <ExternalLink href='https://recoverconcussion.ca/'>
+                https://recoverconcussion.ca/
               </ExternalLink>
               <h2
                 class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
               >
-                EVOLVE Study Manager
+                RECOVER Concussion
               </h2>
 
               <div class='flex gap-2 mt-3'>
                 <div class='divide-y'>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis
-                    sollicitudin magna, a vehicula ipsum hendrerit vitae. Suspendisse
-                    eleifend libero at malesuada auctor.
+                    Developed as a web app to provide a customized user interface targeted
+                    at youths who have suffered a concussion. This app allowed
+                    participants to consume targeted educational information and submit
+                    recovery data without having to interface with REDCap directly.
                   </p>
                   <dl class='mt-10 space-y-8 divide-y divide-gray-900/10'>
                     <div class='pt-2 lg:grid lg:grid-cols-12 lg:gap-8'>
@@ -450,7 +497,9 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                         Technologies
                       </dt>
                       <dd class='mt-4 lg:col-span-7 lg:mt-0'>
-                        <p class='text-sm leading-7 text-gray-600'>Django, MySQL</p>
+                        <p class='text-sm leading-7 text-gray-600'>
+                          React, Flask, Postgres, REDCap API
+                        </p>
                       </dd>
                     </div>
                   </dl>
@@ -459,24 +508,37 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
             </div>
           </div>
         </li>
-
         <li>
           <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
-            <Picture
-              src={astrowindImage}
-              formats={['avif', 'webp']}
-              height={400}
-              alt='astrolus-template'
-              class='w-full rounded-3xl shadow-lg'
-            />
+            <div class='grid grid-cols-3 gap-2'>
+              <Picture
+                src={evolveImage}
+                formats={['avif', 'webp']}
+                height={300}
+                alt='dx-screen1'
+                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-contain'
+              />
+              <Picture
+                src={partumImage}
+                formats={['avif', 'webp']}
+                height={300}
+                alt='dx-screen2'
+                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-contain'
+              />
+              <Picture
+                src={tempo2Image}
+                formats={['avif', 'webp']}
+                height={300}
+                alt='dx-screen3'
+                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-contain'
+              />
+            </div>
+
             <div>
-              <ExternalLink href='https://dataxplor.researchcalgary.ca/'>
-                https://dataxplor.researchcalgary.ca/
-              </ExternalLink>
               <h2
                 class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
               >
-                TEMPO Study Manager
+                Study Manager
               </h2>
 
               <div class='flex gap-2 mt-3'>
