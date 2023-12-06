@@ -1,7 +1,7 @@
 ---
 import { Picture } from 'astro:assets'
 import webappImage from '../assets/webapp.jpg'
-import marketingsiteImage from '../assets/marketingsite.jpg'
+import educationalsiteImage from '../assets/educationalsite2.jpg'
 import Layout from '../layouts/Layout.astro'
 import InternalLink from '../components/ui/InternalLink.astro'
 ---
@@ -45,8 +45,8 @@ import InternalLink from '../components/ui/InternalLink.astro'
                 Our team of experienced developers specializes in creating custom web
                 applications. We understand that every project has unique requirements and
                 challenges. That's why we work closely with you to understand your needs
-                and develop a solution that helps you achieve your goals. Our custom web
-                applications are designed to be user-friendly, scalable, and secure,
+                and develop a solution that helps you achieve your goals. <br />Our custom
+                web applications are designed to be user-friendly, scalable, and secure,
                 helping you focus on what matters most without worrying about the details.
               </p>
             </div>
@@ -56,7 +56,7 @@ import InternalLink from '../components/ui/InternalLink.astro'
     </section>
     <section>
       <InternalLink
-        href='/custom-software/marketing-sites'
+        href='/custom-software/educational-sites'
         className='group no-underline'
       >
         <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
@@ -68,27 +68,28 @@ import InternalLink from '../components/ui/InternalLink.astro'
             <h2
               class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
             >
-              Marketing sites
+              Educational sites
             </h2>
 
             <div class='flex gap-2 mt-3'>
               <p>
-                We also offer simple static websites for projects that need a
-                straightforward, yet effective online presence. These websites are perfect
-                for showcasing your goals and achievements, sharing information, and
-                reaching out to your target audience. Despite their simplicity, our static
+                We also offer simple static websites for studies or researchers looking to
+                have an online presence. These websites are perfect for sharing
+                information about a study, engaging with your target audience, or
+                showcasing your own goals and achievements. <br />Our clean and sleek
                 websites are designed with the same attention to detail and commitment to
-                quality as our custom web applications.
+                quality as our custom web applications. Simply pick a template, provide us
+                with your content, and we'll handle the rest.
               </p>
             </div>
           </div>
           <Picture
-            src={marketingsiteImage}
+            src={educationalsiteImage}
             formats={['avif', 'webp']}
             width={800}
             height={400}
             class='w-full rounded-3xl shadow-lg'
-            alt='marketing-sites'
+            alt='educational-sites'
           />
         </div>
       </InternalLink>
