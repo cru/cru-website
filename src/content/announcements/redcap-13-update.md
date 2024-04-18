@@ -1,0 +1,21 @@
+---
+draft: false
+title: 'REDCap updated to v13'
+publishDate: 2024-01-04
+description: 'REDCap is updated to version 13 bringing new features and enhancements to elevate the user experience'
+image: {src: 'https://images.unsplash.com/photo-1633412802994-5c058f151b66?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f', alt: 'rc-update-image'}
+tags: ['redcap']
+---
+
+We are excited to announce the successful upgrade and validation of REDCap to version 13.7 by CRU. This instance of REDCap adheres to the requirements set by Health Canada/ICH GCP for conducting phase 3 and regulatory clinical trials.
+
+The upgrade introduces exciting features and enhancements to elevate the user experience:
+- New MyCap mobile app: Specifically designed to enhance participant engagement and retention, especially in projects with regular participant contact, such as daily or weekly surveys.
+- Multi-language support: Facilitates effortless language switching in instruments, benefiting both data entry personnel and survey respondents.
+- New data export options: Seamless integration with Tableau for enhanced data analysis.
+- New inline preview option for uploaded images and PDF files (instead of only seeing the filename in an upload field and downloading to view it, the uploaded image/file can be displayed in RC)
+- New embed option for files sent via text and email. These file/image attachments are stored in the new "Miscellaneous File Attachments" folder in the File Repository.
+
+If you are considering starting a new REDCap project, please complete our [intake survey](https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D).
+
+For inquiries or concerns, please reach out to us at cru@ucalgary.ca.
