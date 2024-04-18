@@ -3,7 +3,7 @@ draft: false
 title: 'CRU & CHI Merger'
 publishDate: 2024-04-01
 description: 'We are pleased to announce the Cumming School of Medicine’s (CSM) Clinical Research Unit (CRU) will merge with the Centre for Health Informatics (CHI) on March 15, 2024.'
-image: {src: 'https://cumming.ucalgary.ca/sites/default/files/styles/ucws_hero_cta_50_50_desktop/public/2023-05/IMG_0376.webp?h=53687040&itok=KoidcjLv', alt: 'merge-image'}
+image: {src: 'https://cumming.ucalgary.ca/sites/default/files/styles/ucws_hero_cta_50_50_desktop/public/2023-05/IMG_0376.JPG?h=53687040&itok=KoidcjLv', alt: 'merge-image'}
 tags: ['cru', 'chi', 'cumming']
 ---
 
