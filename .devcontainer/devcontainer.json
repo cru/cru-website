@@ -1,9 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
 {
-  "name": "static-template",
+  "name": "cru-website",
   "image": "node:lts",
-  "forwardPorts": [4321],
+  "forwardPorts": [
+    4321
+  ],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -15,7 +17,7 @@
     }
   },
   "mounts": [
-    "source=node_modules,target=${containerWorkspaceFolder}/node_modules/.tmp,type=volume"
+    "source=cru-website-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
   ],
   "postCreateCommand": "yarn install"
 }
