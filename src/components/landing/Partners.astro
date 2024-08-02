@@ -2,7 +2,6 @@
 import { Picture } from 'astro:assets'
 import csmLogo from '../../assets/partners/csm.png'
 import ahsLogo from '../../assets/partners/ahs.png'
-import impactLogo from '../../assets/partners/impact.png'
 import redcapLogo from '../../assets/partners/redcap.png'
 
 interface Props {}
@@ -41,17 +40,6 @@ const {} = Astro.props
       formats={['avif', 'webp']}
       height={100}
       alt='redcap-logo'
-      class='contrast-0 transition hover:contrast-100'
-    />
-  </div>
-  <div
-    class='rounded-xl border border-gray-200 bg-white bg-opacity-5 py-2 px-4 hover:bg-opacity-10'
-  >
-    <Picture
-      src={impactLogo}
-      formats={['avif', 'webp']}
-      height={100}
-      alt='impact-logo'
       class='contrast-0 transition hover:contrast-100'
     />
   </div>
