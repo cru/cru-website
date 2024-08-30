@@ -2,6 +2,7 @@
 import { Picture } from 'astro:assets'
 import logoImage from '../assets/logo.png'
 import uofcLogo from '../assets/partners/uofc.png'
+import chiLogo from '../assets/partners/chi.png'
 import ctaImage from '../assets/cta.svg'
 import Button from './ui/Button.astro'
 import ExternalLink from './ui/ExternalLink.astro'
@@ -69,6 +70,18 @@ const {} = Astro.props
                 alt='uofc-logo'
                 class='h-7 w-auto'
               />
+              <div class='flex space-x-1'>
+                <Picture
+                  src={chiLogo}
+                  formats={['avif', 'webp']}
+                  width={150}
+                  alt='logo'
+                  class='h-7 w-auto'
+                />
+                <span class='font-bold text-black text-sm leading-4'
+                  >Centre for Health <br />Informatics</span
+                >
+              </div>
             </div>
             <div class='flex gap-6'>
               <a
@@ -204,7 +217,7 @@ const {} = Astro.props
             </div>
           </div>
           <div class='flex justify-between border-t border-gray-100 py-4 pb-8 md:pl-16'>
-            <span>&copy; Clinical Research Unit {new Date().getFullYear()}</span>
+            <span>&copy; University of Calgary {new Date().getFullYear()}</span>
             <span>All rights reserved</span>
           </div>
         </div>
