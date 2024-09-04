@@ -1,0 +1,23 @@
+---
+draft: false
+title: 'REDCap updated to v14'
+publishDate: 2024-08-15
+description: 'REDCap is updated to version 14 bringing new features and enhancements to elevate the user experience'
+image: {src: '/generic-graphic2.jpg', alt: 'rc-update-image'}
+tags: ['redcap']
+---
+
+We are excited to announce the successful upgrade and validation of REDCap to version 14.0.41 by CRU. This instance of REDCap adheres to the requirements set by Health Canada/ICH GCP for conducting phase 3 and regulatory clinical trials.
+
+The upgrade introduces exciting features and enhancements to elevate the user experience:
+- New feature for MyCap: Longitudinal functionality for MyCap-enabled projects. MyCap is a mobile app designed to enhance participant engagement and retention. This is especially useful for projects with regular participant contact, such as daily or weekly surveys.
+- Enhanced Participant Tracking: The @MC-PARTICIPANT-CODE action tag automatically captures MyCap participant codes, simplifying project management and data collection.
+- New and Rapid Retrieval Caching features: REDCap has changed its backend design, allowing speed and performance to be maintained as projects expand. Administrators can manage cache settings and storage options for optimal performance.
+- Improved data import: REDCap can now handle larger import files by importing them asynchronously in the background.
+- Flexible Data Management: The new "Move Project Data" page empowers administrators to seamlessly transfer project data between tables, optimizing performance with ease.
+- New Project Design import/export options: the Survey Queue and Form Display Logic can now be edited using CSV files, making these features easier to modify for large projects.
+- More date, math, and text functions: REDCap can now identify components from date fields (year, month, day), calculate modulo and exponentials for Euler's number (e), and perform search/replace functions in the text.
+
+If you are considering starting a new REDCap project, please complete our [intake survey](https://redcap.cru.ucalgary.ca/surveys/?s=7L49EPE94D).
+
+For inquiries or concerns, please reach out to us at cru@ucalgary.ca.
