@@ -3,7 +3,7 @@ draft: false
 title: 'REDCap updated to v14'
 publishDate: 2024-08-15
 description: 'REDCap is updated to version 14 bringing new features and enhancements to elevate the user experience'
-image: {src: '/generic-graphic2.jpg', alt: 'rc-update-image'}
+image: {src: '/assets/graphic-7.svg', alt: 'rc-update-image'}
 tags: ['redcap']
 ---
 
