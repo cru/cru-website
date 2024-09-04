@@ -15,7 +15,7 @@ Our approach ensures a secure, semi-automated, and client-friendly data manageme
 
 __1) Project Intake__
 
-The CRU hosts a variety of leading EDC platforms, such as REDCap, REDCap Cloud and DFDiscover. This gives researchers a range of choices and capabilities when building tools dedicated to data capture, databases, and custom data management. We also offer custom software that can be tailored to the needs and workflows of a specific project. In order to determine which services, platform, software bundles or data management support will best suit a client’s needs, we use a stratified and structured intake service. Using this decision model and through consultations with the client, we are able to determine the best approach to building and managing the client’s database.
+The CRU hosts the leading EDC platform, REDCap. This gives researchers a range of choices and capabilities when building tools dedicated to data capture, databases, and custom data management. We also offer custom software that can be tailored to the needs and workflows of a specific project. In order to determine which services, platform, software bundles or data management support will best suit a client’s needs, we use a stratified and structured intake service. Using this decision model and through consultations with the client, we are able to determine the best approach to building and managing the client’s database.
 
 During the intake process, we assess and define:
 <ul class='columns-2'>
