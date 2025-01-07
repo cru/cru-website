@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9d2d86a6-24db-4ee8-97f1-be76e957f775/deploy-status)](https://app.netlify.com/sites/cru-website/deploys)
-
 # cru.ucalgary.ca
 
 Inspired by: https://github.com/eavinti/astro-landing and https://tailus.io/blocks
