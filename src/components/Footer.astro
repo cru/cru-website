@@ -1,7 +1,8 @@
 ---
 import { Picture } from 'astro:assets'
 import logoImage from '../assets/logo.png'
-import uofcLogo from '../assets/partners/csm.png'
+import uofcLogo from '../assets/partners/uofc.png'
+import chiLogo from '../assets/partners/chi.png'
 import ctaImage from '../assets/cta.svg'
 import Button from './ui/Button.astro'
 import ExternalLink from './ui/ExternalLink.astro'
@@ -60,14 +61,21 @@ const {} = Astro.props
                 formats={['avif', 'webp']}
                 height={150}
                 alt='uofc-logo'
-                class='w-48 h-auto'
+                class='w-40 h-auto'
+              />
+              <Picture
+                src={chiLogo}
+                formats={['avif', 'webp']}
+                height={150}
+                alt='logo'
+                class='w-28 h-auto'
               />
               <Picture
                 src={logoImage}
                 formats={['avif', 'webp']}
                 height={150}
                 alt='logo'
-                class='w-16 h-auto'
+                class='w-28 h-auto'
               />
             </div>
             <div class='flex gap-6'>
