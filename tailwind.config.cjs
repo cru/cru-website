@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: 'Ubuntu, ui-serif', // Adds a new `font-display` class
+        display: 'Gotham, sans-serif', // Adds a new `font-display` class
       },
       colors: {
         'brand-primary': {
