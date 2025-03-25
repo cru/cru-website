@@ -1,8 +1,8 @@
 ---
 draft: false
-title: 'REDCap Upgraded to v14.5'
+title: 'REDCap updated to v14.5'
 publishDate: 2025-02-27
-description: 'Successful REDCap Upgrade to v14.5 (Validated) – System Now Operational'
+description: 'Successful REDCap update to v14.5 (Validated) – System Now Operational'
 image: {src: '/assets/graphic-8.svg', alt: 'rc-update-image'}
 tags: ['redcap']
 ---
