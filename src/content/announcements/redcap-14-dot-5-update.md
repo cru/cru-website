@@ -3,7 +3,7 @@ draft: false
 title: 'REDCap updated to v14.5'
 publishDate: 2025-02-27
 description: 'Successful REDCap update to v14.5 (Validated) – System Now Operational'
-image: {src: '/assets/graphic-8.svg', alt: 'rc-update-image'}
+image: { src: '/assets/graphic-8.svg', alt: 'rc-update-image' }
 tags: ['redcap']
 ---
 

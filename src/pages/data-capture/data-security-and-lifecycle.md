@@ -13,11 +13,12 @@ Our approach ensures a secure, semi-automated, and client-friendly data manageme
 
 <div class="pt-4"></div>
 
-__1) Project Intake__
+**1) Project Intake**
 
 The CHI hosts the leading EDC platform, REDCap. This gives researchers a range of choices and capabilities when building tools dedicated to data capture, databases, and custom data management. We also offer custom software that can be tailored to the needs and workflows of a specific project. In order to determine which services, platform, software bundles or data management support will best suit a client’s needs, we use a stratified and structured intake service. Using this decision model and through consultations with the client, we are able to determine the best approach to building and managing the client’s database.
 
 During the intake process, we assess and define:
+
 <ul class='columns-2'>
     <li>Trial type and phase</li>
     <li>Study design</li>
@@ -49,6 +50,7 @@ During the intake process, we assess and define:
 We will work with you to understand your data collection needs, and assess the parameters and controls needed to manage your research data. We will then establish an agreement with you to provide clarity and assurance.
 
 Key considerations include:
+
 - The end date of data collection, and expected total volume of data to be collected and stored
 - How and where the collected data will be stored and backed up
 - Privacy, confidentiality and intellectual property requirements
@@ -58,7 +60,7 @@ Key considerations include:
 
 <div class="pt-4"></div>
 
-__2) Data Setup & Collection__
+**2) Data Setup & Collection**
 
 Once a data collection platform has been agreed upon and the intake process has been completed, we will work in collaboration with the client to design and build the project and data management application services according to their standards and requirements. This process can look different across the various platforms; however, we adhere to quality assurance and testing policies in order to guarantee functional and effective data collection and management.
 
@@ -66,11 +68,12 @@ To safeguard the data collection process, study data system access will only be 
 
 <div class="pt-4"></div>
 
-__3) Data Storing & Handling__
+**3) Data Storing & Handling**
 
 The CHI uses a variety of data storage services, including perimeter networks and double screened subnetworks, and logical and physical separation of data and application access. In order to determine the best storage location for a client’s data, we classify the data according to the University of Calgary’s security policies and data classification levels. Based on this classification, we will consult with the client to create an active data storage plan.
 
 Our active data storage plans are policy driven and include the following considerations:
+
 - Where requested, cloud computing platforms or managed research compute services can be leveraged or embedded in data pipelines.
 - If data is highly confidential (e.g., participant or patient identifiable), greater precautions are taken, and an agreement will be established with the client to ensure that a secured data storage and computing platform is used.
 - Sensitive data can be VPN disclosed and platform access is regularly scanned for leaks and holes.
@@ -82,9 +85,10 @@ We can also help support the client in establishing the most suitable strategies
 
 <div class="pt-4"></div>
 
-__4) Data Analysis__
+**4) Data Analysis**
 
 If requested, the CHI can provide the following additional support for clinical trials and observational studies:
+
 - Consultation with clients about their research project to help create statistical analysis plans and documentation for funding applications.
 - Statistical analysis for health research projects.
 - Professional writing of the methods and results sections of manuscripts.
@@ -94,7 +98,7 @@ If requested, the CHI can provide the following additional support for clinical 
 
 <div class="pt-4"></div>
 
-__5) Data Backup & Archive__
+**5) Data Backup & Archive**
 
 We apply industry standard data backups and redundancy. Data backups can be specified and completed according to the client’s needs. This includes how and when the backups are performed, and where the backups are stored. Periodic backups can be executed at the client’s preference, whether full, differential or incremental, and restrictions can be put in place to control who has access to this data.
 
@@ -104,7 +108,7 @@ We recommend that clients create a self-managed long-term data storage plan and 
 
 <div class="pt-4"></div>
 
-__6) Project Close-out & Data Purging__
+**6) Project Close-out & Data Purging**
 
 Project close-out procedures will be performed prior to database locking in order to verify the integrity and completion of the database. These procedures involve a series of controlled checks including, but not limited to, checking that all CRFs have been entered, manual reviews have been completed, the project data are consistent with specifications in the project dictionary, and other processes. At project completion, we provide your data in a formal sign off, according to Standard Operating Procedures for the CHI. If requested, project data will be snapshotted and encrypted for up to one year after project closure.
 
