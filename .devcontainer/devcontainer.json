@@ -12,6 +12,7 @@
         "ecmel.vscode-html-css",
         "bradlc.vscode-tailwindcss",
         "astro-build.astro-vscode",
+        "esbenp.prettier-vscode",
         "unifiedjs.vscode-mdx"
       ]
     }
