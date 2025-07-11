@@ -12,8 +12,8 @@ const { href, arrow = true, className = '', ...attrs } = Astro.props
 
 <a
   href={href}
-  target='_blank'
-  rel='noopener noreferrer'
+  target="_blank"
+  rel="noopener noreferrer"
   class={`cursor-pointer text-brand-primary-500 ${
     arrow && "after:content-['_↗']"
   } ${className}`}

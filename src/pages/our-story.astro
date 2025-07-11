@@ -6,20 +6,20 @@ import Layout from '../layouts/Layout.astro'
 import ExternalLink from '../components/ui/ExternalLink.astro'
 ---
 
-<Layout title='Our Story'>
-  <div class='space-y-32 mx-auto'>
-    <div class='space-y-12'>
+<Layout title="Our Story">
+  <div class="space-y-32 mx-auto">
+    <div class="space-y-12">
       <h1>Our Story</h1>
-      <p class='text-lg leading-8'>
+      <p class="text-lg leading-8">
         The Clinical Research Unit at the University of Calgary has a rich history rooted
         in its origins at the Hotchkiss Brain Institute (HBI) and later becoming a key
         part of the Cumming School of Medicine. With over 18 years of experience
         supporting a plethora of study types, we have the expertise to provide data
         management guidance every step of the way.
       </p>
-      <section class='space-y-8'>
+      <section class="space-y-8">
         <div>
-          <span class='text-brand-primary-500 text-sm'> 2006 </span>
+          <span class="text-brand-primary-500 text-sm"> 2006 </span>
           <h4>Origins at the Hotchkiss Brain Institute</h4>
         </div>
         <ul>
@@ -40,7 +40,7 @@ import ExternalLink from '../components/ui/ExternalLink.astro'
         </ul>
 
         <div>
-          <span class='text-brand-primary-500 text-sm'> 2014</span>
+          <span class="text-brand-primary-500 text-sm"> 2014</span>
           <h4>Transition to the Cumming School of Medicine</h4>
         </div>
         <ul>
@@ -61,10 +61,10 @@ import ExternalLink from '../components/ui/ExternalLink.astro'
         </ul>
 
         <div>
-          <span class='text-brand-primary-500 text-sm'> 2024</span>
+          <span class="text-brand-primary-500 text-sm"> 2024</span>
           <h4>
             Merger with <ExternalLink
-              href='https://cumming.ucalgary.ca/centres/centre-health-informatics'
+              href="https://cumming.ucalgary.ca/centres/centre-health-informatics"
               >Centre for Health Informatics</ExternalLink
             >
           </h4>
@@ -88,7 +88,7 @@ import ExternalLink from '../components/ui/ExternalLink.astro'
         </ul>
 
         <div>
-          <span class='text-brand-primary-500 text-sm'> Today </span>
+          <span class="text-brand-primary-500 text-sm"> Today </span>
           <h4>Current role</h4>
         </div>
         <p>
@@ -101,16 +101,16 @@ import ExternalLink from '../components/ui/ExternalLink.astro'
       </section>
     </div>
 
-    <section class='space-y-8'>
+    <section class="space-y-8">
       <h2>Why work with us?</h2>
-      <div class='space-y-8 text-left'>
-        <section class='space-y-2'>
-          <div class='flex items-center space-x-4'>
+      <div class="space-y-8 text-left">
+        <section class="space-y-2">
+          <div class="flex items-center space-x-4">
             <div
-              aria-hidden='true'
-              class='flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary-50 dark:bg-gray-700'
+              aria-hidden="true"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary-50 dark:bg-gray-700"
             >
-              <span class='font-bold text-brand-primary-600 dark:text-brand-primary-300'
+              <span class="font-bold text-brand-primary-600 dark:text-brand-primary-300"
                 >1</span
               >
             </div>
@@ -125,13 +125,13 @@ import ExternalLink from '../components/ui/ExternalLink.astro'
             reliable, and efficient services tailored to your specific requirements.
           </p>
         </section>
-        <section class='space-y-2'>
-          <div class='flex items-center space-x-4'>
+        <section class="space-y-2">
+          <div class="flex items-center space-x-4">
             <div
-              aria-hidden='true'
-              class='flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary-50 dark:bg-gray-700'
+              aria-hidden="true"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary-50 dark:bg-gray-700"
             >
-              <span class='font-bold text-brand-primary-600 dark:text-brand-primary-300'
+              <span class="font-bold text-brand-primary-600 dark:text-brand-primary-300"
                 >2</span
               >
             </div>
@@ -145,13 +145,13 @@ import ExternalLink from '../components/ui/ExternalLink.astro'
             project, delivering high-quality results while maintaining affordability.
           </p>
         </section>
-        <section class='space-y-2'>
-          <div class='flex items-center space-x-4'>
+        <section class="space-y-2">
+          <div class="flex items-center space-x-4">
             <div
-              aria-hidden='true'
-              class='flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary-50 dark:bg-gray-700'
+              aria-hidden="true"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary-50 dark:bg-gray-700"
             >
-              <span class='font-bold text-brand-primary-600 dark:text-brand-primary-300'
+              <span class="font-bold text-brand-primary-600 dark:text-brand-primary-300"
                 >3</span
               >
             </div>
@@ -167,48 +167,48 @@ import ExternalLink from '../components/ui/ExternalLink.astro'
       </div>
     </section>
 
-    <section class='space-y-16 text-center'>
+    <section class="space-y-16 text-center">
       <h2>Meet our leadership</h2>
-      <div class='grid gap-28 py-20 md:grid-cols-2 md:gap-12'>
-        <div class='group space-y-8 border-t-4 border-gray-100'>
-          <div class='mx-auto -mt-16 h-32 w-32 rotate-45 overflow-hidden rounded-[2rem]'>
+      <div class="grid gap-28 py-20 md:grid-cols-2 md:gap-12">
+        <div class="group space-y-8 border-t-4 border-gray-100">
+          <div class="mx-auto -mt-16 h-32 w-32 rotate-45 overflow-hidden rounded-[2rem]">
             <Picture
               src={directorPortrait}
               formats={['avif', 'webp']}
               height={500}
-              alt='director-portrait'
-              class='mx-auto h-full w-full -rotate-45 scale-125 object-cover transition duration-300 group-hover:scale-[1.4]'
+              alt="director-portrait"
+              class="mx-auto h-full w-full -rotate-45 scale-125 object-cover transition duration-300 group-hover:scale-[1.4]"
             />
           </div>
-          <div class='space-y-4 text-center'>
+          <div class="space-y-4 text-center">
             <div>
-              <h4 class='text-2xl text-gray-700'>Tyler Williamson</h4>
-              <span class='block text-sm text-gray-500'>Director</span>
+              <h4 class="text-2xl text-gray-700">Tyler Williamson</h4>
+              <span class="block text-sm text-gray-500">Director</span>
             </div>
-            <ExternalLink href='mailto:tyler.williamson@ucalgary.ca' className='text-xs'>
+            <ExternalLink href="mailto:tyler.williamson@ucalgary.ca" className="text-xs">
               Get in touch
             </ExternalLink>
           </div>
         </div>
 
-        <div class='group space-y-8 border-t-4 border-gray-100'>
-          <div class='mx-auto -mt-16 h-32 w-32 rotate-45 overflow-hidden rounded-[2rem]'>
+        <div class="group space-y-8 border-t-4 border-gray-100">
+          <div class="mx-auto -mt-16 h-32 w-32 rotate-45 overflow-hidden rounded-[2rem]">
             <Picture
               src={technicalPortrait}
               formats={['avif', 'webp']}
               height={500}
-              alt='technical-lead-portrait'
-              class='mx-auto h-full w-full -rotate-45 scale-125 object-cover transition duration-300 group-hover:scale-[1.4]'
+              alt="technical-lead-portrait"
+              class="mx-auto h-full w-full -rotate-45 scale-125 object-cover transition duration-300 group-hover:scale-[1.4]"
             />
           </div>
-          <div class='space-y-4 text-center'>
+          <div class="space-y-4 text-center">
             <div>
-              <h4 class='text-2xl text-gray-700'>Lennard Kuijten</h4>
-              <span class='block text-sm text-gray-500'
+              <h4 class="text-2xl text-gray-700">Lennard Kuijten</h4>
+              <span class="block text-sm text-gray-500"
                 >Technical Solutions and Innovation</span
               >
             </div>
-            <ExternalLink href='mailto:lennard.kuijten@ucalgary.ca' className='text-xs'>
+            <ExternalLink href="mailto:lennard.kuijten@ucalgary.ca" className="text-xs">
               Get in touch
             </ExternalLink>
           </div>

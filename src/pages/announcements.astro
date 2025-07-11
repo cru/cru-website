@@ -15,40 +15,40 @@ announcementEntries.sort(function (a, b) {
 })
 ---
 
-<Layout title='Announcements'>
+<Layout title="Announcements">
   <h1>Announcements</h1>
-  <div class='py-20'>
-    <ul class='grid gap-16 mx-auto list-none'>
+  <div class="py-20">
+    <ul class="grid gap-16 mx-auto list-none">
       {
         announcementEntries.map((announcement, index) => (
           <li>
             <InternalLink
               href={`/announcements/${announcement.slug}`}
-              className='group no-underline'
+              className="group no-underline"
             >
-              <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
+              <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
                 {announcement.data.image?.src && (
                   <Image
                     src={announcement.data.image.src}
                     alt={announcement.data.image.alt}
                     width={800}
                     height={400}
-                    class='w-full h-80 object-cover rounded-3xl shadow-lg'
+                    class="w-full h-80 object-cover rounded-3xl shadow-lg"
                   />
                 )}
                 <div>
                   <time
-                    class='text-gray-400'
+                    class="text-gray-400"
                     datetime={announcement.data.publishDate.toISOString()}
                   >
                     {announcement.data.publishDate.toDateString()}
                   </time>
 
-                  <h2 class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'>
+                  <h2 class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500">
                     {announcement.data.title}
                   </h2>
 
-                  <div class='flex gap-2 mt-3'>
+                  <div class="flex gap-2 mt-3">
                     <p>{announcement.data.description}</p>
                   </div>
                 </div>

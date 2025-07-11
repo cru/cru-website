@@ -29,31 +29,31 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
 import ExternalLink from '../../components/ui/ExternalLink.astro'
 ---
 
-<Layout title='Custom Web Apps'>
-  <div class='space-y-32'>
-    <div class='lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16'>
+<Layout title="Custom Web Apps">
+  <div class="space-y-32">
+    <div class="lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16">
       <!-- Product image -->
-      <div class='lg:col-span-4 lg:row-end-1'>
-        <div class='aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100'>
+      <div class="lg:col-span-4 lg:row-end-1">
+        <div class="aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
           <Picture
             src={webappImage}
             formats={['avif', 'webp']}
             height={800}
-            alt='web-apps'
-            class='object-cover object-center bg-repeat'
+            alt="web-apps"
+            class="object-cover object-center bg-repeat"
           />
         </div>
       </div>
 
       <!-- Product details -->
       <div
-        class='mx-auto max-w-2xl space-y-10 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none'
+        class="mx-auto max-w-2xl space-y-10 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none"
       >
-        <div class='flex flex-col-reverse'>
+        <div class="flex flex-col-reverse">
           <div>
             <h1>Web apps</h1>
-            <h2 id='information-heading' class='sr-only'>Product information</h2>
-            <p class='mt-1 text-sm text-gray-600'>
+            <h2 id="information-heading" class="sr-only">Product information</h2>
+            <p class="mt-1 text-sm text-gray-600">
               Custom applications developed in-house
             </p>
           </div>
@@ -64,102 +64,102 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           transform your vision into a functional and user-friendly platform that
           simplifies your research processes.
         </p>
-        <div class='grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-1'>
-          <Button primary block href='https://redcap.ucalgary.ca/surveys/?s=7L49EPE94D'>
+        <div class="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-1">
+          <Button primary block href="https://redcap.ucalgary.ca/surveys/?s=7L49EPE94D">
             Get started today
           </Button>
         </div>
 
-        <div class='border-t border-gray-900/10 pt-8'>
+        <div class="border-t border-gray-900/10 pt-8">
           <h4>The process</h4>
-          <div class='prose prose-sm mt-4 text-gray-600'>
-            <ul role='list' class='space-y-6'>
-              <li class='relative flex gap-x-4'>
-                <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
-                  <div class='w-px bg-gray-200'></div>
+          <div class="prose prose-sm mt-4 text-gray-600">
+            <ul role="list" class="space-y-6">
+              <li class="relative flex gap-x-4">
+                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                  <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
-                  class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+                  class="relative flex h-6 w-6 flex-none items-center justify-center bg-white"
                 >
-                  <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                  <div class="h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300">
                   </div>
                 </div>
-                <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
-                  <span class='font-medium text-gray-900'>Intake</span>: lets sit down and
+                <p class="flex-auto py-0.5 text-xs leading-5 text-gray-600">
+                  <span class="font-medium text-gray-900">Intake</span>: lets sit down and
                   discuss your project requirements
                 </p>
               </li>
 
-              <li class='relative flex gap-x-4'>
-                <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
-                  <div class='w-px bg-gray-200'></div>
+              <li class="relative flex gap-x-4">
+                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                  <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
-                  class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+                  class="relative flex h-6 w-6 flex-none items-center justify-center bg-white"
                 >
-                  <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                  <div class="h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300">
                   </div>
                 </div>
-                <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
-                  <span class='font-medium text-gray-900'>Scoping</span>: we'll put
+                <p class="flex-auto py-0.5 text-xs leading-5 text-gray-600">
+                  <span class="font-medium text-gray-900">Scoping</span>: we'll put
                   together a plan that can make your vision a reality
                 </p>
               </li>
-              <li class='relative flex gap-x-4'>
-                <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
-                  <div class='w-px bg-gray-200'></div>
+              <li class="relative flex gap-x-4">
+                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                  <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
-                  class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+                  class="relative flex h-6 w-6 flex-none items-center justify-center bg-white"
                 >
-                  <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                  <div class="h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300">
                   </div>
                 </div>
-                <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
-                  <span class='font-medium text-gray-900'>Development</span>: our team
+                <p class="flex-auto py-0.5 text-xs leading-5 text-gray-600">
+                  <span class="font-medium text-gray-900">Development</span>: our team
                   will get to work building your project from the ground up
                 </p>
               </li>
-              <li class='relative flex gap-x-4'>
-                <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
-                  <div class='w-px bg-gray-200'></div>
+              <li class="relative flex gap-x-4">
+                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                  <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
-                  class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+                  class="relative flex h-6 w-6 flex-none items-center justify-center bg-white"
                 >
-                  <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                  <div class="h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300">
                   </div>
                 </div>
-                <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
-                  <span class='font-medium text-gray-900'>Testing</span>: we want you
+                <p class="flex-auto py-0.5 text-xs leading-5 text-gray-600">
+                  <span class="font-medium text-gray-900">Testing</span>: we want you
                   involved every step of the way, you will have access to test during the
                   developemnt phase
                 </p>
               </li>
-              <li class='relative flex gap-x-4'>
-                <div class='absolute left-0 top-0 flex w-6 justify-center -bottom-6'>
-                  <div class='w-px bg-gray-200'></div>
+              <li class="relative flex gap-x-4">
+                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                  <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
-                  class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+                  class="relative flex h-6 w-6 flex-none items-center justify-center bg-white"
                 >
-                  <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                  <div class="h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300">
                   </div>
                 </div>
-                <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
-                  <span class='font-medium text-gray-900'>Deployment</span>: we'll take
+                <p class="flex-auto py-0.5 text-xs leading-5 text-gray-600">
+                  <span class="font-medium text-gray-900">Deployment</span>: we'll take
                   care of the details so you don't have to
                 </p>
               </li>
-              <li class='relative flex gap-x-4'>
+              <li class="relative flex gap-x-4">
                 <div
-                  class='relative flex h-6 w-6 flex-none items-center justify-center bg-white'
+                  class="relative flex h-6 w-6 flex-none items-center justify-center bg-white"
                 >
-                  <div class='h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300'>
+                  <div class="h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300">
                   </div>
                 </div>
-                <p class='flex-auto py-0.5 text-xs leading-5 text-gray-600'>
-                  <span class='font-medium text-gray-900'>Go live</span>! your site will
+                <p class="flex-auto py-0.5 text-xs leading-5 text-gray-600">
+                  <span class="font-medium text-gray-900">Go live</span>! your site will
                   be published to the web making it available for you and your users
                 </p>
               </li>
@@ -169,16 +169,16 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
       </div>
 
       <!-- FAQ -->
-      <div class='lg:col-span-4 divide-y divide-gray-900/10'>
+      <div class="lg:col-span-4 divide-y divide-gray-900/10">
         <h4>Frequently asked questions</h4>
-        <dl class='mt-10 space-y-8 divide-y divide-gray-900/10'>
-          <div class='pt-8 lg:grid lg:grid-cols-12 lg:gap-8'>
-            <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+        <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
+          <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+            <dt class="text-sm font-semibold leading-7 lg:col-span-5">
               We want to run analysis on our data, can you help choose the right data
               model?
             </dt>
-            <dd class='mt-4 lg:col-span-7 lg:mt-0'>
-              <p class='text-sm leading-7 text-gray-600'>
+            <dd class="mt-4 lg:col-span-7 lg:mt-0">
+              <p class="text-sm leading-7 text-gray-600">
                 We understand that successful analysis of data is what brings research
                 results. Our data team is able to advise and guide you towards optimal
                 storage decisions; SQL, delimited, document, tag values, fixed width, or
@@ -186,12 +186,12 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
               </p>
             </dd>
           </div>
-          <div class='pt-8 lg:grid lg:grid-cols-12 lg:gap-8'>
-            <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+          <div class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8">
+            <dt class="text-sm font-semibold leading-7 lg:col-span-5">
               I need to integrate my data with outside systems, can you do that?
             </dt>
-            <dd class='mt-4 lg:col-span-7 lg:mt-0'>
-              <p class='text-sm leading-7 text-gray-600'>
+            <dd class="mt-4 lg:col-span-7 lg:mt-0">
+              <p class="text-sm leading-7 text-gray-600">
                 We recognize that research data can come from varied sources and on
                 occasion need to be accumulated into a centralized repository. The
                 middleware team is able to extract, transport, and deliver data from any
@@ -204,74 +204,74 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
       </div>
     </div>
 
-    <section class='space-y-16'>
-      <div class='mx-auto max-w-2xl text-center lg:max-w-4xl'>
-        <SectionHeading heading='See what we have accomplished' sup='Explore our work'>
+    <section class="space-y-16">
+      <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
+        <SectionHeading heading="See what we have accomplished" sup="Explore our work">
           <p>
             Over the years we have worked on some great projects, here are just a few of
             the highlights
           </p>
         </SectionHeading>
       </div>
-      <ul class='grid gap-16 mx-auto list-none'>
+      <ul class="grid gap-16 mx-auto list-none">
         <li>
-          <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
-            <div class='grid grid-cols-3 gap-2'>
+          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+            <div class="grid grid-cols-3 gap-2">
               <Picture
                 src={dxImage1}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen1'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen1"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={dxImage2}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen2'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen2"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={dxImage3}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen3'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen3"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={dxImage4}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen4'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen4"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={dxImage5}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen5'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen5"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={dxImage6}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen6'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen6"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
             </div>
             <div>
-              <ExternalLink href='https://dataxplor.researchcalgary.ca/'>
+              <ExternalLink href="https://dataxplor.researchcalgary.ca/">
                 https://dataxplor.researchcalgary.ca/
               </ExternalLink>
               <h2
-                class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
+                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
               >
                 DataXplor
               </h2>
 
-              <div class='flex gap-2 mt-3'>
-                <div class='divide-y'>
+              <div class="flex gap-2 mt-3">
+                <div class="divide-y">
                   <p>
                     A custom platform that offers a suite of data tools to help you better
                     understand and improve your data. It can be challenging to understand
@@ -279,13 +279,13 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                     easy-to-use tools empower you to interact with, visualize, and
                     interpret your data.
                   </p>
-                  <dl class='mt-10 space-y-8 divide-y divide-gray-900/10'>
-                    <div class='pt-2 lg:grid lg:grid-cols-12 lg:gap-8'>
-                      <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+                  <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
+                    <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
+                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
                         Technologies
                       </dt>
-                      <dd class='mt-4 lg:col-span-7 lg:mt-0'>
-                        <p class='text-sm leading-7 text-gray-600'>
+                      <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                        <p class="text-sm leading-7 text-gray-600">
                           Next.js, FastAPI, Tailwind
                         </p>
                       </dd>
@@ -298,27 +298,27 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
         </li>
 
         <li>
-          <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
+          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
             <Picture
               src={erpImage}
               formats={['avif', 'webp']}
               height={300}
-              alt='erp-screen'
-              class='w-full rounded-lg shadow-sm'
+              alt="erp-screen"
+              class="w-full rounded-lg shadow-sm"
             />
 
             <div>
-              <ExternalLink href='https://erp.researchcalgary.ca/'>
+              <ExternalLink href="https://erp.researchcalgary.ca/">
                 https://erp.researchcalgary.ca/
               </ExternalLink>
               <h2
-                class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
+                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
               >
                 ERP
               </h2>
 
-              <div class='flex gap-2 mt-3'>
-                <div class='divide-y'>
+              <div class="flex gap-2 mt-3">
+                <div class="divide-y">
                   <p>
                     A custom enterprise resource planning platform designed specifically
                     for the Centre for Health Informatics. This system optimizes the
@@ -326,13 +326,13 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                     and staff time management, delivering a seamless solution tailored to
                     our unique operational needs.
                   </p>
-                  <dl class='mt-10 space-y-8 divide-y divide-gray-900/10'>
-                    <div class='pt-2 lg:grid lg:grid-cols-12 lg:gap-8'>
-                      <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+                  <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
+                    <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
+                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
                         Technologies
                       </dt>
-                      <dd class='mt-4 lg:col-span-7 lg:mt-0'>
-                        <p class='text-sm leading-7 text-gray-600'>
+                      <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                        <p class="text-sm leading-7 text-gray-600">
                           React, Flask, Postgres
                         </p>
                       </dd>
@@ -345,75 +345,75 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
         </li>
 
         <li>
-          <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
-            <div class='grid grid-cols-3 gap-2'>
+          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+            <div class="grid grid-cols-3 gap-2">
               <Picture
                 src={spineImage1}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='spine-screen1'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="spine-screen1"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={spineImage2}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='spine-screen2'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="spine-screen2"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={spineImage3}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='spine-screen3'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="spine-screen3"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={spineImage4}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='spine-screen4'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="spine-screen4"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={spineImage5}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='spine-screen5'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="spine-screen5"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={spineImage6}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='spine-screen6'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="spine-screen6"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
             </div>
             <div>
-              <ExternalLink href='https://calgaryspine.ca/'>
+              <ExternalLink href="https://calgaryspine.ca/">
                 https://calgaryspine.ca/
               </ExternalLink>
               <h2
-                class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
+                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
               >
                 Calgary Spine Program
               </h2>
 
-              <div class='flex gap-2 mt-3'>
-                <div class='divide-y'>
+              <div class="flex gap-2 mt-3">
+                <div class="divide-y">
                   <p>
                     A custom platform developed from the ground-up to support the Calgary
                     Spine Program in its initiative to reduce wait times and improve
                     outcomes.
                   </p>
-                  <dl class='mt-10 space-y-8 divide-y divide-gray-900/10'>
-                    <div class='pt-2 lg:grid lg:grid-cols-12 lg:gap-8'>
-                      <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+                  <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
+                    <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
+                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
                         Technologies
                       </dt>
-                      <dd class='mt-4 lg:col-span-7 lg:mt-0'>
-                        <p class='text-sm leading-7 text-gray-600'>
+                      <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                        <p class="text-sm leading-7 text-gray-600">
                           React, Flask, MongoDB, Postgres
                         </p>
                       </dd>
@@ -425,77 +425,77 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           </div>
         </li>
         <li>
-          <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
-            <div class='grid grid-cols-3 gap-2'>
+          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+            <div class="grid grid-cols-3 gap-2">
               <Picture
                 src={recoverImage1}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen1'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen1"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={recoverImage2}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen2'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen2"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={recoverImage3}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen3'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen3"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={recoverImage4}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen3'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen3"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={recoverImage5}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen3'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen3"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
               <Picture
                 src={recoverImage6}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen3'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover'
+                alt="dx-screen3"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-cover"
               />
             </div>
 
             <div>
-              <ExternalLink href='https://recoverconcussion.ca/'>
+              <ExternalLink href="https://recoverconcussion.ca/">
                 https://recoverconcussion.ca/
               </ExternalLink>
               <h2
-                class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
+                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
               >
                 RECOVER Concussion
               </h2>
 
-              <div class='flex gap-2 mt-3'>
-                <div class='divide-y'>
+              <div class="flex gap-2 mt-3">
+                <div class="divide-y">
                   <p>
                     Developed as a web app to provide a customized user interface targeted
                     at youths who have suffered a concussion. This app allowed
                     participants to consume targeted educational information and submit
                     recovery data without having to interface with REDCap directly.
                   </p>
-                  <dl class='mt-10 space-y-8 divide-y divide-gray-900/10'>
-                    <div class='pt-2 lg:grid lg:grid-cols-12 lg:gap-8'>
-                      <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+                  <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
+                    <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
+                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
                         Technologies
                       </dt>
-                      <dd class='mt-4 lg:col-span-7 lg:mt-0'>
-                        <p class='text-sm leading-7 text-gray-600'>
+                      <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                        <p class="text-sm leading-7 text-gray-600">
                           React, Flask, Postgres, REDCap API
                         </p>
                       </dd>
@@ -507,40 +507,40 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           </div>
         </li>
         <li>
-          <div class='grid md:grid-cols-2 gap-5 md:gap-10 items-center'>
-            <div class='grid grid-cols-3 gap-2'>
+          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+            <div class="grid grid-cols-3 gap-2">
               <Picture
                 src={evolveImage}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen1'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-contain'
+                alt="dx-screen1"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-contain"
               />
               <Picture
                 src={partumImage}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen2'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-contain'
+                alt="dx-screen2"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-contain"
               />
               <Picture
                 src={tempo2Image}
                 formats={['avif', 'webp']}
                 height={300}
-                alt='dx-screen3'
-                class='w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-contain'
+                alt="dx-screen3"
+                class="w-full h-[100px] rounded-lg shadow-sm border border-gray-100 object-contain"
               />
             </div>
 
             <div>
               <h2
-                class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'
+                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
               >
                 Study Manager
               </h2>
 
-              <div class='flex gap-2 mt-3'>
-                <div class='divide-y'>
+              <div class="flex gap-2 mt-3">
+                <div class="divide-y">
                   <p>
                     A series of custom web applications designed to streamline the
                     management of multi-site randomized clinical trials. Study Manager
@@ -549,13 +549,13 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                     drug management, certificate handling, site coordination, user
                     management, and reporting.
                   </p>
-                  <dl class='mt-10 space-y-8 divide-y divide-gray-900/10'>
-                    <div class='pt-2 lg:grid lg:grid-cols-12 lg:gap-8'>
-                      <dt class='text-sm font-semibold leading-7 lg:col-span-5'>
+                  <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
+                    <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
+                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
                         Technologies
                       </dt>
-                      <dd class='mt-4 lg:col-span-7 lg:mt-0'>
-                        <p class='text-sm leading-7 text-gray-600'>Django, MySQL</p>
+                      <dd class="mt-4 lg:col-span-7 lg:mt-0">
+                        <p class="text-sm leading-7 text-gray-600">Django, MySQL</p>
                       </dd>
                     </div>
                   </dl>

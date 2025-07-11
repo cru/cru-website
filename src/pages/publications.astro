@@ -14,26 +14,26 @@ publicationEntries.sort(function (a, b) {
 })
 ---
 
-<Layout title='Publications'>
+<Layout title="Publications">
   <h1>Publications</h1>
-  <div class='py-20'>
-    <ul class='grid gap-16 mx-auto list-none'>
+  <div class="py-20">
+    <ul class="grid gap-16 mx-auto list-none">
       {
         publicationEntries.map((publication, index) => (
           <li>
             <ExternalLink
               href={publication.data.link}
               arrow={false}
-              className='group no-underline'
+              className="group no-underline"
             >
               <div>
                 <time
-                  class='text-gray-400'
+                  class="text-gray-400"
                   datetime={publication.data.publishDate.toISOString()}
                 >
                   {publication.data.publishDate.toDateString()}
                 </time>
-                <h2 class='text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500'>
+                <h2 class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500">
                   {publication.data.title}
                 </h2>
                 <p>{publication.data.authors?.join(', ')}</p>

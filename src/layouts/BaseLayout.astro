@@ -12,29 +12,29 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html class='h-full bg-gray-50' lang='en'>
+<html class="h-full bg-gray-50" lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
-    <meta name='generator' content={Astro.generator} />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
     <meta
-      name='description'
-      content='The Centre for Health Informatics is on a mission is to simplify end-to-end research data processes'
+      name="description"
+      content="The Centre for Health Informatics is on a mission is to simplify end-to-end research data processes"
     />
     <title>{title} | chi</title>
 
     <ClientRouter />
   </head>
-  <body class='h-full'>
-    <div class='bg-white'>
+  <body class="h-full">
+    <div class="bg-white">
       <Navbar />
 
-      <main class='px-4 pb-24 sm:px-6 sm:pb-32'>
+      <main class="px-4 pb-24 sm:px-6 sm:pb-32">
         <slot />
       </main>
 
-      <div class='mx-auto mt-80'>
+      <div class="mx-auto mt-80">
         <Footer />
       </div>
     </div>
