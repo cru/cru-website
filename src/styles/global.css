@@ -1,13 +1,59 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@font-face {
-  font-family: 'Gotham';
-  src: url('/assets/fonts/Gotham-Black.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+@theme {
+  --font-display: Gotham, sans-serif;
+
+  --color-brand-primary-50: var(--color-red-50);
+  --color-brand-primary-100: var(--color-red-100);
+  --color-brand-primary-200: var(--color-red-200);
+  --color-brand-primary-300: var(--color-red-300);
+  --color-brand-primary-400: var(--color-red-400);
+  --color-brand-primary-500: #d6001c;
+  --color-brand-primary-600: var(--color-red-600);
+  --color-brand-primary-700: var(--color-red-700);
+  --color-brand-primary-800: var(--color-red-800);
+  --color-brand-primary-900: var(--color-red-900);
+  --color-brand-primary-950: var(--color-red-950);
+
+  --color-brand-secondary-50: var(--color-amber-50);
+  --color-brand-secondary-100: var(--color-amber-100);
+  --color-brand-secondary-200: var(--color-amber-200);
+  --color-brand-secondary-300: var(--color-amber-300);
+  --color-brand-secondary-400: var(--color-amber-400);
+  --color-brand-secondary-500: var(--color-amber-500);
+  --color-brand-secondary-600: var(--color-amber-600);
+  --color-brand-secondary-700: var(--color-amber-700);
+  --color-brand-secondary-800: var(--color-amber-800);
+  --color-brand-secondary-900: var(--color-amber-900);
+  --color-brand-secondary-950: var(--color-amber-950);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer utilities {
+  @font-face {
+    font-family: 'Gotham';
+    src: url('/assets/fonts/Gotham-Black.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
 }
 
 @layer base {
@@ -16,7 +62,7 @@
   h3,
   h4,
   h5 {
-    @apply font-display font-bold leading-10 tracking-tight;
+    @apply font-display font-bold tracking-tight;
   }
   h1 {
     @apply text-3xl md:text-5xl;
