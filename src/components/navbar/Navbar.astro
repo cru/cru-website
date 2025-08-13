@@ -45,7 +45,7 @@ const menuitems = [
 
 <header class="absolute inset-x-0 top-0 z-50">
   <nav
-    class="flex flex-col lg:items-center justify-between p-6 bg-gray-100 lg:flex-row lg:px-8 lg:bg-transparent"
+    class="flex flex-col justify-between bg-gray-100 p-6 lg:flex-row lg:items-center lg:bg-transparent lg:px-8"
   >
     <div class="flex items-center justify-between lg:flex-1">
       <a href="/" class="-m-1.5 p-1.5">
@@ -60,7 +60,7 @@ const menuitems = [
         <h3 class="m-0">CHI</h3>
       </a>
       <div class="flex flex-1 justify-end lg:hidden">
-        <MenuIcon class="w-4 h-4 text-gray-900" />
+        <MenuIcon class="h-4 w-4 text-gray-900" />
       </div>
     </div>
 
@@ -80,11 +80,11 @@ const menuitems = [
               {!item.children && (
                 <a
                   href={item.path}
-                  class="text-sm font-semibold leading-6 text-gray-900 block py-2"
+                  class="block py-2 text-sm leading-6 font-semibold text-gray-900"
                 >
                   <span> {item.title}</span>
                   {item.badge && (
-                    <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-brand-primary-600 rounded-full">
+                    <span class="bg-brand-primary-600 ml-1 animate-pulse rounded-full px-2 py-0.5 text-[10px] font-semibold text-white uppercase">
                       New
                     </span>
                   )}

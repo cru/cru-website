@@ -23,7 +23,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
             formats={['avif', 'webp']}
             height={800}
             alt="web-apps"
-            class="object-cover object-center bg-repeat"
+            class="bg-repeat object-cover object-center"
           />
         </div>
       </div>
@@ -63,7 +63,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           <div class="prose prose-sm mt-4 text-gray-600">
             <ul role="list" class="space-y-6">
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -79,7 +79,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
               </li>
 
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -94,7 +94,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
                 </p>
               </li>
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -109,7 +109,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
                 </p>
               </li>
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -124,7 +124,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
                 </p>
               </li>
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -156,11 +156,11 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
       </div>
 
       <!-- FAQ -->
-      <div class="lg:col-span-4 divide-y divide-gray-900/10">
+      <div class="divide-y divide-gray-900/10 lg:col-span-4">
         <h4 class="py-8">Frequently asked questions</h4>
         <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
           <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-sm font-semibold leading-7 lg:col-span-5">
+            <dt class="text-sm leading-7 font-semibold lg:col-span-5">
               What is an "Educational" site?
             </dt>
             <dd class="mt-4 lg:col-span-7 lg:mt-0">
@@ -173,7 +173,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
             </dd>
           </div>
           <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-sm font-semibold leading-7 lg:col-span-5">
+            <dt class="text-sm leading-7 font-semibold lg:col-span-5">
               How is it different from a "Web App"?
             </dt>
             <dd class="mt-4 lg:col-span-7 lg:mt-0">
@@ -199,8 +199,8 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           </p>
         </SectionHeading>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="relative isolate overflow-hidden rounded-2xl px-8 pb-8 pt-48">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div class="relative isolate overflow-hidden rounded-2xl px-8 pt-48 pb-8">
           <Picture
             src={astroshipImage}
             formats={['avif', 'webp']}
@@ -213,7 +213,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           >
           </div>
           <div
-            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"
           >
           </div>
           <h3 class="text-white">
@@ -228,7 +228,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           </h3>
         </div>
 
-        <div class="relative isolate overflow-hidden rounded-2xl px-8 pb-8 pt-48">
+        <div class="relative isolate overflow-hidden rounded-2xl px-8 pt-48 pb-8">
           <Picture
             src={astrolusImage}
             formats={['avif', 'webp']}
@@ -241,7 +241,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           >
           </div>
           <div
-            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"
           >
           </div>
           <h3 class="text-white">
@@ -256,7 +256,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           </h3>
         </div>
 
-        <div class="relative isolate overflow-hidden rounded-2xl px-8 pb-8 pt-48">
+        <div class="relative isolate overflow-hidden rounded-2xl px-8 pt-48 pb-8">
           <Picture
             src={tailcastImage}
             formats={['avif', 'webp']}
@@ -269,7 +269,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           >
           </div>
           <div
-            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"
           >
           </div>
           <h3 class="text-white">
@@ -284,7 +284,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           </h3>
         </div>
 
-        <div class="relative isolate overflow-hidden rounded-2xl px-8 pb-8 pt-48">
+        <div class="relative isolate overflow-hidden rounded-2xl px-8 pt-48 pb-8">
           <Picture
             src={planetarioImage}
             formats={['avif', 'webp']}
@@ -297,7 +297,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           >
           </div>
           <div
-            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"
           >
           </div>
           <h3 class="text-white">
@@ -312,7 +312,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           </h3>
         </div>
 
-        <div class="relative isolate overflow-hidden rounded-2xl px-8 pb-8 pt-48">
+        <div class="relative isolate overflow-hidden rounded-2xl px-8 pt-48 pb-8">
           <Picture
             src={agencexImage}
             formats={['avif', 'webp']}
@@ -325,7 +325,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           >
           </div>
           <div
-            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"
           >
           </div>
           <h3 class="text-white">
@@ -340,7 +340,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           </h3>
         </div>
 
-        <div class="relative isolate overflow-hidden rounded-2xl px-8 pb-8 pt-48">
+        <div class="relative isolate overflow-hidden rounded-2xl px-8 pt-48 pb-8">
           <Picture
             src={astrowindImage}
             formats={['avif', 'webp']}
@@ -353,7 +353,7 @@ import SectionHeading from '../../components/ui/SectionHeading.astro'
           >
           </div>
           <div
-            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset"
           >
           </div>
           <h3 class="text-white">

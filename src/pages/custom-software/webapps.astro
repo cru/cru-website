@@ -40,7 +40,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
             formats={['avif', 'webp']}
             height={800}
             alt="web-apps"
-            class="object-cover object-center bg-repeat"
+            class="bg-repeat object-cover object-center"
           />
         </div>
       </div>
@@ -75,7 +75,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           <div class="prose prose-sm mt-4 text-gray-600">
             <ul role="list" class="space-y-6">
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -91,7 +91,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
               </li>
 
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -106,7 +106,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                 </p>
               </li>
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -121,7 +121,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                 </p>
               </li>
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -137,7 +137,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                 </p>
               </li>
               <li class="relative flex gap-x-4">
-                <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+                <div class="absolute top-0 -bottom-6 left-0 flex w-6 justify-center">
                   <div class="w-px bg-gray-200"></div>
                 </div>
                 <div
@@ -169,11 +169,11 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
       </div>
 
       <!-- FAQ -->
-      <div class="lg:col-span-4 divide-y divide-gray-900/10">
+      <div class="divide-y divide-gray-900/10 lg:col-span-4">
         <h4 class="py-8">Frequently asked questions</h4>
         <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
           <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-sm font-semibold leading-7 lg:col-span-5">
+            <dt class="text-sm leading-7 font-semibold lg:col-span-5">
               We want to run analysis on our data, can you help choose the right data
               model?
             </dt>
@@ -187,7 +187,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
             </dd>
           </div>
           <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
-            <dt class="text-sm font-semibold leading-7 lg:col-span-5">
+            <dt class="text-sm leading-7 font-semibold lg:col-span-5">
               I need to integrate my data with outside systems, can you do that?
             </dt>
             <dd class="mt-4 lg:col-span-7 lg:mt-0">
@@ -213,51 +213,51 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           </p>
         </SectionHeading>
       </div>
-      <ul class="grid gap-16 mx-auto list-none">
+      <ul class="mx-auto grid list-none gap-16">
         <li>
-          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+          <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
             <div class="grid grid-cols-3 gap-2">
               <Picture
                 src={dxImage1}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen1"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={dxImage2}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen2"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={dxImage3}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen3"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={dxImage4}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen4"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={dxImage5}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen5"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={dxImage6}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen6"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
             </div>
             <div>
@@ -265,12 +265,12 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                 https://dataxplor.researchcalgary.ca/
               </ExternalLink>
               <h2
-                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
+                class="group-hover:decoration-brand-primary-500 text-black group-hover:underline group-hover:decoration-2"
               >
                 DataXplor
               </h2>
 
-              <div class="flex gap-2 mt-3">
+              <div class="mt-3 flex gap-2">
                 <div class="divide-y">
                   <p>
                     A custom platform that offers a suite of data tools to help you better
@@ -281,7 +281,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                   </p>
                   <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
                     <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
-                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
+                      <dt class="text-sm leading-7 font-semibold lg:col-span-5">
                         Technologies
                       </dt>
                       <dd class="mt-4 lg:col-span-7 lg:mt-0">
@@ -298,7 +298,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
         </li>
 
         <li>
-          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+          <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
             <Picture
               src={erpImage}
               formats={['avif', 'webp']}
@@ -312,12 +312,12 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                 https://erp.researchcalgary.ca/
               </ExternalLink>
               <h2
-                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
+                class="group-hover:decoration-brand-primary-500 text-black group-hover:underline group-hover:decoration-2"
               >
                 ERP
               </h2>
 
-              <div class="flex gap-2 mt-3">
+              <div class="mt-3 flex gap-2">
                 <div class="divide-y">
                   <p>
                     A custom enterprise resource planning platform designed specifically
@@ -328,7 +328,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                   </p>
                   <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
                     <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
-                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
+                      <dt class="text-sm leading-7 font-semibold lg:col-span-5">
                         Technologies
                       </dt>
                       <dd class="mt-4 lg:col-span-7 lg:mt-0">
@@ -345,49 +345,49 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
         </li>
 
         <li>
-          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+          <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
             <div class="grid grid-cols-3 gap-2">
               <Picture
                 src={spineImage1}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="spine-screen1"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={spineImage2}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="spine-screen2"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={spineImage3}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="spine-screen3"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={spineImage4}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="spine-screen4"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={spineImage5}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="spine-screen5"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={spineImage6}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="spine-screen6"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
             </div>
             <div>
@@ -395,12 +395,12 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                 https://calgaryspine.ca/
               </ExternalLink>
               <h2
-                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
+                class="group-hover:decoration-brand-primary-500 text-black group-hover:underline group-hover:decoration-2"
               >
                 Calgary Spine Program
               </h2>
 
-              <div class="flex gap-2 mt-3">
+              <div class="mt-3 flex gap-2">
                 <div class="divide-y">
                   <p>
                     A custom platform developed from the ground-up to support the Calgary
@@ -409,7 +409,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                   </p>
                   <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
                     <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
-                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
+                      <dt class="text-sm leading-7 font-semibold lg:col-span-5">
                         Technologies
                       </dt>
                       <dd class="mt-4 lg:col-span-7 lg:mt-0">
@@ -425,49 +425,49 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           </div>
         </li>
         <li>
-          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+          <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
             <div class="grid grid-cols-3 gap-2">
               <Picture
                 src={recoverImage1}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen1"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={recoverImage2}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen2"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={recoverImage3}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen3"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={recoverImage4}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen3"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={recoverImage5}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen3"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
               <Picture
                 src={recoverImage6}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen3"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-cover"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-cover shadow-xs"
               />
             </div>
 
@@ -476,12 +476,12 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                 https://recoverconcussion.ca/
               </ExternalLink>
               <h2
-                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
+                class="group-hover:decoration-brand-primary-500 text-black group-hover:underline group-hover:decoration-2"
               >
                 RECOVER Concussion
               </h2>
 
-              <div class="flex gap-2 mt-3">
+              <div class="mt-3 flex gap-2">
                 <div class="divide-y">
                   <p>
                     Developed as a web app to provide a customized user interface targeted
@@ -491,7 +491,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                   </p>
                   <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
                     <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
-                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
+                      <dt class="text-sm leading-7 font-semibold lg:col-span-5">
                         Technologies
                       </dt>
                       <dd class="mt-4 lg:col-span-7 lg:mt-0">
@@ -507,39 +507,39 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           </div>
         </li>
         <li>
-          <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+          <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
             <div class="grid grid-cols-3 gap-2">
               <Picture
                 src={evolveImage}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen1"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-contain"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-contain shadow-xs"
               />
               <Picture
                 src={partumImage}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen2"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-contain"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-contain shadow-xs"
               />
               <Picture
                 src={tempo2Image}
                 formats={['avif', 'webp']}
                 height={300}
                 alt="dx-screen3"
-                class="w-full h-[100px] rounded-lg shadow-xs border border-gray-100 object-contain"
+                class="h-[100px] w-full rounded-lg border border-gray-100 object-contain shadow-xs"
               />
             </div>
 
             <div>
               <h2
-                class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500"
+                class="group-hover:decoration-brand-primary-500 text-black group-hover:underline group-hover:decoration-2"
               >
                 Study Manager
               </h2>
 
-              <div class="flex gap-2 mt-3">
+              <div class="mt-3 flex gap-2">
                 <div class="divide-y">
                   <p>
                     A series of custom web applications designed to streamline the
@@ -551,7 +551,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
                   </p>
                   <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
                     <div class="pt-2 lg:grid lg:grid-cols-12 lg:gap-8">
-                      <dt class="text-sm font-semibold leading-7 lg:col-span-5">
+                      <dt class="text-sm leading-7 font-semibold lg:col-span-5">
                         Technologies
                       </dt>
                       <dd class="mt-4 lg:col-span-7 lg:mt-0">

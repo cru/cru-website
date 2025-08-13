@@ -81,7 +81,7 @@
   }
 
   p {
-    @apply text-gray-900 pb-1;
+    @apply pb-1 text-gray-900;
   }
 
   blockquote {
@@ -89,10 +89,10 @@
   }
 
   ul {
-    @apply list-disc list-inside mb-2 ml-4 text-gray-600;
+    @apply mb-2 ml-4 list-inside list-disc text-gray-600;
   }
 
   ol {
-    @apply list-decimal list-inside mb-2 ml-4 text-gray-600;
+    @apply mb-2 ml-4 list-inside list-decimal text-gray-600;
   }
 }

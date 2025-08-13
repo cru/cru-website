@@ -18,7 +18,7 @@ announcementEntries.sort(function (a, b) {
 <Layout title="Announcements">
   <h1>Announcements</h1>
   <div class="py-20">
-    <ul class="grid gap-16 mx-auto list-none">
+    <ul class="mx-auto grid list-none gap-16">
       {
         announcementEntries.map((announcement, index) => (
           <li>
@@ -26,14 +26,14 @@ announcementEntries.sort(function (a, b) {
               href={`/announcements/${announcement.slug}`}
               className="group no-underline!"
             >
-              <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+              <div class="grid items-center gap-5 md:grid-cols-2 md:gap-10">
                 {announcement.data.image?.src && (
                   <Image
                     src={announcement.data.image.src}
                     alt={announcement.data.image.alt}
                     width={800}
                     height={400}
-                    class="w-full h-80 object-cover rounded-3xl shadow-lg"
+                    class="h-80 w-full rounded-3xl object-cover shadow-lg"
                   />
                 )}
                 <div>
@@ -44,11 +44,11 @@ announcementEntries.sort(function (a, b) {
                     {announcement.data.publishDate.toDateString()}
                   </time>
 
-                  <h2 class="text-black group-hover:underline group-hover:decoration-2 group-hover:decoration-brand-primary-500">
+                  <h2 class="group-hover:decoration-brand-primary-500 text-black group-hover:underline group-hover:decoration-2">
                     {announcement.data.title}
                   </h2>
 
-                  <div class="flex gap-2 mt-3">
+                  <div class="mt-3 flex gap-2">
                     <p>{announcement.data.description}</p>
                   </div>
                 </div>
