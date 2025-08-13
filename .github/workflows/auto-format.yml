@@ -1,15 +1,13 @@
 name: auto-format-js
 
-on:
-  push:
-  pull_request:
+on: push
 
 jobs:
   format:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
       - name: Set up Node
@@ -18,10 +16,11 @@ jobs:
           node-version: 'lts/*'
       - name: Install Prettier
         run: |
+          corepack enable
+          yes | yarn set version stable
           yarn install
       - name: Format with Prettier
-        run: |
-          yarn pretty
+        run: yarn pretty
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

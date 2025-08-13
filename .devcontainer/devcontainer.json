@@ -17,5 +17,5 @@
   "mounts": [
     "source=cru-website-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
   ],
-  "postCreateCommand": "yarn install"
+  "postCreateCommand": "corepack enable && yes | yarn set version stable && yarn install"
 }
