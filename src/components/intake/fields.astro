@@ -1,0 +1,1758 @@
+---
+// REDCap form fields generated from fields.csv
+---
+
+<form class="mx-auto max-w-4xl space-y-6 p-6">
+  <!-- Record Information -->
+  <div class="space-y-4">
+    <input type="hidden" name="record_id" id="record_id" />
+    <input type="hidden" name="record_date" id="record_date" />
+  </div>
+
+  <!-- Service Type -->
+  <div class="space-y-3">
+    <label class="block text-sm font-medium text-gray-700">
+      What type of support are you looking for from CHI? *
+    </label>
+    <div class="space-y-2">
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="service_type[]"
+          value="user"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">New REDCap user account</span>
+      </label>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="service_type[]"
+          value="proj"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">New service, project, or support request</span>
+      </label>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="service_type[]"
+          value="trial"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">Free trial / practice project</span>
+      </label>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="service_type[]"
+          value="oth"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">Other / learn more about CHI services</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Requester Information -->
+  <fieldset class="space-y-4 rounded-lg border border-gray-200 p-4">
+    <legend class="px-2 text-lg font-semibold text-gray-900">Requester Information</legend
+    >
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div>
+        <label for="requester_fname" class="block text-sm font-medium text-gray-700"
+          >First Name *</label
+        >
+        <input
+          type="text"
+          name="requester_fname"
+          id="requester_fname"
+          required
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+      <div>
+        <label for="requester_lname" class="block text-sm font-medium text-gray-700"
+          >Last Name *</label
+        >
+        <input
+          type="text"
+          name="requester_lname"
+          id="requester_lname"
+          required
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+    </div>
+
+    <div>
+      <label for="requester_email" class="block text-sm font-medium text-gray-700"
+        >Email *</label
+      >
+      <input
+        type="email"
+        name="requester_email"
+        id="requester_email"
+        required
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+
+    <div>
+      <label for="requester_institution" class="block text-sm font-medium text-gray-700"
+        >Institutional Affiliation *</label
+      >
+      <select
+        name="requester_institution"
+        id="requester_institution"
+        required
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      >
+        <option value="">Select institution...</option>
+        <option value="uc">University of Calgary</option>
+        <option value="oth">Other (AHS, University of Alberta, etc.)</option>
+      </select>
+    </div>
+
+    <div id="requester_institution_uc_section" style="display: none;">
+      <label
+        for="requester_institution_uc"
+        class="block text-sm font-medium text-gray-700"
+        >University of Calgary Faculty</label
+      >
+      <select
+        name="requester_institution_uc"
+        id="requester_institution_uc"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      >
+        <option value="">Select faculty...</option>
+        <option value="med">Cumming School of Medicine</option>
+        <option value="nur">Nursing</option>
+        <option value="kin">Kinesiology</option>
+        <option value="eng">Engineering</option>
+      </select>
+    </div>
+
+    <div id="requester_institution_uc_faculty_section">
+      <label
+        for="requester_institution_uc_faculty"
+        class="block text-sm font-medium text-gray-700">Department</label
+      >
+      <select
+        name="requester_institution_uc_faculty"
+        id="requester_institution_uc_faculty"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      >
+        <option value="">Select department...</option>
+        <option value="appm">Anesthesiology, Perioperative and Pain Medicine</option>
+        <option value="bmb">Biochemistry and Molecular Biology</option>
+        <option value="cardiac">Cardiac Sciences</option>
+        <option value="cba">Cell Biology and Anatomy</option>
+        <option value="cns">Clinical Neurosciences</option>
+        <option value="chs">Community Health Sciences</option>
+        <option value="ccm">Critical Care Medicine</option>
+        <option value="emerg">Emergency Medicine</option>
+        <option value="fam">Family Medicine</option>
+        <option value="gen">Medical Genetics</option>
+        <option value="med">Medicine</option>
+        <option value="microinfect"
+          >Microbiology, Immunology and Infectious Diseases</option
+        >
+        <option value="obgyn">Obstetrics and Gynaecology</option>
+        <option value="onc">Oncology</option>
+        <option value="ped">Pediatrics / Paediatrics</option>
+        <option value="lab">Pathology and Laboratory Medicine</option>
+        <option value="phys">Physiology and Pharmacology</option>
+        <option value="psych">Psychiatry</option>
+        <option value="rad">Radiology</option>
+        <option value="surg">Surgery</option>
+      </select>
+    </div>
+
+    <div id="requester_institution_oth_section" style="display: none;">
+      <label
+        for="requester_institution_oth"
+        class="block text-sm font-medium text-gray-700">Other Institution</label
+      >
+      <select
+        name="requester_institution_oth"
+        id="requester_institution_oth"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      >
+        <option value="">Select other...</option>
+        <option value="uni">Other Post-Secondary Institute</option>
+        <option value="pca">Primary Care Alberta</option>
+        <option value="aca">Acute Care Alberta</option>
+        <option value="ra">Recovery Alberta</option>
+        <option value="ala">Assisted Living Alberta</option>
+        <option value="ahs">Alberta Health Services</option>
+        <option value="oth">Other</option>
+      </select>
+    </div>
+
+    <div id="requester_institution_uni_section" style="display: none;">
+      <label
+        for="requester_institution_uni"
+        class="block text-sm font-medium text-gray-700">Specify Institution</label
+      >
+      <input
+        type="text"
+        name="requester_institution_uni"
+        id="requester_institution_uni"
+        placeholder="specify institution"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+
+    <div id="requester_institution_other_section" style="display: none;">
+      <label
+        for="requester_institution_other"
+        class="block text-sm font-medium text-gray-700">Other Institution</label
+      >
+      <input
+        type="text"
+        name="requester_institution_other"
+        id="requester_institution_other"
+        placeholder="specify institution"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+
+    <div>
+      <label for="requester_referred_from" class="block text-sm font-medium text-gray-700"
+        >How did you hear about our services?</label
+      >
+      <input
+        type="text"
+        name="requester_referred_from"
+        id="requester_referred_from"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+  </fieldset>
+
+  <!-- New REDCap User Account Section -->
+  <fieldset
+    class="space-y-4 rounded-lg border border-gray-200 p-4"
+    id="user_section"
+    style="display: none;"
+  >
+    <legend class="px-2 text-lg font-semibold text-gray-900"
+      >New REDCap User Account</legend
+    >
+
+    <div>
+      <label for="user_account_num" class="block text-sm font-medium text-gray-700"
+        >How many new user accounts are you requesting?</label
+      >
+      <select
+        name="user_account_num"
+        id="user_account_num"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="user_1_is_requester"
+          value="1"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">This account is for myself</span>
+      </label>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="user_1_fields">
+      <div>
+        <label for="user_1_fname" class="block text-sm font-medium text-gray-700"
+          >User 1 First Name</label
+        >
+        <input
+          type="text"
+          name="user_1_fname"
+          id="user_1_fname"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+      <div>
+        <label for="user_1_lname" class="block text-sm font-medium text-gray-700"
+          >User 1 Last Name</label
+        >
+        <input
+          type="text"
+          name="user_1_lname"
+          id="user_1_lname"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+      <div>
+        <label for="user_1_email" class="block text-sm font-medium text-gray-700"
+          >User 1 Email</label
+        >
+        <input
+          type="email"
+          name="user_1_email"
+          id="user_1_email"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+    </div>
+
+    <!-- Additional user fields (2-15) would be generated dynamically -->
+    <div id="additional_users">
+      <!-- Users 2-15 will be added via JavaScript based on user_account_num selection -->
+    </div>
+
+    <div>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="user_notify"
+          value="1"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2"
+          >I would like to be notified when the requested account(s) are created & their
+          usernames</span
+        >
+      </label>
+    </div>
+  </fieldset>
+
+  <!-- Project Information Section -->
+  <fieldset
+    class="space-y-4 rounded-lg border border-gray-200 p-4"
+    id="project_section"
+    style="display: none;"
+  >
+    <legend class="px-2 text-lg font-semibold text-gray-900"
+      >New Service or Project</legend
+    >
+
+    <div class="space-y-3">
+      <label class="block text-sm font-medium text-gray-700"
+        >What type of support or service do you need? *</label
+      >
+      <div class="space-y-2">
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="proj_type[]"
+            value="rc"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">REDCap (Research Electronic Data Capture)</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="proj_type[]"
+            value="custom"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Custom Platform Development</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="proj_type[]"
+            value="ma"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Methods, Data & Analytics Support</span>
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <label for="proj_title" class="block text-sm font-medium text-gray-700"
+        >Project or Study Title *</label
+      >
+      <input
+        type="text"
+        name="proj_title"
+        id="proj_title"
+        required
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >Purpose of your project or study? *</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="proj_purpose"
+            value="research"
+            class="border-gray-300"
+          />
+          <span class="ml-2">Research</span>
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="proj_purpose" value="qi" class="border-gray-300" />
+          <span class="ml-2">Quality Improvement</span>
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="proj_purpose" value="op" class="border-gray-300" />
+          <span class="ml-2">Operational</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Research Purpose Sub-options -->
+    <div id="research_purpose_section" style="display: none;">
+      <label class="block text-sm font-medium text-gray-700">Research Type</label>
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="proj_purpose_res"
+            value="basic"
+            class="border-gray-300"
+          />
+          <span class="ml-2">Basic research</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="proj_purpose_res"
+            value="ct"
+            class="border-gray-300"
+          />
+          <span class="ml-2">Clinical Trial</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="proj_purpose_res"
+            value="registry"
+            class="border-gray-300"
+          />
+          <span class="ml-2">Registry/Repository</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="proj_purpose_res"
+            value="oth"
+            class="border-gray-300"
+          />
+          <span class="ml-2">Other</span>
+        </label>
+      </div>
+    </div>
+
+    <div id="research_other_section" style="display: none;">
+      <label for="proj_purpose_res_oth" class="block text-sm font-medium text-gray-700"
+        >Specify Research Purpose</label
+      >
+      <input
+        type="text"
+        name="proj_purpose_res_oth"
+        id="proj_purpose_res_oth"
+        placeholder="specify project or study purpose"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+
+    <!-- Principal Investigator Information -->
+    <fieldset class="space-y-4 rounded border border-gray-100 p-3">
+      <legend class="text-md px-2 font-medium text-gray-800"
+        >Principal Investigator Information</legend
+      >
+
+      <div>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="proj_requester_is_pi"
+            value="1"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I am the principal investigator</span>
+        </label>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="pi_fields">
+        <div>
+          <label for="proj_pi_fname" class="block text-sm font-medium text-gray-700"
+            >PI First Name</label
+          >
+          <input
+            type="text"
+            name="proj_pi_fname"
+            id="proj_pi_fname"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          />
+        </div>
+        <div>
+          <label for="proj_pi_lname" class="block text-sm font-medium text-gray-700"
+            >PI Last Name</label
+          >
+          <input
+            type="text"
+            name="proj_pi_lname"
+            id="proj_pi_lname"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          />
+        </div>
+        <div>
+          <label for="proj_pi_email" class="block text-sm font-medium text-gray-700"
+            >PI Email</label
+          >
+          <input
+            type="email"
+            name="proj_pi_email"
+            id="proj_pi_email"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          />
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- Project Details -->
+    <div class="space-y-4">
+      <div>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="proj_is_lshi"
+            value="1"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2"
+            >This study is a Learning Health System Initiative (LSHI)</span
+          >
+        </label>
+      </div>
+
+      <div>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="proj_have_protocol"
+            value="1"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I have a study or project summary/protocol I can upload</span
+          >
+        </label>
+      </div>
+
+      <div id="protocol_upload_section" style="display: none;">
+        <label for="proj_protocol_upload" class="block text-sm font-medium text-gray-700"
+          >Project Summary/Protocol Upload</label
+        >
+        <input
+          type="file"
+          name="proj_protocol_upload"
+          id="proj_protocol_upload"
+          class="mt-1 block w-full"
+        />
+      </div>
+
+      <div>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="proj_have_ethics"
+            value="1"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I have ethics approval</span>
+        </label>
+      </div>
+
+      <div id="ethics_details_section" style="display: none;">
+        <div>
+          <label for="proj_ethics_id" class="block text-sm font-medium text-gray-700"
+            >Ethics ID</label
+          >
+          <input
+            type="text"
+            name="proj_ethics_id"
+            id="proj_ethics_id"
+            placeholder="Ethics ID"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          />
+        </div>
+        <div>
+          <label for="proj_ethics_upload" class="block text-sm font-medium text-gray-700"
+            >Ethics Upload</label
+          >
+          <input
+            type="file"
+            name="proj_ethics_upload"
+            id="proj_ethics_upload"
+            class="mt-1 block w-full"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="proj_need_ethics"
+            value="1"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I need support with ethics</span>
+        </label>
+      </div>
+
+      <div>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="proj_have_budget"
+            value="1"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I have an approved/anticipated budget in mind</span>
+        </label>
+      </div>
+
+      <div id="budget_section" style="display: none;">
+        <label for="proj_budget_amt" class="block text-sm font-medium text-gray-700"
+          >Budget Amount (CAD$)</label
+        >
+        <input
+          type="number"
+          name="proj_budget_amt"
+          id="proj_budget_amt"
+          placeholder="CAD$"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div>
+          <label for="proj_date_start" class="block text-sm font-medium text-gray-700"
+            >Intended Start Date</label
+          >
+          <input
+            type="date"
+            name="proj_date_start"
+            id="proj_date_start"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          />
+        </div>
+        <div>
+          <label for="proj_date_end" class="block text-sm font-medium text-gray-700"
+            >Intended End Date</label
+          >
+          <input
+            type="date"
+            name="proj_date_end"
+            id="proj_date_end"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <!-- REDCap Specific Section -->
+  <fieldset
+    class="space-y-4 rounded-lg border border-gray-200 p-4"
+    id="redcap_section"
+    style="display: none;"
+  >
+    <legend class="px-2 text-lg font-semibold text-gray-900"
+      >REDCap Project Details</legend
+    >
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >What type of project service are you interested in?</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input type="radio" name="rc_build" value="self" class="border-gray-300" />
+          <span class="ml-2">Self-service project</span>
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="rc_build" value="chi" class="border-gray-300" />
+          <span class="ml-2">CHI supported project</span>
+        </label>
+      </div>
+      <label class="mt-2 flex items-center">
+        <input
+          type="checkbox"
+          name="rc_build_unsure"
+          value="1"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">I am unsure</span>
+      </label>
+    </div>
+
+    <div>
+      <label for="rc_participant_num" class="block text-sm font-medium text-gray-700"
+        >Number of Expected Study Participants</label
+      >
+      <input
+        type="number"
+        name="rc_participant_num"
+        id="rc_participant_num"
+        min="0"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+
+    <div>
+      <label for="rc_site_num" class="block text-sm font-medium text-gray-700"
+        >Number of Study Sites</label
+      >
+      <input
+        type="number"
+        name="rc_site_num"
+        id="rc_site_num"
+        min="0"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+
+    <div>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="rc_have_international_sites"
+          value="1"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">I have international sites</span>
+      </label>
+    </div>
+
+    <div id="international_sites_section" style="display: none;">
+      <label class="block text-sm font-medium text-gray-700"
+        >Which international sites?</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="rc_international_sites[]"
+            value="usa"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">USA</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="rc_international_sites[]"
+            value="europe"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Europe</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="rc_international_sites[]"
+            value="oth"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Other</span>
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="rc_have_surveys"
+          value="1"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2"
+          >I require surveys (online questionnaires) to be sent to participants</span
+        >
+      </label>
+    </div>
+
+    <div>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="rc_have_randomization"
+          value="1"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">I require randomization</span>
+      </label>
+    </div>
+
+    <div id="randomization_section" style="display: none;">
+      <label
+        for="rc_randomization_summary"
+        class="block text-sm font-medium text-gray-700"
+        >Please provide a summary of the randomization schema</label
+      >
+      <textarea
+        name="rc_randomization_summary"
+        id="rc_randomization_summary"
+        rows="3"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+    </div>
+
+    <div>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="rc_have_xml"
+          value="1"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2"
+          >I have an existing REDCap project XML file to create my project from</span
+        >
+      </label>
+    </div>
+
+    <div id="xml_upload_section" style="display: none;">
+      <label for="rc_xml_upload" class="block text-sm font-medium text-gray-700"
+        >Existing REDCap Project XML File</label
+      >
+      <input
+        type="file"
+        name="rc_xml_upload"
+        id="rc_xml_upload"
+        accept=".xml"
+        class="mt-1 block w-full"
+      />
+    </div>
+
+    <!-- REDCap Pricing Tier -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >Please select a REDCap Support Tier *</label
+      >
+      <p class="mb-2 text-sm text-gray-600">
+        <a
+          href="https://cru.ucalgary.ca/data-capture/pricing/"
+          class="text-blue-600 hover:underline"
+          >See Data Capture Pricing for more information</a
+        >
+      </p>
+      <div class="space-y-2">
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="rc_price_tier"
+            value="basic"
+            class="border-gray-300"
+          />
+          <span class="ml-2">Basic</span>
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="rc_price_tier" value="plus" class="border-gray-300" />
+          <span class="ml-2">Plus</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="rc_price_tier"
+            value="premium"
+            class="border-gray-300"
+          />
+          <span class="ml-2">Premium</span>
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <!-- Methods & Analytics Section -->
+  <fieldset
+    class="space-y-4 rounded-lg border border-gray-200 p-4"
+    id="methods_analytics_section"
+    style="display: none;"
+  >
+    <legend class="px-2 text-lg font-semibold text-gray-900"
+      >Methods, Data & Analytics Support</legend
+    >
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >Do you currently have data? *</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="ma_have_existing_data"
+            value="1"
+            class="border-gray-300"
+          />
+          <span class="ml-2">Yes</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="ma_have_existing_data"
+            value="0"
+            class="border-gray-300"
+          />
+          <span class="ml-2">No, I require data access</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="radio"
+            name="ma_have_existing_data"
+            value="99"
+            class="border-gray-300"
+          />
+          <span class="ml-2">I am looking for more information</span>
+        </label>
+      </div>
+    </div>
+
+    <div id="existing_data_section" style="display: none;">
+      <label class="block text-sm font-medium text-gray-700"
+        >What type of data do you have?</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_existing_data[]"
+            value="rc"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I have data on CHI's REDCap platform</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_existing_data[]"
+            value="admin"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I have administrative data</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_existing_data[]"
+            value="oth"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I have other data</span>
+        </label>
+      </div>
+    </div>
+
+    <div id="redcap_pid_section" style="display: none;">
+      <label for="ma_existing_data_pid" class="block text-sm font-medium text-gray-700"
+        >REDCap PID</label
+      >
+      <input
+        type="number"
+        name="ma_existing_data_pid"
+        id="ma_existing_data_pid"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+
+    <div id="dataset_description_section" style="display: none;">
+      <label for="ma_data_desc" class="block text-sm font-medium text-gray-700"
+        >What dataset(s) will you be using?</label
+      >
+      <textarea
+        name="ma_data_desc"
+        id="ma_data_desc"
+        rows="3"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >What Methods support do you require? *</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_methods[]"
+            value="power"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Power/sample size calculations</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_methods[]"
+            value="review"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2"
+            >Review of existing methods section/research design/statistical plan</span
+          >
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_methods[]"
+            value="dev"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2"
+            >Co-development of methods section/research design/statistical plan</span
+          >
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_methods[]"
+            value="unsure"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I am unsure</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_methods[]"
+            value="none"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I don't require methods support</span>
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >What Analytics support do you require? *</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_analytics[]"
+            value="cleaning"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Data cleaning, linking and processing</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_analytics[]"
+            value="power"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Sample size calculation (a priori power calculations)</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_analytics[]"
+            value="stats"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2"
+            >Descriptive statistics, traditional biostatistical methods</span
+          >
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_analytics[]"
+            value="ml"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Machine learning and data science methods</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_analytics[]"
+            value="vis"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Visualizations</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_analytics[]"
+            value="oth"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Other</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_analytics[]"
+            value="unsure"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I am unsure</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="ma_analytics[]"
+            value="none"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I don't require analytics support</span>
+        </label>
+      </div>
+    </div>
+
+    <div id="analytics_other_section" style="display: none;">
+      <label for="ma_analytics_oth" class="block text-sm font-medium text-gray-700"
+        >What other Analytics support do you require?</label
+      >
+      <textarea
+        name="ma_analytics_oth"
+        id="ma_analytics_oth"
+        rows="3"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+    </div>
+
+    <div>
+      <label for="ma_research_question" class="block text-sm font-medium text-gray-700"
+        >What is your Research Question?</label
+      >
+      <input
+        type="text"
+        name="ma_research_question"
+        id="ma_research_question"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      />
+    </div>
+  </fieldset>
+
+  <!-- Custom Platform Development Section -->
+  <fieldset
+    class="space-y-4 rounded-lg border border-gray-200 p-4"
+    id="custom_section"
+    style="display: none;"
+  >
+    <legend class="px-2 text-lg font-semibold text-gray-900"
+      >Custom Platform Development</legend
+    >
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >What type of Custom Data Services do you need? *</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="custom_type[]"
+            value="dashboard"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Data Dashboards</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="custom_type[]"
+            value="web"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Public Facing Websites</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="custom_type[]"
+            value="edc"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Custom Data Capture Application</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="custom_type[]"
+            value="mgmt"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Data Management Tool</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="custom_type[]"
+            value="infra"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Infrastructure</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="custom_type[]"
+            value="advice"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Advisory/Consultancy</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="custom_type[]"
+            value="mobile"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">Mobile Data Capture Tool</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="custom_type[]"
+            value="unsure"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">I'm unsure</span>
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <label for="custom_needs" class="block text-sm font-medium text-gray-700"
+        >Please elaborate on your needs or vision? *</label
+      >
+      <textarea
+        name="custom_needs"
+        id="custom_needs"
+        rows="4"
+        required
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+    </div>
+
+    <div>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="custom_need_rc"
+          value="1"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2"
+          >I require any custom integration with REDCap or other platforms</span
+        >
+      </label>
+    </div>
+
+    <div id="custom_integration_section" style="display: none;">
+      <label for="custom_rc_summary" class="block text-sm font-medium text-gray-700"
+        >Please describe your integration needs</label
+      >
+      <textarea
+        name="custom_rc_summary"
+        id="custom_rc_summary"
+        rows="3"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+    </div>
+  </fieldset>
+
+  <!-- Free Trial Section -->
+  <fieldset
+    class="space-y-4 rounded-lg border border-gray-200 p-4"
+    id="trial_section"
+    style="display: none;"
+  >
+    <legend class="px-2 text-lg font-semibold text-gray-900"
+      >Free Trial / Practice Project</legend
+    >
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >What type of service are you looking to try? *</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="trial_type[]"
+            value="rc"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">REDCap practice/training project</span>
+        </label>
+        <label class="flex items-center">
+          <input
+            type="checkbox"
+            name="trial_type[]"
+            value="dx"
+            class="rounded border-gray-300"
+          />
+          <span class="ml-2">DataXplor</span>
+        </label>
+      </div>
+    </div>
+
+    <div id="trial_redcap_section" style="display: none;">
+      <div>
+        <label for="trial_proj_title" class="block text-sm font-medium text-gray-700"
+          >Practice Project Title *</label
+        >
+        <input
+          type="text"
+          name="trial_proj_title"
+          id="trial_proj_title"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+
+      <div>
+        <label for="trial_rc_users" class="block text-sm font-medium text-gray-700"
+          >REDCap Username(s) to add to the practice project</label
+        >
+        <textarea
+          name="trial_rc_users"
+          id="trial_rc_users"
+          rows="3"
+          placeholder="Including your own, if known"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+      </div>
+    </div>
+  </fieldset>
+
+  <!-- Financial Information -->
+  <fieldset
+    class="space-y-4 rounded-lg border border-gray-200 p-4"
+    id="financial_section"
+    style="display: none;"
+  >
+    <legend class="px-2 text-lg font-semibold text-gray-900">Financial Information</legend
+    >
+
+    <div>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="fin_requester_is_contact"
+          value="1"
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">I am the billing contact</span>
+      </label>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="billing_contact_fields">
+      <div>
+        <label for="fin_contact_fname" class="block text-sm font-medium text-gray-700"
+          >Billing Contact First Name</label
+        >
+        <input
+          type="text"
+          name="fin_contact_fname"
+          id="fin_contact_fname"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+      <div>
+        <label for="fin_contact_lname" class="block text-sm font-medium text-gray-700"
+          >Billing Contact Last Name</label
+        >
+        <input
+          type="text"
+          name="fin_contact_lname"
+          id="fin_contact_lname"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+      <div>
+        <label for="fin_contact_email" class="block text-sm font-medium text-gray-700"
+          >Billing Contact Email</label
+        >
+        <input
+          type="email"
+          name="fin_contact_email"
+          id="fin_contact_email"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700"
+        >Please select preferred payment method *</label
+      >
+      <div class="mt-2 space-y-2">
+        <label class="flex items-center">
+          <input type="radio" name="fin_method" value="uofc" class="border-gray-300" />
+          <span class="ml-2">UofC GLJE/Journal Transfer</span>
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="fin_method" value="ex" class="border-gray-300" />
+          <span class="ml-2">External Account (e.g., AHS, other institutions)</span>
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="fin_method" value="cc" class="border-gray-300" />
+          <span class="ml-2">Credit Card (note: UofC PCard is not allowed)</span>
+        </label>
+      </div>
+    </div>
+
+    <div id="external_payment_section" style="display: none;" class="space-y-4">
+      <div>
+        <label
+          for="fin_method_ex_institution"
+          class="block text-sm font-medium text-gray-700"
+          >Institution/Company Name *</label
+        >
+        <input
+          type="text"
+          name="fin_method_ex_institution"
+          id="fin_method_ex_institution"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+      <div>
+        <label for="fin_method_ex_address" class="block text-sm font-medium text-gray-700"
+          >Institution/Company Address *</label
+        >
+        <textarea
+          name="fin_method_ex_address"
+          id="fin_method_ex_address"
+          rows="3"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+      </div>
+      <div>
+        <label for="fin_method_ex_name" class="block text-sm font-medium text-gray-700"
+          >Institution/Company Contact Name *</label
+        >
+        <input
+          type="text"
+          name="fin_method_ex_name"
+          id="fin_method_ex_name"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+      <div>
+        <label for="fin_method_ex_email" class="block text-sm font-medium text-gray-700"
+          >Institution/Company Contact Email *</label
+        >
+        <input
+          type="email"
+          name="fin_method_ex_email"
+          id="fin_method_ex_email"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
+    </div>
+
+    <div>
+      <label class="flex items-center">
+        <input
+          type="checkbox"
+          name="terms_agree"
+          value="1"
+          required
+          class="rounded border-gray-300"
+        />
+        <span class="ml-2">I agree to the Terms & Conditions *</span>
+      </label>
+    </div>
+
+    <div>
+      <label for="terms_sig" class="block text-sm font-medium text-gray-700"
+        >Authorization Signature *</label
+      >
+      <input
+        type="file"
+        name="terms_sig"
+        id="terms_sig"
+        required
+        class="mt-1 block w-full"
+      />
+    </div>
+  </fieldset>
+
+  <!-- Other Services Section -->
+  <fieldset
+    class="space-y-4 rounded-lg border border-gray-200 p-4"
+    id="other_section"
+    style="display: none;"
+  >
+    <legend class="px-2 text-lg font-semibold text-gray-900">Other Services</legend>
+
+    <div>
+      <label for="service_oth_questions" class="block text-sm font-medium text-gray-700"
+        >What would you like help with, or what questions do you have?</label
+      >
+      <textarea
+        name="service_oth_questions"
+        id="service_oth_questions"
+        rows="4"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+    </div>
+  </fieldset>
+
+  <!-- Additional Comments -->
+  <div>
+    <label for="service_comments" class="block text-sm font-medium text-gray-700"
+      >Any additional notes or comments?</label
+    >
+    <textarea
+      name="service_comments"
+      id="service_comments"
+      rows="3"
+      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="pt-6">
+    <button
+      type="submit"
+      class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
+    >
+      Submit Request
+    </button>
+  </div>
+
+  <script>
+    // JavaScript to handle form logic and conditional field display
+    document.addEventListener('DOMContentLoaded', function () {
+      // Handle service type checkboxes
+      const serviceTypeCheckboxes = document.querySelectorAll(
+        'input[name="service_type[]"]'
+      )
+      const userSection = document.getElementById('user_section')
+      const projectSection = document.getElementById('project_section')
+      const trialSection = document.getElementById('trial_section')
+      const otherSection = document.getElementById('other_section')
+
+      serviceTypeCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function () {
+          const checkedValues = Array.from(serviceTypeCheckboxes)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.value)
+
+          userSection.style.display = checkedValues.includes('user') ? 'block' : 'none'
+          projectSection.style.display = checkedValues.includes('proj') ? 'block' : 'none'
+          trialSection.style.display = checkedValues.includes('trial') ? 'block' : 'none'
+          otherSection.style.display = checkedValues.includes('oth') ? 'block' : 'none'
+        })
+      })
+
+      // Handle institutional affiliation logic
+      const institutionSelect = document.getElementById('requester_institution')
+      const ucSection = document.getElementById('requester_institution_uc_section')
+      const ucFacultySection = document.getElementById(
+        'requester_institution_uc_faculty_section'
+      )
+      const othSection = document.getElementById('requester_institution_oth_section')
+      const uniSection = document.getElementById('requester_institution_uni_section')
+      const otherInstSection = document.getElementById(
+        'requester_institution_other_section'
+      )
+
+      institutionSelect.addEventListener('change', function () {
+        ucSection.style.display = this.value === 'uc' ? 'block' : 'none'
+        othSection.style.display = this.value === 'oth' ? 'block' : 'none'
+      })
+
+      const ucSelect = document.getElementById('requester_institution_uc')
+      ucSelect.addEventListener('change', function () {
+        ucFacultySection.style.display = this.value === 'med' ? 'block' : 'none'
+      })
+
+      const othSelect = document.getElementById('requester_institution_oth')
+      othSelect.addEventListener('change', function () {
+        uniSection.style.display = this.value === 'uni' ? 'block' : 'none'
+        otherInstSection.style.display = this.value === 'oth' ? 'block' : 'none'
+      })
+
+      // Handle project type logic
+      const projTypeCheckboxes = document.querySelectorAll('input[name="proj_type[]"]')
+      const redcapSection = document.getElementById('redcap_section')
+      const methodsAnalyticsSection = document.getElementById('methods_analytics_section')
+      const customSection = document.getElementById('custom_section')
+      const financialSection = document.getElementById('financial_section')
+
+      projTypeCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function () {
+          const checkedValues = Array.from(projTypeCheckboxes)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.value)
+
+          redcapSection.style.display = checkedValues.includes('rc') ? 'block' : 'none'
+          methodsAnalyticsSection.style.display = checkedValues.includes('ma')
+            ? 'block'
+            : 'none'
+          customSection.style.display = checkedValues.includes('custom')
+            ? 'block'
+            : 'none'
+          financialSection.style.display = checkedValues.length > 0 ? 'block' : 'none'
+        })
+      })
+
+      // Handle research purpose logic
+      const projPurposeRadios = document.querySelectorAll('input[name="proj_purpose"]')
+      const researchPurposeSection = document.getElementById('research_purpose_section')
+
+      projPurposeRadios.forEach((radio) => {
+        radio.addEventListener('change', function () {
+          researchPurposeSection.style.display =
+            this.value === 'research' ? 'block' : 'none'
+        })
+      })
+
+      const researchTypeRadios = document.querySelectorAll(
+        'input[name="proj_purpose_res"]'
+      )
+      const researchOtherSection = document.getElementById('research_other_section')
+
+      researchTypeRadios.forEach((radio) => {
+        radio.addEventListener('change', function () {
+          researchOtherSection.style.display = this.value === 'oth' ? 'block' : 'none'
+        })
+      })
+
+      // Handle PI information logic
+      const piCheckbox = document.getElementById('proj_requester_is_pi')
+      const piFields = document.getElementById('pi_fields')
+
+      if (piCheckbox) {
+        piCheckbox.addEventListener('change', function () {
+          const piInputs = piFields.querySelectorAll('input')
+          piInputs.forEach((input) => {
+            input.style.display = this.checked ? 'none' : 'block'
+            input.required = !this.checked
+          })
+        })
+      }
+
+      // Handle other conditional sections
+      const conditionalSections = [
+        { trigger: 'proj_have_protocol', section: 'protocol_upload_section' },
+        { trigger: 'proj_have_ethics', section: 'ethics_details_section' },
+        { trigger: 'proj_have_budget', section: 'budget_section' },
+        {
+          trigger: 'rc_have_international_sites',
+          section: 'international_sites_section',
+        },
+        { trigger: 'rc_have_randomization', section: 'randomization_section' },
+        { trigger: 'rc_have_xml', section: 'xml_upload_section' },
+        { trigger: 'custom_need_rc', section: 'custom_integration_section' },
+        {
+          trigger: 'fin_requester_is_contact',
+          section: 'billing_contact_fields',
+          reverse: true,
+        },
+      ]
+
+      conditionalSections.forEach(({ trigger, section, reverse = false }) => {
+        const triggerElement = document.querySelector(`[name="${trigger}"]`)
+        const sectionElement = document.getElementById(section)
+
+        if (triggerElement && sectionElement) {
+          triggerElement.addEventListener('change', function () {
+            const show = reverse ? !this.checked : this.checked
+            sectionElement.style.display = show ? 'block' : 'none'
+          })
+        }
+      })
+
+      // Handle payment method logic
+      const paymentRadios = document.querySelectorAll('input[name="fin_method"]')
+      const externalPaymentSection = document.getElementById('external_payment_section')
+
+      paymentRadios.forEach((radio) => {
+        radio.addEventListener('change', function () {
+          externalPaymentSection.style.display = this.value === 'ex' ? 'block' : 'none'
+        })
+      })
+
+      // Handle trial type logic
+      const trialTypeCheckboxes = document.querySelectorAll('input[name="trial_type[]"]')
+      const trialRedcapSection = document.getElementById('trial_redcap_section')
+
+      trialTypeCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function () {
+          const checkedValues = Array.from(trialTypeCheckboxes)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.value)
+          trialRedcapSection.style.display = checkedValues.includes('rc')
+            ? 'block'
+            : 'none'
+        })
+      })
+
+      // Handle methods & analytics conditional logic
+      const maHaveDataRadios = document.querySelectorAll(
+        'input[name="ma_have_existing_data"]'
+      )
+      const existingDataSection = document.getElementById('existing_data_section')
+      const datasetDescSection = document.getElementById('dataset_description_section')
+
+      maHaveDataRadios.forEach((radio) => {
+        radio.addEventListener('change', function () {
+          existingDataSection.style.display = this.value === '1' ? 'block' : 'none'
+          datasetDescSection.style.display =
+            this.value === '0' || this.value === '99' ? 'block' : 'none'
+        })
+      })
+
+      const maExistingDataCheckboxes = document.querySelectorAll(
+        'input[name="ma_existing_data[]"]'
+      )
+      const redcapPidSection = document.getElementById('redcap_pid_section')
+
+      maExistingDataCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function () {
+          const checkedValues = Array.from(maExistingDataCheckboxes)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.value)
+          redcapPidSection.style.display = checkedValues.includes('rc') ? 'block' : 'none'
+        })
+      })
+
+      const analyticsOtherCheckbox = document.querySelector(
+        'input[name="ma_analytics[]"][value="oth"]'
+      )
+      const analyticsOtherSection = document.getElementById('analytics_other_section')
+
+      if (analyticsOtherCheckbox) {
+        analyticsOtherCheckbox.addEventListener('change', function () {
+          analyticsOtherSection.style.display = this.checked ? 'block' : 'none'
+        })
+      }
+
+      // Set current date for hidden record_date field
+      const recordDateField = document.getElementById('record_date')
+      if (recordDateField) {
+        recordDateField.value = new Date().toISOString().split('T')[0]
+      }
+    })
+  </script>
+</form>
