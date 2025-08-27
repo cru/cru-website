@@ -1,5 +1,6 @@
 ---
 import Checkbox from '../ui/Checkbox.astro'
+import InputText from '../ui/InputText.astro'
 
 // REDCap form fields generated from fields.csv
 ---
@@ -42,30 +43,18 @@ import Checkbox from '../ui/Checkbox.astro'
     >
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-      <div>
-        <label for="requester_fname" class="block text-sm font-medium text-gray-700"
-          >First Name *</label
-        >
-        <input
-          type="text"
-          name="requester_fname"
-          id="requester_fname"
-          required
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-        />
-      </div>
-      <div>
-        <label for="requester_lname" class="block text-sm font-medium text-gray-700"
-          >Last Name *</label
-        >
-        <input
-          type="text"
-          name="requester_lname"
-          id="requester_lname"
-          required
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-        />
-      </div>
+      <InputText
+        id="requester_fname"
+        name="requester_fname"
+        label="First Name *"
+        required
+      />
+      <InputText
+        id="requester_lname"
+        name="requester_lname"
+        label="Last Name *"
+        required
+      />
     </div>
 
     <div>
@@ -174,42 +163,28 @@ import Checkbox from '../ui/Checkbox.astro'
     </div>
 
     <div id="requester_institution_uni_section" style="display: none;">
-      <label
-        for="requester_institution_uni"
-        class="block text-sm font-medium text-gray-700">Specify Institution</label
-      >
-      <input
-        type="text"
-        name="requester_institution_uni"
+      <InputText
         id="requester_institution_uni"
+        name="requester_institution_uni"
+        label="Specify Institution"
         placeholder="specify institution"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
       />
     </div>
 
     <div id="requester_institution_other_section" style="display: none;">
-      <label
-        for="requester_institution_other"
-        class="block text-sm font-medium text-gray-700">Other Institution</label
-      >
-      <input
-        type="text"
-        name="requester_institution_other"
+      <InputText
         id="requester_institution_other"
+        name="requester_institution_other"
+        label="Other Institution"
         placeholder="specify institution"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
       />
     </div>
 
     <div>
-      <label for="requester_referred_from" class="block text-sm font-medium text-gray-700"
-        >How did you hear about our services?</label
-      >
-      <input
-        type="text"
-        name="requester_referred_from"
+      <InputText
         id="requester_referred_from"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        name="requester_referred_from"
+        label="How did you hear about our services?"
       />
     </div>
   </fieldset>
@@ -256,28 +231,8 @@ import Checkbox from '../ui/Checkbox.astro'
     </div>
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="user_1_fields">
-      <div>
-        <label for="user_1_fname" class="block text-sm font-medium text-gray-700"
-          >User 1 First Name</label
-        >
-        <input
-          type="text"
-          name="user_1_fname"
-          id="user_1_fname"
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-        />
-      </div>
-      <div>
-        <label for="user_1_lname" class="block text-sm font-medium text-gray-700"
-          >User 1 Last Name</label
-        >
-        <input
-          type="text"
-          name="user_1_lname"
-          id="user_1_lname"
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-        />
-      </div>
+      <InputText id="user_1_fname" name="user_1_fname" label="User 1 First Name" />
+      <InputText id="user_1_lname" name="user_1_lname" label="User 1 Last Name" />
       <div>
         <label for="user_1_email" class="block text-sm font-medium text-gray-700"
           >User 1 Email</label
@@ -335,15 +290,11 @@ import Checkbox from '../ui/Checkbox.astro'
     </div>
 
     <div>
-      <label for="proj_title" class="block text-sm font-medium text-gray-700"
-        >Project or Study Title *</label
-      >
-      <input
-        type="text"
-        name="proj_title"
+      <InputText
         id="proj_title"
+        name="proj_title"
+        label="Project or Study Title *"
         required
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
       />
     </div>
 
@@ -416,15 +367,11 @@ import Checkbox from '../ui/Checkbox.astro'
     </div>
 
     <div id="research_other_section" style="display: none;">
-      <label for="proj_purpose_res_oth" class="block text-sm font-medium text-gray-700"
-        >Specify Research Purpose</label
-      >
-      <input
-        type="text"
-        name="proj_purpose_res_oth"
+      <InputText
         id="proj_purpose_res_oth"
+        name="proj_purpose_res_oth"
+        label="Specify Research Purpose"
         placeholder="specify project or study purpose"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
       />
     </div>
 
@@ -443,28 +390,8 @@ import Checkbox from '../ui/Checkbox.astro'
       </div>
 
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="pi_fields">
-        <div>
-          <label for="proj_pi_fname" class="block text-sm font-medium text-gray-700"
-            >PI First Name</label
-          >
-          <input
-            type="text"
-            name="proj_pi_fname"
-            id="proj_pi_fname"
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-          />
-        </div>
-        <div>
-          <label for="proj_pi_lname" class="block text-sm font-medium text-gray-700"
-            >PI Last Name</label
-          >
-          <input
-            type="text"
-            name="proj_pi_lname"
-            id="proj_pi_lname"
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-          />
-        </div>
+        <InputText id="proj_pi_fname" name="proj_pi_fname" label="PI First Name" />
+        <InputText id="proj_pi_lname" name="proj_pi_lname" label="PI Last Name" />
         <div>
           <label for="proj_pi_email" class="block text-sm font-medium text-gray-700"
             >PI Email</label
@@ -515,15 +442,11 @@ import Checkbox from '../ui/Checkbox.astro'
 
       <div id="ethics_details_section" style="display: none;">
         <div>
-          <label for="proj_ethics_id" class="block text-sm font-medium text-gray-700"
-            >Ethics ID</label
-          >
-          <input
-            type="text"
-            name="proj_ethics_id"
+          <InputText
             id="proj_ethics_id"
+            name="proj_ethics_id"
+            label="Ethics ID"
             placeholder="Ethics ID"
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
           />
         </div>
         <div>
@@ -1028,14 +951,10 @@ import Checkbox from '../ui/Checkbox.astro'
     </div>
 
     <div>
-      <label for="ma_research_question" class="block text-sm font-medium text-gray-700"
-        >What is your Research Question?</label
-      >
-      <input
-        type="text"
-        name="ma_research_question"
+      <InputText
         id="ma_research_question"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        name="ma_research_question"
+        label="What is your Research Question?"
       />
     </div>
   </fieldset>
@@ -1200,14 +1119,10 @@ import Checkbox from '../ui/Checkbox.astro'
 
     <div id="trial_redcap_section" style="display: none;">
       <div>
-        <label for="trial_proj_title" class="block text-sm font-medium text-gray-700"
-          >Practice Project Title *</label
-        >
-        <input
-          type="text"
-          name="trial_proj_title"
+        <InputText
           id="trial_proj_title"
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          name="trial_proj_title"
+          label="Practice Project Title *"
         />
       </div>
 
@@ -1243,28 +1158,16 @@ import Checkbox from '../ui/Checkbox.astro'
     </div>
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="billing_contact_fields">
-      <div>
-        <label for="fin_contact_fname" class="block text-sm font-medium text-gray-700"
-          >Billing Contact First Name</label
-        >
-        <input
-          type="text"
-          name="fin_contact_fname"
-          id="fin_contact_fname"
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-        />
-      </div>
-      <div>
-        <label for="fin_contact_lname" class="block text-sm font-medium text-gray-700"
-          >Billing Contact Last Name</label
-        >
-        <input
-          type="text"
-          name="fin_contact_lname"
-          id="fin_contact_lname"
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-        />
-      </div>
+      <InputText
+        id="fin_contact_fname"
+        name="fin_contact_fname"
+        label="Billing Contact First Name"
+      />
+      <InputText
+        id="fin_contact_lname"
+        name="fin_contact_lname"
+        label="Billing Contact Last Name"
+      />
       <div>
         <label for="fin_contact_email" class="block text-sm font-medium text-gray-700"
           >Billing Contact Email</label
@@ -1300,16 +1203,10 @@ import Checkbox from '../ui/Checkbox.astro'
 
     <div id="external_payment_section" style="display: none;" class="space-y-4">
       <div>
-        <label
-          for="fin_method_ex_institution"
-          class="block text-sm font-medium text-gray-700"
-          >Institution/Company Name *</label
-        >
-        <input
-          type="text"
-          name="fin_method_ex_institution"
+        <InputText
           id="fin_method_ex_institution"
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          name="fin_method_ex_institution"
+          label="Institution/Company Name *"
         />
       </div>
       <div>
@@ -1323,14 +1220,10 @@ import Checkbox from '../ui/Checkbox.astro'
           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
       </div>
       <div>
-        <label for="fin_method_ex_name" class="block text-sm font-medium text-gray-700"
-          >Institution/Company Contact Name *</label
-        >
-        <input
-          type="text"
-          name="fin_method_ex_name"
+        <InputText
           id="fin_method_ex_name"
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+          name="fin_method_ex_name"
+          label="Institution/Company Contact Name *"
         />
       </div>
       <div>
