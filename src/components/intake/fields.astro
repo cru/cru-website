@@ -1,4 +1,6 @@
 ---
+import Checkbox from '../ui/Checkbox.astro'
+
 // REDCap form fields generated from fields.csv
 ---
 
@@ -15,42 +17,22 @@
       What type of support are you looking for from CHI? *
     </label>
     <div class="space-y-2">
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="service_type[]"
-          value="user"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2">New REDCap user account</span>
-      </label>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="service_type[]"
-          value="proj"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2">New service, project, or support request</span>
-      </label>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="service_type[]"
-          value="trial"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2">Free trial / practice project</span>
-      </label>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="service_type[]"
-          value="oth"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2">Other / learn more about CHI services</span>
-      </label>
+      <Checkbox name="service_type[]" value="user" label="New REDCap user account" />
+      <Checkbox
+        name="service_type[]"
+        value="proj"
+        label="New service, project, or support request"
+      />
+      <Checkbox
+        name="service_type[]"
+        value="trial"
+        label="Free trial / practice project"
+      />
+      <Checkbox
+        name="service_type[]"
+        value="oth"
+        label="Other / learn more about CHI services"
+      />
     </div>
   </div>
 
@@ -270,15 +252,7 @@
     </div>
 
     <div>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="user_1_is_requester"
-          value="1"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2">This account is for myself</span>
-      </label>
+      <Checkbox name="user_1_is_requester" value="1" label="This account is for myself" />
     </div>
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="user_1_fields">
@@ -323,18 +297,11 @@
     </div>
 
     <div>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="user_notify"
-          value="1"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2"
-          >I would like to be notified when the requested account(s) are created & their
-          usernames</span
-        >
-      </label>
+      <Checkbox
+        name="user_notify"
+        value="1"
+        label="I would like to be notified when the requested account(s) are created & their usernames"
+      />
     </div>
   </fieldset>
 
@@ -353,33 +320,17 @@
         >What type of support or service do you need? *</label
       >
       <div class="space-y-2">
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            name="proj_type[]"
-            value="rc"
-            class="rounded border-gray-300"
-          />
-          <span class="ml-2">REDCap (Research Electronic Data Capture)</span>
-        </label>
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            name="proj_type[]"
-            value="custom"
-            class="rounded border-gray-300"
-          />
-          <span class="ml-2">Custom Platform Development</span>
-        </label>
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            name="proj_type[]"
-            value="ma"
-            class="rounded border-gray-300"
-          />
-          <span class="ml-2">Methods, Data & Analytics Support</span>
-        </label>
+        <Checkbox
+          name="proj_type[]"
+          value="rc"
+          label="REDCap (Research Electronic Data Capture)"
+        />
+        <Checkbox name="proj_type[]" value="custom" label="Custom Platform Development" />
+        <Checkbox
+          name="proj_type[]"
+          value="ma"
+          label="Methods, Data & Analytics Support"
+        />
       </div>
     </div>
 
@@ -484,15 +435,11 @@
       >
 
       <div>
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            name="proj_requester_is_pi"
-            value="1"
-            class="rounded border-gray-300"
-          />
-          <span class="ml-2">I am the principal investigator</span>
-        </label>
+        <Checkbox
+          name="proj_requester_is_pi"
+          value="1"
+          label="I am the principal investigator"
+        />
       </div>
 
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="pi_fields">
@@ -535,30 +482,19 @@
     <!-- Project Details -->
     <div class="space-y-4">
       <div>
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            name="proj_is_lshi"
-            value="1"
-            class="rounded border-gray-300"
-          />
-          <span class="ml-2"
-            >This study is a Learning Health System Initiative (LSHI)</span
-          >
-        </label>
+        <Checkbox
+          name="proj_is_lshi"
+          value="1"
+          label="This study is a Learning Health System Initiative (LSHI)"
+        />
       </div>
 
       <div>
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            name="proj_have_protocol"
-            value="1"
-            class="rounded border-gray-300"
-          />
-          <span class="ml-2">I have a study or project summary/protocol I can upload</span
-          >
-        </label>
+        <Checkbox
+          name="proj_have_protocol"
+          value="1"
+          label="I have a study or project summary/protocol I can upload"
+        />
       </div>
 
       <div id="protocol_upload_section" style="display: none;">
@@ -574,15 +510,7 @@
       </div>
 
       <div>
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            name="proj_have_ethics"
-            value="1"
-            class="rounded border-gray-300"
-          />
-          <span class="ml-2">I have ethics approval</span>
-        </label>
+        <Checkbox name="proj_have_ethics" value="1" label="I have ethics approval" />
       </div>
 
       <div id="ethics_details_section" style="display: none;">
@@ -612,27 +540,15 @@
       </div>
 
       <div>
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            name="proj_need_ethics"
-            value="1"
-            class="rounded border-gray-300"
-          />
-          <span class="ml-2">I need support with ethics</span>
-        </label>
+        <Checkbox name="proj_need_ethics" value="1" label="I need support with ethics" />
       </div>
 
       <div>
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            name="proj_have_budget"
-            value="1"
-            class="rounded border-gray-300"
-          />
-          <span class="ml-2">I have an approved/anticipated budget in mind</span>
-        </label>
+        <Checkbox
+          name="proj_have_budget"
+          value="1"
+          label="I have an approved/anticipated budget in mind"
+        />
       </div>
 
       <div id="budget_section" style="display: none;">
@@ -700,13 +616,7 @@
         </label>
       </div>
       <label class="mt-2 flex items-center">
-        <input
-          type="checkbox"
-          name="rc_build_unsure"
-          value="1"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2">I am unsure</span>
+        <Checkbox name="rc_build_unsure" value="1" label="I am unsure" />
       </label>
     </div>
 
@@ -737,15 +647,11 @@
     </div>
 
     <div>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="rc_have_international_sites"
-          value="1"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2">I have international sites</span>
-      </label>
+      <Checkbox
+        name="rc_have_international_sites"
+        value="1"
+        label="I have international sites"
+      />
     </div>
 
     <div id="international_sites_section" style="display: none;">
@@ -784,29 +690,15 @@
     </div>
 
     <div>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="rc_have_surveys"
-          value="1"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2"
-          >I require surveys (online questionnaires) to be sent to participants</span
-        >
-      </label>
+      <Checkbox
+        name="rc_have_surveys"
+        value="1"
+        label="I require surveys (online questionnaires) to be sent to participants"
+      />
     </div>
 
     <div>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="rc_have_randomization"
-          value="1"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2">I require randomization</span>
-      </label>
+      <Checkbox name="rc_have_randomization" value="1" label="I require randomization" />
     </div>
 
     <div id="randomization_section" style="display: none;">
@@ -823,17 +715,11 @@
     </div>
 
     <div>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="rc_have_xml"
-          value="1"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2"
-          >I have an existing REDCap project XML file to create my project from</span
-        >
-      </label>
+      <Checkbox
+        name="rc_have_xml"
+        value="1"
+        label="I have an existing REDCap project XML file to create my project from"
+      />
     </div>
 
     <div id="xml_upload_section" style="display: none;">
@@ -1257,17 +1143,11 @@
     </div>
 
     <div>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="custom_need_rc"
-          value="1"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2"
-          >I require any custom integration with REDCap or other platforms</span
-        >
-      </label>
+      <Checkbox
+        name="custom_need_rc"
+        value="1"
+        label="I require any custom integration with REDCap or other platforms"
+      />
     </div>
 
     <div id="custom_integration_section" style="display: none;">
@@ -1355,15 +1235,11 @@
     >
 
     <div>
-      <label class="flex items-center">
-        <input
-          type="checkbox"
-          name="fin_requester_is_contact"
-          value="1"
-          class="rounded border-gray-300"
-        />
-        <span class="ml-2">I am the billing contact</span>
-      </label>
+      <Checkbox
+        name="fin_requester_is_contact"
+        value="1"
+        label="I am the billing contact"
+      />
     </div>
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="billing_contact_fields">
