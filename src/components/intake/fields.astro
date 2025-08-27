@@ -1,6 +1,7 @@
 ---
 import Checkbox from '../ui/Checkbox.astro'
 import InputText from '../ui/InputText.astro'
+import Select from '../ui/Select.astro'
 
 // REDCap form fields generated from fields.csv
 ---
@@ -70,96 +71,83 @@ import InputText from '../ui/InputText.astro'
       />
     </div>
 
-    <div>
-      <label for="requester_institution" class="block text-sm font-medium text-gray-700"
-        >Institutional Affiliation *</label
-      >
-      <select
-        name="requester_institution"
-        id="requester_institution"
-        required
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-      >
-        <option value="">Select institution...</option>
-        <option value="uc">University of Calgary</option>
-        <option value="oth">Other (AHS, University of Alberta, etc.)</option>
-      </select>
-    </div>
+    <Select
+      id="requester_institution"
+      name="requester_institution"
+      label="Institutional Affiliation *"
+      required
+      options={[
+        { value: '', label: 'Select institution...' },
+        { value: 'uc', label: 'University of Calgary' },
+        { value: 'oth', label: 'Other (AHS, University of Alberta, etc.)' },
+      ]}
+    />
 
     <div id="requester_institution_uc_section" style="display: none;">
-      <label
-        for="requester_institution_uc"
-        class="block text-sm font-medium text-gray-700"
-        >University of Calgary Faculty</label
-      >
-      <select
-        name="requester_institution_uc"
+      <Select
         id="requester_institution_uc"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-      >
-        <option value="">Select faculty...</option>
-        <option value="med">Cumming School of Medicine</option>
-        <option value="nur">Nursing</option>
-        <option value="kin">Kinesiology</option>
-        <option value="eng">Engineering</option>
-      </select>
+        name="requester_institution_uc"
+        label="University of Calgary Faculty"
+        options={[
+          { value: '', label: 'Select faculty...' },
+          { value: 'med', label: 'Cumming School of Medicine' },
+          { value: 'nur', label: 'Nursing' },
+          { value: 'kin', label: 'Kinesiology' },
+          { value: 'eng', label: 'Engineering' },
+        ]}
+      />
     </div>
 
     <div id="requester_institution_uc_faculty_section">
-      <label
-        for="requester_institution_uc_faculty"
-        class="block text-sm font-medium text-gray-700">Department</label
-      >
-      <select
-        name="requester_institution_uc_faculty"
+      <Select
         id="requester_institution_uc_faculty"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-      >
-        <option value="">Select department...</option>
-        <option value="appm">Anesthesiology, Perioperative and Pain Medicine</option>
-        <option value="bmb">Biochemistry and Molecular Biology</option>
-        <option value="cardiac">Cardiac Sciences</option>
-        <option value="cba">Cell Biology and Anatomy</option>
-        <option value="cns">Clinical Neurosciences</option>
-        <option value="chs">Community Health Sciences</option>
-        <option value="ccm">Critical Care Medicine</option>
-        <option value="emerg">Emergency Medicine</option>
-        <option value="fam">Family Medicine</option>
-        <option value="gen">Medical Genetics</option>
-        <option value="med">Medicine</option>
-        <option value="microinfect"
-          >Microbiology, Immunology and Infectious Diseases</option
-        >
-        <option value="obgyn">Obstetrics and Gynaecology</option>
-        <option value="onc">Oncology</option>
-        <option value="ped">Pediatrics / Paediatrics</option>
-        <option value="lab">Pathology and Laboratory Medicine</option>
-        <option value="phys">Physiology and Pharmacology</option>
-        <option value="psych">Psychiatry</option>
-        <option value="rad">Radiology</option>
-        <option value="surg">Surgery</option>
-      </select>
+        name="requester_institution_uc_faculty"
+        label="Department"
+        options={[
+          { value: '', label: 'Select department...' },
+          { value: 'appm', label: 'Anesthesiology, Perioperative and Pain Medicine' },
+          { value: 'bmb', label: 'Biochemistry and Molecular Biology' },
+          { value: 'cardiac', label: 'Cardiac Sciences' },
+          { value: 'cba', label: 'Cell Biology and Anatomy' },
+          { value: 'cns', label: 'Clinical Neurosciences' },
+          { value: 'chs', label: 'Community Health Sciences' },
+          { value: 'ccm', label: 'Critical Care Medicine' },
+          { value: 'emerg', label: 'Emergency Medicine' },
+          { value: 'fam', label: 'Family Medicine' },
+          { value: 'gen', label: 'Medical Genetics' },
+          { value: 'med', label: 'Medicine' },
+          {
+            value: 'microinfect',
+            label: 'Microbiology, Immunology and Infectious Diseases',
+          },
+          { value: 'obgyn', label: 'Obstetrics and Gynaecology' },
+          { value: 'onc', label: 'Oncology' },
+          { value: 'ped', label: 'Pediatrics / Paediatrics' },
+          { value: 'lab', label: 'Pathology and Laboratory Medicine' },
+          { value: 'phys', label: 'Physiology and Pharmacology' },
+          { value: 'psych', label: 'Psychiatry' },
+          { value: 'rad', label: 'Radiology' },
+          { value: 'surg', label: 'Surgery' },
+        ]}
+      />
     </div>
 
     <div id="requester_institution_oth_section" style="display: none;">
-      <label
-        for="requester_institution_oth"
-        class="block text-sm font-medium text-gray-700">Other Institution</label
-      >
-      <select
-        name="requester_institution_oth"
+      <Select
         id="requester_institution_oth"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-      >
-        <option value="">Select other...</option>
-        <option value="uni">Other Post-Secondary Institute</option>
-        <option value="pca">Primary Care Alberta</option>
-        <option value="aca">Acute Care Alberta</option>
-        <option value="ra">Recovery Alberta</option>
-        <option value="ala">Assisted Living Alberta</option>
-        <option value="ahs">Alberta Health Services</option>
-        <option value="oth">Other</option>
-      </select>
+        name="requester_institution_oth"
+        label="Other Institution"
+        options={[
+          { value: '', label: 'Select other...' },
+          { value: 'uni', label: 'Other Post-Secondary Institute' },
+          { value: 'pca', label: 'Primary Care Alberta' },
+          { value: 'aca', label: 'Acute Care Alberta' },
+          { value: 'ra', label: 'Recovery Alberta' },
+          { value: 'ala', label: 'Assisted Living Alberta' },
+          { value: 'ahs', label: 'Alberta Health Services' },
+          { value: 'oth', label: 'Other' },
+        ]}
+      />
     </div>
 
     <div id="requester_institution_uni_section" style="display: none;">
@@ -200,30 +188,28 @@ import InputText from '../ui/InputText.astro'
     >
 
     <div>
-      <label for="user_account_num" class="block text-sm font-medium text-gray-700"
-        >How many new user accounts are you requesting?</label
-      >
-      <select
-        name="user_account_num"
+      <Select
         id="user_account_num"
-        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-      >
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
-      </select>
+        name="user_account_num"
+        label="How many new user accounts are you requesting?"
+        options={[
+          { value: '1', label: '1' },
+          { value: '2', label: '2' },
+          { value: '3', label: '3' },
+          { value: '4', label: '4' },
+          { value: '5', label: '5' },
+          { value: '6', label: '6' },
+          { value: '7', label: '7' },
+          { value: '8', label: '8' },
+          { value: '9', label: '9' },
+          { value: '10', label: '10' },
+          { value: '11', label: '11' },
+          { value: '12', label: '12' },
+          { value: '13', label: '13' },
+          { value: '14', label: '14' },
+          { value: '15', label: '15' },
+        ]}
+      />
     </div>
 
     <div>
