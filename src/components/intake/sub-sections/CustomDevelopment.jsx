@@ -1,0 +1,134 @@
+import Checkbox from "../../ui/solid/Checkbox"
+
+export default function CustomDevelopment() {
+	return (
+		<fieldset
+			class="space-y-4 rounded-lg border border-gray-200 p-4"
+			id="custom_section"
+			style={{ display: "none" }}
+		>
+			<legend class="px-2 text-lg font-semibold text-gray-900">
+				Custom Platform Development
+			</legend>
+
+			<div>
+				<div class="block text-sm font-medium text-gray-700">
+					What type of Custom Data Services do you need? *
+				</div>
+				<div class="mt-2 space-y-2">
+					<label class="flex items-center">
+						<input
+							type="checkbox"
+							name="custom_type[]"
+							value="dashboard"
+							class="rounded border-gray-300"
+						/>
+						<span class="ml-2">Data Dashboards</span>
+					</label>
+					<label class="flex items-center">
+						<input
+							type="checkbox"
+							name="custom_type[]"
+							value="web"
+							class="rounded border-gray-300"
+						/>
+						<span class="ml-2">Public Facing Websites</span>
+					</label>
+					<label class="flex items-center">
+						<input
+							type="checkbox"
+							name="custom_type[]"
+							value="edc"
+							class="rounded border-gray-300"
+						/>
+						<span class="ml-2">Custom Data Capture Application</span>
+					</label>
+					<label class="flex items-center">
+						<input
+							type="checkbox"
+							name="custom_type[]"
+							value="mgmt"
+							class="rounded border-gray-300"
+						/>
+						<span class="ml-2">Data Management Tool</span>
+					</label>
+					<label class="flex items-center">
+						<input
+							type="checkbox"
+							name="custom_type[]"
+							value="infra"
+							class="rounded border-gray-300"
+						/>
+						<span class="ml-2">Infrastructure</span>
+					</label>
+					<label class="flex items-center">
+						<input
+							type="checkbox"
+							name="custom_type[]"
+							value="advice"
+							class="rounded border-gray-300"
+						/>
+						<span class="ml-2">Advisory/Consultancy</span>
+					</label>
+					<label class="flex items-center">
+						<input
+							type="checkbox"
+							name="custom_type[]"
+							value="mobile"
+							class="rounded border-gray-300"
+						/>
+						<span class="ml-2">Mobile Data Capture Tool</span>
+					</label>
+					<label class="flex items-center">
+						<input
+							type="checkbox"
+							name="custom_type[]"
+							value="unsure"
+							class="rounded border-gray-300"
+						/>
+						<span class="ml-2">I'm unsure</span>
+					</label>
+				</div>
+			</div>
+
+			<div>
+				<label
+					for="custom_needs"
+					class="block text-sm font-medium text-gray-700"
+				>
+					Please elaborate on your needs or vision? *
+				</label>
+				<textarea
+					name="custom_needs"
+					id="custom_needs"
+					rows="4"
+					required
+					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+				></textarea>
+			</div>
+
+			<div>
+				<Checkbox
+					name="custom_need_rc"
+					value="1"
+					label="I require any custom integration with REDCap or other platforms"
+				/>
+			</div>
+
+			<div id="custom_integration_section" style={{ display: "none" }}>
+				<label
+					for="custom_rc_summary"
+					class="block text-sm font-medium text-gray-700"
+				>
+					Please describe your integration needs
+				</label>
+				<textarea
+					name="custom_rc_summary"
+					id="custom_rc_summary"
+					rows="3"
+					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+				></textarea>
+			</div>
+		</fieldset>
+	)
+}

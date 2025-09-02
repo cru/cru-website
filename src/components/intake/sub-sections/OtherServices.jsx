@@ -1,0 +1,28 @@
+export default function OtherServices() {
+	return (
+		<fieldset
+			class="space-y-4 rounded-lg border border-gray-200 p-4"
+			id="other_section"
+			style={{ display: "none" }}
+		>
+			<legend class="px-2 text-lg font-semibold text-gray-900">
+				Other Services
+			</legend>
+
+			<div>
+				<label
+					for="service_oth_questions"
+					class="block text-sm font-medium text-gray-700"
+				>
+					What would you like help with, or what questions do you have?
+				</label>
+				<textarea
+					name="service_oth_questions"
+					id="service_oth_questions"
+					rows="4"
+					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+				></textarea>
+			</div>
+		</fieldset>
+	)
+}

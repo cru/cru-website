@@ -1,82 +1,91 @@
----
-import Checkbox from '../ui/Checkbox.astro'
-import AccountCreation from './sub-sections/AccountCreation.astro'
-import CustomDevelopment from './sub-sections/CustomDevelopment.astro'
-import Financial from './sub-sections/Financial.astro'
-import FreeTrial from './sub-sections/FreeTrial.astro'
-import MethodsAnalytics from './sub-sections/MethodsAnalytics.astro'
-import OtherServices from './sub-sections/OtherServices.astro'
-import PrincipalInvestigator from './sub-sections/PrincipalInvestigator.astro'
-import ProjectDetails from './sub-sections/ProjectDetails.astro'
-import ProjectInfo from './sub-sections/ProjectInfo.astro'
-import Redcap from './sub-sections/Redcap.astro'
-import Requester from './sub-sections/Requester.astro'
-import ResearchPurpose from './sub-sections/ResearchPurpose.astro'
----
+import Checkbox from "../ui/solid/Checkbox"
+import AccountCreation from "./sub-sections/AccountCreation"
+import CustomDevelopment from "./sub-sections/CustomDevelopment"
+import Financial from "./sub-sections/Financial"
+import FreeTrial from "./sub-sections/FreeTrial"
+import MethodsAnalytics from "./sub-sections/MethodsAnalytics"
+import OtherServices from "./sub-sections/OtherServices"
+import PrincipalInvestigator from "./sub-sections/PrincipalInvestigator"
+import ProjectDetails from "./sub-sections/ProjectDetails"
+import ProjectInfo from "./sub-sections/ProjectInfo"
+import Redcap from "./sub-sections/Redcap"
+import Requester from "./sub-sections/Requester"
+import ResearchPurpose from "./sub-sections/ResearchPurpose"
 
-<form class="mx-auto w-full space-y-6 py-6">
-  <!-- Service Type -->
-  <div class="space-y-3">
-    <label class="block text-sm font-medium text-gray-700">
-      What type of support are you looking for from CHI? *
-    </label>
-    <div class="space-y-2">
-      <Checkbox name="service_type[]" value="user" label="New REDCap user account" />
-      <Checkbox
-        name="service_type[]"
-        value="proj"
-        label="New service, project, or support request"
-      />
-      <Checkbox
-        name="service_type[]"
-        value="trial"
-        label="Free trial / practice project"
-      />
-      <Checkbox
-        name="service_type[]"
-        value="oth"
-        label="Other / learn more about CHI services"
-      />
-    </div>
+const IntakeForm = () => {
+	return (
+		<form class="mx-auto w-full space-y-6 py-6">
+			<div class="space-y-3">
+				<div class="space-y-2">
+					<label class="block text-sm font-medium text-gray-700">
+						What type of support are you looking for from CHI? *
+					</label>
+					<Checkbox
+						name="service_type[]"
+						value="user"
+						label="New REDCap user account"
+					/>
+					<Checkbox
+						name="service_type[]"
+						value="proj"
+						label="New service, project, or support request"
+					/>
+					<Checkbox
+						name="service_type[]"
+						value="trial"
+						label="Free trial / practice project"
+					/>
+					<Checkbox
+						name="service_type[]"
+						value="oth"
+						label="Other / learn more about CHI services"
+					/>
+				</div>
 
-    <AccountCreation />
-    <CustomDevelopment />
-    <Financial />
-    <FreeTrial />
-    <MethodsAnalytics />
-    <OtherServices />
-    <PrincipalInvestigator />
-    <ProjectDetails />
-    <ProjectInfo />
-    <Redcap />
-    <Requester />
-    <ResearchPurpose />
-  </div>
+				<AccountCreation />
+				<CustomDevelopment />
+				<Financial />
+				<FreeTrial />
+				<MethodsAnalytics />
+				<OtherServices />
+				<PrincipalInvestigator />
+				<ProjectDetails />
+				<ProjectInfo />
+				<Redcap />
+				<Requester />
+				<ResearchPurpose />
+			</div>
 
-  <!-- Additional Comments -->
-  <div>
-    <label for="service_comments" class="block text-sm font-medium text-gray-700"
-      >Any additional notes or comments?</label
-    >
-    <textarea
-      name="service_comments"
-      id="service_comments"
-      rows="3"
-      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
-  </div>
+			<div>
+				<label
+					for="service_comments"
+					class="block text-sm font-medium text-gray-700"
+				>
+					Any additional notes or comments?
+				</label>
+				<textarea
+					name="service_comments"
+					id="service_comments"
+					rows="3"
+					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+				></textarea>
+			</div>
 
-  <!-- Submit Button -->
-  <div class="pt-6">
-    <button
-      type="submit"
-      class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
-    >
-      Submit Request
-    </button>
-  </div>
-</form>
+			<div class="pt-6">
+				<button
+					type="submit"
+					class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
+				>
+					Submit Request
+				</button>
+			</div>
+		</form>
+	)
+}
 
-<script>
+export default IntakeForm
+
+/* <script>
   // JavaScript to handle form logic and conditional field display
   document.addEventListener('DOMContentLoaded', function () {
     // Handle service type checkboxes
@@ -285,4 +294,4 @@ import ResearchPurpose from './sub-sections/ResearchPurpose.astro'
       recordDateField.value = new Date().toISOString().split('T')[0]
     }
   })
-</script>
+</script> */

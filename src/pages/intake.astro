@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import IntakeForm from '../components/intake/IntakeForm.astro'
+import IntakeForm from '../components/intake/IntakeForm'
 import SolidSteps from '../components/ui/solid/SolidSteps'
 ---
 
@@ -27,7 +27,7 @@ import SolidSteps from '../components/ui/solid/SolidSteps'
             'Research Purpose',
           ]}
         />
-        <IntakeForm />
+        <IntakeForm client:idle />
       </article>
     </div>
   </div>
