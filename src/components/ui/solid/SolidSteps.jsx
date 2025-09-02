@@ -7,20 +7,20 @@ const SolidSteps = (props) => {
 		return (
 			<Switch>
 				<Match when={activeStep() < idx}>
-					<div class="size-7 shrink-0 mx-[-1px] border-2 flex items-center justify-center rounded-full">
-						<span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+					<div class="mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2">
+						<span class="h-3 w-3 rounded-full bg-gray-300"></span>
 					</div>
 				</Match>
 				<Match when={activeStep() === idx}>
-					<div class="w-7 h-7 shrink-0 mx-[-1px] border-2 border-green-500 flex items-center justify-center rounded-full">
-						<span class="w-3 h-3 bg-green-500 rounded-full"></span>
+					<div class="mx-[-1px] flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-green-500">
+						<span class="h-3 w-3 rounded-full bg-green-500"></span>
 					</div>
 				</Match>
 				<Match when={activeStep() > idx}>
-					<div class="size-7 shrink-0 mx-[-1px] border-2 border-green-500 flex items-center justify-center rounded-full">
+					<div class="mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-green-500">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="w-4 h-4 fill-green-500"
+							class="h-4 w-4 fill-green-500"
 							viewBox="0 0 24 24"
 						>
 							<title>Step completed</title>
