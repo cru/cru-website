@@ -1,0 +1,122 @@
+---
+import Checkbox from '../../ui/Checkbox.astro'
+import InputText from '../../ui/InputText.astro'
+---
+
+<!-- Financial Information -->
+<fieldset
+  class="space-y-4 rounded-lg border border-gray-200 p-4"
+  id="financial_section"
+  style="display: none;"
+>
+  <legend class="px-2 text-lg font-semibold text-gray-900">Financial Information</legend>
+
+  <div>
+    <Checkbox
+      name="fin_requester_is_contact"
+      value="1"
+      label="I am the billing contact"
+    />
+  </div>
+
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="billing_contact_fields">
+    <InputText
+      id="fin_contact_fname"
+      name="fin_contact_fname"
+      label="Billing Contact First Name"
+    />
+    <InputText
+      id="fin_contact_lname"
+      name="fin_contact_lname"
+      label="Billing Contact Last Name"
+    />
+
+    <InputText
+      id="fin_contact_email"
+      name="fin_contact_email"
+      label="Billing Contact Email"
+      type="email"
+    />
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-gray-700"
+      >Please select preferred payment method *</label
+    >
+    <div class="mt-2 space-y-2">
+      <label class="flex items-center">
+        <input type="radio" name="fin_method" value="uofc" class="border-gray-300" />
+        <span class="ml-2">UofC GLJE/Journal Transfer</span>
+      </label>
+      <label class="flex items-center">
+        <input type="radio" name="fin_method" value="ex" class="border-gray-300" />
+        <span class="ml-2">External Account (e.g., AHS, other institutions)</span>
+      </label>
+      <label class="flex items-center">
+        <input type="radio" name="fin_method" value="cc" class="border-gray-300" />
+        <span class="ml-2">Credit Card (note: UofC PCard is not allowed)</span>
+      </label>
+    </div>
+  </div>
+
+  <div id="external_payment_section" style="display: none;" class="space-y-4">
+    <div>
+      <InputText
+        id="fin_method_ex_institution"
+        name="fin_method_ex_institution"
+        label="Institution/Company Name *"
+      />
+    </div>
+    <div>
+      <label for="fin_method_ex_address" class="block text-sm font-medium text-gray-700"
+        >Institution/Company Address *</label
+      >
+      <textarea
+        name="fin_method_ex_address"
+        id="fin_method_ex_address"
+        rows="3"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+    </div>
+    <div>
+      <InputText
+        id="fin_method_ex_name"
+        name="fin_method_ex_name"
+        label="Institution/Company Contact Name *"
+      />
+    </div>
+
+    <InputText
+      id="fin_method_ex_email"
+      name="fin_method_ex_email"
+      label="Institution/Company Contact Email"
+      type="email"
+      required
+    />
+  </div>
+
+  <div>
+    <label class="flex items-center">
+      <input
+        type="checkbox"
+        name="terms_agree"
+        value="1"
+        required
+        class="rounded border-gray-300"
+      />
+      <span class="ml-2">I agree to the Terms & Conditions *</span>
+    </label>
+  </div>
+
+  <div>
+    <label for="terms_sig" class="block text-sm font-medium text-gray-700"
+      >Authorization Signature *</label
+    >
+    <input
+      type="file"
+      name="terms_sig"
+      id="terms_sig"
+      required
+      class="mt-1 block w-full"
+    />
+  </div>
+</fieldset>
