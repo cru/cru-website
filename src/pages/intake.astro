@@ -1,34 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import IntakeForm from '../components/intake/IntakeForm'
-import SolidSteps from '../components/ui/solid/SolidSteps'
 ---
 
 <Layout title="Intake">
   <div class="space-y-32">
     <div class="space-y-12">
       <h1>Intake Form</h1>
-      <article class="flex space-x-24">
-        <SolidSteps
-          client:idle
-          steps={[
-            'Service Type',
-            'New REDCap Account',
-            'Custom Development',
-            'Financial Info',
-            'Free Trial',
-            'M&A',
-            'Other Services',
-            'Principal Investigator',
-            'Project Details',
-            'Project Info',
-            'REDCap',
-            'Requester',
-            'Research Purpose',
-          ]}
-        />
-        <IntakeForm client:idle />
-      </article>
+      <IntakeForm client:idle />
     </div>
   </div>
 </Layout>

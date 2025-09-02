@@ -1,4 +1,6 @@
+import { createSignal } from "solid-js"
 import Checkbox from "../ui/solid/Checkbox"
+import SolidSteps from "../ui/solid/SolidSteps"
 import AccountCreation from "./sub-sections/AccountCreation"
 import CustomDevelopment from "./sub-sections/CustomDevelopment"
 import Financial from "./sub-sections/Financial"
@@ -13,73 +15,105 @@ import Requester from "./sub-sections/Requester"
 import ResearchPurpose from "./sub-sections/ResearchPurpose"
 
 const IntakeForm = () => {
+	const [activeStep, setActiveStep] = createSignal(0)
+
 	return (
-		<form class="mx-auto w-full space-y-6 py-6">
-			<div class="space-y-3">
-				<div class="space-y-2">
-					<label class="block text-sm font-medium text-gray-700">
-						What type of support are you looking for from CHI? *
-					</label>
-					<Checkbox
-						name="service_type[]"
-						value="user"
-						label="New REDCap user account"
-					/>
-					<Checkbox
-						name="service_type[]"
-						value="proj"
-						label="New service, project, or support request"
-					/>
-					<Checkbox
-						name="service_type[]"
-						value="trial"
-						label="Free trial / practice project"
-					/>
-					<Checkbox
-						name="service_type[]"
-						value="oth"
-						label="Other / learn more about CHI services"
-					/>
+		<article class="flex space-x-24">
+			<SolidSteps
+				client:idle
+				activeStep={activeStep()}
+				steps={[
+					"Service Type",
+					"New REDCap Account",
+					"Custom Development",
+					"Financial Info",
+					"Free Trial",
+					"M&A",
+					"Other Services",
+					"Principal Investigator",
+					"Project Details",
+					"Project Info",
+					"REDCap",
+					"Requester",
+					"Research Purpose",
+				]}
+			/>
+
+			<form class="mx-auto w-full space-y-6 py-6">
+				<div class="space-y-3">
+					<div class="space-y-2">
+						<label class="block text-sm font-medium text-gray-700">
+							What type of support are you looking for from CHI? *
+						</label>
+						<Checkbox
+							name="service_type[]"
+							value="user"
+							label="New REDCap user account"
+						/>
+						<Checkbox
+							name="service_type[]"
+							value="proj"
+							label="New service, project, or support request"
+						/>
+						<Checkbox
+							name="service_type[]"
+							value="trial"
+							label="Free trial / practice project"
+						/>
+						<Checkbox
+							name="service_type[]"
+							value="oth"
+							label="Other / learn more about CHI services"
+						/>
+					</div>
+
+					<AccountCreation />
+					<CustomDevelopment />
+					<Financial />
+					<FreeTrial />
+					<MethodsAnalytics />
+					<OtherServices />
+					<PrincipalInvestigator />
+					<ProjectDetails />
+					<ProjectInfo />
+					<Redcap />
+					<Requester />
+					<ResearchPurpose />
 				</div>
 
-				<AccountCreation />
-				<CustomDevelopment />
-				<Financial />
-				<FreeTrial />
-				<MethodsAnalytics />
-				<OtherServices />
-				<PrincipalInvestigator />
-				<ProjectDetails />
-				<ProjectInfo />
-				<Redcap />
-				<Requester />
-				<ResearchPurpose />
-			</div>
+				<div>
+					<label
+						for="service_comments"
+						class="block text-sm font-medium text-gray-700"
+					>
+						Any additional notes or comments?
+					</label>
+					<textarea
+						name="service_comments"
+						id="service_comments"
+						rows="3"
+						class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+					></textarea>
+				</div>
 
-			<div>
-				<label
-					for="service_comments"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Any additional notes or comments?
-				</label>
-				<textarea
-					name="service_comments"
-					id="service_comments"
-					rows="3"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				></textarea>
-			</div>
+				<div class="pt-6">
+					<button
+						type="submit"
+						class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
+					>
+						Submit Request
+					</button>
 
-			<div class="pt-6">
-				<button
-					type="submit"
-					class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
-				>
-					Submit Request
-				</button>
-			</div>
-		</form>
+					<button
+						type="button"
+						onClick={() => setActiveStep(activeStep() + 1)}
+						class="mt-12 cursor-pointer"
+					>
+						Next
+					</button>
+				</div>
+			</form>
+		</article>
 	)
 }
 

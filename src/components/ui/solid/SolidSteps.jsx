@@ -1,22 +1,20 @@
-import { createSignal, For, Match, Show, Switch } from "solid-js"
+import { For, Match, Show, Switch } from "solid-js"
 
 const SolidSteps = (props) => {
-	const [activeStep, setActiveStep] = createSignal(0)
-
 	const getStepIcon = (idx = 0) => {
 		return (
 			<Switch>
-				<Match when={activeStep() < idx}>
+				<Match when={props.activeStep < idx}>
 					<div class="mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2">
 						<span class="h-3 w-3 rounded-full bg-gray-300"></span>
 					</div>
 				</Match>
-				<Match when={activeStep() === idx}>
+				<Match when={props.activeStep === idx}>
 					<div class="mx-[-1px] flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-green-500">
 						<span class="h-3 w-3 rounded-full bg-green-500"></span>
 					</div>
 				</Match>
-				<Match when={activeStep() > idx}>
+				<Match when={props.activeStep > idx}>
 					<div class="mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-green-500">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +58,7 @@ const SolidSteps = (props) => {
 								</div>
 								{getStepIcon(index())}
 								<Show
-									when={activeStep() > index()}
+									when={props.activeStep > index()}
 									fallback={<div class="w-0.5 h-16 bg-gray-300"></div>}
 								>
 									<div class="w-0.5 h-16 bg-green-500"></div>
@@ -70,14 +68,6 @@ const SolidSteps = (props) => {
 					}
 				</For>
 			</ol>
-
-			<button
-				type="button"
-				onClick={() => setActiveStep(activeStep() + 1)}
-				class="mt-12 cursor-pointer"
-			>
-				Next
-			</button>
 		</div>
 	)
 }
