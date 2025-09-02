@@ -12,14 +12,9 @@ import ProjectInfo from './sub-sections/ProjectInfo.astro'
 import Redcap from './sub-sections/Redcap.astro'
 import Requester from './sub-sections/Requester.astro'
 import ResearchPurpose from './sub-sections/ResearchPurpose.astro'
-import SolidSteps from '../ui/SolidSteps.jsx'
 ---
 
-<form class="mx-auto max-w-4xl space-y-6 p-6">
-  <SolidSteps
-    client:idle
-    steps={['Service Type', 'New REDCap Account', 'Custom Development']}
-  />
+<form class="mx-auto w-full space-y-6 py-6">
   <!-- Service Type -->
   <div class="space-y-3">
     <label class="block text-sm font-medium text-gray-700">

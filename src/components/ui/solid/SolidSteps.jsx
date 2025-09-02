@@ -36,8 +36,8 @@ const SolidSteps = (props) => {
 	}
 
 	return (
-		<div>
-			<ol class="flex items-center flex-col justify-center w-max">
+		<div class="w-lg">
+			<ol class="flex items-start flex-col justify-center">
 				<For each={props.steps}>
 					{(item, index) =>
 						index() === props.steps.length - 1 ? (
@@ -71,7 +71,11 @@ const SolidSteps = (props) => {
 				</For>
 			</ol>
 
-			<button type="button" onClick={() => setActiveStep(activeStep() + 1)}>
+			<button
+				type="button"
+				onClick={() => setActiveStep(activeStep() + 1)}
+				class="mt-12 cursor-pointer"
+			>
 				Next
 			</button>
 		</div>
