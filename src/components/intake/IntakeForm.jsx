@@ -28,8 +28,8 @@ const IntakeForm = () => {
         steps={Object.values(STEPS).map((s) => s.label)}
       />
 
-      <form class="mx-auto w-full space-y-12 py-6">
-        <div class="flex justify-between">
+      <form class="mx-auto w-full py-6">
+        <div class="flex justify-between pb-16">
           <wa-button
             size="small"
             on:click={() => setActiveStep(activeStep() - 1)}

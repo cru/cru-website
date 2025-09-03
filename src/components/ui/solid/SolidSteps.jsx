@@ -7,10 +7,10 @@ const SolidSteps = (props) => {
 
   createEffect(() => {
     if (props.activeStep > delayedActiveStep()) {
-      // Delay the step activation by the line animation duration (800ms)
+      // Delay the step activation by the line animation duration (700ms)
       setTimeout(() => {
         setDelayedActiveStep(props.activeStep)
-      }, 800)
+      }, 700)
     } else if (props.activeStep < delayedActiveStep()) {
       // Handle backward navigation immediately
       setDelayedActiveStep(props.activeStep)
