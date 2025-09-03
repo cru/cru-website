@@ -1,197 +1,171 @@
-import Checkbox from "../../ui/solid/Checkbox"
+import Checkbox from '../../ui/solid/Checkbox'
 
 export default function Redcap() {
-	return (
-		<fieldset
-			class="space-y-4 rounded-lg border border-gray-200 p-4"
-			id="redcap_section"
-		>
-			<legend class="px-2 text-lg font-semibold text-gray-900">
-				REDCap Project Details
-			</legend>
+  return (
+    <fieldset class="space-y-4 rounded-lg border border-gray-200 p-4" id="redcap_section">
+      <legend class="px-2 text-lg font-semibold text-gray-900">
+        REDCap Project Details
+      </legend>
 
-			<div>
-				<div class="block text-sm font-medium text-gray-700">
-					What type of project service are you interested in?
-				</div>
-				<div class="mt-2 space-y-2">
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_build"
-							value="self"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Self-service project</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_build"
-							value="chi"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">CHI supported project</span>
-					</label>
-				</div>
-				<div class="mt-2 flex items-center">
-					<Checkbox name="rc_build_unsure" value="1" label="I am unsure" />
-				</div>
-			</div>
+      <div>
+        <div class="block text-sm font-medium text-gray-700">
+          What type of project service are you interested in?
+        </div>
+        <div class="mt-2 space-y-2">
+          <label class="flex items-center">
+            <input type="radio" name="rc_build" value="self" class="border-gray-300" />
+            <span class="ml-2">Self-service project</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="rc_build" value="chi" class="border-gray-300" />
+            <span class="ml-2">CHI supported project</span>
+          </label>
+        </div>
+        <div class="mt-2 flex items-center">
+          <Checkbox name="rc_build_unsure" value="1" label="I am unsure" />
+        </div>
+      </div>
 
-			<div>
-				<label
-					for="rc_participant_num"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Number of Expected Study Participants
-				</label>
-				<input
-					type="number"
-					name="rc_participant_num"
-					id="rc_participant_num"
-					min="0"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				/>
-			</div>
+      <div>
+        <label for="rc_participant_num" class="block text-sm font-medium text-gray-700">
+          Number of Expected Study Participants
+        </label>
+        <input
+          type="number"
+          name="rc_participant_num"
+          id="rc_participant_num"
+          min="0"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
 
-			<div>
-				<label
-					for="rc_site_num"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Number of Study Sites
-				</label>
-				<input
-					type="number"
-					name="rc_site_num"
-					id="rc_site_num"
-					min="0"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				/>
-			</div>
+      <div>
+        <label for="rc_site_num" class="block text-sm font-medium text-gray-700">
+          Number of Study Sites
+        </label>
+        <input
+          type="number"
+          name="rc_site_num"
+          id="rc_site_num"
+          min="0"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        />
+      </div>
 
-			<div>
-				<Checkbox
-					name="rc_have_international_sites"
-					value="1"
-					label="I have international sites"
-				/>
-			</div>
+      <div>
+        <Checkbox
+          name="rc_have_international_sites"
+          value="1"
+          label="I have international sites"
+        />
+      </div>
 
-			<div id="international_sites_section">
-				<div class="block text-sm font-medium text-gray-700">
-					Which international sites?
-				</div>
-				<div class="mt-2 space-y-2">
-					<Checkbox name="rc_international_sites[]" value="usa" label="USA" />
-					<Checkbox
-						name="rc_international_sites[]"
-						value="europe"
-						label="Europe"
-					/>
-					<Checkbox name="rc_international_sites[]" value="oth" label="Other" />
-				</div>
-			</div>
+      <div id="international_sites_section">
+        <div class="block text-sm font-medium text-gray-700">
+          Which international sites?
+        </div>
+        <div class="mt-2 space-y-2">
+          <Checkbox name="rc_international_sites[]" value="usa" label="USA" />
+          <Checkbox name="rc_international_sites[]" value="europe" label="Europe" />
+          <Checkbox name="rc_international_sites[]" value="oth" label="Other" />
+        </div>
+      </div>
 
-			<div>
-				<Checkbox
-					name="rc_have_surveys"
-					value="1"
-					label="I require surveys (online questionnaires) to be sent to participants"
-				/>
-			</div>
+      <div>
+        <Checkbox
+          name="rc_have_surveys"
+          value="1"
+          label="I require surveys (online questionnaires) to be sent to participants"
+        />
+      </div>
 
-			<div>
-				<Checkbox
-					name="rc_have_randomization"
-					value="1"
-					label="I require randomization"
-				/>
-			</div>
+      <div>
+        <Checkbox
+          name="rc_have_randomization"
+          value="1"
+          label="I require randomization"
+        />
+      </div>
 
-			<div id="randomization_section">
-				<label
-					for="rc_randomization_summary"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Please provide a summary of the randomization schema
-				</label>
-				<textarea
-					name="rc_randomization_summary"
-					id="rc_randomization_summary"
-					rows="3"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				></textarea>
-			</div>
+      <div id="randomization_section">
+        <label
+          for="rc_randomization_summary"
+          class="block text-sm font-medium text-gray-700"
+        >
+          Please provide a summary of the randomization schema
+        </label>
+        <textarea
+          name="rc_randomization_summary"
+          id="rc_randomization_summary"
+          rows="3"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        ></textarea>
+      </div>
 
-			<div>
-				<Checkbox
-					name="rc_have_xml"
-					value="1"
-					label="I have an existing REDCap project XML file to create my project from"
-				/>
-			</div>
+      <div>
+        <Checkbox
+          name="rc_have_xml"
+          value="1"
+          label="I have an existing REDCap project XML file to create my project from"
+        />
+      </div>
 
-			<div id="xml_upload_section">
-				<label
-					for="rc_xml_upload"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Existing REDCap Project XML File
-				</label>
-				<input
-					type="file"
-					name="rc_xml_upload"
-					id="rc_xml_upload"
-					accept=".xml"
-					class="mt-1 block w-full"
-				/>
-			</div>
+      <div id="xml_upload_section">
+        <label for="rc_xml_upload" class="block text-sm font-medium text-gray-700">
+          Existing REDCap Project XML File
+        </label>
+        <input
+          type="file"
+          name="rc_xml_upload"
+          id="rc_xml_upload"
+          accept=".xml"
+          class="mt-1 block w-full"
+        />
+      </div>
 
-			{/* REDCap Pricing Tier */}
-			<div>
-				<div class="block text-sm font-medium text-gray-700">
-					Please select a REDCap Support Tier *
-				</div>
-				<p class="mb-2 text-sm text-gray-600">
-					<a
-						href="https://cru.ucalgary.ca/data-capture/pricing/"
-						class="text-blue-600 hover:underline"
-					>
-						See Data Capture Pricing for more information
-					</a>
-				</p>
-				<div class="space-y-2">
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_price_tier"
-							value="basic"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Basic</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_price_tier"
-							value="plus"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Plus</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_price_tier"
-							value="premium"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Premium</span>
-					</label>
-				</div>
-			</div>
-		</fieldset>
-	)
+      {/* REDCap Pricing Tier */}
+      <div>
+        <div class="block text-sm font-medium text-gray-700">
+          Please select a REDCap Support Tier *
+        </div>
+        <p class="mb-2 text-sm text-gray-600">
+          <a
+            href="https://cru.ucalgary.ca/data-capture/pricing/"
+            class="text-blue-600 hover:underline"
+          >
+            See Data Capture Pricing for more information
+          </a>
+        </p>
+        <div class="space-y-2">
+          <label class="flex items-center">
+            <input
+              type="radio"
+              name="rc_price_tier"
+              value="basic"
+              class="border-gray-300"
+            />
+            <span class="ml-2">Basic</span>
+          </label>
+          <label class="flex items-center">
+            <input
+              type="radio"
+              name="rc_price_tier"
+              value="plus"
+              class="border-gray-300"
+            />
+            <span class="ml-2">Plus</span>
+          </label>
+          <label class="flex items-center">
+            <input
+              type="radio"
+              name="rc_price_tier"
+              value="premium"
+              class="border-gray-300"
+            />
+            <span class="ml-2">Premium</span>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  )
 }
