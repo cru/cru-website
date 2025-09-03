@@ -29,16 +29,10 @@ const IntakeForm = () => {
 
       <form class="mx-auto w-full space-y-12 py-6">
         <div class="flex justify-between">
-          <wa-button
-            size="small"
-            on:click={() => setActiveStep(activeStep() - 1)}
-          >
+          <wa-button size="small" on:click={() => setActiveStep(activeStep() - 1)}>
             Previous
           </wa-button>
-          <wa-button
-            size="small"
-            on:click={() => setActiveStep(activeStep() + 1)}
-          >
+          <wa-button size="small" on:click={() => setActiveStep(activeStep() + 1)}>
             Next
           </wa-button>
         </div>
