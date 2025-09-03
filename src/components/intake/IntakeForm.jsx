@@ -38,6 +38,7 @@ const IntakeForm = () => {
           'Free Trial',
           'New REDCap Account',
           'Other Services',
+          'Finish up',
         ]}
       />
 
@@ -98,19 +99,15 @@ const IntakeForm = () => {
           <OtherServices />
         </div>
 
-        <TextArea
-          name="service_comments"
-          id="service_comments"
-          label="Any additional notes or comments?"
-        />
-
-        <div class="pt-6">
-          <button
-            type="submit"
-            class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
-          >
-            Submit Request
-          </button>
+        <div class="space-y-6">
+          <TextArea
+            name="service_comments"
+            id="service_comments"
+            label="Any additional notes or comments?"
+          />
+          <wa-button type="submit" class="w-full ">
+            Submit request
+          </wa-button>
         </div>
       </form>
     </article>
