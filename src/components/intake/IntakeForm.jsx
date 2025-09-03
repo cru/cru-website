@@ -1,5 +1,6 @@
 import '@awesome.me/webawesome/dist/components/button/button.js'
-import { createSignal } from 'solid-js'
+import { createSignal, For } from 'solid-js'
+import { Dynamic } from 'solid-js/web'
 import SolidSteps from '../ui/solid/SolidSteps'
 import AccountCreation from './sub-sections/AccountCreation'
 import CustomDevelopment from './sub-sections/CustomDevelopment'
@@ -43,20 +44,14 @@ const IntakeForm = () => {
           </wa-button>
         </div>
 
-        <ServiceType hidden={activeStep() !== 0} />
-        <NewProject hidden={activeStep() !== 1} />
-        <Requester hidden={activeStep() !== 2} />
-        <PrincipalInvestigator hidden={activeStep() !== 3} />
-        <ResearchPurpose hidden={activeStep() !== 4} />
-        <ProjectDetails hidden={activeStep() !== 5} />
-        <Redcap hidden={activeStep() !== 6} />
-        <MethodsAnalytics hidden={activeStep() !== 7} />
-        <CustomDevelopment hidden={activeStep() !== 8} />
-        <Financial hidden={activeStep() !== 9} />
-        <AccountCreation hidden={activeStep() !== 10} />
-        <FreeTrial hidden={activeStep() !== 11} />
-        <OtherServices hidden={activeStep() !== 12} />
-        <Finish hidden={activeStep() !== 13} />
+        <For each={Object.values(STEPS)}>
+          {(step, index) => (
+            <Dynamic
+              component={step.Component}
+              hidden={activeStep() !== index()}
+            />
+          )}
+        </For>
       </form>
     </article>
   )
