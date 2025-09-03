@@ -1,112 +1,112 @@
-import { createSignal } from "solid-js"
-import Checkbox from "../ui/solid/Checkbox"
-import SolidSteps from "../ui/solid/SolidSteps"
-import TextArea from "../ui/solid/TextArea"
-import AccountCreation from "./sub-sections/AccountCreation"
-import CustomDevelopment from "./sub-sections/CustomDevelopment"
-import Financial from "./sub-sections/Financial"
-import FreeTrial from "./sub-sections/FreeTrial"
-import MethodsAnalytics from "./sub-sections/MethodsAnalytics"
-import OtherServices from "./sub-sections/OtherServices"
-import PrincipalInvestigator from "./sub-sections/PrincipalInvestigator"
-import ProjectDetails from "./sub-sections/ProjectDetails"
-import ProjectInfo from "./sub-sections/ProjectInfo"
-import Redcap from "./sub-sections/Redcap"
-import Requester from "./sub-sections/Requester"
-import ResearchPurpose from "./sub-sections/ResearchPurpose"
+import { createSignal } from 'solid-js'
+import Checkbox from '../ui/solid/Checkbox'
+import SolidSteps from '../ui/solid/SolidSteps'
+import TextArea from '../ui/solid/TextArea'
+import AccountCreation from './sub-sections/AccountCreation'
+import CustomDevelopment from './sub-sections/CustomDevelopment'
+import Financial from './sub-sections/Financial'
+import FreeTrial from './sub-sections/FreeTrial'
+import MethodsAnalytics from './sub-sections/MethodsAnalytics'
+import OtherServices from './sub-sections/OtherServices'
+import PrincipalInvestigator from './sub-sections/PrincipalInvestigator'
+import ProjectDetails from './sub-sections/ProjectDetails'
+import ProjectInfo from './sub-sections/ProjectInfo'
+import Redcap from './sub-sections/Redcap'
+import Requester from './sub-sections/Requester'
+import ResearchPurpose from './sub-sections/ResearchPurpose'
 
 const IntakeForm = () => {
-	const [activeStep, setActiveStep] = createSignal(0)
+  const [activeStep, setActiveStep] = createSignal(0)
 
-	return (
-		<article class="flex space-x-24">
-			<SolidSteps
-				client:idle
-				activeStep={activeStep()}
-				steps={[
-					"Service Type",
-					"New REDCap Account",
-					"Custom Development",
-					"Financial Info",
-					"Free Trial",
-					"M&A",
-					"Other Services",
-					"Principal Investigator",
-					"Project Details",
-					"Project Info",
-					"REDCap",
-					"Requester",
-					"Research Purpose",
-				]}
-			/>
+  return (
+    <article class="flex space-x-24">
+      <SolidSteps
+        client:idle
+        activeStep={activeStep()}
+        steps={[
+          'Service Type',
+          'New REDCap Account',
+          'Custom Development',
+          'Financial Info',
+          'Free Trial',
+          'M&A',
+          'Other Services',
+          'Principal Investigator',
+          'Project Details',
+          'Project Info',
+          'REDCap',
+          'Requester',
+          'Research Purpose',
+        ]}
+      />
 
-			<form class="mx-auto w-full space-y-6 py-6">
-				<div class="space-y-12">
-					<section class="flex flex-col space-y-4">
-						<p>What type of support are you looking for from CHI?</p>
-						<Checkbox
-							name="service_type[]"
-							value="user"
-							label="New REDCap user account"
-						/>
-						<Checkbox
-							name="service_type[]"
-							value="proj"
-							label="New service, project, or support request"
-						/>
-						<Checkbox
-							name="service_type[]"
-							value="trial"
-							label="Free trial / practice project"
-						/>
-						<Checkbox
-							name="service_type[]"
-							value="oth"
-							label="Other / learn more about CHI services"
-						/>
-					</section>
+      <form class="mx-auto w-full space-y-6 py-6">
+        <div class="space-y-12">
+          <section class="flex flex-col space-y-4">
+            <p>What type of support are you looking for from CHI?</p>
+            <Checkbox
+              name="service_type[]"
+              value="user"
+              label="New REDCap user account"
+            />
+            <Checkbox
+              name="service_type[]"
+              value="proj"
+              label="New service, project, or support request"
+            />
+            <Checkbox
+              name="service_type[]"
+              value="trial"
+              label="Free trial / practice project"
+            />
+            <Checkbox
+              name="service_type[]"
+              value="oth"
+              label="Other / learn more about CHI services"
+            />
+          </section>
 
-					<AccountCreation />
-					<CustomDevelopment />
-					<Financial />
-					<FreeTrial />
-					<MethodsAnalytics />
-					<OtherServices />
-					<PrincipalInvestigator />
-					<ProjectDetails />
-					<ProjectInfo />
-					<Redcap />
-					<Requester />
-					<ResearchPurpose />
-				</div>
+          <AccountCreation />
+          <CustomDevelopment />
+          <Financial />
+          <FreeTrial />
+          <MethodsAnalytics />
+          <OtherServices />
+          <PrincipalInvestigator />
+          <ProjectDetails />
+          <ProjectInfo />
+          <Redcap />
+          <Requester />
+          <ResearchPurpose />
+        </div>
 
-				<div>
-					<TextArea
-						name="service_comments"
-						id="service_comments"
-						label="Any additional notes or comments?"
-					/>
-				</div>
+        <div>
+          <TextArea
+            name="service_comments"
+            id="service_comments"
+            label="Any additional notes or comments?"
+          />
+        </div>
 
-				<div class="pt-6">
-					<button
-						type="submit"
-						class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
-					>
-						Submit Request
-					</button>
+        <div class="pt-6">
+          <button
+            type="submit"
+            class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
+          >
+            Submit Request
+          </button>
 
-					<button
-						type="button"
-						onClick={() => setActiveStep(activeStep() + 1)}
-						class="mt-12 cursor-pointer"
-					>
-						Next
-					</button>
-				</div>
-			</form>
-		</article>
-	)
+          <button
+            type="button"
+            onClick={() => setActiveStep(activeStep() + 1)}
+            class="mt-12 cursor-pointer"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </article>
+  )
 }
 
 export default IntakeForm
