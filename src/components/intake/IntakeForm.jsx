@@ -41,6 +41,13 @@ const IntakeForm = () => {
       />
 
       <form class="mx-auto w-full space-y-6 py-6">
+        <button
+          type="button"
+          onClick={() => setActiveStep(activeStep() + 1)}
+          class="mt-12 cursor-pointer"
+        >
+          Next
+        </button>
         <div class="space-y-12">
           <Radio
             name="service_type"
@@ -94,14 +101,6 @@ const IntakeForm = () => {
             class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
           >
             Submit Request
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveStep(activeStep() + 1)}
-            class="mt-12 cursor-pointer"
-          >
-            Next
           </button>
         </div>
       </form>
