@@ -1,21 +1,16 @@
+import "@awesome.me/webawesome/dist/components/select/select.js"
+import { Index } from "solid-js"
+
 const Select = (props) => {
-  return (
-    <div class="space-y-1">
-      <label for={props.id} class="block text-sm font-medium">
-        {props.label}
-      </label>
-      <select
-        name={props.name}
-        id={props.id}
-        {...props}
-        class={`block w-full appearance-none rounded-md border border-gray-200 px-2 py-1 ${props.className}`}
-      >
-        {props.options.map((option) => (
-          <option value={option.value}>{option.label}</option>
-        ))}
-      </select>
-    </div>
-  )
+	return (
+		<wa-select {...props} class={`${props.className}`}>
+			<Index each={props.options}>
+				{(option) => (
+					<wa-option value={option().value}>{option().label}</wa-option>
+				)}
+			</Index>
+		</wa-select>
+	)
 }
 
 export default Select

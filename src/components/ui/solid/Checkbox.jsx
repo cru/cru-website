@@ -1,16 +1,11 @@
+import "@awesome.me/webawesome/dist/components/checkbox/checkbox.js"
+
 const Checkbox = (props) => {
-  return (
-    <label class="flex items-center">
-      <input
-        type="checkbox"
-        name={props.name}
-        value={props.value}
-        {...props}
-        class={`rounded border-gray-300 ${props.className}`}
-      />
-      <span class="ml-2">{props.label}</span>
-    </label>
-  )
+	return (
+		<wa-checkbox {...props} class={`${props.className}`}>
+			{props.label}
+		</wa-checkbox>
+	)
 }
 
 export default Checkbox
