@@ -1,112 +1,112 @@
-import { createSignal } from "solid-js"
-import Radio from "../ui/solid/Radio"
-import SolidSteps from "../ui/solid/SolidSteps"
-import TextArea from "../ui/solid/TextArea"
-import AccountCreation from "./sub-sections/AccountCreation"
-import CustomDevelopment from "./sub-sections/CustomDevelopment"
-import Financial from "./sub-sections/Financial"
-import FreeTrial from "./sub-sections/FreeTrial"
-import MethodsAnalytics from "./sub-sections/MethodsAnalytics"
-import NewProject from "./sub-sections/NewProject"
-import OtherServices from "./sub-sections/OtherServices"
-import PrincipalInvestigator from "./sub-sections/PrincipalInvestigator"
-import ProjectDetails from "./sub-sections/ProjectDetails"
-import Redcap from "./sub-sections/Redcap"
-import Requester from "./sub-sections/Requester"
-import ResearchPurpose from "./sub-sections/ResearchPurpose"
+import { createSignal } from 'solid-js'
+import Radio from '../ui/solid/Radio'
+import SolidSteps from '../ui/solid/SolidSteps'
+import TextArea from '../ui/solid/TextArea'
+import AccountCreation from './sub-sections/AccountCreation'
+import CustomDevelopment from './sub-sections/CustomDevelopment'
+import Financial from './sub-sections/Financial'
+import FreeTrial from './sub-sections/FreeTrial'
+import MethodsAnalytics from './sub-sections/MethodsAnalytics'
+import NewProject from './sub-sections/NewProject'
+import OtherServices from './sub-sections/OtherServices'
+import PrincipalInvestigator from './sub-sections/PrincipalInvestigator'
+import ProjectDetails from './sub-sections/ProjectDetails'
+import Redcap from './sub-sections/Redcap'
+import Requester from './sub-sections/Requester'
+import ResearchPurpose from './sub-sections/ResearchPurpose'
 
 const IntakeForm = () => {
-	const [activeStep, setActiveStep] = createSignal(0)
+  const [activeStep, setActiveStep] = createSignal(0)
 
-	return (
-		<article class="flex space-x-24">
-			<SolidSteps
-				client:idle
-				activeStep={activeStep()}
-				steps={[
-					"Service Type",
-					"New REDCap Account",
-					"Custom Development",
-					"Financial Info",
-					"Free Trial",
-					"M&A",
-					"Other Services",
-					"Principal Investigator",
-					"Project Details",
-					"Project Info",
-					"REDCap",
-					"Requester",
-					"Research Purpose",
-				]}
-			/>
+  return (
+    <article class="flex space-x-24">
+      <SolidSteps
+        client:idle
+        activeStep={activeStep()}
+        steps={[
+          'Service Type',
+          'New REDCap Account',
+          'Custom Development',
+          'Financial Info',
+          'Free Trial',
+          'M&A',
+          'Other Services',
+          'Principal Investigator',
+          'Project Details',
+          'Project Info',
+          'REDCap',
+          'Requester',
+          'Research Purpose',
+        ]}
+      />
 
-			<form class="mx-auto w-full space-y-6 py-6">
-				<div class="space-y-12">
-					<Radio
-						name="service_type"
-						label="What type of support are you looking for from CHI?"
-						required
-						options={[
-							{
-								value: "user",
-								label: "Do you need us to create a new REDCap account for you?",
-							},
-							{
-								value: "trial",
-								label:
-									"Do you need us to create a new REDCap 60-day Practice Project for you?",
-							},
-							{
-								value: "proj",
-								label:
-									"Are you looking to request support or initiate a new service with our team today (e.g. a new REDCap project, data access, analytics, or platform development and/or support)?",
-							},
-							{
-								value: "oth",
-								label:
-									"I’m not sure what services I require, but I would like to learn more about the support required by CHI.",
-							},
-						]}
-					/>
-					<NewProject />
-					<Requester />
-					<PrincipalInvestigator />
-					<ResearchPurpose />
-					<ProjectDetails />
-					<Redcap />
-					<MethodsAnalytics />
-					<CustomDevelopment />
-					<Financial />
-					<AccountCreation />
-					<FreeTrial />
-					<OtherServices />
-				</div>
+      <form class="mx-auto w-full space-y-6 py-6">
+        <div class="space-y-12">
+          <Radio
+            name="service_type"
+            label="What type of support are you looking for from CHI?"
+            required
+            options={[
+              {
+                value: 'user',
+                label: 'Do you need us to create a new REDCap account for you?',
+              },
+              {
+                value: 'trial',
+                label:
+                  'Do you need us to create a new REDCap 60-day Practice Project for you?',
+              },
+              {
+                value: 'proj',
+                label:
+                  'Are you looking to request support or initiate a new service with our team today (e.g. a new REDCap project, data access, analytics, or platform development and/or support)?',
+              },
+              {
+                value: 'oth',
+                label:
+                  'I’m not sure what services I require, but I would like to learn more about the support required by CHI.',
+              },
+            ]}
+          />
+          <NewProject />
+          <Requester />
+          <PrincipalInvestigator />
+          <ResearchPurpose />
+          <ProjectDetails />
+          <Redcap />
+          <MethodsAnalytics />
+          <CustomDevelopment />
+          <Financial />
+          <AccountCreation />
+          <FreeTrial />
+          <OtherServices />
+        </div>
 
-				<TextArea
-					name="service_comments"
-					id="service_comments"
-					label="Any additional notes or comments?"
-				/>
+        <TextArea
+          name="service_comments"
+          id="service_comments"
+          label="Any additional notes or comments?"
+        />
 
-				<div class="pt-6">
-					<button
-						type="submit"
-						class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
-					>
-						Submit Request
-					</button>
+        <div class="pt-6">
+          <button
+            type="submit"
+            class="bg-brand-primary-700 hover:bg-brand-primary-800 focus:ring-brand-primary-500 w-full rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-offset-2"
+          >
+            Submit Request
+          </button>
 
-					<button
-						type="button"
-						onClick={() => setActiveStep(activeStep() + 1)}
-						class="mt-12 cursor-pointer"
-					>
-						Next
-					</button>
-				</div>
-			</form>
-		</article>
-	)
+          <button
+            type="button"
+            onClick={() => setActiveStep(activeStep() + 1)}
+            class="mt-12 cursor-pointer"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </article>
+  )
 }
 
 export default IntakeForm
