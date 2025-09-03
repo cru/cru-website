@@ -1,3 +1,4 @@
+import '@awesome.me/webawesome/dist/components/button/button.js'
 import { createSignal } from 'solid-js'
 import Radio from '../ui/solid/Radio'
 import SolidSteps from '../ui/solid/SolidSteps'
@@ -41,13 +42,21 @@ const IntakeForm = () => {
       />
 
       <form class="mx-auto w-full space-y-6 py-6">
-        <button
-          type="button"
-          onClick={() => setActiveStep(activeStep() + 1)}
-          class="mt-12 cursor-pointer"
-        >
-          Next
-        </button>
+        <div class="flex justify-between">
+          <wa-button
+            size="small"
+            on:click={() => setActiveStep(activeStep() - 1)}
+          >
+            Previous
+          </wa-button>
+          <wa-button
+            size="small"
+            on:click={() => setActiveStep(activeStep() + 1)}
+          >
+            Next
+          </wa-button>
+        </div>
+
         <div class="space-y-12">
           <Radio
             name="service_type"
