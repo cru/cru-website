@@ -25,18 +25,18 @@ const IntakeForm = () => {
         activeStep={activeStep()}
         steps={[
           'Service Type',
-          'New REDCap Account',
+          'New Service or Project',
+          'Requester Information',
+          'Principal Investigator',
+          'Research Purpose',
+          'Project Details',
+          'REDCap Build',
+          'Methods & Analytics',
           'Custom Development',
           'Financial Info',
           'Free Trial',
-          'M&A',
+          'New REDCap Account',
           'Other Services',
-          'Principal Investigator',
-          'Project Details',
-          'Project Info',
-          'REDCap',
-          'Requester',
-          'Research Purpose',
         ]}
       />
 
