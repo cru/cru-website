@@ -1,20 +1,36 @@
-import { For, Match, Switch } from 'solid-js'
+import { createEffect, createSignal, For, Match, Switch } from 'solid-js'
 
 const SolidSteps = (props) => {
+  const [delayedActiveStep, setDelayedActiveStep] = createSignal(
+    props.activeStep || 0,
+  )
+
+  createEffect(() => {
+    if (props.activeStep > delayedActiveStep()) {
+      // Delay the step activation by the line animation duration (800ms)
+      setTimeout(() => {
+        setDelayedActiveStep(props.activeStep)
+      }, 800)
+    } else if (props.activeStep < delayedActiveStep()) {
+      // Handle backward navigation immediately
+      setDelayedActiveStep(props.activeStep)
+    }
+  })
+
   const getStepIcon = (idx = 0) => {
     return (
       <Switch>
-        <Match when={props.activeStep < idx}>
+        <Match when={delayedActiveStep() < idx}>
           <div class="mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-gray-300 transition-all duration-300 ease-in-out hover:scale-110 hover:border-gray-400">
             <span class="h-3 w-3 rounded-full bg-gray-300 transition-all duration-300 ease-in-out"></span>
           </div>
         </Match>
-        <Match when={props.activeStep === idx}>
-          <div class="mx-[-1px] flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-emerald-500 transition-all duration-500 ease-in-out animate-pulse scale-110 shadow-lg shadow-emerald-500/30">
+        <Match when={delayedActiveStep() === idx}>
+          <div class="mx-[-1px] flex h-7 w-7 shrink-0 items-center justify-center rounded-full z-10 border-2 border-emerald-500 transition-all duration-500 ease-in-out animate-pulse scale-110 shadow-lg shadow-emerald-500/30 animate-step-activate">
             <span class="h-3 w-3 rounded-full bg-emerald-500 transition-all duration-500 ease-in-out animate-ping"></span>
           </div>
         </Match>
-        <Match when={props.activeStep > idx}>
+        <Match when={delayedActiveStep() > idx}>
           <div class="mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-emerald-500 transition-all duration-700 ease-out hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/30 animate-fade-in">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +65,9 @@ const SolidSteps = (props) => {
                   </p>
                   <h6
                     class={`text-sm font-semibold transition-all duration-300 ease-out ${
-                      props.activeStep === index()
+                      delayedActiveStep() === index()
                         ? 'text-emerald-600 scale-105'
-                        : props.activeStep > index()
+                        : delayedActiveStep() > index()
                           ? 'text-emerald-500'
                           : 'text-slate-400'
                     }`}
@@ -72,11 +88,11 @@ const SolidSteps = (props) => {
                   </p>
                   <h6
                     class={`text-sm font-semibold transition-all duration-300 ease-out ${
-                      props.activeStep === index()
+                      delayedActiveStep() === index()
                         ? 'text-emerald-600 scale-105'
-                        : props.activeStep > index()
+                        : delayedActiveStep() > index()
                           ? 'text-emerald-500'
-                          : 'text-slate-900'
+                          : 'text-slate-400'
                     }`}
                   >
                     {item}
