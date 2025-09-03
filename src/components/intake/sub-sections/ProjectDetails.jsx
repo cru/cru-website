@@ -9,9 +9,7 @@ export default function ProjectDetails(props) {
         class="space-y-4 rounded-lg border border-gray-200 p-4"
         id="methods_analytics_section"
       >
-        <legend class="px-2 text-lg font-semibold text-gray-900">
-          Project Details
-        </legend>
+        <legend class="px-2 text-lg font-semibold text-gray-900">Project Details</legend>
         <div class="space-y-4">
           <Checkbox
             name="proj_is_lshi"
@@ -40,11 +38,7 @@ export default function ProjectDetails(props) {
             />
           </div>
 
-          <Checkbox
-            name="proj_have_ethics"
-            value="1"
-            label="I have ethics approval"
-          />
+          <Checkbox name="proj_have_ethics" value="1" label="I have ethics approval" />
 
           <Input
             id="proj_ethics_id"

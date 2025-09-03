@@ -8,9 +8,7 @@ export default function OtherServices(props) {
         class="space-y-4 rounded-lg border border-gray-200 p-4"
         id="other_section"
       >
-        <legend class="px-2 text-lg font-semibold text-gray-900">
-          Other Services
-        </legend>
+        <legend class="px-2 text-lg font-semibold text-gray-900">Other Services</legend>
 
         <div>
           <TextArea

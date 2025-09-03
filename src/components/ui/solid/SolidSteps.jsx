@@ -1,9 +1,7 @@
 import { createEffect, createSignal, For, Match, Switch } from 'solid-js'
 
 const SolidSteps = (props) => {
-  const [delayedActiveStep, setDelayedActiveStep] = createSignal(
-    props.activeStep || 0,
-  )
+  const [delayedActiveStep, setDelayedActiveStep] = createSignal(props.activeStep || 0)
 
   createEffect(() => {
     if (props.activeStep > delayedActiveStep()) {
@@ -26,15 +24,15 @@ const SolidSteps = (props) => {
           </div>
         </Match>
         <Match when={delayedActiveStep() === idx}>
-          <div class="mx-[-1px] flex h-7 w-7 shrink-0 items-center justify-center rounded-full z-10 border-2 border-emerald-500 transition-all duration-500 ease-in-out animate-pulse scale-110 shadow-lg shadow-emerald-500/30 animate-step-activate">
-            <span class="h-3 w-3 rounded-full bg-emerald-500 transition-all duration-500 ease-in-out animate-ping"></span>
+          <div class="animate-step-activate z-10 mx-[-1px] flex h-7 w-7 shrink-0 scale-110 animate-pulse items-center justify-center rounded-full border-2 border-emerald-500 shadow-lg shadow-emerald-500/30 transition-all duration-500 ease-in-out">
+            <span class="h-3 w-3 animate-ping rounded-full bg-emerald-500 transition-all duration-500 ease-in-out"></span>
           </div>
         </Match>
         <Match when={delayedActiveStep() > idx}>
-          <div class="mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-emerald-500 transition-all duration-700 ease-out hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/30 animate-fade-in">
+          <div class="animate-fade-in mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-emerald-500 transition-all duration-700 ease-out hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/30">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4 fill-emerald-500 transition-all duration-500 ease-out animate-bounce-in"
+              class="animate-bounce-in h-4 w-4 fill-emerald-500 transition-all duration-500 ease-out"
               viewBox="0 0 24 24"
             >
               <title>Step completed</title>
@@ -56,7 +54,7 @@ const SolidSteps = (props) => {
           {(item, index) =>
             index() === props.steps.length - 1 ? (
               <li
-                class="relative flex flex-col items-center transition-all duration-500 ease-out animate-slide-in"
+                class="animate-slide-in relative flex flex-col items-center transition-all duration-500 ease-out"
                 style={`animation-delay: ${index() * 100}ms`}
               >
                 <div class="absolute top-0 left-full ml-4 w-max transition-all duration-300 ease-out hover:translate-x-1">
@@ -66,7 +64,7 @@ const SolidSteps = (props) => {
                   <h6
                     class={`text-sm font-semibold transition-all duration-300 ease-out ${
                       delayedActiveStep() === index()
-                        ? 'text-emerald-600 scale-105'
+                        ? 'scale-105 text-emerald-600'
                         : delayedActiveStep() > index()
                           ? 'text-emerald-500'
                           : 'text-slate-400'
@@ -79,7 +77,7 @@ const SolidSteps = (props) => {
               </li>
             ) : (
               <li
-                class="relative flex flex-col items-center transition-all duration-500 ease-out animate-slide-in"
+                class="animate-slide-in relative flex flex-col items-center transition-all duration-500 ease-out"
                 style={`animation-delay: ${index() * 100}ms`}
               >
                 <div class="absolute top-0 left-full ml-4 w-max transition-all duration-300 ease-out hover:translate-x-1">
@@ -89,7 +87,7 @@ const SolidSteps = (props) => {
                   <h6
                     class={`text-sm font-semibold transition-all duration-300 ease-out ${
                       delayedActiveStep() === index()
-                        ? 'text-emerald-600 scale-105'
+                        ? 'scale-105 text-emerald-600'
                         : delayedActiveStep() > index()
                           ? 'text-emerald-500'
                           : 'text-slate-400'
@@ -105,9 +103,7 @@ const SolidSteps = (props) => {
                   {/* Animated green line that fills from top to bottom */}
                   <div
                     class={`absolute top-0 w-full bg-emerald-500 transition-all duration-700 ease-out ${
-                      props.activeStep > index()
-                        ? 'h-full animate-line-fill-down'
-                        : 'h-0'
+                      props.activeStep > index() ? 'animate-line-fill-down h-full' : 'h-0'
                     }`}
                   ></div>
                 </div>

@@ -9,9 +9,7 @@ export default function ResearchPurpose(props) {
         class="space-y-4 rounded-lg border border-gray-200 p-4"
         id="methods_analytics_section"
       >
-        <legend class="px-2 text-lg font-semibold text-gray-900">
-          Research Type
-        </legend>
+        <legend class="px-2 text-lg font-semibold text-gray-900">Research Type</legend>
         <Radio
           name="proj_purpose_res"
           label="What is the primary purpose of your research?"

@@ -11,7 +11,7 @@ export default function Finish(props) {
           id="service_comments"
           label="Any additional notes or comments?"
         />
-        <wa-button type="submit" class="w-full ">
+        <wa-button type="submit" class="w-full">
           Submit request
         </wa-button>
       </div>
