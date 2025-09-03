@@ -7,10 +7,10 @@ import CustomDevelopment from "./sub-sections/CustomDevelopment"
 import Financial from "./sub-sections/Financial"
 import FreeTrial from "./sub-sections/FreeTrial"
 import MethodsAnalytics from "./sub-sections/MethodsAnalytics"
+import NewProject from "./sub-sections/NewProject"
 import OtherServices from "./sub-sections/OtherServices"
 import PrincipalInvestigator from "./sub-sections/PrincipalInvestigator"
 import ProjectDetails from "./sub-sections/ProjectDetails"
-import ProjectInfo from "./sub-sections/ProjectInfo"
 import Redcap from "./sub-sections/Redcap"
 import Requester from "./sub-sections/Requester"
 import ResearchPurpose from "./sub-sections/ResearchPurpose"
@@ -47,27 +47,39 @@ const IntakeForm = () => {
 						label="What type of support are you looking for from CHI?"
 						required
 						options={[
-							{ value: "user", label: "New REDCap user account" },
+							{
+								value: "user",
+								label: "Do you need us to create a new REDCap account for you?",
+							},
+							{
+								value: "trial",
+								label:
+									"Do you need us to create a new REDCap 60-day Practice Project for you?",
+							},
 							{
 								value: "proj",
-								label: "New service, project, or support request",
+								label:
+									"Are you looking to request support or initiate a new service with our team today (e.g. a new REDCap project, data access, analytics, or platform development and/or support)?",
 							},
-							{ value: "trial", label: "Free trial / practice project" },
-							{ value: "oth", label: "Other / learn more about CHI services" },
+							{
+								value: "oth",
+								label:
+									"I’m not sure what services I require, but I would like to learn more about the support required by CHI.",
+							},
 						]}
 					/>
-					<AccountCreation />
+					<NewProject />
+					<Requester />
+					<PrincipalInvestigator />
+					<ResearchPurpose />
+					<ProjectDetails />
+					<Redcap />
+					<MethodsAnalytics />
 					<CustomDevelopment />
 					<Financial />
+					<AccountCreation />
 					<FreeTrial />
-					<MethodsAnalytics />
 					<OtherServices />
-					<PrincipalInvestigator />
-					<ProjectDetails />
-					<ProjectInfo />
-					<Redcap />
-					<Requester />
-					<ResearchPurpose />
 				</div>
 
 				<TextArea
