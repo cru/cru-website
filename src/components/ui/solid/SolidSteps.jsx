@@ -1,4 +1,4 @@
-import { For, Match, Show, Switch } from 'solid-js'
+import { For, Match, Switch } from 'solid-js'
 
 const SolidSteps = (props) => {
   const getStepIcon = (idx = 0) => {
@@ -10,15 +10,15 @@ const SolidSteps = (props) => {
           </div>
         </Match>
         <Match when={props.activeStep === idx}>
-          <div class="mx-[-1px] flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-green-500 transition-all duration-500 ease-in-out animate-pulse scale-110 shadow-lg shadow-green-500/30">
-            <span class="h-3 w-3 rounded-full bg-green-500 transition-all duration-500 ease-in-out animate-ping"></span>
+          <div class="mx-[-1px] flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-emerald-500 transition-all duration-500 ease-in-out animate-pulse scale-110 shadow-lg shadow-emerald-500/30">
+            <span class="h-3 w-3 rounded-full bg-emerald-500 transition-all duration-500 ease-in-out animate-ping"></span>
           </div>
         </Match>
         <Match when={props.activeStep > idx}>
-          <div class="mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-green-500 transition-all duration-700 ease-out hover:scale-110 hover:shadow-lg hover:shadow-green-500/30 animate-fade-in">
+          <div class="mx-[-1px] flex size-7 shrink-0 items-center justify-center rounded-full border-2 border-emerald-500 transition-all duration-700 ease-out hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/30 animate-fade-in">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4 fill-green-500 transition-all duration-500 ease-out animate-bounce-in"
+              class="h-4 w-4 fill-emerald-500 transition-all duration-500 ease-out animate-bounce-in"
               viewBox="0 0 24 24"
             >
               <title>Step completed</title>
@@ -50,9 +50,9 @@ const SolidSteps = (props) => {
                   <h6
                     class={`text-sm font-semibold transition-all duration-300 ease-out ${
                       props.activeStep === index()
-                        ? 'text-green-600 scale-105'
+                        ? 'text-emerald-600 scale-105'
                         : props.activeStep > index()
-                          ? 'text-green-500'
+                          ? 'text-emerald-500'
                           : 'text-slate-400'
                     }`}
                   >
@@ -73,9 +73,9 @@ const SolidSteps = (props) => {
                   <h6
                     class={`text-sm font-semibold transition-all duration-300 ease-out ${
                       props.activeStep === index()
-                        ? 'text-green-600 scale-105'
+                        ? 'text-emerald-600 scale-105'
                         : props.activeStep > index()
-                          ? 'text-green-500'
+                          ? 'text-emerald-500'
                           : 'text-slate-900'
                     }`}
                   >
@@ -83,14 +83,18 @@ const SolidSteps = (props) => {
                   </h6>
                 </div>
                 {getStepIcon(index())}
-                <Show
-                  when={props.activeStep > index()}
-                  fallback={
-                    <div class="h-16 w-0.5 bg-gray-300 transition-all duration-300 ease-in-out"></div>
-                  }
-                >
-                  <div class="h-16 w-0.5 bg-green-500 transition-all duration-700 ease-out animate-grow-height"></div>
-                </Show>
+                <div class="relative h-16 w-0.5 overflow-hidden">
+                  {/* Background grey line */}
+                  <div class="absolute inset-0 w-full bg-gray-300 transition-all duration-300 ease-in-out"></div>
+                  {/* Animated green line that fills from top to bottom */}
+                  <div
+                    class={`absolute top-0 w-full bg-emerald-500 transition-all duration-700 ease-out ${
+                      props.activeStep > index()
+                        ? 'h-full animate-line-fill-down'
+                        : 'h-0'
+                    }`}
+                  ></div>
+                </div>
               </li>
             )
           }
