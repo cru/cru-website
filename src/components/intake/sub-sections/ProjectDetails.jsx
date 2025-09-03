@@ -1,5 +1,5 @@
 import Checkbox from "../../ui/solid/Checkbox"
-import InputText from "../../ui/solid/InputText"
+import Input from "../../ui/solid/Input"
 
 export default function ProjectDetails() {
 	return (
@@ -48,7 +48,7 @@ export default function ProjectDetails() {
 
 				<div id="ethics_details_section">
 					<div>
-						<InputText
+						<Input
 							id="proj_ethics_id"
 							name="proj_ethics_id"
 							label="Ethics ID"
@@ -88,52 +88,37 @@ export default function ProjectDetails() {
 				</div>
 
 				<div id="budget_section">
-					<label
-						for="proj_budget_amt"
-						class="block text-sm font-medium text-gray-700"
-					>
-						Budget Amount (CAD$)
-					</label>
-					<input
-						type="number"
-						name="proj_budget_amt"
+					<Input
 						id="proj_budget_amt"
+						name="proj_budget_amt"
+						label="Budget Amount (CAD$)"
+						min="0"
+						type="number"
 						placeholder="CAD$"
-						class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
 					/>
 				</div>
 
 				<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 					<div>
-						<label
-							for="proj_date_start"
-							class="block text-sm font-medium text-gray-700"
-						>
-							Intended Start Date
-						</label>
-						<input
-							type="date"
-							name="proj_date_start"
+						<Input
 							id="proj_date_start"
-							class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+							name="proj_date_start"
+							label="Intended Start Date"
+							type="date"
 						/>
 					</div>
+
 					<div>
-						<label
-							for="proj_date_end"
-							class="block text-sm font-medium text-gray-700"
-						>
-							Intended End Date
-						</label>
-						<input
-							type="date"
-							name="proj_date_end"
+						<Input
 							id="proj_date_end"
-							class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+							name="proj_date_end"
+							label="Intended End Date"
+							type="date"
 						/>
 					</div>
 				</div>
 			</div>
+
 			<fieldset></fieldset>
 		</fieldset>
 	)

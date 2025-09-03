@@ -1,4 +1,4 @@
-import InputText from "../../ui/solid/InputText"
+import Input from "../../ui/solid/Input"
 import Select from "../../ui/solid/Select"
 
 export default function Requester() {
@@ -9,13 +9,13 @@ export default function Requester() {
 			</legend>
 
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-				<InputText
+				<Input
 					id="requester_fname"
 					name="requester_fname"
 					label="First Name"
 					required
 				/>
-				<InputText
+				<Input
 					id="requester_lname"
 					name="requester_lname"
 					label="Last Name"
@@ -23,7 +23,7 @@ export default function Requester() {
 				/>
 			</div>
 
-			<InputText
+			<Input
 				id="requester_email"
 				name="requester_email"
 				label="Email"
@@ -114,7 +114,7 @@ export default function Requester() {
 			</div>
 
 			<div id="requester_institution_uni_section">
-				<InputText
+				<Input
 					id="requester_institution_uni"
 					name="requester_institution_uni"
 					label="Specify Institution"
@@ -123,7 +123,7 @@ export default function Requester() {
 			</div>
 
 			<div id="requester_institution_other_section">
-				<InputText
+				<Input
 					id="requester_institution_other"
 					name="requester_institution_other"
 					label="Other Institution"
@@ -132,7 +132,7 @@ export default function Requester() {
 			</div>
 
 			<div>
-				<InputText
+				<Input
 					id="requester_referred_from"
 					name="requester_referred_from"
 					label="How did you hear about our services?"

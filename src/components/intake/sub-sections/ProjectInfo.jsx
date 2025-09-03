@@ -1,5 +1,6 @@
 import Checkbox from "../../ui/solid/Checkbox"
-import InputText from "../../ui/solid/InputText"
+import Input from "../../ui/solid/Input"
+import Radio from "../../ui/solid/Radio"
 
 export default function ProjectInfo() {
 	return (
@@ -35,46 +36,25 @@ export default function ProjectInfo() {
 			</div>
 
 			<div>
-				<InputText
+				<Input
 					id="proj_title"
 					name="proj_title"
-					label="Project or Study Title *"
+					label="Project or Study Title"
 					required
 				/>
 			</div>
 
 			<div>
-				<div class="block text-sm font-medium text-gray-700">
-					Purpose of your project or study? *
-				</div>
 				<div class="mt-2 space-y-2">
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="proj_purpose"
-							value="research"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Research</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="proj_purpose"
-							value="qi"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Quality Improvement</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="proj_purpose"
-							value="op"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Operational</span>
-					</label>
+					<Radio
+						name="proj_purpose"
+						label="Purpose of your project or study?"
+						options={[
+							{ value: "research", label: "Research" },
+							{ value: "qi", label: "Quality Improvement" },
+							{ value: "op", label: "Operational" },
+						]}
+					/>
 				</div>
 			</div>
 		</fieldset>

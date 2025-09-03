@@ -1,6 +1,7 @@
 import { createSignal } from "solid-js"
 import Checkbox from "../ui/solid/Checkbox"
 import SolidSteps from "../ui/solid/SolidSteps"
+import TextArea from "../ui/solid/TextArea"
 import AccountCreation from "./sub-sections/AccountCreation"
 import CustomDevelopment from "./sub-sections/CustomDevelopment"
 import Financial from "./sub-sections/Financial"
@@ -80,18 +81,11 @@ const IntakeForm = () => {
 				</div>
 
 				<div>
-					<label
-						for="service_comments"
-						class="block text-sm font-medium text-gray-700"
-					>
-						Any additional notes or comments?
-					</label>
-					<textarea
+					<TextArea
 						name="service_comments"
 						id="service_comments"
-						rows="3"
-						class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-					></textarea>
+						label="Any additional notes or comments?"
+					/>
 				</div>
 
 				<div class="pt-6">

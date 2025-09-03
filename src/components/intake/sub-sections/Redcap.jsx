@@ -1,4 +1,7 @@
 import Checkbox from "../../ui/solid/Checkbox"
+import Input from "../../ui/solid/Input"
+import Radio from "../../ui/solid/Radio"
+import TextArea from "../../ui/solid/TextArea"
 
 export default function Redcap() {
 	return (
@@ -11,63 +14,39 @@ export default function Redcap() {
 			</legend>
 
 			<div>
-				<div class="block text-sm font-medium text-gray-700">
-					What type of project service are you interested in?
-				</div>
 				<div class="mt-2 space-y-2">
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_build"
-							value="self"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Self-service project</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_build"
-							value="chi"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">CHI supported project</span>
-					</label>
+					<Radio
+						name="rc_build"
+						label="What type of project service are you interested in?"
+						options={[
+							{ value: "self", label: "Self-service project" },
+							{ value: "chi", label: "CHI supported project" },
+						]}
+					/>
 				</div>
+
 				<div class="mt-2 flex items-center">
 					<Checkbox name="rc_build_unsure" value="1" label="I am unsure" />
 				</div>
 			</div>
 
 			<div>
-				<label
-					for="rc_participant_num"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Number of Expected Study Participants
-				</label>
-				<input
-					type="number"
-					name="rc_participant_num"
+				<Input
 					id="rc_participant_num"
+					name="rc_participant_num"
+					label="Number of Expected Study Participants"
+					type="number"
 					min="0"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
 				/>
 			</div>
 
 			<div>
-				<label
-					for="rc_site_num"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Number of Study Sites
-				</label>
-				<input
-					type="number"
-					name="rc_site_num"
+				<Input
 					id="rc_site_num"
+					name="rc_site_num"
+					label="Number of Study Sites"
+					type="number"
 					min="0"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
 				/>
 			</div>
 
@@ -111,18 +90,11 @@ export default function Redcap() {
 			</div>
 
 			<div id="randomization_section">
-				<label
-					for="rc_randomization_summary"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Please provide a summary of the randomization schema
-				</label>
-				<textarea
+				<TextArea
 					name="rc_randomization_summary"
 					id="rc_randomization_summary"
-					rows="3"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				></textarea>
+					label="Please provide a summary of the randomization schema"
+				/>
 			</div>
 
 			<div>
@@ -151,45 +123,17 @@ export default function Redcap() {
 
 			{/* REDCap Pricing Tier */}
 			<div>
-				<div class="block text-sm font-medium text-gray-700">
-					Please select a REDCap Support Tier *
-				</div>
-				<p class="mb-2 text-sm text-gray-600">
-					<a
-						href="https://cru.ucalgary.ca/data-capture/pricing/"
-						class="text-blue-600 hover:underline"
-					>
-						See Data Capture Pricing for more information
-					</a>
-				</p>
 				<div class="space-y-2">
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_price_tier"
-							value="basic"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Basic</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_price_tier"
-							value="plus"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Plus</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="rc_price_tier"
-							value="premium"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Premium</span>
-					</label>
+					<Radio
+						name="rc_price_tier"
+						label="Please select a REDCap Support Tier"
+						hint="See Data Capture Pricing for more information"
+						options={[
+							{ value: "basic", label: "Basic" },
+							{ value: "plus", label: "Plus" },
+							{ value: "premium", label: "Premium" },
+						]}
+					/>
 				</div>
 			</div>
 		</fieldset>

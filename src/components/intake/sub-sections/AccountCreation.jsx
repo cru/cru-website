@@ -1,5 +1,5 @@
 import Checkbox from "../../ui/solid/Checkbox"
-import InputText from "../../ui/solid/InputText"
+import Input from "../../ui/solid/Input"
 import Select from "../../ui/solid/Select"
 
 const AccountCreation = () => {
@@ -46,17 +46,13 @@ const AccountCreation = () => {
 			</div>
 
 			<div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="user_1_fields">
-				<InputText
+				<Input
 					id="user_1_fname"
 					name="user_1_fname"
 					label="User 1 First Name"
 				/>
-				<InputText
-					id="user_1_lname"
-					name="user_1_lname"
-					label="User 1 Last Name"
-				/>
-				<InputText
+				<Input id="user_1_lname" name="user_1_lname" label="User 1 Last Name" />
+				<Input
 					id="user_1_email"
 					name="user_1_email"
 					label="User 1 Email"

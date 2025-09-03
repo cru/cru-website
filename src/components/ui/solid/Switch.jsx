@@ -2,7 +2,7 @@ import "@awesome.me/webawesome/dist/components/switch/switch.js"
 
 const Switch = (props) => {
 	return (
-		<wa-switch {...props} class={`${props.className}`}>
+		<wa-switch {...props} class={`${props.classes}`}>
 			{props.label}
 		</wa-switch>
 	)

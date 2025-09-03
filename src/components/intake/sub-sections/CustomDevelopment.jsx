@@ -1,4 +1,5 @@
 import Checkbox from "../../ui/solid/Checkbox"
+import TextArea from "../../ui/solid/TextArea"
 
 export default function CustomDevelopment() {
 	return (
@@ -55,19 +56,13 @@ export default function CustomDevelopment() {
 			</div>
 
 			<div>
-				<label
-					for="custom_needs"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Please elaborate on your needs or vision? *
-				</label>
-				<textarea
+				<TextArea
 					name="custom_needs"
 					id="custom_needs"
-					rows="4"
+					label="Please elaborate on your needs or vision? *"
 					required
 					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				></textarea>
+				/>
 			</div>
 
 			<div>
@@ -78,20 +73,11 @@ export default function CustomDevelopment() {
 				/>
 			</div>
 
-			<div id="custom_integration_section" style={{ display: "none" }}>
-				<label
-					for="custom_rc_summary"
-					class="block text-sm font-medium text-gray-700"
-				>
-					Please describe your integration needs
-				</label>
-				<textarea
-					name="custom_rc_summary"
-					id="custom_rc_summary"
-					rows="3"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				></textarea>
-			</div>
+			<TextArea
+				name="custom_rc_summary"
+				id="custom_rc_summary"
+				label="Please describe your integration needs"
+			/>
 		</fieldset>
 	)
 }

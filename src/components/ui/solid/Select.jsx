@@ -3,7 +3,7 @@ import { Index } from "solid-js"
 
 const Select = (props) => {
 	return (
-		<wa-select {...props} class={`${props.className}`}>
+		<wa-select {...props} class={`${props.classes}`}>
 			<Index each={props.options}>
 				{(option) => (
 					<wa-option value={option().value}>{option().label}</wa-option>

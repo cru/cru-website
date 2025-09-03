@@ -1,5 +1,6 @@
 import Checkbox from "../../ui/solid/Checkbox"
-import InputText from "../../ui/solid/InputText"
+import Input from "../../ui/solid/Input"
+import TextArea from "../../ui/solid/TextArea"
 
 export default function FreeTrial() {
 	return (
@@ -27,7 +28,7 @@ export default function FreeTrial() {
 
 			<div id="trial_redcap_section">
 				<div>
-					<InputText
+					<Input
 						id="trial_proj_title"
 						name="trial_proj_title"
 						label="Practice Project Title *"
@@ -35,19 +36,12 @@ export default function FreeTrial() {
 				</div>
 
 				<div>
-					<label
-						for="trial_rc_users"
-						class="block text-sm font-medium text-gray-700"
-					>
-						REDCap Username(s) to add to the practice project
-					</label>
-					<textarea
+					<TextArea
 						name="trial_rc_users"
 						id="trial_rc_users"
-						rows="3"
+						label="REDCap Username(s) to add to the practice project"
 						placeholder="Including your own, if known"
-						class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-					></textarea>
+					/>
 				</div>
 			</div>
 		</fieldset>

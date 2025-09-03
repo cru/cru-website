@@ -1,5 +1,7 @@
 import Checkbox from "../../ui/solid/Checkbox"
-import InputText from "../../ui/solid/InputText"
+import Input from "../../ui/solid/Input"
+import Radio from "../../ui/solid/Radio"
+import TextArea from "../../ui/solid/TextArea"
 
 export default function Financial() {
 	return (
@@ -23,18 +25,18 @@ export default function Financial() {
 				class="grid grid-cols-1 gap-4 md:grid-cols-3"
 				id="billing_contact_fields"
 			>
-				<InputText
+				<Input
 					id="fin_contact_fname"
 					name="fin_contact_fname"
 					label="Billing Contact First Name"
 				/>
-				<InputText
+				<Input
 					id="fin_contact_lname"
 					name="fin_contact_lname"
 					label="Billing Contact Last Name"
 				/>
 
-				<InputText
+				<Input
 					id="fin_contact_email"
 					name="fin_contact_email"
 					label="Billing Contact Email"
@@ -47,37 +49,21 @@ export default function Financial() {
 					Please select preferred payment method *
 				</div>
 				<div class="mt-2 space-y-2">
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="fin_method"
-							value="uofc"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">UofC GLJE/Journal Transfer</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="fin_method"
-							value="ex"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">
-							External Account (e.g., AHS, other institutions)
-						</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="fin_method"
-							value="cc"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">
-							Credit Card (note: UofC PCard is not allowed)
-						</span>
-					</label>
+					<Radio
+						name="fin_method"
+						label="Please select preferred payment method"
+						options={[
+							{ value: "uofc", label: "UofC GLJE/Journal Transfer" },
+							{
+								value: "ex",
+								label: "External Account (e.g., AHS, other institutions)",
+							},
+							{
+								value: "cc",
+								label: "Credit Card (note: UofC PCard is not allowed)",
+							},
+						]}
+					/>
 				</div>
 			</div>
 
@@ -87,35 +73,30 @@ export default function Financial() {
 				class="space-y-4"
 			>
 				<div>
-					<InputText
+					<Input
 						id="fin_method_ex_institution"
 						name="fin_method_ex_institution"
 						label="Institution/Company Name *"
 					/>
 				</div>
 				<div>
-					<label
-						for="fin_method_ex_address"
-						class="block text-sm font-medium text-gray-700"
-					>
-						Institution/Company Address *
-					</label>
-					<textarea
+					<TextArea
 						name="fin_method_ex_address"
 						id="fin_method_ex_address"
-						rows="3"
-						class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-					></textarea>
+						label="Institution/Company Address *"
+						required
+					/>
 				</div>
+
 				<div>
-					<InputText
+					<Input
 						id="fin_method_ex_name"
 						name="fin_method_ex_name"
 						label="Institution/Company Contact Name *"
 					/>
 				</div>
 
-				<InputText
+				<Input
 					id="fin_method_ex_email"
 					name="fin_method_ex_email"
 					label="Institution/Company Contact Email"

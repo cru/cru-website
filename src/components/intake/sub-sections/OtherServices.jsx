@@ -1,3 +1,5 @@
+import TextArea from "../../ui/solid/TextArea"
+
 export default function OtherServices() {
 	return (
 		<fieldset
@@ -9,18 +11,11 @@ export default function OtherServices() {
 			</legend>
 
 			<div>
-				<label
-					for="service_oth_questions"
-					class="block text-sm font-medium text-gray-700"
-				>
-					What would you like help with, or what questions do you have?
-				</label>
-				<textarea
+				<TextArea
 					name="service_oth_questions"
 					id="service_oth_questions"
-					rows="4"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				></textarea>
+					label="What would you like help with, or what questions do you have?"
+				/>
 			</div>
 		</fieldset>
 	)

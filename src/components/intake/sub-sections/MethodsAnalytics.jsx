@@ -1,5 +1,7 @@
 import Checkbox from "../../ui/solid/Checkbox"
-import InputText from "../../ui/solid/InputText"
+import Input from "../../ui/solid/Input"
+import Radio from "../../ui/solid/Radio"
+import TextArea from "../../ui/solid/TextArea"
 
 export default function MethodsAnalytics() {
 	return (
@@ -12,37 +14,16 @@ export default function MethodsAnalytics() {
 			</legend>
 
 			<div>
-				<div class="block text-sm font-medium text-gray-700">
-					Do you currently have data? *
-				</div>
 				<div class="mt-2 space-y-2">
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="ma_have_existing_data"
-							value="1"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">Yes</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="ma_have_existing_data"
-							value="0"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">No, I require data access</span>
-					</label>
-					<label class="flex items-center">
-						<input
-							type="radio"
-							name="ma_have_existing_data"
-							value="99"
-							class="border-gray-300"
-						/>
-						<span class="ml-2">I am looking for more information</span>
-					</label>
+					<Radio
+						name="ma_have_existing_data"
+						label="Do you currently have data?"
+						options={[
+							{ value: "1", label: "Yes" },
+							{ value: "0", label: "No, I require data access" },
+							{ value: "99", label: "I am looking for more information" },
+						]}
+					/>
 				</div>
 			</div>
 
@@ -70,33 +51,20 @@ export default function MethodsAnalytics() {
 			</div>
 
 			<div id="redcap_pid_section">
-				<label
-					for="ma_existing_data_pid"
-					class="block text-sm font-medium text-gray-700"
-				>
-					REDCap PID
-				</label>
-				<input
-					type="number"
-					name="ma_existing_data_pid"
+				<Input
 					id="ma_existing_data_pid"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+					name="ma_existing_data_pid"
+					type="number"
+					label="REDCap PID"
 				/>
 			</div>
 
 			<div id="dataset_description_section">
-				<label
-					for="ma_data_desc"
-					class="block text-sm font-medium text-gray-700"
-				>
-					What dataset(s) will you be using?
-				</label>
-				<textarea
+				<TextArea
 					name="ma_data_desc"
 					id="ma_data_desc"
-					rows="3"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				></textarea>
+					label="What dataset(s) will you be using?"
+				/>
 			</div>
 
 			<div>
@@ -165,23 +133,14 @@ export default function MethodsAnalytics() {
 				</div>
 			</div>
 
-			<div id="analytics_other_section">
-				<label
-					for="ma_analytics_oth"
-					class="block text-sm font-medium text-gray-700"
-				>
-					What other Analytics support do you require?
-				</label>
-				<textarea
-					name="ma_analytics_oth"
-					id="ma_analytics_oth"
-					rows="3"
-					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
-				></textarea>
-			</div>
+			<TextArea
+				name="ma_analytics_oth"
+				id="ma_analytics_oth"
+				label="What other Analytics support do you require?"
+			/>
 
 			<div>
-				<InputText
+				<Input
 					id="ma_research_question"
 					name="ma_research_question"
 					label="What is your Research Question?"
