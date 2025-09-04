@@ -1,9 +1,7 @@
 import { createEffect, createSignal, For, Match, Switch } from 'solid-js'
 
 const SolidSteps = (props) => {
-  const [delayedActiveStep, setDelayedActiveStep] = createSignal(
-    props.activeStep || 0,
-  )
+  const [delayedActiveStep, setDelayedActiveStep] = createSignal(props.activeStep || 0)
 
   createEffect(() => {
     if (props.activeStep > delayedActiveStep()) {
@@ -56,7 +54,7 @@ const SolidSteps = (props) => {
           {(item, index) =>
             index() === props.steps.length - 1 ? (
               <li
-                class="animate-slide-down relative flex flex-col items-center transition-all duration-500 ease-out opacity-0 -translate-y-5"
+                class="animate-slide-down relative flex -translate-y-5 flex-col items-center opacity-0 transition-all duration-500 ease-out"
                 style={`animation-delay: ${index() * 100}ms; animation-fill-mode: forwards;`}
               >
                 <div class="absolute top-0 left-full ml-4 w-max transition-all duration-300 ease-out hover:translate-x-1">
@@ -79,7 +77,7 @@ const SolidSteps = (props) => {
               </li>
             ) : (
               <li
-                class="animate-slide-down relative flex flex-col items-center transition-all duration-500 ease-out opacity-0 -translate-y-5"
+                class="animate-slide-down relative flex -translate-y-5 flex-col items-center opacity-0 transition-all duration-500 ease-out"
                 style={`animation-delay: ${index() * 100}ms; animation-fill-mode: forwards;`}
               >
                 <div class="absolute top-0 left-full ml-4 w-max transition-all duration-300 ease-out hover:translate-x-1">
@@ -105,9 +103,7 @@ const SolidSteps = (props) => {
                   {/* Animated green line that fills from top to bottom */}
                   <div
                     class={`absolute top-0 w-full bg-emerald-500 transition-all duration-700 ease-out ${
-                      props.activeStep > index()
-                        ? 'animate-line-fill-down h-full'
-                        : 'h-0'
+                      props.activeStep > index() ? 'animate-line-fill-down h-full' : 'h-0'
                     }`}
                   ></div>
                 </div>
