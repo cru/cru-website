@@ -14,10 +14,7 @@ export default function Financial(props) {
           label="I am the billing contact"
         />
 
-        <div
-          class="grid grid-cols-1 gap-4 md:grid-cols-3"
-          id="billing_contact_fields"
-        >
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="billing_contact_fields">
           <Input
             id="fin_contact_fname"
             name="fin_contact_fname"

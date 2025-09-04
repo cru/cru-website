@@ -13,12 +13,7 @@ export default function Requester(props) {
             label="First Name"
             required
           />
-          <Input
-            id="requester_lname"
-            name="requester_lname"
-            label="Last Name"
-            required
-          />
+          <Input id="requester_lname" name="requester_lname" label="Last Name" required />
         </div>
 
         <Input

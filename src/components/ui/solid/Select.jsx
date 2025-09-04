@@ -11,7 +11,7 @@ const Select = (props) => {
     >
       <Index each={props.options}>
         {(option) => (
-          <wa-option value={option().value} class="p-2 mx-1 rounded-md">
+          <wa-option value={option().value} class="mx-1 rounded-md p-2">
             {option().label}
           </wa-option>
         )}

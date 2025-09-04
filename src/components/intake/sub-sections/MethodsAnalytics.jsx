@@ -32,11 +32,7 @@ export default function MethodsAnalytics(props) {
             value="admin"
             label="I have administrative data"
           />
-          <Checkbox
-            name="ma_existing_data[]"
-            value="oth"
-            label="I have other data"
-          />
+          <Checkbox name="ma_existing_data[]" value="oth" label="I have other data" />
         </div>
 
         <Input

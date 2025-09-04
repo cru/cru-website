@@ -23,7 +23,7 @@ const IntakeForm = () => {
   const branchFields = new Set(
     STEPS.flatMap((s) => s.branchFrom)
       .filter((b) => b)
-      .map((b) => b?.field),
+      .map((b) => b?.field)
   )
   let formRef
 
@@ -32,10 +32,8 @@ const IntakeForm = () => {
       (s) =>
         !s.branchFrom ||
         s.branchFrom.every(
-          (p) =>
-            branchTriggers()[p.field] &&
-            branchTriggers()[p.field].includes(p.value),
-        ),
+          (p) => branchTriggers()[p.field] && branchTriggers()[p.field].includes(p.value)
+        )
     )
 
   createEffect(() => {
@@ -83,10 +81,7 @@ const IntakeForm = () => {
         </div>
         <For each={availableSteps()}>
           {(step, index) => (
-            <Dynamic
-              component={step.Component}
-              hidden={activeStep() !== index()}
-            />
+            <Dynamic component={step.Component} hidden={activeStep() !== index()} />
           )}
         </For>
       </form>

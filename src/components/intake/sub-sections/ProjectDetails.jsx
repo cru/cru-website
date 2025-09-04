@@ -5,7 +5,7 @@ import SubSection from '../SubSection'
 export default function ProjectDetails(props) {
   return (
     <SubSection {...props} title="Project Details">
-<fieldset class="space-y-4">
+      <fieldset class="space-y-4">
         <div class="space-y-4">
           <Checkbox
             name="proj_is_lshi"
