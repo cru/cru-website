@@ -30,26 +30,17 @@ const IntakeForm = () => {
 
       <form class="mx-auto w-full py-6">
         <div class="flex justify-between pb-16">
-          <wa-button
-            size="small"
-            on:click={() => setActiveStep(activeStep() - 1)}
-          >
+          <wa-button size="small" on:click={() => setActiveStep(activeStep() - 1)}>
             Previous
           </wa-button>
-          <wa-button
-            size="small"
-            on:click={() => setActiveStep(activeStep() + 1)}
-          >
+          <wa-button size="small" on:click={() => setActiveStep(activeStep() + 1)}>
             Next
           </wa-button>
         </div>
 
         <For each={Object.values(STEPS)}>
           {(step, index) => (
-            <Dynamic
-              component={step.Component}
-              hidden={activeStep() !== index()}
-            />
+            <Dynamic component={step.Component} hidden={activeStep() !== index()} />
           )}
         </For>
       </form>
