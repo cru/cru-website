@@ -5,15 +5,8 @@ import SubSection from '../SubSection'
 
 export default function NewProject(props) {
   return (
-    <SubSection {...props}>
-      <fieldset
-        class="space-y-4 rounded-lg border border-gray-200 p-4"
-        id="project_section"
-      >
-        <legend class="px-2 text-lg font-semibold text-gray-900">
-          New Service or Project
-        </legend>
-
+    <SubSection {...props} title="New Service or Project">
+      <fieldset class="space-y-4">
         <div class="space-y-3">
           <div class="block text-sm font-medium text-gray-700">
             What type of support or service do you need?

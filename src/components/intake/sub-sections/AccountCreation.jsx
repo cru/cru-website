@@ -5,12 +5,8 @@ import SubSection from '../SubSection'
 
 const AccountCreation = (props) => {
   return (
-    <SubSection {...props}>
-      <fieldset class="space-y-4 rounded-lg border border-gray-200 p-4" id="user_section">
-        <legend class="px-2 text-lg font-semibold text-gray-900">
-          New REDCap User Account
-        </legend>
-
+    <SubSection {...props} title="New REDCap User Account">
+      <fieldset class="space-y-4">
         <div>
           <Select
             id="user_account_num"
@@ -45,8 +41,16 @@ const AccountCreation = (props) => {
         </div>
 
         <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="user_1_fields">
-          <Input id="user_1_fname" name="user_1_fname" label="User 1 First Name" />
-          <Input id="user_1_lname" name="user_1_lname" label="User 1 Last Name" />
+          <Input
+            id="user_1_fname"
+            name="user_1_fname"
+            label="User 1 First Name"
+          />
+          <Input
+            id="user_1_lname"
+            name="user_1_lname"
+            label="User 1 Last Name"
+          />
           <Input
             id="user_1_email"
             name="user_1_email"

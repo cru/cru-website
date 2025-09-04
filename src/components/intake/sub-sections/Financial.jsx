@@ -6,22 +6,18 @@ import SubSection from '../SubSection'
 
 export default function Financial(props) {
   return (
-    <SubSection {...props}>
-      <fieldset
-        class="space-y-4 rounded-lg border border-gray-200 p-4"
-        id="financial_section"
-      >
-        <legend class="px-2 text-lg font-semibold text-gray-900">
-          Financial Information
-        </legend>
-
+    <SubSection {...props} title="Financial Information">
+      <fieldset class="space-y-4">
         <Checkbox
           name="fin_requester_is_contact"
           value="1"
           label="I am the billing contact"
         />
 
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="billing_contact_fields">
+        <div
+          class="grid grid-cols-1 gap-4 md:grid-cols-3"
+          id="billing_contact_fields"
+        >
           <Input
             id="fin_contact_fname"
             name="fin_contact_fname"

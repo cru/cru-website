@@ -4,12 +4,8 @@ import SubSection from '../SubSection'
 
 export default function ProjectDetails(props) {
   return (
-    <SubSection {...props}>
-      <fieldset
-        class="space-y-4 rounded-lg border border-gray-200 p-4"
-        id="methods_analytics_section"
-      >
-        <legend class="px-2 text-lg font-semibold text-gray-900">Project Details</legend>
+    <SubSection {...props} title="Project Details">
+<fieldset class="space-y-4">
         <div class="space-y-4">
           <Checkbox
             name="proj_is_lshi"

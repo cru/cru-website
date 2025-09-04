@@ -4,8 +4,8 @@ import SubSection from '../SubSection'
 
 export default function Finish(props) {
   return (
-    <SubSection {...props}>
-      <div class="space-y-6">
+    <SubSection {...props} title="Finish and Submit">
+      <fieldset class="space-y-4">
         <TextArea
           name="service_comments"
           id="service_comments"
@@ -14,7 +14,7 @@ export default function Finish(props) {
         <wa-button type="submit" class="w-full">
           Submit request
         </wa-button>
-      </div>
+      </fieldset>
     </SubSection>
   )
 }

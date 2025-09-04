@@ -6,15 +6,8 @@ import SubSection from '../SubSection'
 
 export default function Redcap(props) {
   return (
-    <SubSection {...props}>
-      <fieldset
-        class="space-y-4 rounded-lg border border-gray-200 p-4"
-        id="redcap_section"
-      >
-        <legend class="px-2 text-lg font-semibold text-gray-900">
-          REDCap Project Details
-        </legend>
-
+    <SubSection {...props} title="REDCap Project Details">
+      <fieldset class="space-y-4">
         <Radio
           name="rc_build"
           label="What type of project service are you interested in?"
@@ -53,7 +46,11 @@ export default function Redcap(props) {
         </div>
         <div class="mt-2 space-y-2">
           <Checkbox name="rc_international_sites[]" value="usa" label="USA" />
-          <Checkbox name="rc_international_sites[]" value="europe" label="Europe" />
+          <Checkbox
+            name="rc_international_sites[]"
+            value="europe"
+            label="Europe"
+          />
           <Checkbox name="rc_international_sites[]" value="oth" label="Other" />
         </div>
 
@@ -82,7 +79,10 @@ export default function Redcap(props) {
         />
 
         <div id="xml_upload_section">
-          <label for="rc_xml_upload" class="block text-sm font-medium text-gray-700">
+          <label
+            for="rc_xml_upload"
+            class="block text-sm font-medium text-gray-700"
+          >
             Existing REDCap Project XML File
           </label>
           <input

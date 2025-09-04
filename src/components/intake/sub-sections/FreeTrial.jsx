@@ -5,15 +5,8 @@ import SubSection from '../SubSection'
 
 export default function FreeTrial(props) {
   return (
-    <SubSection {...props}>
-      <fieldset
-        class="space-y-4 rounded-lg border border-gray-200 p-4"
-        id="trial_section"
-      >
-        <legend class="px-2 text-lg font-semibold text-gray-900">
-          Free Trial / Practice Project
-        </legend>
-
+    <SubSection {...props} title="Free Trial / Practice Project">
+      <fieldset class="space-y-4">
         <div>
           <div class="block text-sm font-medium text-gray-700">
             What type of service are you looking to try? *

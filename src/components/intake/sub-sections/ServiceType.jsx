@@ -3,10 +3,10 @@ import SubSection from '../SubSection'
 
 export default function ServiceType(props) {
   return (
-    <SubSection {...props}>
+    <SubSection {...props} title="Welcome to the CHI">
       <Radio
         name="service_type"
-        label="What type of support are you looking for from CHI?"
+        label="To get started, let us know what type of support you are looking for"
         required
         options={[
           {

@@ -23,7 +23,7 @@ const IntakeForm = () => {
   const branchFields = new Set(
     STEPS.flatMap((s) => s.branchFrom)
       .filter((b) => b)
-      .map((b) => b?.field)
+      .map((b) => b?.field),
   )
   let formRef
 
@@ -32,8 +32,10 @@ const IntakeForm = () => {
       (s) =>
         !s.branchFrom ||
         s.branchFrom.every(
-          (p) => branchTriggers()[p.field] && branchTriggers()[p.field].includes(p.value)
-        )
+          (p) =>
+            branchTriggers()[p.field] &&
+            branchTriggers()[p.field].includes(p.value),
+        ),
     )
 
   createEffect(() => {
@@ -60,19 +62,31 @@ const IntakeForm = () => {
         steps={availableSteps().map((s) => s.label)}
       />
 
-      <form id="intake-form" ref={formRef} class="mx-auto w-full py-6">
-        <div class="flex justify-between pb-16">
-          <wa-button size="small" on:click={() => setActiveStep(activeStep() - 1)}>
+      <form id="intake-form" ref={formRef} class="mx-auto w-full space-y-6">
+        <div class="flex justify-between">
+          <wa-button
+            size="small"
+            appearance="filled"
+            disabled={activeStep() === 0}
+            on:click={() => setActiveStep(activeStep() - 1)}
+          >
             Previous
           </wa-button>
-          <wa-button size="small" on:click={() => setActiveStep(activeStep() + 1)}>
+          <wa-button
+            size="small"
+            appearance="accent"
+            disabled={activeStep() === availableSteps().length - 1}
+            on:click={() => setActiveStep(activeStep() + 1)}
+          >
             Next
           </wa-button>
         </div>
-
         <For each={availableSteps()}>
           {(step, index) => (
-            <Dynamic component={step.Component} hidden={activeStep() !== index()} />
+            <Dynamic
+              component={step.Component}
+              hidden={activeStep() !== index()}
+            />
           )}
         </For>
       </form>

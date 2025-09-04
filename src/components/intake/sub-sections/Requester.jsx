@@ -4,12 +4,8 @@ import SubSection from '../SubSection'
 
 export default function Requester(props) {
   return (
-    <SubSection {...props}>
-      <fieldset class="space-y-4 rounded-lg border border-gray-200 p-4">
-        <legend class="px-2 text-lg font-semibold text-gray-900">
-          Requester Information
-        </legend>
-
+    <SubSection {...props} title="Requester Information">
+      <fieldset class="space-y-4">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
           <Input
             id="requester_fname"
@@ -17,7 +13,12 @@ export default function Requester(props) {
             label="First Name"
             required
           />
-          <Input id="requester_lname" name="requester_lname" label="Last Name" required />
+          <Input
+            id="requester_lname"
+            name="requester_lname"
+            label="Last Name"
+            required
+          />
         </div>
 
         <Input

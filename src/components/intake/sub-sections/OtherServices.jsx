@@ -3,13 +3,8 @@ import SubSection from '../SubSection'
 
 export default function OtherServices(props) {
   return (
-    <SubSection {...props}>
-      <fieldset
-        class="space-y-4 rounded-lg border border-gray-200 p-4"
-        id="other_section"
-      >
-        <legend class="px-2 text-lg font-semibold text-gray-900">Other Services</legend>
-
+    <SubSection {...props} title="Other Services">
+      <fieldset class="space-y-4">
         <div>
           <TextArea
             name="service_oth_questions"
