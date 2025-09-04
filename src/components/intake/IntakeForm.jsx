@@ -33,9 +33,10 @@ const IntakeForm = () => {
         !s.branchFrom ||
         s.branchFrom.every(
           (p) =>
-            branchTriggers()[p.field] && branchTriggers()[p.field] === p.value,
+            branchTriggers()[p.field] &&
+            branchTriggers()[p.field].includes(p.value),
         ),
-    ).map((s) => s.label)
+    )
 
   createEffect(() => {
     if (!formRef) return
@@ -48,8 +49,8 @@ const IntakeForm = () => {
     const formData = new FormData(formRef)
     const fieldName = e.target.name
     if (branchFields.has(fieldName)) {
-      const fieldValue = formData.get(fieldName)
-      setBranchTriggers({ ...branchTriggers(), [fieldName]: fieldValue })
+      const fieldValues = formData.getAll(fieldName)
+      setBranchTriggers({ ...branchTriggers(), [fieldName]: fieldValues })
     }
   }
 
@@ -58,22 +59,31 @@ const IntakeForm = () => {
       <SolidSteps
         client:idle
         activeStep={activeStep()}
-        steps={availableSteps()}
+        steps={availableSteps().map((s) => s.label)}
       />
 
       <form id="intake-form" ref={formRef} class="mx-auto w-full py-6">
         <div class="flex justify-between pb-16">
-          <wa-button size="small" on:click={() => setActiveStep(activeStep() - 1)}>
+          <wa-button
+            size="small"
+            on:click={() => setActiveStep(activeStep() - 1)}
+          >
             Previous
           </wa-button>
-          <wa-button size="small" on:click={() => setActiveStep(activeStep() + 1)}>
+          <wa-button
+            size="small"
+            on:click={() => setActiveStep(activeStep() + 1)}
+          >
             Next
           </wa-button>
         </div>
 
-        <For each={Object.values(STEPS)}>
+        <For each={availableSteps()}>
           {(step, index) => (
-            <Dynamic component={step.Component} hidden={activeStep() !== index()} />
+            <Dynamic
+              component={step.Component}
+              hidden={activeStep() !== index()}
+            />
           )}
         </For>
       </form>
@@ -87,41 +97,43 @@ const STEPS = [
     Component: ServiceType,
   },
   {
+    label: 'Requester Information',
+    Component: Requester,
+  },
+  {
     label: 'New Project',
     branchFrom: [{ field: 'service_type', value: 'proj' }],
     Component: NewProject,
   },
   {
-    label: 'Requester Information',
-    Component: Requester,
-  },
-  {
     label: 'Principal Investigator',
+    branchFrom: [{ field: 'service_type', value: 'proj' }],
     Component: PrincipalInvestigator,
   },
   {
     label: 'Research Purpose',
+    branchFrom: [{ field: 'service_type', value: 'proj' }],
     Component: ResearchPurpose,
   },
   {
     label: 'Project Details',
+    branchFrom: [{ field: 'service_type', value: 'proj' }],
     Component: ProjectDetails,
   },
   {
     label: 'REDCap Build',
+    branchFrom: [{ field: 'proj_type[]', value: 'rc' }],
     Component: Redcap,
   },
   {
     label: 'Methods & Analytics',
+    branchFrom: [{ field: 'proj_type[]', value: 'ma' }],
     Component: MethodsAnalytics,
   },
   {
     label: 'Custom Development',
+    branchFrom: [{ field: 'proj_type[]', value: 'custom' }],
     Component: CustomDevelopment,
-  },
-  {
-    label: 'Financial Info',
-    Component: Financial,
   },
   {
     label: 'New REDCap Account',
@@ -139,72 +151,14 @@ const STEPS = [
     Component: OtherServices,
   },
   {
+    label: 'Financial Info',
+    branchFrom: [{ field: 'service_type', value: 'proj' }],
+    Component: Financial,
+  },
+  {
     label: 'Finish up',
     Component: Finish,
   },
 ]
-
-const zSTEPS = {
-  SERVICE_TYPE: {
-    label: 'Service Type',
-    Component: ServiceType,
-  },
-  NEW_PROJECT: {
-    label: 'New Project',
-    prerequisites: [{ field: 'service_type', value: 'proj' }],
-    Component: NewProject,
-  },
-  REQUESTER: {
-    label: 'Requester Information',
-    Component: Requester,
-  },
-  PRINCIPAL_INVESTIGATOR: {
-    label: 'Principal Investigator',
-    Component: PrincipalInvestigator,
-  },
-  RESEARCH_PURPOSE: {
-    label: 'Research Purpose',
-    Component: ResearchPurpose,
-  },
-  PROJECT_DETAILS: {
-    label: 'Project Details',
-    Component: ProjectDetails,
-  },
-  REDCAP: {
-    label: 'REDCap Build',
-    Component: Redcap,
-  },
-  METHODS_ANALYTICS: {
-    label: 'Methods & Analytics',
-    Component: MethodsAnalytics,
-  },
-  CUSTOM_DEVELOPMENT: {
-    label: 'Custom Development',
-    Component: CustomDevelopment,
-  },
-  FINANCIAL: {
-    label: 'Financial Info',
-    Component: Financial,
-  },
-  ACCOUNT_CREATION: {
-    label: 'New REDCap Account',
-    prerequisites: [{ field: 'service_type', value: 'user' }],
-    Component: AccountCreation,
-  },
-  FREE_TRIAL: {
-    label: 'Free Trial',
-    prerequisites: [{ field: 'service_type', value: 'trial' }],
-    Component: FreeTrial,
-  },
-  OTHER_SERVICES: {
-    label: 'Other Services',
-    prerequisites: [{ field: 'service_type', value: 'oth' }],
-    Component: OtherServices,
-  },
-  FINISH: {
-    label: 'Finish up',
-    Component: Finish,
-  },
-}
 
 export default IntakeForm
