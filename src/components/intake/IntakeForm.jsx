@@ -23,7 +23,7 @@ const IntakeForm = () => {
   const branchFields = new Set(
     STEPS.flatMap((s) => s.branchFrom)
       .filter((b) => b)
-      .map((b) => b?.field)
+      .map((b) => b?.field),
   )
   let formRef
 
@@ -32,8 +32,10 @@ const IntakeForm = () => {
       (s) =>
         !s.branchFrom ||
         s.branchFrom.every(
-          (p) => branchTriggers()[p.field] && branchTriggers()[p.field].includes(p.value)
-        )
+          (p) =>
+            branchTriggers()[p.field] &&
+            branchTriggers()[p.field].includes(p.value),
+        ),
     )
 
   createEffect(() => {
@@ -81,7 +83,10 @@ const IntakeForm = () => {
         </div>
         <For each={availableSteps()}>
           {(step, index) => (
-            <Dynamic component={step.Component} hidden={activeStep() !== index()} />
+            <Dynamic
+              component={step.Component}
+              hidden={activeStep() !== index()}
+            />
           )}
         </For>
       </form>
@@ -91,40 +96,40 @@ const IntakeForm = () => {
 
 const STEPS = [
   {
-    label: 'Service Type',
+    label: 'How can we help?',
     Component: ServiceType,
   },
   {
-    label: 'Requester Information',
+    label: 'Some info about you',
     Component: Requester,
   },
   {
-    label: 'New Project',
+    label: 'New service or project',
     branchFrom: [{ field: 'service_type', value: 'proj' }],
     Component: NewProject,
   },
   {
-    label: 'Principal Investigator',
+    label: 'Principal investigator',
     branchFrom: [{ field: 'service_type', value: 'proj' }],
     Component: PrincipalInvestigator,
   },
   {
-    label: 'Research Purpose',
+    label: 'Research purpose',
     branchFrom: [{ field: 'service_type', value: 'proj' }],
     Component: ResearchPurpose,
   },
   {
-    label: 'Project Details',
+    label: 'Project details',
     branchFrom: [{ field: 'service_type', value: 'proj' }],
     Component: ProjectDetails,
   },
   {
-    label: 'REDCap Build',
+    label: 'REDCap build',
     branchFrom: [{ field: 'proj_type[]', value: 'rc' }],
     Component: Redcap,
   },
   {
-    label: 'Custom Development',
+    label: 'Custom development',
     branchFrom: [{ field: 'proj_type[]', value: 'custom' }],
     Component: CustomDevelopment,
   },
@@ -134,22 +139,22 @@ const STEPS = [
     Component: MethodsAnalytics,
   },
   {
-    label: 'New REDCap Account',
+    label: 'New REDCap account',
     branchFrom: [{ field: 'service_type', value: 'user' }],
     Component: AccountCreation,
   },
   {
-    label: 'Free Trial',
+    label: 'Free trial',
     branchFrom: [{ field: 'service_type', value: 'trial' }],
     Component: FreeTrial,
   },
   {
-    label: 'Other Services',
+    label: 'Other services',
     branchFrom: [{ field: 'service_type', value: 'oth' }],
     Component: OtherServices,
   },
   {
-    label: 'Financial Info',
+    label: 'Financial info',
     branchFrom: [{ field: 'service_type', value: 'proj' }],
     Component: Financial,
   },

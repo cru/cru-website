@@ -4,24 +4,40 @@ import SubSection from '../SubSection'
 
 export default function CustomDevelopment(props) {
   return (
-    <SubSection {...props} title="Custom Platform Development">
+    <SubSection {...props} title="Custom platform development">
       <fieldset class="space-y-4">
         <div class="block text-sm font-medium text-gray-700">
           What type of Custom Data Services do you need? *
         </div>
         <div class="mt-2 space-y-2">
-          <Checkbox name="custom_type[]" value="dashboard" label="Data Dashboards" />
-          <Checkbox name="custom_type[]" value="web" label="Public Facing Websites" />
+          <Checkbox
+            name="custom_type[]"
+            value="dashboard"
+            label="Data Dashboards"
+          />
+          <Checkbox
+            name="custom_type[]"
+            value="web"
+            label="Public Facing Websites"
+          />
           <Checkbox
             name="custom_type[]"
             value="edc"
             label="Custom Data Capture Application"
           />
 
-          <Checkbox name="custom_type[]" value="mgmt" label="Data Management Tool" />
+          <Checkbox
+            name="custom_type[]"
+            value="mgmt"
+            label="Data Management Tool"
+          />
           <Checkbox name="custom_type[]" value="infra" label="Infrastructure" />
 
-          <Checkbox name="custom_type[]" value="advice" label="Advisory/Consultancy" />
+          <Checkbox
+            name="custom_type[]"
+            value="advice"
+            label="Advisory/Consultancy"
+          />
 
           <Checkbox
             name="custom_type[]"

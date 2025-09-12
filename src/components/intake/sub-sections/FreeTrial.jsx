@@ -5,7 +5,7 @@ import SubSection from '../SubSection'
 
 export default function FreeTrial(props) {
   return (
-    <SubSection {...props} title="Free Trial / Practice Project">
+    <SubSection {...props} title="Free trial / practice project">
       <fieldset class="space-y-4">
         <div>
           <div class="block text-sm font-medium text-gray-700">

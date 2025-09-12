@@ -6,7 +6,7 @@ import SubSection from '../SubSection'
 
 export default function Financial(props) {
   return (
-    <SubSection {...props} title="Financial Information">
+    <SubSection {...props} title="Financial information">
       <fieldset class="space-y-4">
         <Checkbox
           name="fin_requester_is_contact"

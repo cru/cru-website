@@ -4,7 +4,7 @@ import SubSection from '../SubSection'
 
 export default function PrincipalInvestigator(props) {
   return (
-    <SubSection {...props} title="Principal Investigator">
+    <SubSection {...props} title="Principal investigator">
       <fieldset class="space-y-4">
         <Checkbox
           name="proj_requester_is_pi"

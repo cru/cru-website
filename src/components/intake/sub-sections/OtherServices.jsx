@@ -3,7 +3,7 @@ import SubSection from '../SubSection'
 
 export default function OtherServices(props) {
   return (
-    <SubSection {...props} title="Other Services">
+    <SubSection {...props} title="Other services">
       <fieldset class="space-y-4">
         <div>
           <TextArea

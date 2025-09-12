@@ -5,7 +5,11 @@ const Radio = (props) => {
   return (
     <wa-radio-group size="small" {...props} class={`${props.classes}`}>
       <Index each={props.options}>
-        {(option) => <wa-radio value={option().value}>{option().label}</wa-radio>}
+        {(option) => (
+          <wa-radio value={option().value} class="py-1">
+            {option().label}
+          </wa-radio>
+        )}
       </Index>
     </wa-radio-group>
   )

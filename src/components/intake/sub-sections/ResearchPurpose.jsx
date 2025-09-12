@@ -4,7 +4,7 @@ import SubSection from '../SubSection'
 
 export default function ResearchPurpose(props) {
   return (
-    <SubSection {...props} title="Research Purpose">
+    <SubSection {...props} title="Research purpose">
       <fieldset class="space-y-4">
         <Radio
           name="proj_purpose_res"

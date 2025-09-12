@@ -5,7 +5,7 @@ import SubSection from '../SubSection'
 
 export default function NewProject(props) {
   return (
-    <SubSection {...props} title="New Service or Project">
+    <SubSection {...props} title="New service or project">
       <fieldset class="space-y-4">
         <div class="space-y-3">
           <div class="block text-sm font-medium text-gray-700">

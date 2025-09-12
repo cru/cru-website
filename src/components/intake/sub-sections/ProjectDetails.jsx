@@ -4,7 +4,7 @@ import SubSection from '../SubSection'
 
 export default function ProjectDetails(props) {
   return (
-    <SubSection {...props} title="Project Details">
+    <SubSection {...props} title="Project details">
       <fieldset class="space-y-4">
         <div class="space-y-4">
           <Checkbox
@@ -34,7 +34,11 @@ export default function ProjectDetails(props) {
             />
           </div>
 
-          <Checkbox name="proj_have_ethics" value="1" label="I have ethics approval" />
+          <Checkbox
+            name="proj_have_ethics"
+            value="1"
+            label="I have ethics approval"
+          />
 
           <Input
             id="proj_ethics_id"

@@ -6,7 +6,7 @@ import SubSection from '../SubSection'
 
 export default function MethodsAnalytics(props) {
   return (
-    <SubSection {...props} title="Methods, Data & Analytics Support">
+    <SubSection {...props} title="Methods, data & analytics support">
       <fieldset class="space-y-4">
         <Radio
           name="ma_have_existing_data"
@@ -32,7 +32,11 @@ export default function MethodsAnalytics(props) {
             value="admin"
             label="I have administrative data"
           />
-          <Checkbox name="ma_existing_data[]" value="oth" label="I have other data" />
+          <Checkbox
+            name="ma_existing_data[]"
+            value="oth"
+            label="I have other data"
+          />
         </div>
 
         <Input
