@@ -1,5 +1,4 @@
 import { defineAction } from 'astro:actions';
-import { z } from 'astro:schema';
 import axios from 'axios';
 import { intakeSchema } from '../lib/schemas';
 
@@ -16,6 +15,8 @@ export const server = {
       if (!url || !token) {
         return { detail: 'REDCap API URL or token is not set in environment variables' }
       }
+
+      console.log(input)
 
 
       const payload = {

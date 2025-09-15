@@ -42,7 +42,7 @@ export default function Redcap(props) {
           label="I have international sites"
         />
 
-        <CheckboxGroup name="rc_international_sites[]" label="Which international sites?" options={[
+        <CheckboxGroup name="rc_international_sites" label="Which international sites?" options={[
           { value: 'usa', label: 'USA' },
           { value: 'europe', label: 'Europe' },
           { value: 'oth', label: 'Other' },

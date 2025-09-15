@@ -8,7 +8,7 @@ export default function CustomDevelopment(props) {
     <SubSection {...props} title="Custom platform development">
       <fieldset class="space-y-4">
         <CheckboxGroup
-          name="custom_type[]"
+          name="custom_type"
           label="What type of Custom Data Services do you need? *"
           options={[
             { value: 'dashboard', label: 'Data Dashboards' },

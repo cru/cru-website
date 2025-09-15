@@ -7,7 +7,7 @@ export default function FreeTrial(props) {
   return (
     <SubSection {...props} title="Free trial / practice project">
       <fieldset class="space-y-4">
-        <CheckboxGroup name="trial_type[]" label="What type of service are you looking to try?" options={[
+        <CheckboxGroup name="trial_type" label="What type of service are you looking to try?" options={[
           { value: 'rc', label: 'REDCap practice/training project' },
           { value: 'dx', label: 'DataXplor' },
         ]} />

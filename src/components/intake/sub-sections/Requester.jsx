@@ -8,7 +8,6 @@ export default function Requester(props) {
       <fieldset class="space-y-4">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
           <Input
-            id="requester_fname"
             name="requester_fname"
             label="First Name"
             required
@@ -16,7 +15,6 @@ export default function Requester(props) {
             disabled={props.hidden}
           />
           <Input
-            id="requester_lname"
             name="requester_lname"
             label="Last Name"
             required
@@ -26,7 +24,6 @@ export default function Requester(props) {
         </div>
 
         <Input
-          id="requester_email"
           name="requester_email"
           label="Email"
           type="email"
@@ -35,7 +32,6 @@ export default function Requester(props) {
         />
 
         <Select
-          id="requester_institution"
           name="requester_institution"
           label="Institutional Affiliation"
           required
@@ -48,7 +44,6 @@ export default function Requester(props) {
         />
 
         <Select
-          id="requester_institution_uc"
           name="requester_institution_uc"
           label="University of Calgary Faculty"
           options={[
@@ -61,7 +56,6 @@ export default function Requester(props) {
         />
 
         <Select
-          id="requester_institution_uc_faculty"
           name="requester_institution_uc_faculty"
           label="Department"
           options={[
@@ -96,7 +90,6 @@ export default function Requester(props) {
         />
 
         <Select
-          id="requester_institution_oth"
           name="requester_institution_oth"
           label="Other Institution"
           options={[
@@ -112,21 +105,18 @@ export default function Requester(props) {
         />
 
         <Input
-          id="requester_institution_uni"
           name="requester_institution_uni"
           label="Specify Institution"
           placeholder="specify institution"
         />
 
         <Input
-          id="requester_institution_other"
           name="requester_institution_other"
           label="Other Institution"
           placeholder="specify institution"
         />
 
         <Input
-          id="requester_referred_from"
           name="requester_referred_from"
           label="How did you hear about our services?"
         />

@@ -18,7 +18,7 @@ export default function MethodsAnalytics(props) {
           ]}
         />
 
-        <CheckboxGroup name="ma_existing_data[]" label="What type of data do you have?" options={[
+        <CheckboxGroup name="ma_existing_data" label="What type of data do you have?" options={[
           { value: 'rc', label: "I have data on CHI's REDCap platform" },
           { value: 'admin', label: 'I have administrative data' },
           { value: 'oth', label: 'I have other data' },
@@ -38,7 +38,7 @@ export default function MethodsAnalytics(props) {
           label="What dataset(s) will you be using?"
         />
 
-        <CheckboxGroup name="ma_methods[]" label="What Methods support do you require?" options={[
+        <CheckboxGroup name="ma_methods" label="What Methods support do you require?" options={[
           { value: 'power', label: 'Power/sample size calculations' },
           { value: 'review', label: 'Review of existing methods section/research design/statistical plan' },
           { value: 'dev', label: 'Co-development of methods section/research design/statistical plan' },
@@ -46,7 +46,7 @@ export default function MethodsAnalytics(props) {
           { value: 'none', label: "I don't require methods support" },
         ]} />
         
-        <CheckboxGroup name="ma_analytics[]" label="What Analytics support do you require?" options={[
+        <CheckboxGroup name="ma_analytics" label="What Analytics support do you require?" options={[
           { value: 'cleaning', label: 'Data cleaning, linking and processing' },
           { value: 'power', label: 'Sample size calculation (a priori power calculations)' },
           { value: 'stats', label: 'Descriptive statistics, traditional biostatistical methods' },

@@ -112,57 +112,57 @@ const STEPS = [
   },
   {
     label: 'New service or project',
-    branchFrom: [{ field: 'service_type', value: 'proj' }],
+    branchFrom: [{ field: 'service_type___proj', value: '1' }],
     Component: NewProject,
   },
   {
     label: 'Principal investigator',
-    branchFrom: [{ field: 'service_type', value: 'proj' }],
+    branchFrom: [{ field: 'service_type___proj', value: '1' }],
     Component: PrincipalInvestigator,
   },
   {
     label: 'Research purpose',
-    branchFrom: [{ field: 'service_type', value: 'proj' }],
+    branchFrom: [{ field: 'service_type___proj', value: '1' }],
     Component: ResearchPurpose,
   },
   {
     label: 'Project details',
-    branchFrom: [{ field: 'service_type', value: 'proj' }],
+    branchFrom: [{ field: 'service_type___proj', value: '1' }],
     Component: ProjectDetails,
   },
   {
     label: 'REDCap build',
-    branchFrom: [{ field: 'proj_type[]', value: 'rc' }],
+    branchFrom: [{ field: 'proj_type___rc', value: '1' }],
     Component: Redcap,
   },
   {
     label: 'Custom development',
-    branchFrom: [{ field: 'proj_type[]', value: 'custom' }],
+    branchFrom: [{ field: 'proj_type___custom', value: '1' }],
     Component: CustomDevelopment,
   },
   {
     label: 'Methods & Analytics',
-    branchFrom: [{ field: 'proj_type[]', value: 'ma' }],
+    branchFrom: [{ field: 'proj_type___ma', value: '1' }],
     Component: MethodsAnalytics,
   },
   {
     label: 'New REDCap account',
-    branchFrom: [{ field: 'service_type', value: 'user' }],
+    branchFrom: [{ field: 'service_type___user', value: '1' }],
     Component: AccountCreation,
   },
   {
     label: 'Free trial',
-    branchFrom: [{ field: 'service_type', value: 'trial' }],
+    branchFrom: [{ field: 'service_type___trial', value: '1' }],
     Component: FreeTrial,
   },
   {
     label: 'Other services',
-    branchFrom: [{ field: 'service_type', value: 'oth' }],
+    branchFrom: [{ field: 'service_type___oth', value: '1' }],
     Component: OtherServices,
   },
   {
     label: 'Financial info',
-    branchFrom: [{ field: 'service_type', value: 'proj' }],
+    branchFrom: [{ field: 'service_type___proj', value: '1' }],
     Component: Financial,
   },
   {

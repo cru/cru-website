@@ -10,8 +10,8 @@ const CheckboxGroup = (props) => {
           <div class="flex flex-col space-y-2">
           <For each={props.options}>{(option) => (
             <Checkbox
-              name={props.name}
-              value={option.value}
+              name={`${props.name}___${option.value}`}
+              value={1}
               label={option.label}
             />
           )}</For>

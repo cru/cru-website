@@ -8,7 +8,7 @@ export default function NewProject(props) {
     <SubSection {...props} title="New service or project">
       <fieldset class="space-y-4">
         <CheckboxGroup
-          name="proj_type[]"
+          name="proj_type"
           label="What type of support or service do you need?"
           options={[
             {
