@@ -12,12 +12,16 @@ export default function Requester(props) {
             name="requester_fname"
             label="First Name"
             required
+            minLength="2"
+            disabled={props.hidden}
           />
           <Input
             id="requester_lname"
             name="requester_lname"
             label="Last Name"
             required
+            minLength="2"
+            disabled={props.hidden}
           />
         </div>
 
@@ -27,6 +31,7 @@ export default function Requester(props) {
           label="Email"
           type="email"
           required
+          disabled={props.hidden}
         />
 
         <Select
@@ -34,6 +39,7 @@ export default function Requester(props) {
           name="requester_institution"
           label="Institutional Affiliation"
           required
+          disabled={props.hidden}
           options={[
             { value: '', label: 'Select institution...' },
             { value: 'uc', label: 'University of Calgary' },

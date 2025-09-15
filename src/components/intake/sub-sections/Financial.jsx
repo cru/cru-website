@@ -60,6 +60,8 @@ export default function Financial(props) {
           name="fin_method_ex_institution"
           label="Institution/Company Name"
           required
+          minLength="2"
+          disabled={props.hidden}
         />
 
         <TextArea
@@ -67,6 +69,8 @@ export default function Financial(props) {
           id="fin_method_ex_address"
           label="Institution/Company Address"
           required
+          minLength="2"
+          disabled={props.hidden}
         />
 
         <Input
@@ -74,6 +78,8 @@ export default function Financial(props) {
           name="fin_method_ex_name"
           label="Institution/Company Contact Name"
           required
+          minLength="2"
+          disabled={props.hidden}
         />
 
         <Input
@@ -82,12 +88,14 @@ export default function Financial(props) {
           label="Institution/Company Contact Email"
           type="email"
           required
+          disabled={props.hidden}
         />
 
         <Checkbox
           name="terms_agree"
           value="1"
           required
+          disabled={props.hidden}
           label="I agree to the Terms & Conditions"
         />
 
@@ -99,6 +107,7 @@ export default function Financial(props) {
           name="terms_sig"
           id="terms_sig"
           required
+          disabled={props.hidden}
           class="mt-1 block w-full"
         />
       </fieldset>

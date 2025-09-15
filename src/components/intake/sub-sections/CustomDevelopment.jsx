@@ -53,6 +53,7 @@ export default function CustomDevelopment(props) {
           id="custom_needs"
           label="Please elaborate on your needs or vision? *"
           required
+          disabled={props.hidden}
           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
         />
 

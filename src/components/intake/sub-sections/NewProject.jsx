@@ -34,6 +34,8 @@ export default function NewProject(props) {
           name="proj_title"
           label="Project or Study Title"
           required
+          minLength="2"
+          disabled={props.hidden}
         />
 
         <div class="mt-2 space-y-2">

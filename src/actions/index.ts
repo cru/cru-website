@@ -1,13 +1,14 @@
 import { defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 import axios from 'axios';
+import { intakeSchema } from '../lib/schemas';
 
 
 export const server = {
   submitIntake: defineAction({
-    input: z.object({
-      record_id: z.string().default(crypto.randomUUID()),
-      name: z.string(),
+    input: intakeSchema.refine((data) => {
+      data.record_id = crypto.randomUUID();
+      return data;
     }),
     handler: async (input) => {
       const url = import.meta.env.REDCAP_API_URL
@@ -16,16 +17,14 @@ export const server = {
         return { detail: 'REDCap API URL or token is not set in environment variables' }
       }
 
-      console.log(input)
 
       const payload = {
         token: token,
         format: 'json',
-        return_format: 'json',
         type: 'flat',
         forceAutoNumber: true,
         content: 'record',
-        data: JSON.stringify(input)
+        data: JSON.stringify([input])
       }
 
       try {
@@ -37,8 +36,8 @@ export const server = {
         return `success!`
         
       } catch (error) {
-        console.error(error)
-        return 'Failed to retrieve project info from REDCap' 
+        console.error(error.response.data)
+        return 'Failed to post intake to REDCap' 
       }
     }
   })

@@ -40,9 +40,7 @@ const IntakeForm = () => {
 
   createEffect(() => {
     if (!formRef) return
-
-    const form = formRef
-    form.addEventListener('input', handleFormEvent)
+    formRef.addEventListener('input', handleFormEvent)
   })
 
   const handleFormEvent = (e) => {
@@ -51,6 +49,13 @@ const IntakeForm = () => {
     if (branchFields.has(fieldName)) {
       const fieldValues = formData.getAll(fieldName)
       setBranchTriggers({ ...branchTriggers(), [fieldName]: fieldValues })
+    }
+  }
+
+
+  const handleNext = () => {
+    if (formRef.reportValidity()) {
+      setActiveStep(activeStep() + 1)
     }
   }
 
@@ -76,7 +81,7 @@ const IntakeForm = () => {
             size="small"
             appearance="accent"
             disabled={activeStep() === availableSteps().length - 1}
-            on:click={() => setActiveStep(activeStep() + 1)}
+            on:click={handleNext}
           >
             Next
           </wa-button>
@@ -85,6 +90,7 @@ const IntakeForm = () => {
           {(step, index) => (
             <Dynamic
               component={step.Component}
+              formRef={formRef}
               hidden={activeStep() !== index()}
             />
           )}
@@ -163,5 +169,7 @@ const STEPS = [
     Component: Finish,
   },
 ]
+
+
 
 export default IntakeForm

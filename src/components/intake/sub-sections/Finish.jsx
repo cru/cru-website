@@ -5,8 +5,11 @@ import { actions } from 'astro:actions'
 
 export default function Finish(props) {
   const handleSubmit = async () => {
-    const { data, error } = await actions.submitIntake({ name: 'Houston' })
+    const formData = new FormData(props.formRef)
+    const { data, error } = await actions.submitIntake(Object.fromEntries(formData.entries()))
+    console.log(error)
     if (!error) alert(data)
+      
   }
 
   return (
