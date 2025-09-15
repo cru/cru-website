@@ -1,4 +1,4 @@
-import Checkbox from '../../ui/solid/Checkbox'
+import CheckboxGroup from '../../ui/solid/CheckboxGroup'
 import Input from '../../ui/solid/Input'
 import Radio from '../../ui/solid/Radio'
 import TextArea from '../../ui/solid/TextArea'
@@ -18,27 +18,12 @@ export default function MethodsAnalytics(props) {
           ]}
         />
 
-        <div class="block text-sm font-medium text-gray-700">
-          What type of data do you have?
-        </div>
-        <div class="mt-2 space-y-2">
-          <Checkbox
-            name="ma_existing_data[]"
-            value="rc"
-            label="I have data on CHI's REDCap platform"
-          />
-          <Checkbox
-            name="ma_existing_data[]"
-            value="admin"
-            label="I have administrative data"
-          />
-          <Checkbox
-            name="ma_existing_data[]"
-            value="oth"
-            label="I have other data"
-          />
-        </div>
-
+        <CheckboxGroup name="ma_existing_data[]" label="What type of data do you have?" options={[
+          { value: 'rc', label: "I have data on CHI's REDCap platform" },
+          { value: 'admin', label: 'I have administrative data' },
+          { value: 'oth', label: 'I have other data' },
+        ]} />
+        
         <Input
           id="ma_existing_data_pid"
           name="ma_existing_data_pid"
@@ -53,67 +38,25 @@ export default function MethodsAnalytics(props) {
           label="What dataset(s) will you be using?"
         />
 
-        <div class="block text-sm font-medium text-gray-700">
-          What Methods support do you require? *
-        </div>
-        <div class="mt-2 space-y-2">
-          <Checkbox
-            name="ma_methods[]"
-            value="power"
-            label="Power/sample size calculations"
-          />
-          <Checkbox
-            name="ma_methods[]"
-            value="review"
-            label="Review of existing methods section/research design/statistical plan"
-          />
-          <Checkbox
-            name="ma_methods[]"
-            value="dev"
-            label="Co-development of methods section/research design/statistical plan"
-          />
-
-          <Checkbox name="ma_methods[]" value="unsure" label="I am unsure" />
-          <Checkbox
-            name="ma_methods[]"
-            value="none"
-            label="I don't require methods support"
-          />
-        </div>
-
-        <div class="block text-sm font-medium text-gray-700">
-          What Analytics support do you require? *
-        </div>
-        <div class="mt-2 space-y-2">
-          <Checkbox
-            name="ma_analytics[]"
-            value="cleaning"
-            label="Data cleaning, linking and processing"
-          />
-          <Checkbox
-            name="ma_analytics[]"
-            value="power"
-            label="Sample size calculation (a priori power calculations)"
-          />
-          <Checkbox
-            name="ma_analytics[]"
-            value="stats"
-            label="Descriptive statistics, traditional biostatistical methods"
-          />
-          <Checkbox
-            name="ma_analytics[]"
-            value="ml"
-            label="Machine learning and data science methods"
-          />
-          <Checkbox name="ma_analytics[]" value="vis" label="Visualizations" />
-          <Checkbox name="ma_analytics[]" value="oth" label="Other" />
-          <Checkbox name="ma_analytics[]" value="unsure" label="I am unsure" />
-          <Checkbox
-            name="ma_analytics[]"
-            value="none"
-            label="I don't require analytics support"
-          />
-        </div>
+        <CheckboxGroup name="ma_methods[]" label="What Methods support do you require?" options={[
+          { value: 'power', label: 'Power/sample size calculations' },
+          { value: 'review', label: 'Review of existing methods section/research design/statistical plan' },
+          { value: 'dev', label: 'Co-development of methods section/research design/statistical plan' },
+          { value: 'unsure', label: 'I am unsure' },
+          { value: 'none', label: "I don't require methods support" },
+        ]} />
+        
+        <CheckboxGroup name="ma_analytics[]" label="What Analytics support do you require?" options={[
+          { value: 'cleaning', label: 'Data cleaning, linking and processing' },
+          { value: 'power', label: 'Sample size calculation (a priori power calculations)' },
+          { value: 'stats', label: 'Descriptive statistics, traditional biostatistical methods' },
+          { value: 'ml', label: 'Machine learning and data science methods' },
+          { value: 'vis', label: 'Visualizations' },
+          { value: 'oth', label: 'Other' },
+          { value: 'unsure', label: 'I am unsure' },
+          { value: 'none', label: "I don't require analytics support" },
+        ]} />
+        
 
         <TextArea
           name="ma_analytics_oth"

@@ -68,6 +68,16 @@ const IntakeForm = () => {
       />
 
       <form id="intake-form" ref={formRef} class="mx-auto w-full space-y-6">
+        
+        <For each={availableSteps()}>
+          {(step, index) => (
+            <Dynamic
+              component={step.Component}
+              formRef={formRef}
+              hidden={activeStep() !== index()}
+            />
+          )}
+        </For>
         <div class="flex justify-between">
           <wa-button
             size="small"
@@ -86,15 +96,6 @@ const IntakeForm = () => {
             Next
           </wa-button>
         </div>
-        <For each={availableSteps()}>
-          {(step, index) => (
-            <Dynamic
-              component={step.Component}
-              formRef={formRef}
-              hidden={activeStep() !== index()}
-            />
-          )}
-        </For>
       </form>
     </article>
   )

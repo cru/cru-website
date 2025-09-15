@@ -1,4 +1,5 @@
 import Checkbox from '../../ui/solid/Checkbox'
+import CheckboxGroup from '../../ui/solid/CheckboxGroup'
 import TextArea from '../../ui/solid/TextArea'
 import SubSection from '../SubSection'
 
@@ -6,48 +7,21 @@ export default function CustomDevelopment(props) {
   return (
     <SubSection {...props} title="Custom platform development">
       <fieldset class="space-y-4">
-        <div class="block text-sm font-medium text-gray-700">
-          What type of Custom Data Services do you need? *
-        </div>
-        <div class="mt-2 space-y-2">
-          <Checkbox
-            name="custom_type[]"
-            value="dashboard"
-            label="Data Dashboards"
-          />
-          <Checkbox
-            name="custom_type[]"
-            value="web"
-            label="Public Facing Websites"
-          />
-          <Checkbox
-            name="custom_type[]"
-            value="edc"
-            label="Custom Data Capture Application"
-          />
-
-          <Checkbox
-            name="custom_type[]"
-            value="mgmt"
-            label="Data Management Tool"
-          />
-          <Checkbox name="custom_type[]" value="infra" label="Infrastructure" />
-
-          <Checkbox
-            name="custom_type[]"
-            value="advice"
-            label="Advisory/Consultancy"
-          />
-
-          <Checkbox
-            name="custom_type[]"
-            value="mobile"
-            label="Mobile Data Capture Tool"
-          />
-
-          <Checkbox name="custom_type[]" value="unsure" label="I'm unsure" />
-        </div>
-
+        <CheckboxGroup
+          name="custom_type[]"
+          label="What type of Custom Data Services do you need? *"
+          options={[
+            { value: 'dashboard', label: 'Data Dashboards' },
+            { value: 'web', label: 'Public Facing Websites' },
+            { value: 'edc', label: 'Custom Data Capture Application' },
+            { value: 'mgmt', label: 'Data Management Tool' },
+            { value: 'infra', label: 'Infrastructure' },
+            { value: 'advice', label: 'Advisory/Consultancy' },
+            { value: 'mobile', label: 'Mobile Data Capture Tool' },
+            { value: 'unsure', label: "I'm unsure" },
+          ]}
+        />
+        
         <TextArea
           name="custom_needs"
           id="custom_needs"

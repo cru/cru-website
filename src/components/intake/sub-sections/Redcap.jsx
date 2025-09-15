@@ -1,4 +1,5 @@
 import Checkbox from '../../ui/solid/Checkbox'
+import CheckboxGroup from '../../ui/solid/CheckboxGroup'
 import Input from '../../ui/solid/Input'
 import Radio from '../../ui/solid/Radio'
 import TextArea from '../../ui/solid/TextArea'
@@ -41,18 +42,12 @@ export default function Redcap(props) {
           label="I have international sites"
         />
 
-        <div class="block text-sm font-medium text-gray-700">
-          Which international sites?
-        </div>
-        <div class="mt-2 space-y-2">
-          <Checkbox name="rc_international_sites[]" value="usa" label="USA" />
-          <Checkbox
-            name="rc_international_sites[]"
-            value="europe"
-            label="Europe"
-          />
-          <Checkbox name="rc_international_sites[]" value="oth" label="Other" />
-        </div>
+        <CheckboxGroup name="rc_international_sites[]" label="Which international sites?" options={[
+          { value: 'usa', label: 'USA' },
+          { value: 'europe', label: 'Europe' },
+          { value: 'oth', label: 'Other' },
+        ]} />
+        
 
         <Checkbox
           name="rc_have_surveys"

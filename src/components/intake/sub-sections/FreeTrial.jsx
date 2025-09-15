@@ -1,4 +1,4 @@
-import Checkbox from '../../ui/solid/Checkbox'
+import CheckboxGroup from '../../ui/solid/CheckboxGroup'
 import Input from '../../ui/solid/Input'
 import TextArea from '../../ui/solid/TextArea'
 import SubSection from '../SubSection'
@@ -7,38 +7,23 @@ export default function FreeTrial(props) {
   return (
     <SubSection {...props} title="Free trial / practice project">
       <fieldset class="space-y-4">
-        <div>
-          <div class="block text-sm font-medium text-gray-700">
-            What type of service are you looking to try? *
-          </div>
-          <div class="mt-2 space-y-2">
-            <Checkbox
-              name="trial_type[]"
-              value="rc"
-              label="REDCap practice/training project"
-            />
-            <Checkbox name="trial_type[]" value="dx" label="DataXplor" />
-          </div>
-        </div>
+        <CheckboxGroup name="trial_type[]" label="What type of service are you looking to try?" options={[
+          { value: 'rc', label: 'REDCap practice/training project' },
+          { value: 'dx', label: 'DataXplor' },
+        ]} />
 
-        <div id="trial_redcap_section">
-          <div>
             <Input
               id="trial_proj_title"
               name="trial_proj_title"
               label="Practice Project Title *"
             />
-          </div>
 
-          <div>
             <TextArea
               name="trial_rc_users"
               id="trial_rc_users"
               label="REDCap Username(s) to add to the practice project"
               placeholder="Including your own, if known"
             />
-          </div>
-        </div>
       </fieldset>
     </SubSection>
   )
