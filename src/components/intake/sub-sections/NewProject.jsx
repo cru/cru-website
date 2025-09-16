@@ -25,13 +25,7 @@ export default function NewProject(props) {
             },
           ]}
         />
-        <Input
-          name="proj_title"
-          label="Project or Study Title"
-          required
-          minlength="2"
-          
-        />
+        <Input name="proj_title" label="Project or Study Title" required minlength="2" />
 
         <div class="mt-2 space-y-2">
           <Radio

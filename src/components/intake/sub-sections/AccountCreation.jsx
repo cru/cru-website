@@ -40,19 +40,9 @@ const AccountCreation = (props) => {
         </div>
 
         <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="user_1_fields">
-          <Input
-            name="user_1_fname"
-            label="User 1 First Name"
-          />
-          <Input
-            name="user_1_lname"
-            label="User 1 Last Name"
-          />
-          <Input
-            name="user_1_email"
-            label="User 1 Email"
-            type="email"
-          />
+          <Input name="user_1_fname" label="User 1 First Name" />
+          <Input name="user_1_lname" label="User 1 Last Name" />
+          <Input name="user_1_email" label="User 1 Email" type="email" />
         </div>
 
         {/* <!-- Additional user fields (2-15) would be generated dynamically --> */}

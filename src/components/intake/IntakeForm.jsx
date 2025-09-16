@@ -59,7 +59,7 @@ const IntakeForm = () => {
     {
       name: 'project_details',
       label: 'Project details',
-        form: null,
+      form: null,
       branchFrom: [{ field: 'service_type___proj', value: '1' }],
       Component: ProjectDetails,
     },
@@ -120,9 +120,10 @@ const IntakeForm = () => {
     },
   ])
   const branchFields = new Set(
-    steps.flatMap((s) => s.branchFrom)
+    steps
+      .flatMap((s) => s.branchFrom)
       .filter((b) => b)
-      .map((b) => b?.field),
+      .map((b) => b?.field)
   )
 
   const availableSteps = () =>
@@ -130,10 +131,8 @@ const IntakeForm = () => {
       (s) =>
         !s.branchFrom ||
         s.branchFrom.every(
-          (p) =>
-            branchTriggers()[p.field] &&
-            branchTriggers()[p.field].includes(p.value),
-        ),
+          (p) => branchTriggers()[p.field] && branchTriggers()[p.field].includes(p.value)
+        )
     )
 
   createEffect(() => {
@@ -160,15 +159,14 @@ const IntakeForm = () => {
     setBranchTriggers({ ...branchTriggers(), [fieldName]: fieldValue })
   }
 
-
   const handleNext = () => {
     const form = availableSteps()[activeStep()].form
-    if(form && form.reportValidity()) setActiveStep(activeStep() + 1)
+    if (form && form.reportValidity()) setActiveStep(activeStep() + 1)
   }
 
   const registerForm = (name, form) => {
     if (!name || !form) return
-    setSteps((step) => step.name === name, "form", form)
+    setSteps((step) => step.name === name, 'form', form)
   }
 
   const handleSubmit = async () => {
@@ -177,11 +175,10 @@ const IntakeForm = () => {
       if (!step.form) return
 
       const formData = new FormData(step.form)
-      const asJson = Object.fromEntries(
-        Array.from(formData.keys()).map(key => [
-          key, formData.get(key)
-        ])
-      ) ?? {}
+      const asJson =
+        Object.fromEntries(
+          Array.from(formData.keys()).map((key) => [key, formData.get(key)])
+        ) ?? {}
       formJson = { ...formJson, ...asJson }
     })
 
@@ -203,7 +200,7 @@ const IntakeForm = () => {
             <Dynamic
               component={step.Component}
               hidden={activeStep() !== index()}
-              setFormRef={form => registerForm(step.name, form)}
+              setFormRef={(form) => registerForm(step.name, form)}
               onSubmit={handleSubmit}
             />
           )}
@@ -230,8 +227,5 @@ const IntakeForm = () => {
     </article>
   )
 }
-
-
-
 
 export default IntakeForm

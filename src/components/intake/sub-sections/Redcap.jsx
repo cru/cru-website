@@ -27,12 +27,7 @@ export default function Redcap(props) {
           min="0"
         />
 
-        <Input
-          name="rc_site_num"
-          label="Number of Study Sites"
-          type="number"
-          min="0"
-        />
+        <Input name="rc_site_num" label="Number of Study Sites" type="number" min="0" />
 
         <Checkbox
           name="rc_have_international_sites"
@@ -40,12 +35,15 @@ export default function Redcap(props) {
           label="I have international sites"
         />
 
-        <CheckboxGroup name="rc_international_sites" label="Which international sites?" options={[
-          { value: 'usa', label: 'USA' },
-          { value: 'europe', label: 'Europe' },
-          { value: 'oth', label: 'Other' },
-        ]} />
-        
+        <CheckboxGroup
+          name="rc_international_sites"
+          label="Which international sites?"
+          options={[
+            { value: 'usa', label: 'USA' },
+            { value: 'europe', label: 'Europe' },
+            { value: 'oth', label: 'Other' },
+          ]}
+        />
 
         <Checkbox
           name="rc_have_surveys"
@@ -71,10 +69,7 @@ export default function Redcap(props) {
         />
 
         <div id="xml_upload_section">
-          <label
-            for="rc_xml_upload"
-            class="block text-sm font-medium text-gray-700"
-          >
+          <label for="rc_xml_upload" class="block text-sm font-medium text-gray-700">
             Existing REDCap Project XML File
           </label>
           <input

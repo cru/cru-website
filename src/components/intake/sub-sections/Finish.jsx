@@ -6,10 +6,7 @@ export default function Finish(props) {
   return (
     <SubSection {...props} title="Finish up">
       <fieldset class="space-y-4">
-        <TextArea
-          name="service_comments"
-          label="Any additional notes or comments?"
-        />
+        <TextArea name="service_comments" label="Any additional notes or comments?" />
         <wa-button type="button" class="w-full" onClick={props.onSubmit}>
           Submit request
         </wa-button>

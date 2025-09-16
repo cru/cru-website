@@ -1,13 +1,12 @@
-import { defineAction } from 'astro:actions';
-import axios from 'axios';
-import { intakeSchema } from '../lib/schemas';
-
+import { defineAction } from 'astro:actions'
+import axios from 'axios'
+import { intakeSchema } from '../lib/schemas'
 
 export const server = {
   submitIntake: defineAction({
     input: intakeSchema.refine((data) => {
-      data.record_id = crypto.randomUUID();
-      return data;
+      data.record_id = crypto.randomUUID()
+      return data
     }),
     handler: async (input) => {
       const url = import.meta.env.REDCAP_API_URL
@@ -18,14 +17,13 @@ export const server = {
 
       console.log(input)
 
-
       const payload = {
         token: token,
         format: 'json',
         type: 'flat',
         forceAutoNumber: true,
         content: 'record',
-        data: JSON.stringify([input])
+        data: JSON.stringify([input]),
       }
 
       try {
@@ -35,11 +33,10 @@ export const server = {
         console.log(data)
 
         return `success!`
-        
       } catch (error) {
         console.error(error.response.data)
-        return 'Failed to post intake to REDCap' 
+        return 'Failed to post intake to REDCap'
       }
-    }
-  })
+    },
+  }),
 }

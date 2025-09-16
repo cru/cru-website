@@ -26,24 +26,12 @@ export default function ProjectDetails(props) {
             >
               Project Summary/Protocol Upload
             </label>
-            <input
-              type="file"
-              name="proj_protocol_upload"
-              class="mt-1 block w-full"
-            />
+            <input type="file" name="proj_protocol_upload" class="mt-1 block w-full" />
           </div>
 
-          <Checkbox
-            name="proj_have_ethics"
-            value="1"
-            label="I have ethics approval"
-          />
+          <Checkbox name="proj_have_ethics" value="1" label="I have ethics approval" />
 
-          <Input
-            name="proj_ethics_id"
-            label="Ethics ID"
-            placeholder="Ethics ID"
-          />
+          <Input name="proj_ethics_id" label="Ethics ID" placeholder="Ethics ID" />
           <div>
             <label
               for="proj_ethics_upload"
@@ -51,11 +39,7 @@ export default function ProjectDetails(props) {
             >
               Ethics Upload
             </label>
-            <input
-              type="file"
-              name="proj_ethics_upload"
-              class="mt-1 block w-full"
-            />
+            <input type="file" name="proj_ethics_upload" class="mt-1 block w-full" />
           </div>
 
           <Checkbox
@@ -79,17 +63,9 @@ export default function ProjectDetails(props) {
           />
 
           <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <Input
-              name="proj_date_start"
-              label="Intended Start Date"
-              type="date"
-            />
+            <Input name="proj_date_start" label="Intended Start Date" type="date" />
 
-            <Input
-              name="proj_date_end"
-              label="Intended End Date"
-              type="date"
-            />
+            <Input name="proj_date_end" label="Intended End Date" type="date" />
           </div>
         </div>
       </fieldset>

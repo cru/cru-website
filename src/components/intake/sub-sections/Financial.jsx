@@ -15,20 +15,10 @@ export default function Financial(props) {
         />
 
         <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="billing_contact_fields">
-          <Input
-            name="fin_contact_fname"
-            label="Billing Contact First Name"
-          />
-          <Input
-            name="fin_contact_lname"
-            label="Billing Contact Last Name"
-          />
+          <Input name="fin_contact_fname" label="Billing Contact First Name" />
+          <Input name="fin_contact_lname" label="Billing Contact Last Name" />
 
-          <Input
-            name="fin_contact_email"
-            label="Billing Contact Email"
-            type="email"
-          />
+          <Input name="fin_contact_email" label="Billing Contact Email" type="email" />
         </div>
 
         <div class="block text-sm font-medium text-gray-700">
@@ -57,7 +47,6 @@ export default function Financial(props) {
           label="Institution/Company Name"
           required
           minlength="2"
-          
         />
 
         <TextArea
@@ -65,7 +54,6 @@ export default function Financial(props) {
           label="Institution/Company Address"
           required
           minlength="2"
-          
         />
 
         <Input
@@ -73,7 +61,6 @@ export default function Financial(props) {
           label="Institution/Company Contact Name"
           required
           minlength="2"
-          
         />
 
         <Input
@@ -81,14 +68,12 @@ export default function Financial(props) {
           label="Institution/Company Contact Email"
           type="email"
           required
-          
         />
 
         <Checkbox
           name="terms_agree"
           value="1"
           required
-          
           label="I agree to the Terms & Conditions"
         />
 
@@ -100,7 +85,6 @@ export default function Financial(props) {
           name="terms_sig"
           id="terms_sig"
           required
-          
           class="mt-1 block w-full"
         />
       </fieldset>
