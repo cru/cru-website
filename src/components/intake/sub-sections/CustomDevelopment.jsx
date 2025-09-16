@@ -24,10 +24,9 @@ export default function CustomDevelopment(props) {
         
         <TextArea
           name="custom_needs"
-          id="custom_needs"
           label="Please elaborate on your needs or vision? *"
           required
-          disabled={props.hidden}
+          
           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
         />
 
@@ -39,7 +38,6 @@ export default function CustomDevelopment(props) {
 
         <TextArea
           name="custom_rc_summary"
-          id="custom_rc_summary"
           label="Please describe your integration needs"
         />
       </fieldset>

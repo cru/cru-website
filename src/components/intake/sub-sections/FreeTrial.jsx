@@ -13,14 +13,12 @@ export default function FreeTrial(props) {
         ]} />
 
             <Input
-              id="trial_proj_title"
               name="trial_proj_title"
               label="Practice Project Title *"
             />
 
             <TextArea
               name="trial_rc_users"
-              id="trial_rc_users"
               label="REDCap Username(s) to add to the practice project"
               placeholder="Including your own, if known"
             />

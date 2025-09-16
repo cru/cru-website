@@ -7,7 +7,6 @@ export default function OtherServices(props) {
       <fieldset class="space-y-4">
           <TextArea
             name="service_oth_questions"
-            id="service_oth_questions"
             label="What would you like help with, or what questions do you have?"
           />
       </fieldset>

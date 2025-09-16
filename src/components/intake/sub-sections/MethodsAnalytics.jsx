@@ -25,7 +25,6 @@ export default function MethodsAnalytics(props) {
         ]} />
         
         <Input
-          id="ma_existing_data_pid"
           name="ma_existing_data_pid"
           type="number"
           min="0"
@@ -34,7 +33,6 @@ export default function MethodsAnalytics(props) {
 
         <TextArea
           name="ma_data_desc"
-          id="ma_data_desc"
           label="What dataset(s) will you be using?"
         />
 
@@ -60,12 +58,10 @@ export default function MethodsAnalytics(props) {
 
         <TextArea
           name="ma_analytics_oth"
-          id="ma_analytics_oth"
           label="What other Analytics support do you require?"
         />
 
         <Input
-          id="ma_research_question"
           name="ma_research_question"
           label="What is your Research Question?"
         />

@@ -5,21 +5,21 @@ import SubSection from '../SubSection'
 export default function Requester(props) {
   return (
     <SubSection {...props} title="Some info about you">
-      <fieldset class="space-y-4">
+      <fieldset name='requester_info' class="space-y-4">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
           <Input
             name="requester_fname"
             label="First Name"
             required
-            minLength="2"
-            disabled={props.hidden}
+            minlength="2"
+            
           />
           <Input
             name="requester_lname"
             label="Last Name"
             required
-            minLength="2"
-            disabled={props.hidden}
+            minlength="2"
+            
           />
         </div>
 
@@ -28,14 +28,14 @@ export default function Requester(props) {
           label="Email"
           type="email"
           required
-          disabled={props.hidden}
+          
         />
 
         <Select
           name="requester_institution"
           label="Institutional Affiliation"
           required
-          disabled={props.hidden}
+          
           options={[
             { value: '', label: 'Select institution...' },
             { value: 'uc', label: 'University of Calgary' },

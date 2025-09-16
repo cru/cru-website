@@ -30,7 +30,7 @@ export default function ServiceType(props) {
         name="service_type"
         label="To get started, let us know what type of support you are looking for"
         required
-        disabled={props.hidden}
+        
         options={[
           {
             value: 'user',

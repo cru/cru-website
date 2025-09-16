@@ -26,12 +26,11 @@ export default function NewProject(props) {
           ]}
         />
         <Input
-          id="proj_title"
           name="proj_title"
           label="Project or Study Title"
           required
-          minLength="2"
-          disabled={props.hidden}
+          minlength="2"
+          
         />
 
         <div class="mt-2 space-y-2">

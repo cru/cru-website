@@ -1,14 +1,24 @@
+import { onMount } from "solid-js"
+
 const SubSection = (props) => {
+  let formRef
+
+  onMount(() => {
+    props.setFormRef(formRef)
+  })
+
   return (
     <section
-      class={`space-y-8 overflow-hidden p-1 transition-all duration-800 ease-in-out ${
+      class={`overflow-hidden transition-all duration-700 ease-in-out space-y-8 p-1 ${
         props.hidden
-          ? 'pointer-events-none absolute bottom-0 h-0 translate-y-32 opacity-0'
-          : 'max-h-screen translate-y-0 scale-100 opacity-100'
+          ? 'pointer-events-none h-0 -translate-x-64 opacity-0 scale-80 absolute bottom-0'
+          : 'max-h-screen translate-x-0 translate-y-0 opacity-100 scale-100'
       }`}
     >
-      <h4>{props.title}</h4>
-      {props.children}
+    
+      <form ref={(el) => (formRef = el)}>
+        {props.children}
+      </form>
     </section>
   )
 }

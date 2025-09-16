@@ -21,7 +21,6 @@ export default function Redcap(props) {
         <Checkbox name="rc_build_unsure" value="1" label="I am unsure" />
 
         <Input
-          id="rc_participant_num"
           name="rc_participant_num"
           label="Number of Expected Study Participants"
           type="number"
@@ -29,7 +28,6 @@ export default function Redcap(props) {
         />
 
         <Input
-          id="rc_site_num"
           name="rc_site_num"
           label="Number of Study Sites"
           type="number"
@@ -63,7 +61,6 @@ export default function Redcap(props) {
 
         <TextArea
           name="rc_randomization_summary"
-          id="rc_randomization_summary"
           label="Please provide a summary of the randomization schema"
         />
 
@@ -83,7 +80,6 @@ export default function Redcap(props) {
           <input
             type="file"
             name="rc_xml_upload"
-            id="rc_xml_upload"
             accept=".xml"
             class="mt-1 block w-full"
           />

@@ -18,7 +18,6 @@ export default function ResearchPurpose(props) {
         />
 
         <Input
-          id="proj_purpose_res_oth"
           name="proj_purpose_res_oth"
           label="Specify Research Purpose"
           placeholder="specify project or study purpose"

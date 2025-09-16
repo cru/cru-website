@@ -16,18 +16,15 @@ export default function Financial(props) {
 
         <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="billing_contact_fields">
           <Input
-            id="fin_contact_fname"
             name="fin_contact_fname"
             label="Billing Contact First Name"
           />
           <Input
-            id="fin_contact_lname"
             name="fin_contact_lname"
             label="Billing Contact Last Name"
           />
 
           <Input
-            id="fin_contact_email"
             name="fin_contact_email"
             label="Billing Contact Email"
             type="email"
@@ -56,46 +53,42 @@ export default function Financial(props) {
         </div>
 
         <Input
-          id="fin_method_ex_institution"
           name="fin_method_ex_institution"
           label="Institution/Company Name"
           required
-          minLength="2"
-          disabled={props.hidden}
+          minlength="2"
+          
         />
 
         <TextArea
           name="fin_method_ex_address"
-          id="fin_method_ex_address"
           label="Institution/Company Address"
           required
-          minLength="2"
-          disabled={props.hidden}
+          minlength="2"
+          
         />
 
         <Input
-          id="fin_method_ex_name"
           name="fin_method_ex_name"
           label="Institution/Company Contact Name"
           required
-          minLength="2"
-          disabled={props.hidden}
+          minlength="2"
+          
         />
 
         <Input
-          id="fin_method_ex_email"
           name="fin_method_ex_email"
           label="Institution/Company Contact Email"
           type="email"
           required
-          disabled={props.hidden}
+          
         />
 
         <Checkbox
           name="terms_agree"
           value="1"
           required
-          disabled={props.hidden}
+          
           label="I agree to the Terms & Conditions"
         />
 
@@ -107,7 +100,7 @@ export default function Financial(props) {
           name="terms_sig"
           id="terms_sig"
           required
-          disabled={props.hidden}
+          
           class="mt-1 block w-full"
         />
       </fieldset>

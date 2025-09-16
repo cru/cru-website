@@ -1,5 +1,6 @@
 import '@awesome.me/webawesome/dist/components/button/button.js'
 import { createEffect, createSignal, For } from 'solid-js'
+import { createStore } from 'solid-js/store'
 import { Dynamic } from 'solid-js/web'
 import SolidSteps from '../ui/solid/SolidSteps'
 import AccountCreation from './sub-sections/AccountCreation'
@@ -20,15 +21,111 @@ import ServiceType from './sub-sections/ServiceType'
 const IntakeForm = () => {
   const [activeStep, setActiveStep] = createSignal(0)
   const [branchTriggers, setBranchTriggers] = createSignal({})
+  const [steps, setSteps] = createStore([
+    {
+      name: 'service_type',
+      label: 'How can we help?',
+      form: null,
+      Component: ServiceType,
+    },
+    {
+      name: 'requester_info',
+      label: 'Some info about you',
+      form: null,
+      Component: Requester,
+    },
+    {
+      name: 'new_project',
+      label: 'New service or project',
+      form: null,
+      branchFrom: [{ field: 'service_type___proj', value: '1' }],
+      Component: NewProject,
+    },
+    {
+      name: 'principal_investigator',
+      label: 'Principal investigator',
+      form: null,
+      branchFrom: [{ field: 'service_type___proj', value: '1' }],
+      Component: PrincipalInvestigator,
+    },
+    {
+      name: 'research_purpose',
+      label: 'Research purpose',
+      form: null,
+      branchFrom: [{ field: 'service_type___proj', value: '1' }],
+      Component: ResearchPurpose,
+    },
+    {
+      name: 'project_details',
+      label: 'Project details',
+        form: null,
+      branchFrom: [{ field: 'service_type___proj', value: '1' }],
+      Component: ProjectDetails,
+    },
+    {
+      name: 'redcap',
+      label: 'REDCap build',
+      form: null,
+      branchFrom: [{ field: 'proj_type___rc', value: '1' }],
+      Component: Redcap,
+    },
+    {
+      name: 'custom_development',
+      label: 'Custom development',
+      form: null,
+      branchFrom: [{ field: 'proj_type___custom', value: '1' }],
+      Component: CustomDevelopment,
+    },
+    {
+      name: 'methods_analytics',
+      label: 'Methods & Analytics',
+      form: null,
+      branchFrom: [{ field: 'proj_type___ma', value: '1' }],
+      Component: MethodsAnalytics,
+    },
+    {
+      name: 'account_creation',
+      label: 'New REDCap account',
+      form: null,
+      branchFrom: [{ field: 'service_type___user', value: '1' }],
+      Component: AccountCreation,
+    },
+    {
+      name: 'free_trial',
+      label: 'Free trial',
+      form: null,
+      branchFrom: [{ field: 'service_type___trial', value: '1' }],
+      Component: FreeTrial,
+    },
+    {
+      name: 'other_services',
+      label: 'Other services',
+      form: null,
+      branchFrom: [{ field: 'service_type___oth', value: '1' }],
+      Component: OtherServices,
+    },
+    {
+      name: 'financial_info',
+      label: 'Financial info',
+      form: null,
+      branchFrom: [{ field: 'service_type___proj', value: '1' }],
+      Component: Financial,
+    },
+    {
+      name: 'finish',
+      label: 'Finish up',
+      form: null,
+      Component: Finish,
+    },
+  ])
   const branchFields = new Set(
-    STEPS.flatMap((s) => s.branchFrom)
+    steps.flatMap((s) => s.branchFrom)
       .filter((b) => b)
       .map((b) => b?.field),
   )
-  let formRef
 
   const availableSteps = () =>
-    STEPS.filter(
+    steps.filter(
       (s) =>
         !s.branchFrom ||
         s.branchFrom.every(
@@ -39,42 +136,54 @@ const IntakeForm = () => {
     )
 
   createEffect(() => {
-    if (!formRef) return
-    formRef.addEventListener('input', handleFormEvent)
+    availableSteps().forEach((step) => {
+      if (!step.form) return
+      step.form.addEventListener('input', handleFormEvent)
+    })
   })
 
   const handleFormEvent = (e) => {
-    const formData = new FormData(formRef)
     const fieldName = e.target.name
-    if (branchFields.has(fieldName)) {
-      const fieldValues = formData.getAll(fieldName)
-      setBranchTriggers({ ...branchTriggers(), [fieldName]: fieldValues })
+    let fieldValue = null
+    for (const step of availableSteps()) {
+      if (!step.form) continue
+      if (branchFields.has(fieldName)) {
+        const formData = new FormData(step.form)
+        if (formData.has(fieldName)) {
+          fieldValue = formData.get(fieldName)
+          break
+        }
+      }
     }
+
+    setBranchTriggers({ ...branchTriggers(), [fieldName]: fieldValue })
   }
 
 
   const handleNext = () => {
-    if (formRef.reportValidity()) {
-      setActiveStep(activeStep() + 1)
-    }
+    const form = availableSteps()[activeStep()].form
+    if(form && form.reportValidity()) setActiveStep(activeStep() + 1)
+  }
+
+  const registerForm = (name, form) => {
+    if (!name || !form) return
+    setSteps((step) => step.name === name, "form", form)
   }
 
   return (
     <article class="flex space-x-24">
       <SolidSteps
-        client:idle
         activeStep={activeStep()}
         steps={availableSteps().map((s) => s.label)}
       />
 
-      <form id="intake-form" ref={formRef} class="mx-auto w-full space-y-6">
-        
+      <div class="mx-auto w-full space-y-6">
         <For each={availableSteps()}>
           {(step, index) => (
             <Dynamic
               component={step.Component}
-              formRef={formRef}
               hidden={activeStep() !== index()}
+              setFormRef={form => registerForm(step.name, form)}
             />
           )}
         </For>
@@ -96,80 +205,11 @@ const IntakeForm = () => {
             Next
           </wa-button>
         </div>
-      </form>
+      </div>
     </article>
   )
 }
 
-const STEPS = [
-  {
-    label: 'How can we help?',
-    Component: ServiceType,
-  },
-  {
-    label: 'Some info about you',
-    Component: Requester,
-  },
-  {
-    label: 'New service or project',
-    branchFrom: [{ field: 'service_type___proj', value: '1' }],
-    Component: NewProject,
-  },
-  {
-    label: 'Principal investigator',
-    branchFrom: [{ field: 'service_type___proj', value: '1' }],
-    Component: PrincipalInvestigator,
-  },
-  {
-    label: 'Research purpose',
-    branchFrom: [{ field: 'service_type___proj', value: '1' }],
-    Component: ResearchPurpose,
-  },
-  {
-    label: 'Project details',
-    branchFrom: [{ field: 'service_type___proj', value: '1' }],
-    Component: ProjectDetails,
-  },
-  {
-    label: 'REDCap build',
-    branchFrom: [{ field: 'proj_type___rc', value: '1' }],
-    Component: Redcap,
-  },
-  {
-    label: 'Custom development',
-    branchFrom: [{ field: 'proj_type___custom', value: '1' }],
-    Component: CustomDevelopment,
-  },
-  {
-    label: 'Methods & Analytics',
-    branchFrom: [{ field: 'proj_type___ma', value: '1' }],
-    Component: MethodsAnalytics,
-  },
-  {
-    label: 'New REDCap account',
-    branchFrom: [{ field: 'service_type___user', value: '1' }],
-    Component: AccountCreation,
-  },
-  {
-    label: 'Free trial',
-    branchFrom: [{ field: 'service_type___trial', value: '1' }],
-    Component: FreeTrial,
-  },
-  {
-    label: 'Other services',
-    branchFrom: [{ field: 'service_type___oth', value: '1' }],
-    Component: OtherServices,
-  },
-  {
-    label: 'Financial info',
-    branchFrom: [{ field: 'service_type___proj', value: '1' }],
-    Component: Financial,
-  },
-  {
-    label: 'Finish up',
-    Component: Finish,
-  },
-]
 
 
 

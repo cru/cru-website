@@ -29,7 +29,6 @@ export default function ProjectDetails(props) {
             <input
               type="file"
               name="proj_protocol_upload"
-              id="proj_protocol_upload"
               class="mt-1 block w-full"
             />
           </div>
@@ -41,7 +40,6 @@ export default function ProjectDetails(props) {
           />
 
           <Input
-            id="proj_ethics_id"
             name="proj_ethics_id"
             label="Ethics ID"
             placeholder="Ethics ID"
@@ -56,7 +54,6 @@ export default function ProjectDetails(props) {
             <input
               type="file"
               name="proj_ethics_upload"
-              id="proj_ethics_upload"
               class="mt-1 block w-full"
             />
           </div>
@@ -74,7 +71,6 @@ export default function ProjectDetails(props) {
           />
 
           <Input
-            id="proj_budget_amt"
             name="proj_budget_amt"
             label="Budget Amount (CAD$)"
             min="0"
@@ -84,14 +80,12 @@ export default function ProjectDetails(props) {
 
           <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
             <Input
-              id="proj_date_start"
               name="proj_date_start"
               label="Intended Start Date"
               type="date"
             />
 
             <Input
-              id="proj_date_end"
               name="proj_date_end"
               label="Intended End Date"
               type="date"

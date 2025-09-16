@@ -9,7 +9,6 @@ const AccountCreation = (props) => {
       <fieldset class="space-y-4">
         <div>
           <Select
-            id="user_account_num"
             name="user_account_num"
             label="How many new user accounts are you requesting?"
             options={[
@@ -42,17 +41,14 @@ const AccountCreation = (props) => {
 
         <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="user_1_fields">
           <Input
-            id="user_1_fname"
             name="user_1_fname"
             label="User 1 First Name"
           />
           <Input
-            id="user_1_lname"
             name="user_1_lname"
             label="User 1 Last Name"
           />
           <Input
-            id="user_1_email"
             name="user_1_email"
             label="User 1 Email"
             type="email"
