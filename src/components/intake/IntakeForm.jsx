@@ -1,4 +1,5 @@
 import '@awesome.me/webawesome/dist/components/button/button.js'
+import { actions } from 'astro:actions'
 import { createEffect, createSignal, For } from 'solid-js'
 import { createStore } from 'solid-js/store'
 import { Dynamic } from 'solid-js/web'
@@ -170,6 +171,25 @@ const IntakeForm = () => {
     setSteps((step) => step.name === name, "form", form)
   }
 
+  const handleSubmit = async () => {
+    let formJson = {}
+    availableSteps().forEach((step) => {
+      if (!step.form) return
+
+      const formData = new FormData(step.form)
+      const asJson = Object.fromEntries(
+        Array.from(formData.keys()).map(key => [
+          key, formData.get(key)
+        ])
+      ) ?? {}
+      formJson = { ...formJson, ...asJson }
+    })
+
+    const { data, error } = await actions.submitIntake(formJson)
+    console.log(error)
+    if (!error) alert(data)
+  }
+
   return (
     <article class="flex space-x-24">
       <SolidSteps
@@ -184,6 +204,7 @@ const IntakeForm = () => {
               component={step.Component}
               hidden={activeStep() !== index()}
               setFormRef={form => registerForm(step.name, form)}
+              onSubmit={handleSubmit}
             />
           )}
         </For>
