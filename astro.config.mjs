@@ -18,5 +18,7 @@ export default defineConfig({
     '/services-and-pricing/edc-services': '/data-capture/pricing',
   },
 
-  adapter: netlify(),
+  adapter: netlify({
+  imageCDN: false
+}),
 })
