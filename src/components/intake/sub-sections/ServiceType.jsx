@@ -1,62 +1,40 @@
-import CheckboxGroup from '../../ui/solid/CheckboxGroup'
-// import Radio from '../../ui/solid/Radio'
+import Radio from '../../ui/solid/Radio'
 import SubSection from '../SubSection'
 
 export default function ServiceType(props) {
   return (
     <SubSection {...props} title="How can we help?">
-      <CheckboxGroup
+      <div class='space-y-6'>
+
+      <Radio
+        name="service_type_user___user"
+        label="I need a new REDCap account created"
+        required
+        orientation="horizontal"
+        options={[{ value: '1', label: 'Yes' }, { value: '0', label: 'No' }]}
+      />
+      <Radio
         name="service_type"
-        label="To get started, let us know what type of support you are looking for"
+        label="Is there anything else you need support with?"
         options={[
-          {
-            value: 'user',
-            label: 'Do you need us to create a new REDCap account for you?',
-          },
           {
             value: 'trial',
             label:
-              'Do you need us to create a new REDCap 60-day Practice Project for you?',
+              'I would like to create a new REDCap 60-day Practice Project',
           },
           {
             value: 'proj',
             label:
-              'Are you looking to request support or initiate a new service with our team today (e.g. a new REDCap project, data access, analytics, or platform development and/or support)?',
+              'I am looking to request support or initiate a new service with your team today (e.g. a new REDCap project, data access, analytics, or platform development and/or support)',
           },
           {
             value: 'oth',
             label:
-              'I’m not sure what services I require, but I would like to learn more about the support required by CHI.',
+              'I’m not sure what services I require, but I would like to learn more about the support offered by CHI.',
           },
         ]}
       />
-      {/* <Radio
-        name="service_type"
-        label="To get started, let us know what type of support you are looking for"
-        required
-        
-        options={[
-          {
-            value: 'user',
-            label: 'Do you need us to create a new REDCap account for you?',
-          },
-          {
-            value: 'trial',
-            label:
-              'Do you need us to create a new REDCap 60-day Practice Project for you?',
-          },
-          {
-            value: 'proj',
-            label:
-              'Are you looking to request support or initiate a new service with our team today (e.g. a new REDCap project, data access, analytics, or platform development and/or support)?',
-          },
-          {
-            value: 'oth',
-            label:
-              'I’m not sure what services I require, but I would like to learn more about the support required by CHI.',
-          },
-        ]}
-      /> */}
+        </div>
     </SubSection>
   )
 }
