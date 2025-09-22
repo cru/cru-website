@@ -26,15 +26,15 @@ export default function NewProject(props) {
           ]}
         />
         <Input name="proj_title" label="Project or Study Title" required minlength="2" />
-          <Radio
-            name="proj_purpose"
-            label="Purpose of your project or study?"
-            options={[
-              { value: 'research', label: 'Research' },
-              { value: 'qi', label: 'Quality Improvement' },
-              { value: 'op', label: 'Operational' },
-            ]}
-          />
+        <Radio
+          name="proj_purpose"
+          label="Purpose of your project or study?"
+          options={[
+            { value: 'research', label: 'Research' },
+            { value: 'qi', label: 'Quality Improvement' },
+            { value: 'op', label: 'Operational' },
+          ]}
+        />
       </fieldset>
     </SubSection>
   )

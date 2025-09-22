@@ -26,7 +26,11 @@ export default function ProjectDetails(props) {
             </label>
             <input type="file" name="proj_protocol_upload" class="mt-1 block w-full" />
           </div>
-          <Checkbox name="proj_have_ethics___1" value="1" label="I have ethics approval" />
+          <Checkbox
+            name="proj_have_ethics___1"
+            value="1"
+            label="I have ethics approval"
+          />
           <Input name="proj_ethics_id" label="Ethics ID" placeholder="Ethics ID" />
           <div>
             <label

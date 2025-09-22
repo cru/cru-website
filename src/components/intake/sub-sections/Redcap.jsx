@@ -21,8 +21,20 @@ export default function Redcap(props) {
         <Radio
           name="rc_price_tier"
           label="Please select a REDCap Support Tier"
-          hint={<span>See <a href="/data-capture/pricing"               target="_blank"
-              rel="noopener noreferrer" class="cursor-pointer underline hover:decoration-2 hover:decoration-brand-primary-500">Data Capture Pricing</a> for more information</span>}
+          hint={
+            <span>
+              See{' '}
+              <a
+                href="/data-capture/pricing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:decoration-brand-primary-500 cursor-pointer underline hover:decoration-2"
+              >
+                Data Capture Pricing
+              </a>{' '}
+              for more information
+            </span>
+          }
           options={[
             { value: 'basic', label: 'Basic' },
             { value: 'plus', label: 'Plus' },

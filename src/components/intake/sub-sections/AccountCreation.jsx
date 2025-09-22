@@ -6,16 +6,16 @@ const AccountCreation = (props) => {
   return (
     <SubSection {...props} title="New REDCap user account">
       <fieldset class="space-y-4">
-          <Input
-            name="user_account_num"
-            label="How many new user accounts are you requesting?"
-            type="number"
-            required
-            min="1"
-            max="15"
-            defaultValue="1"
-          />
-          {/* <Checkbox
+        <Input
+          name="user_account_num"
+          label="How many new user accounts are you requesting?"
+          type="number"
+          required
+          min="1"
+          max="15"
+          defaultValue="1"
+        />
+        {/* <Checkbox
             name="user_1_is_requester___1"
             value="1"
             label="This account is for myself"
@@ -29,11 +29,11 @@ const AccountCreation = (props) => {
         <div id="additional_users">
           {/* Users 2-15 will be added via JavaScript based on user_account_num selection */}
         </div>
-          <Checkbox
-            name="user_notify___1"
-            value="1"
-            label="I would like to be notified when the requested account(s) are created & their usernames"
-          />
+        <Checkbox
+          name="user_notify___1"
+          value="1"
+          label="I would like to be notified when the requested account(s) are created & their usernames"
+        />
       </fieldset>
     </SubSection>
   )
