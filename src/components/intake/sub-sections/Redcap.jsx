@@ -15,26 +15,33 @@ export default function Redcap(props) {
           options={[
             { value: 'self', label: 'Self-service project' },
             { value: 'chi', label: 'CHI supported project' },
+            { value: 'unsure', label: 'I am unsure' },
           ]}
         />
-
-        <Checkbox name="rc_build_unsure" value="1" label="I am unsure" />
-
+        <Radio
+          name="rc_price_tier"
+          label="Please select a REDCap Support Tier"
+          hint={<span>See <a href="/data-capture/pricing"               target="_blank"
+              rel="noopener noreferrer" class="cursor-pointer underline hover:decoration-2 hover:decoration-brand-primary-500">Data Capture Pricing</a> for more information</span>}
+          options={[
+            { value: 'basic', label: 'Basic' },
+            { value: 'plus', label: 'Plus' },
+            { value: 'premium', label: 'Premium' },
+            { value: 'cctt', label: 'CCTT' },
+          ]}
+        />
         <Input
           name="rc_participant_num"
           label="Number of Expected Study Participants"
           type="number"
           min="0"
         />
-
         <Input name="rc_site_num" label="Number of Study Sites" type="number" min="0" />
-
         <Checkbox
-          name="rc_have_international_sites"
+          name="rc_have_international_sites___1"
           value="1"
           label="I have international sites"
         />
-
         <CheckboxGroup
           name="rc_international_sites"
           label="Which international sites?"
@@ -44,30 +51,25 @@ export default function Redcap(props) {
             { value: 'oth', label: 'Other' },
           ]}
         />
-
         <Checkbox
-          name="rc_have_surveys"
+          name="rc_have_surveys___1"
           value="1"
           label="I require surveys (online questionnaires) to be sent to participants"
         />
-
         <Checkbox
-          name="rc_have_randomization"
+          name="rc_have_randomization___1"
           value="1"
           label="I require randomization"
         />
-
         <TextArea
           name="rc_randomization_summary"
           label="Please provide a summary of the randomization schema"
         />
-
         <Checkbox
-          name="rc_have_xml"
+          name="rc_have_xml___1"
           value="1"
           label="I have an existing REDCap project XML file to create my project from"
         />
-
         <div id="xml_upload_section">
           <label for="rc_xml_upload" class="block text-sm font-medium text-gray-700">
             Existing REDCap Project XML File
@@ -79,18 +81,6 @@ export default function Redcap(props) {
             class="mt-1 block w-full"
           />
         </div>
-
-        {/* REDCap Pricing Tier */}
-        <Radio
-          name="rc_price_tier"
-          label="Please select a REDCap Support Tier"
-          hint="See Data Capture Pricing for more information"
-          options={[
-            { value: 'basic', label: 'Basic' },
-            { value: 'plus', label: 'Plus' },
-            { value: 'premium', label: 'Premium' },
-          ]}
-        />
       </fieldset>
     </SubSection>
   )

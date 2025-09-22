@@ -8,17 +8,15 @@ export default function ProjectDetails(props) {
       <fieldset class="space-y-4">
         <div class="space-y-4">
           <Checkbox
-            name="proj_is_lshi"
+            name="proj_is_lshi___1"
             value="1"
             label="This study is a Learning Health System Initiative (LSHI)"
           />
-
           <Checkbox
-            name="proj_have_protocol"
+            name="proj_have_protocol___1"
             value="1"
             label="I have a study or project summary/protocol I can upload"
           />
-
           <div id="protocol_upload_section">
             <label
               for="proj_protocol_upload"
@@ -28,9 +26,7 @@ export default function ProjectDetails(props) {
             </label>
             <input type="file" name="proj_protocol_upload" class="mt-1 block w-full" />
           </div>
-
-          <Checkbox name="proj_have_ethics" value="1" label="I have ethics approval" />
-
+          <Checkbox name="proj_have_ethics___1" value="1" label="I have ethics approval" />
           <Input name="proj_ethics_id" label="Ethics ID" placeholder="Ethics ID" />
           <div>
             <label
@@ -41,19 +37,16 @@ export default function ProjectDetails(props) {
             </label>
             <input type="file" name="proj_ethics_upload" class="mt-1 block w-full" />
           </div>
-
           <Checkbox
-            name="proj_need_ethics"
+            name="proj_need_ethics___1"
             value="1"
             label="I need support with ethics"
           />
-
           <Checkbox
-            name="proj_have_budget"
+            name="proj_have_budget___1"
             value="1"
             label="I have an approved/anticipated budget in mind"
           />
-
           <Input
             name="proj_budget_amt"
             label="Budget Amount (CAD$)"
@@ -61,10 +54,8 @@ export default function ProjectDetails(props) {
             type="number"
             placeholder="CAD$"
           />
-
           <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
             <Input name="proj_date_start" label="Intended Start Date" type="date" />
-
             <Input name="proj_date_end" label="Intended End Date" type="date" />
           </div>
         </div>

@@ -10,9 +10,7 @@ export default function Requester(props) {
           <Input name="requester_fname" label="First Name" required minlength="2" />
           <Input name="requester_lname" label="Last Name" required minlength="2" />
         </div>
-
         <Input name="requester_email" label="Email" type="email" required />
-
         <Select
           name="requester_institution"
           label="Institutional Affiliation"
@@ -23,7 +21,6 @@ export default function Requester(props) {
             { value: 'oth', label: 'Other (AHS, University of Alberta, etc.)' },
           ]}
         />
-
         <Select
           name="requester_institution_uc"
           label="University of Calgary Faculty"
@@ -35,7 +32,6 @@ export default function Requester(props) {
             { value: 'eng', label: 'Engineering' },
           ]}
         />
-
         <Select
           name="requester_institution_uc_faculty"
           label="Department"
@@ -69,7 +65,6 @@ export default function Requester(props) {
             { value: 'surg', label: 'Surgery' },
           ]}
         />
-
         <Select
           name="requester_institution_oth"
           label="Other Institution"
@@ -84,19 +79,16 @@ export default function Requester(props) {
             { value: 'oth', label: 'Other' },
           ]}
         />
-
         <Input
           name="requester_institution_uni"
           label="Specify Institution"
           placeholder="specify institution"
         />
-
         <Input
           name="requester_institution_other"
           label="Other Institution"
           placeholder="specify institution"
         />
-
         <Input
           name="requester_referred_from"
           label="How did you hear about our services?"

@@ -1,6 +1,6 @@
 import { z } from 'astro:schema'
 
-export const newProjectSchema = z.object({
+const newProjectSchema = z.object({
   proj_type___rc: z.string().optional(),
   proj_type___custom: z.string().optional(),
   proj_type___ma: z.string().optional(),
@@ -8,7 +8,7 @@ export const newProjectSchema = z.object({
   proj_purpose: z.enum(['research', 'qi', 'op']).optional(),
 })
 
-export const requesterSchema = z.object({
+const requesterSchema = z.object({
   requester_fname: z.string().optional(),
   requester_lname: z.string().optional(),
   requester_email: z.string().email().optional(),
@@ -46,44 +46,43 @@ export const requesterSchema = z.object({
   requester_referred_from: z.string().optional(),
 })
 
-export const principalInvestigatorSchema = z.object({
+const principalInvestigatorSchema = z.object({
   proj_requester_is_pi: z.string().optional(),
   proj_pi_fname: z.string().optional(),
   proj_pi_lname: z.string().optional(),
-  proj_pi_email: z.string().email().optional().or(z.literal('')),
+  proj_pi_email: z.string().email().optional(),
 })
 
-export const projectDetailsSchema = z.object({
-  proj_is_lshi: z.string().optional(),
-  proj_have_protocol: z.string().optional(),
+const projectDetailsSchema = z.object({
+  proj_is_lshi___1: z.string().optional(),
+  proj_have_protocol___1: z.string().optional(),
   proj_protocol_upload: z.any().optional(),
-  proj_have_ethics: z.string().optional(),
+  proj_have_ethics___1: z.string().optional(),
   proj_ethics_id: z.string().optional(),
   proj_ethics_upload: z.any().optional(),
-  proj_need_ethics: z.string().optional(),
-  proj_have_budget: z.string().optional(),
+  proj_need_ethics___1: z.string().optional(),
+  proj_have_budget___1: z.string().optional(),
   proj_budget_amt: z.string().optional(),
   proj_date_start: z.string().optional(),
   proj_date_end: z.string().optional(),
 })
 
-export const redcapSchema = z.object({
-  rc_build: z.enum(['self', 'chi']).optional(),
-  rc_build_unsure: z.string().optional(),
+const redcapSchema = z.object({
+  rc_build: z.enum(['self', 'chi', 'unsure']).optional(),
   rc_participant_num: z.string().optional(),
   rc_site_num: z.string().optional(),
-  rc_have_international_sites: z.string().optional(),
+  rc_have_international_sites___1: z.string().optional(),
   rc_international_sites___usa: z.string().optional(),
   rc_international_sites___europe: z.string().optional(),
   rc_international_sites___oth: z.string().optional(),
-  rc_have_surveys: z.string().optional(),
-  rc_have_randomization: z.string().optional(),
+  rc_have_surveys___1: z.string().optional(),
+  rc_have_randomization___1: z.string().optional(),
   rc_randomization_summary: z.string().optional(),
-  rc_have_xml: z.string().optional(),
+  rc_have_xml___1: z.string().optional(),
   rc_xml_upload: z.any().optional(),
-  rc_price_tier: z.enum(['basic', 'plus', 'premium']).optional(),
+  rc_price_tier: z.enum(['basic', 'plus', 'premium', 'cctt']).optional(),
 })
-export const customDevelopmentSchema = z.object({
+const customDevelopmentSchema = z.object({
   custom_type___dashboard: z.string().optional(),
   custom_type___web: z.string().optional(),
   custom_type___edc: z.string().optional(),
@@ -96,7 +95,7 @@ export const customDevelopmentSchema = z.object({
   custom_need_rc: z.string().optional(),
   custom_rc_summary: z.string().optional(),
 })
-export const methodsAnalyticsSchema = z.object({
+const methodsAnalyticsSchema = z.object({
   ma_have_existing_data: z.enum(['1', '0', '99']).optional(),
   ma_existing_data___rc: z.string().optional(),
   ma_existing_data___admin: z.string().optional(),
@@ -118,58 +117,67 @@ export const methodsAnalyticsSchema = z.object({
   ma_analytics_oth: z.string().optional(),
   ma_research_question: z.string().optional(),
 })
-export const financialSchema = z.object({
+const financialSchema = z.object({
   fin_requester_is_contact: z.string().optional(),
   fin_contact_fname: z.string().optional(),
   fin_contact_lname: z.string().optional(),
-  fin_contact_email: z.string().email().optional().or(z.literal('')),
+  fin_contact_email: z.string().email().optional(),
   fin_method: z.enum(['uofc', 'ex', 'cc']).optional(),
   fin_method_ex_institution: z.string().optional(),
   fin_method_ex_address: z.string().optional(),
   fin_method_ex_name: z.string().optional(),
-  fin_method_ex_email: z.string().email().optional().or(z.literal('')),
-  terms_agree: z.string().optional(),
+  fin_method_ex_email: z.string().email().optional(),
+  terms_agree___1: z.string().optional(),
   terms_sig: z.any().optional(),
 })
-export const accountCreationSchema = z.object({
+const accountCreationSchema = z.object({
   user_account_num: z.string().optional(),
-  user_1_is_requester: z.string().optional(),
+  user_1_is_requester___1: z.string().optional(),
   user_1_fname: z.string().optional(),
   user_1_lname: z.string().optional(),
-  user_1_email: z.string().email().optional().or(z.literal('')),
-  user_notify: z.string().optional(),
+  user_1_email: z.string().email().optional(),
+  user_notify___1: z.string().optional(),
 })
-export const serviceTypeSchema = z.object({
+const serviceTypeSchema = z.object({
   service_type_user___user: z.string().optional(),
   service_type: z.enum(['trial', 'proj', 'oth']).optional(),
 })
 
-export const researchPurposeSchema = z.object({
+const researchPurposeSchema = z.object({
   proj_purpose_res: z.enum(['basic', 'ct', 'registry', 'oth']).optional(),
 })
 
-export const otherServicesSchema = z.object({
-  other_service_needs: z.string().optional(),
+const otherServicesSchema = z.object({
+  service_oth_questions: z.string().optional(),
 })
 
-export const freeTrialSchema = z.object({
+const freeTrialSchema = z.object({
+  trial_type___rc: z.string().optional(),
+  trial_type___dx: z.string().optional(),
+  trial_proj_title: z.string().optional(),
+  trial_rc_users: z.string().optional(),
   trial_name: z.string().optional(),
   trial_email: z.string().email().optional(),
   trial_purpose: z.string().optional(),
 })
 
-export const intakeSchema = z.intersection(
-  serviceTypeSchema,
-  requesterSchema,
-  newProjectSchema,
-  principalInvestigatorSchema,
-  researchPurposeSchema,
-  projectDetailsSchema,
-  redcapSchema,
-  customDevelopmentSchema,
-  methodsAnalyticsSchema,
-  accountCreationSchema,
-  freeTrialSchema,
-  otherServicesSchema,
-  financialSchema
-)
+const finishSchema = z.object({
+  service_comments: z.string().optional(),
+})
+
+export const intakeSchema = z.object({
+  ...serviceTypeSchema.shape,
+  ...newProjectSchema.shape,
+  ...requesterSchema.shape,
+  ...principalInvestigatorSchema.shape,
+  ...researchPurposeSchema.shape,
+  ...projectDetailsSchema.shape,
+  ...redcapSchema.shape,
+  ...customDevelopmentSchema.shape,
+  ...methodsAnalyticsSchema.shape,
+  ...financialSchema.shape,
+  ...accountCreationSchema.shape,
+  ...otherServicesSchema.shape,
+  ...freeTrialSchema.shape,
+  ...finishSchema.shape,
+})

@@ -15,9 +15,7 @@ export default function FreeTrial(props) {
             { value: 'dx', label: 'DataXplor' },
           ]}
         />
-
-        <Input name="trial_proj_title" label="Practice Project Title *" />
-
+        <Input name="trial_proj_title" label="Practice Project Title" />
         <TextArea
           name="trial_rc_users"
           label="REDCap Username(s) to add to the practice project"
