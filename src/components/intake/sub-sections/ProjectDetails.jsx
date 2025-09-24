@@ -6,7 +6,7 @@ import SubSection from '../SubSection'
 export default function ProjectDetails(props) {
   return (
     <SubSection {...props} title="Project details">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         <div class="space-y-4">
           <Checkbox
             name="proj_is_lshi___1"
@@ -48,7 +48,7 @@ export default function ProjectDetails(props) {
             <Input name="proj_date_end" label="Intended End Date" type="date" />
           </div>
         </div>
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

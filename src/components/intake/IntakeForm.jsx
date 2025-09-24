@@ -81,7 +81,7 @@ const IntakeForm = () => {
       name: 'redcap',
       label: 'REDCap build',
       form: null,
-      branchFrom: [{ field: 'proj_type___rc', value: 'rc' }],
+      branchFrom: [{ field: 'proj_type___rc', value: '1' }],
       Component: Redcap,
     },
     {

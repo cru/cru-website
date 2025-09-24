@@ -6,7 +6,7 @@ import SubSection from '../SubSection'
 export default function FreeTrial(props) {
   return (
     <SubSection {...props} title="Free trial / practice project">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         <CheckboxGroup
           name="trial_type"
           label="What type of service are you looking to try?"
@@ -21,7 +21,7 @@ export default function FreeTrial(props) {
           label="REDCap Username(s) to add to the practice project"
           placeholder="Including your own, if known"
         />
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

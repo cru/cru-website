@@ -7,7 +7,7 @@ import SubSection from '../SubSection'
 export default function MethodsAnalytics(props) {
   return (
     <SubSection {...props} title="Methods, data & analytics support">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         <Radio
           name="ma_have_existing_data"
           label="Do you currently have data?"
@@ -78,7 +78,7 @@ export default function MethodsAnalytics(props) {
         />
 
         <Input name="ma_research_question" label="What is your Research Question?" />
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

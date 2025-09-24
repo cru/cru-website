@@ -6,7 +6,7 @@ import SubSection from '../SubSection'
 export default function NewProject(props) {
   return (
     <SubSection {...props} title="New service or project">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         <CheckboxGroup
           name="proj_type"
           label="What type of support or service do you need?"
@@ -35,7 +35,7 @@ export default function NewProject(props) {
             { value: 'op', label: 'Operational' },
           ]}
         />
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

@@ -1,11 +1,10 @@
-import Checkbox from '../../ui/solid/Checkbox'
 import Input from '../../ui/solid/Input'
 import SubSection from '../SubSection'
 
 export default function PrincipalInvestigator(props) {
   return (
     <SubSection {...props} title="Principal investigator">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         {/* <Checkbox
           name="proj_requester_is_pi___1"
           value="1"
@@ -16,7 +15,7 @@ export default function PrincipalInvestigator(props) {
           <Input name="proj_pi_lname" label="PI Last Name" />
           <Input name="proj_pi_email" label="PI Email" type="email" />
         </div>
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

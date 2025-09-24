@@ -5,7 +5,7 @@ import SubSection from '../SubSection'
 const AccountCreation = (props) => {
   return (
     <SubSection {...props} title="New REDCap user account">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         <Input
           name="user_account_num"
           label="How many new user accounts are you requesting?"
@@ -34,7 +34,7 @@ const AccountCreation = (props) => {
           value="1"
           label="I would like to be notified when the requested account(s) are created & their usernames"
         />
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

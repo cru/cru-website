@@ -9,7 +9,7 @@ import SubSection from '../SubSection'
 export default function Redcap(props) {
   return (
     <SubSection {...props} title="REDCap project details">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         <Radio
           name="rc_build"
           label="What type of project service are you interested in?"
@@ -84,7 +84,7 @@ export default function Redcap(props) {
           label="I have an existing REDCap project XML file to create my project from"
         />
         <FileUpload name="rc_xml_upload" label="Existing REDCap Project XML File" />
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

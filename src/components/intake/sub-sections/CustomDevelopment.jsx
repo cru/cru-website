@@ -6,7 +6,7 @@ import SubSection from '../SubSection'
 export default function CustomDevelopment(props) {
   return (
     <SubSection {...props} title="Custom platform development">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         <CheckboxGroup
           name="custom_type"
           label="What type of Custom Data Services do you need? *"
@@ -39,7 +39,7 @@ export default function CustomDevelopment(props) {
           name="custom_rc_summary"
           label="Please describe your integration needs"
         />
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

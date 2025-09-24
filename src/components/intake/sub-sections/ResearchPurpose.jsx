@@ -5,7 +5,7 @@ import SubSection from '../SubSection'
 export default function ResearchPurpose(props) {
   return (
     <SubSection {...props} title="Research purpose">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         <Radio
           name="proj_purpose_res"
           label="What is the primary purpose of your research?"
@@ -22,7 +22,7 @@ export default function ResearchPurpose(props) {
           label="Specify Research Purpose"
           placeholder="specify project or study purpose"
         />
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

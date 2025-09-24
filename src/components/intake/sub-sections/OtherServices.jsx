@@ -4,7 +4,7 @@ import SubSection from '../SubSection'
 export default function OtherServices(props) {
   return (
     <SubSection {...props} title="Other services">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         <p>
           <b>Not sure what you need yet? That's okay. </b>
         </p>
@@ -31,7 +31,7 @@ export default function OtherServices(props) {
             </div>
           }
         />
-      </fieldset>
+      </div>
     </SubSection>
   )
 }

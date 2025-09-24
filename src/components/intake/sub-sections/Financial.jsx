@@ -7,7 +7,7 @@ import SubSection from '../SubSection'
 export default function Financial(props) {
   return (
     <SubSection {...props} title="Financial information">
-      <fieldset class="space-y-4">
+      <div class="space-y-4">
         {/* <Checkbox
           name="fin_requester_is_contact___1"
           value="1"
@@ -71,7 +71,7 @@ export default function Financial(props) {
           required
           label="I agree to the Terms & Conditions"
         />
-      </fieldset>
+      </div>
     </SubSection>
   )
 }
