@@ -4,7 +4,7 @@ import SubSection from '../SubSection'
 export default function ServiceType(props) {
   return (
     <SubSection {...props} title="How can we help?">
-      <div class="space-y-6">
+      <div class="space-y-4">
         <Radio
           name="service_type_user___user"
           label="I need a new REDCap account created"

@@ -1,4 +1,5 @@
 import Checkbox from '../../ui/solid/Checkbox'
+import FileUpload from '../../ui/solid/FileUpload'
 import Input from '../../ui/solid/Input'
 import SubSection from '../SubSection'
 
@@ -17,30 +18,14 @@ export default function ProjectDetails(props) {
             value="1"
             label="I have a study or project summary/protocol I can upload"
           />
-          <div id="protocol_upload_section">
-            <label
-              for="proj_protocol_upload"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Project Summary/Protocol Upload
-            </label>
-            <input type="file" name="proj_protocol_upload" class="mt-1 block w-full" />
-          </div>
+          <FileUpload name="proj_protocol_upload" label="Project Summary/Protocol Upload" />
           <Checkbox
             name="proj_have_ethics___1"
             value="1"
             label="I have ethics approval"
           />
           <Input name="proj_ethics_id" label="Ethics ID" placeholder="Ethics ID" />
-          <div>
-            <label
-              for="proj_ethics_upload"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Ethics Upload
-            </label>
-            <input type="file" name="proj_ethics_upload" class="mt-1 block w-full" />
-          </div>
+          <FileUpload name="proj_ethics_upload" label="Ethics Upload" />
           <Checkbox
             name="proj_need_ethics___1"
             value="1"

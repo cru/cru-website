@@ -1,5 +1,6 @@
 import Checkbox from '../../ui/solid/Checkbox'
 import CheckboxGroup from '../../ui/solid/CheckboxGroup'
+import FileUpload from '../../ui/solid/FileUpload'
 import Input from '../../ui/solid/Input'
 import Radio from '../../ui/solid/Radio'
 import TextArea from '../../ui/solid/TextArea'
@@ -82,17 +83,7 @@ export default function Redcap(props) {
           value="1"
           label="I have an existing REDCap project XML file to create my project from"
         />
-        <div id="xml_upload_section">
-          <label for="rc_xml_upload" class="block text-sm font-medium text-gray-700">
-            Existing REDCap Project XML File
-          </label>
-          <input
-            type="file"
-            name="rc_xml_upload"
-            accept=".xml"
-            class="mt-1 block w-full"
-          />
-        </div>
+        <FileUpload name="rc_xml_upload" label="Existing REDCap Project XML File" />
       </fieldset>
     </SubSection>
   )
