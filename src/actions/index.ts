@@ -12,9 +12,9 @@ export const server = {
       }
 
       const data: Record<string, any> = {
-        record_id: crypto.randomUUID()
+        record_id: crypto.randomUUID(),
       }
-      const files: Record<string, File> = {}      
+      const files: Record<string, File> = {}
       for (const [key, value] of formData.entries()) {
         if (value instanceof File && value.size > 0) {
           files[key] = value
@@ -22,11 +22,10 @@ export const server = {
           data[key] = value
         }
       }
-      
+
       // Process your data and files
       // console.log('Data:', data)
       console.log('Files:', files)
-
 
       try {
         const dataPayload = {
@@ -53,7 +52,7 @@ export const server = {
             fileFormData.append('file', file)
 
             console.log(`Uploading file for field: ${fieldName}`)
-            
+
             try {
               const fileRes = await axios.post(url, fileFormData, {
                 headers: {
@@ -75,7 +74,7 @@ export const server = {
         console.error('REDCap error:', error)
         throw new ActionError({
           message: 'Failed to post intake to REDCap',
-          code: "INTERNAL_SERVER_ERROR"
+          code: 'INTERNAL_SERVER_ERROR',
         })
       }
     },

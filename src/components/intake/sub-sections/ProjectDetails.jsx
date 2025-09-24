@@ -18,7 +18,10 @@ export default function ProjectDetails(props) {
             value="1"
             label="I have a study or project summary/protocol I can upload"
           />
-          <FileUpload name="proj_protocol_upload" label="Project Summary/Protocol Upload" />
+          <FileUpload
+            name="proj_protocol_upload"
+            label="Project Summary/Protocol Upload"
+          />
           <Checkbox
             name="proj_have_ethics___1"
             value="1"

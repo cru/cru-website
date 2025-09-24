@@ -35,7 +35,7 @@ const IntakeForm = () => {
       form: null,
       Component: Requester,
     },
-        {
+    {
       name: 'account_creation',
       label: 'New REDCap account',
       form: null,
