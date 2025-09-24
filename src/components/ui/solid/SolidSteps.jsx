@@ -48,7 +48,7 @@ const SolidSteps = (props) => {
   }
 
   return (
-    <div class="w-lg">
+    <div class="w-lg mt-6">
       <ol class="flex flex-col items-start justify-center">
         <For each={props.steps}>
           {(item, index) =>

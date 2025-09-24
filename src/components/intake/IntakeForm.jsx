@@ -35,7 +35,7 @@ const IntakeForm = () => {
       form: null,
       Component: Requester,
     },
-    {
+        {
       name: 'account_creation',
       label: 'New REDCap account',
       form: null,
@@ -81,7 +81,7 @@ const IntakeForm = () => {
       name: 'redcap',
       label: 'REDCap build',
       form: null,
-      branchFrom: [{ field: 'proj_type___rc', value: '1' }],
+      branchFrom: [{ field: 'proj_type___rc', value: 'rc' }],
       Component: Redcap,
     },
     {
@@ -170,19 +170,18 @@ const IntakeForm = () => {
   }
 
   const handleSubmit = async () => {
-    let formJson = {}
+    // Combine all form data into a single FormData
+    const formData = new FormData()
     availableSteps().forEach((step) => {
       if (!step.form) return
 
-      const formData = new FormData(step.form)
-      const asJson =
-        Object.fromEntries(
-          Array.from(formData.keys()).map((key) => [key, formData.get(key)])
-        ) ?? {}
-      formJson = { ...formJson, ...asJson }
+      const stepForm = new FormData(step.form)
+      for (const [key, value] of stepForm.entries()) {
+        formData.append(key, value)
+      }
     })
 
-    const { data, error } = await actions.submitIntake(formJson)
+    const { data, error } = await actions.submitIntakeForm(formData)
     console.log(error)
     if (!error) alert(data)
   }
