@@ -3,7 +3,6 @@ import { actions } from 'astro:actions'
 import { createEffect, createSignal, For } from 'solid-js'
 import { createStore } from 'solid-js/store'
 import { Dynamic } from 'solid-js/web'
-import SolidSteps from '../ui/solid/SolidSteps'
 import AccountCreation from './sub-sections/AccountCreation'
 import CustomDevelopment from './sub-sections/CustomDevelopment'
 import Financial from './sub-sections/Financial'
@@ -18,6 +17,7 @@ import Redcap from './sub-sections/Redcap'
 import Requester from './sub-sections/Requester'
 import ResearchPurpose from './sub-sections/ResearchPurpose'
 import ServiceType from './sub-sections/ServiceType'
+import SolidSteps from './ui/SolidSteps'
 
 const IntakeForm = () => {
   const [activeStep, setActiveStep] = createSignal(0)

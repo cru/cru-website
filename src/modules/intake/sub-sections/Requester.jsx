@@ -1,7 +1,7 @@
 import { createEffect, createSignal, Show } from 'solid-js'
-import Input from '../../ui/solid/Input'
-import Select from '../../ui/solid/Select'
 import SubSection from '../SubSection'
+import Input from '../ui/Input'
+import Select from '../ui/Select'
 
 export default function Requester(props) {
   const [branchTriggers, setBranchTriggers] = createSignal({

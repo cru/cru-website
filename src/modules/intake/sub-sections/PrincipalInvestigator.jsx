@@ -1,5 +1,5 @@
-import Input from '../../ui/solid/Input'
 import SubSection from '../SubSection'
+import Input from '../ui/Input'
 
 export default function PrincipalInvestigator(props) {
   return (

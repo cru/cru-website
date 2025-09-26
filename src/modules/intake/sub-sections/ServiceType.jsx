@@ -1,5 +1,5 @@
-import Radio from '../../ui/solid/Radio'
 import SubSection from '../SubSection'
+import Radio from '../ui/Radio'
 
 export default function ServiceType(props) {
   return (

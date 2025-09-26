@@ -1,7 +1,7 @@
-import Checkbox from '../../ui/solid/Checkbox'
-import FileUpload from '../../ui/solid/FileUpload'
-import Input from '../../ui/solid/Input'
 import SubSection from '../SubSection'
+import Checkbox from '../ui/Checkbox'
+import FileUpload from '../ui/FileUpload'
+import Input from '../ui/Input'
 
 export default function ProjectDetails(props) {
   return (

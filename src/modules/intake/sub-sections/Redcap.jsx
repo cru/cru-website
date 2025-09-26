@@ -1,10 +1,10 @@
-import Checkbox from '../../ui/solid/Checkbox'
-import CheckboxGroup from '../../ui/solid/CheckboxGroup'
-import FileUpload from '../../ui/solid/FileUpload'
-import Input from '../../ui/solid/Input'
-import Radio from '../../ui/solid/Radio'
-import TextArea from '../../ui/solid/TextArea'
 import SubSection from '../SubSection'
+import Checkbox from '../ui/Checkbox'
+import CheckboxGroup from '../ui/CheckboxGroup'
+import FileUpload from '../ui/FileUpload'
+import Input from '../ui/Input'
+import Radio from '../ui/Radio'
+import TextArea from '../ui/TextArea'
 
 export default function Redcap(props) {
   return (

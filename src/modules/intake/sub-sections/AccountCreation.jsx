@@ -1,6 +1,6 @@
-import Checkbox from '../../ui/solid/Checkbox'
-import Input from '../../ui/solid/Input'
 import SubSection from '../SubSection'
+import Checkbox from '../ui/Checkbox'
+import Input from '../ui/Input'
 
 const AccountCreation = (props) => {
   return (

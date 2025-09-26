@@ -1,7 +1,7 @@
-import Checkbox from '../../ui/solid/Checkbox'
-import CheckboxGroup from '../../ui/solid/CheckboxGroup'
-import TextArea from '../../ui/solid/TextArea'
 import SubSection from '../SubSection'
+import Checkbox from '../ui/Checkbox'
+import CheckboxGroup from '../ui/CheckboxGroup'
+import TextArea from '../ui/TextArea'
 
 export default function CustomDevelopment(props) {
   return (

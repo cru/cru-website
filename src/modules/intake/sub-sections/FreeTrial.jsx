@@ -1,7 +1,7 @@
-import CheckboxGroup from '../../ui/solid/CheckboxGroup'
-import Input from '../../ui/solid/Input'
-import TextArea from '../../ui/solid/TextArea'
 import SubSection from '../SubSection'
+import CheckboxGroup from '../ui/CheckboxGroup'
+import Input from '../ui/Input'
+import TextArea from '../ui/TextArea'
 
 export default function FreeTrial(props) {
   return (

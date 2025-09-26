@@ -1,5 +1,5 @@
-import TextArea from '../../ui/solid/TextArea'
 import SubSection from '../SubSection'
+import TextArea from '../ui/TextArea'
 
 export default function OtherServices(props) {
   return (

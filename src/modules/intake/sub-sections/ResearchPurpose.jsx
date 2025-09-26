@@ -1,6 +1,6 @@
-import Input from '../../ui/solid/Input'
-import Radio from '../../ui/solid/Radio'
 import SubSection from '../SubSection'
+import Input from '../ui/Input'
+import Radio from '../ui/Radio'
 
 export default function ResearchPurpose(props) {
   return (

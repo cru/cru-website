@@ -1,6 +1,6 @@
 import '@awesome.me/webawesome/dist/components/button/button.js'
-import TextArea from '../../ui/solid/TextArea'
 import SubSection from '../SubSection'
+import TextArea from '../ui/TextArea'
 
 export default function Finish(props) {
   return (
