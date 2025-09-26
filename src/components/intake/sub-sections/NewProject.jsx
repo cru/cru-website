@@ -12,6 +12,7 @@ export default function NewProject(props) {
         <CheckboxGroup
           name="proj_type"
           label="What type of support or service do you need?"
+          required
           options={[
             {
               value: 'rc',
@@ -31,6 +32,7 @@ export default function NewProject(props) {
         <Radio
           name="proj_purpose"
           label="Purpose of your project or study?"
+          required
           options={[
             { value: 'research', label: 'Research' },
             { value: 'qi', label: 'Quality Improvement' },

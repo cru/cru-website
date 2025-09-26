@@ -15,16 +15,15 @@ export default function Financial(props) {
         /> */}
         <div>
           <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="billing_contact_fields">
-            <Input name="fin_contact_fname" label="First Name" />
-            <Input name="fin_contact_lname" label="Last Name" />
-            <Input name="fin_contact_email" label="Email" type="email" />
+            <Input name="fin_contact_fname" label="First Name" required />
+            <Input name="fin_contact_lname" label="Last Name" required />
+            <Input name="fin_contact_email" label="Email" type="email" required />
           </div>
           <small class="text-gray-600">
             This should always be the project or account owner (preferably the individual
             listed as the project holder in eFIN)
           </small>
         </div>
-
         <Radio
           name="fin_method"
           label="Please select preferred payment method"

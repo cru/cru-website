@@ -43,6 +43,7 @@ export default function Requester(props) {
           <Select
             name="requester_institution_uc_faculty"
             label="University of Calgary Faculty"
+            required
             options={[
               { value: '', label: 'Select faculty...' },
               { value: 'med', label: 'Cumming School of Medicine' },
@@ -56,6 +57,7 @@ export default function Requester(props) {
           <Select
             name="requester_institution_uc_department"
             label="University of Calgary CSM Department"
+            required
             options={[
               { value: '', label: 'Select department...' },
               {
@@ -91,6 +93,7 @@ export default function Requester(props) {
           <Select
             name="requester_institution_oth"
             label="Other Institution"
+            required
             options={[
               { value: '', label: 'Select other...' },
               { value: 'uni', label: 'Other Post-Secondary Institute' },
@@ -107,10 +110,11 @@ export default function Requester(props) {
           <Input
             name="requester_institution_uni"
             label="Specify Other Post-Secondary Institute"
+            required
           />
         </Show>
         <Show when={branchTriggers().requester_institution_oth === 'oth'}>
-          <Input name="requester_institution_other" label="Specify Institution" />
+          <Input name="requester_institution_other" label="Specify Institution" required />
         </Show>
         <Input
           name="requester_referred_from"
