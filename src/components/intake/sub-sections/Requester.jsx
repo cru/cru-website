@@ -1,8 +1,29 @@
+import { createEffect, createSignal, Show } from 'solid-js'
 import Input from '../../ui/solid/Input'
 import Select from '../../ui/solid/Select'
 import SubSection from '../SubSection'
 
 export default function Requester(props) {
+  const [branchTriggers, setBranchTriggers] = createSignal({
+    requester_institution: null,
+    requester_institution_uc_faculty: null,
+    requester_institution_oth: null,
+  })
+
+
+  createEffect(() => {
+    if (!props.form) return
+
+    props.form.addEventListener('input', (e) => {
+      setBranchTriggers({
+        ...branchTriggers(),
+        [e.target.name]: e.target.value,
+      })
+    })
+  })
+
+
+
   return (
     <SubSection {...props} title="Some info about you">
       <div class="space-y-4">
@@ -21,8 +42,9 @@ export default function Requester(props) {
             { value: 'oth', label: 'Other (AHS, University of Alberta, etc.)' },
           ]}
         />
+        <Show when={branchTriggers().requester_institution === 'uc'}>
         <Select
-          name="requester_institution_uc"
+          name="requester_institution_uc_faculty"
           label="University of Calgary Faculty"
           options={[
             { value: '', label: 'Select faculty...' },
@@ -32,9 +54,11 @@ export default function Requester(props) {
             { value: 'eng', label: 'Engineering' },
           ]}
         />
+          </Show>
+          <Show when={branchTriggers().requester_institution_uc_faculty === 'med'}>
         <Select
-          name="requester_institution_uc_faculty"
-          label="Department"
+          name="requester_institution_uc_department"
+          label="University of Calgary CSM Department"
           options={[
             { value: '', label: 'Select department...' },
             {
@@ -65,6 +89,8 @@ export default function Requester(props) {
             { value: 'surg', label: 'Surgery' },
           ]}
         />
+          </Show>
+        <Show when={branchTriggers().requester_institution === 'oth'}>
         <Select
           name="requester_institution_oth"
           label="Other Institution"
@@ -79,16 +105,19 @@ export default function Requester(props) {
             { value: 'oth', label: 'Other' },
           ]}
         />
-        <Input
-          name="requester_institution_uni"
-          label="Specify Institution"
-          placeholder="specify institution"
-        />
+        </Show>
+        <Show when={branchTriggers().requester_institution_oth === 'uni'}>
+          <Input
+            name="requester_institution_uni"
+            label="Specify Other Post-Secondary Institute"
+          />
+        </Show>
+        <Show when={branchTriggers().requester_institution_oth === 'oth'}>
         <Input
           name="requester_institution_other"
-          label="Other Institution"
-          placeholder="specify institution"
+          label="Specify Institution"
         />
+        </Show>
         <Input
           name="requester_referred_from"
           label="How did you hear about our services?"

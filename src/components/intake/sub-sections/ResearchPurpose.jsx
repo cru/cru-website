@@ -16,11 +16,25 @@ export default function ResearchPurpose(props) {
             { value: 'oth', label: 'Other' },
           ]}
         />
-
         <Input
           name="proj_purpose_res_oth"
           label="Specify Research Purpose"
-          placeholder="specify project or study purpose"
+        />
+        <Radio
+          name="proj_purpose_ct"
+          label="Clinical Trial registration"
+          options={[
+            { value: 'hc', label: 'Health Canada' },
+            { value: 'non', label: 'Non-registered' },
+          ]}
+        />
+                <Input
+          name="proj_purpose_ct_hc"
+          label="Protocol or Control number"
+        />
+                        <Input
+          name="proj_purpose_ct_non"
+          label="Protocol or Control number"
         />
       </div>
     </SubSection>

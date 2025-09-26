@@ -9,7 +9,8 @@ export default function CustomDevelopment(props) {
       <div class="space-y-4">
         <CheckboxGroup
           name="custom_type"
-          label="What type of Custom Data Services do you need? *"
+          label="What type of Custom Data Services do you need?"
+          required
           options={[
             { value: 'dashboard', label: 'Data Dashboards' },
             { value: 'web', label: 'Public Facing Websites' },
@@ -21,20 +22,16 @@ export default function CustomDevelopment(props) {
             { value: 'unsure', label: "I'm unsure" },
           ]}
         />
-
         <TextArea
           name="custom_needs"
-          label="Please elaborate on your needs or vision? *"
+          label="Please elaborate on your needs or vision?"
           required
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
         />
-
         <Checkbox
-          name="custom_need_rc"
+          name="custom_need_rc___1"
           value="1"
-          label="I require any custom integration with REDCap or other platforms"
+          label="I require some custom integration with REDCap or other platforms"
         />
-
         <TextArea
           name="custom_rc_summary"
           label="Please describe your integration needs"

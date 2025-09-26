@@ -198,6 +198,7 @@ const IntakeForm = () => {
           {(step, index) => (
             <Dynamic
               component={step.Component}
+              form={step.form}
               hidden={activeStep() !== index()}
               setFormRef={(form) => registerForm(step.name, form)}
               onSubmit={handleSubmit}

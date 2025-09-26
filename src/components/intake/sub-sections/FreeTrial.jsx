@@ -19,7 +19,7 @@ export default function FreeTrial(props) {
         <TextArea
           name="trial_rc_users"
           label="REDCap Username(s) to add to the practice project"
-          placeholder="Including your own, if known"
+          hint="Including your own, if known"
         />
       </div>
     </SubSection>

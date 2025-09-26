@@ -22,6 +22,11 @@ export default function ProjectDetails(props) {
             name="proj_protocol_upload"
             label="Project Summary/Protocol Upload"
           />
+                    <Checkbox
+            name="proj_need_ethics___1"
+            value="1"
+            label="I need support with ethics"
+          />
           <Checkbox
             name="proj_have_ethics___1"
             value="1"
@@ -29,11 +34,7 @@ export default function ProjectDetails(props) {
           />
           <Input name="proj_ethics_id" label="Ethics ID" placeholder="Ethics ID" />
           <FileUpload name="proj_ethics_upload" label="Ethics Upload" />
-          <Checkbox
-            name="proj_need_ethics___1"
-            value="1"
-            label="I need support with ethics"
-          />
+
           <Checkbox
             name="proj_have_budget___1"
             value="1"
