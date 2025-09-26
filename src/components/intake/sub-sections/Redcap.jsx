@@ -13,6 +13,7 @@ export default function Redcap(props) {
         <Radio
           name="rc_build"
           label="What type of project service are you interested in?"
+          required
           options={[
             { value: 'self', label: 'Self-service project' },
             { value: 'chi', label: 'CHI supported project' },
@@ -22,6 +23,7 @@ export default function Redcap(props) {
         <Radio
           name="rc_price_tier"
           label="Please select a REDCap Support Tier"
+          required
           hint={
             <span>
               See{' '}

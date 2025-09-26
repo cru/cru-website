@@ -10,6 +10,7 @@ export default function FreeTrial(props) {
         <CheckboxGroup
           name="trial_type"
           label="What type of service are you looking to try?"
+          required
           options={[
             { value: 'rc', label: 'REDCap practice/training project' },
             { value: 'dx', label: 'DataXplor' },

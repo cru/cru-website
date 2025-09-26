@@ -67,7 +67,7 @@ const IntakeForm = () => {
       name: 'research_purpose',
       label: 'Research purpose',
       form: null,
-      branchFrom: [{ field: 'service_type', value: 'proj' }],
+      branchFrom: [{ field: 'proj_purpose', value: 'research' }],
       Component: ResearchPurpose,
     },
     {

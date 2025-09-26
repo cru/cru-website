@@ -34,7 +34,6 @@ export default function Requester(props) {
           label="Institutional Affiliation"
           required
           options={[
-            { value: '', label: 'Select institution...' },
             { value: 'uc', label: 'University of Calgary' },
             { value: 'oth', label: 'Other (AHS, University of Alberta, etc.)' },
           ]}
@@ -45,7 +44,6 @@ export default function Requester(props) {
             label="University of Calgary Faculty"
             required
             options={[
-              { value: '', label: 'Select faculty...' },
               { value: 'med', label: 'Cumming School of Medicine' },
               { value: 'nur', label: 'Nursing' },
               { value: 'kin', label: 'Kinesiology' },
@@ -59,7 +57,6 @@ export default function Requester(props) {
             label="University of Calgary CSM Department"
             required
             options={[
-              { value: '', label: 'Select department...' },
               {
                 value: 'appm',
                 label: 'Anesthesiology, Perioperative and Pain Medicine',
@@ -95,7 +92,6 @@ export default function Requester(props) {
             label="Other Institution"
             required
             options={[
-              { value: '', label: 'Select other...' },
               { value: 'uni', label: 'Other Post-Secondary Institute' },
               { value: 'pca', label: 'Primary Care Alberta' },
               { value: 'aca', label: 'Acute Care Alberta' },

@@ -9,6 +9,7 @@ export default function ResearchPurpose(props) {
         <Radio
           name="proj_purpose_res"
           label="What is the primary purpose of your research?"
+          required
           options={[
             { value: 'basic', label: 'Basic research' },
             { value: 'ct', label: 'Clinical Trial' },

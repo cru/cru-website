@@ -24,6 +24,7 @@ export default function MethodsAnalytics(props) {
         <Radio
           name="ma_have_existing_data"
           label="Do you currently have data?"
+          required
           options={[
             { value: '1', label: 'Yes' },
             { value: '0', label: 'No, I require data access' },
