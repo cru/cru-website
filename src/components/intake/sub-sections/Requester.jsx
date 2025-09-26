@@ -114,7 +114,11 @@ export default function Requester(props) {
           />
         </Show>
         <Show when={branchTriggers().requester_institution_oth === 'oth'}>
-          <Input name="requester_institution_other" label="Specify Institution" required />
+          <Input
+            name="requester_institution_other"
+            label="Specify Institution"
+            required
+          />
         </Show>
         <Input
           name="requester_referred_from"
