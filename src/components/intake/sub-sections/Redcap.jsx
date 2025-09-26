@@ -84,7 +84,7 @@ export default function Redcap(props) {
           label="I have an existing REDCap project XML file to create my project from"
         />
         <FileUpload name="rc_xml_upload" label="Existing REDCap Project XML File" />
-              <CheckboxGroup
+        <CheckboxGroup
           name="rc_adv_features"
           label="Do you require any advanced REDCap features?"
           options={[
@@ -96,22 +96,19 @@ export default function Redcap(props) {
             { value: 'api', label: 'Custom Integration' },
           ]}
         />
-              <Checkbox
+        <Checkbox
           name="rc_econsent_need_separate"
           value="1"
           label="I would like to create two projects: one for eConsent, one for data collection"
           hint="If you are using eConsent, it is best practice to keep eConsent in a separate project from other data collection to protect patient identifiers"
         />
-                      <Checkbox
+        <Checkbox
           name="rc_econsent_build"
           value="1"
           label="I would like CHI's support with my eConsent (ex. build support, consultation, implementation review)"
         />
-        <Input 
-          name="rc_econsent_title" 
-          label="eConsent project title" 
-        />
-                      <CheckboxGroup
+        <Input name="rc_econsent_title" label="eConsent project title" />
+        <CheckboxGroup
           name="rc_em"
           label="What External Module(s) do you require?"
           options={[
@@ -121,14 +118,11 @@ export default function Redcap(props) {
             { value: '4', label: 'Instance Table' },
             { value: '5', label: 'Show by Role' },
             { value: '6', label: 'Simple Ontology' },
-            {value: '7', label: 'Check for duplicated across multiple projects' },
-            {value: '99', label: 'Other (please describe below)' },
+            { value: '7', label: 'Check for duplicated across multiple projects' },
+            { value: '99', label: 'Other (please describe below)' },
           ]}
         />
-        <Input
-          name="rc_em_oth"
-          label="Specify other External Module(s)"
-        />
+        <Input name="rc_em_oth" label="Specify other External Module(s)" />
         <TextArea
           name="rc_adv_needs"
           label="Tell us more about what you are looking for"

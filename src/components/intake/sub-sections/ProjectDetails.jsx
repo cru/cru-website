@@ -22,7 +22,7 @@ export default function ProjectDetails(props) {
             name="proj_protocol_upload"
             label="Project Summary/Protocol Upload"
           />
-                    <Checkbox
+          <Checkbox
             name="proj_need_ethics___1"
             value="1"
             label="I need support with ethics"

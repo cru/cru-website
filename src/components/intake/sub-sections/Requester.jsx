@@ -10,7 +10,6 @@ export default function Requester(props) {
     requester_institution_oth: null,
   })
 
-
   createEffect(() => {
     if (!props.form) return
 
@@ -21,8 +20,6 @@ export default function Requester(props) {
       })
     })
   })
-
-
 
   return (
     <SubSection {...props} title="Some info about you">
@@ -43,68 +40,68 @@ export default function Requester(props) {
           ]}
         />
         <Show when={branchTriggers().requester_institution === 'uc'}>
-        <Select
-          name="requester_institution_uc_faculty"
-          label="University of Calgary Faculty"
-          options={[
-            { value: '', label: 'Select faculty...' },
-            { value: 'med', label: 'Cumming School of Medicine' },
-            { value: 'nur', label: 'Nursing' },
-            { value: 'kin', label: 'Kinesiology' },
-            { value: 'eng', label: 'Engineering' },
-          ]}
-        />
-          </Show>
-          <Show when={branchTriggers().requester_institution_uc_faculty === 'med'}>
-        <Select
-          name="requester_institution_uc_department"
-          label="University of Calgary CSM Department"
-          options={[
-            { value: '', label: 'Select department...' },
-            {
-              value: 'appm',
-              label: 'Anesthesiology, Perioperative and Pain Medicine',
-            },
-            { value: 'bmb', label: 'Biochemistry and Molecular Biology' },
-            { value: 'cardiac', label: 'Cardiac Sciences' },
-            { value: 'cba', label: 'Cell Biology and Anatomy' },
-            { value: 'cns', label: 'Clinical Neurosciences' },
-            { value: 'chs', label: 'Community Health Sciences' },
-            { value: 'ccm', label: 'Critical Care Medicine' },
-            { value: 'emerg', label: 'Emergency Medicine' },
-            { value: 'fam', label: 'Family Medicine' },
-            { value: 'gen', label: 'Medical Genetics' },
-            { value: 'med', label: 'Medicine' },
-            {
-              value: 'microinfect',
-              label: 'Microbiology, Immunology and Infectious Diseases',
-            },
-            { value: 'obgyn', label: 'Obstetrics and Gynaecology' },
-            { value: 'onc', label: 'Oncology' },
-            { value: 'ped', label: 'Pediatrics / Paediatrics' },
-            { value: 'lab', label: 'Pathology and Laboratory Medicine' },
-            { value: 'phys', label: 'Physiology and Pharmacology' },
-            { value: 'psych', label: 'Psychiatry' },
-            { value: 'rad', label: 'Radiology' },
-            { value: 'surg', label: 'Surgery' },
-          ]}
-        />
-          </Show>
+          <Select
+            name="requester_institution_uc_faculty"
+            label="University of Calgary Faculty"
+            options={[
+              { value: '', label: 'Select faculty...' },
+              { value: 'med', label: 'Cumming School of Medicine' },
+              { value: 'nur', label: 'Nursing' },
+              { value: 'kin', label: 'Kinesiology' },
+              { value: 'eng', label: 'Engineering' },
+            ]}
+          />
+        </Show>
+        <Show when={branchTriggers().requester_institution_uc_faculty === 'med'}>
+          <Select
+            name="requester_institution_uc_department"
+            label="University of Calgary CSM Department"
+            options={[
+              { value: '', label: 'Select department...' },
+              {
+                value: 'appm',
+                label: 'Anesthesiology, Perioperative and Pain Medicine',
+              },
+              { value: 'bmb', label: 'Biochemistry and Molecular Biology' },
+              { value: 'cardiac', label: 'Cardiac Sciences' },
+              { value: 'cba', label: 'Cell Biology and Anatomy' },
+              { value: 'cns', label: 'Clinical Neurosciences' },
+              { value: 'chs', label: 'Community Health Sciences' },
+              { value: 'ccm', label: 'Critical Care Medicine' },
+              { value: 'emerg', label: 'Emergency Medicine' },
+              { value: 'fam', label: 'Family Medicine' },
+              { value: 'gen', label: 'Medical Genetics' },
+              { value: 'med', label: 'Medicine' },
+              {
+                value: 'microinfect',
+                label: 'Microbiology, Immunology and Infectious Diseases',
+              },
+              { value: 'obgyn', label: 'Obstetrics and Gynaecology' },
+              { value: 'onc', label: 'Oncology' },
+              { value: 'ped', label: 'Pediatrics / Paediatrics' },
+              { value: 'lab', label: 'Pathology and Laboratory Medicine' },
+              { value: 'phys', label: 'Physiology and Pharmacology' },
+              { value: 'psych', label: 'Psychiatry' },
+              { value: 'rad', label: 'Radiology' },
+              { value: 'surg', label: 'Surgery' },
+            ]}
+          />
+        </Show>
         <Show when={branchTriggers().requester_institution === 'oth'}>
-        <Select
-          name="requester_institution_oth"
-          label="Other Institution"
-          options={[
-            { value: '', label: 'Select other...' },
-            { value: 'uni', label: 'Other Post-Secondary Institute' },
-            { value: 'pca', label: 'Primary Care Alberta' },
-            { value: 'aca', label: 'Acute Care Alberta' },
-            { value: 'ra', label: 'Recovery Alberta' },
-            { value: 'ala', label: 'Assisted Living Alberta' },
-            { value: 'ahs', label: 'Alberta Health Services' },
-            { value: 'oth', label: 'Other' },
-          ]}
-        />
+          <Select
+            name="requester_institution_oth"
+            label="Other Institution"
+            options={[
+              { value: '', label: 'Select other...' },
+              { value: 'uni', label: 'Other Post-Secondary Institute' },
+              { value: 'pca', label: 'Primary Care Alberta' },
+              { value: 'aca', label: 'Acute Care Alberta' },
+              { value: 'ra', label: 'Recovery Alberta' },
+              { value: 'ala', label: 'Assisted Living Alberta' },
+              { value: 'ahs', label: 'Alberta Health Services' },
+              { value: 'oth', label: 'Other' },
+            ]}
+          />
         </Show>
         <Show when={branchTriggers().requester_institution_oth === 'uni'}>
           <Input
@@ -113,10 +110,7 @@ export default function Requester(props) {
           />
         </Show>
         <Show when={branchTriggers().requester_institution_oth === 'oth'}>
-        <Input
-          name="requester_institution_other"
-          label="Specify Institution"
-        />
+          <Input name="requester_institution_other" label="Specify Institution" />
         </Show>
         <Input
           name="requester_referred_from"

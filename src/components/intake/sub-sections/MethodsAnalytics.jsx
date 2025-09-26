@@ -14,8 +14,11 @@ export default function MethodsAnalytics(props) {
           name="proj_type_ma"
           label="Support type"
           options={[
-            { value: 'ma', label: "Secondary Data Services, Methods & Analytics" },
-            { value: 'grant', label: 'Grant Methods Support, Review & Letters of Support' },
+            { value: 'ma', label: 'Secondary Data Services, Methods & Analytics' },
+            {
+              value: 'grant',
+              label: 'Grant Methods Support, Review & Letters of Support',
+            },
           ]}
         />
         <Radio
@@ -57,8 +60,12 @@ export default function MethodsAnalytics(props) {
             { value: 'none', label: "I don't require methods support" },
           ]}
         />
-        <Input name="ma_grant_deadline" type="date" label="When is your grant deadline?" />
-                <Radio
+        <Input
+          name="ma_grant_deadline"
+          type="date"
+          label="When is your grant deadline?"
+        />
+        <Radio
           name="ma_grant_funder"
           label="Who is your primary funder?"
           options={[
@@ -68,8 +75,8 @@ export default function MethodsAnalytics(props) {
             { value: 'oth', label: 'Other' },
           ]}
         />
-                <Input name="ma_grant_funder_oth" label="Who are your other funders?" />
-                                <Radio
+        <Input name="ma_grant_funder_oth" label="Who are your other funders?" />
+        <Radio
           name="ma_grant_dev_stage"
           label="What stage of development is your grant application in?"
           options={[
@@ -80,21 +87,33 @@ export default function MethodsAnalytics(props) {
             { value: 'oth', label: 'Other' },
           ]}
         />
-                <Input name="ma_research_question" label="What is your Research Question?" />
-        
+        <Input name="ma_research_question" label="What is your Research Question?" />
+
         <Checkbox
           name="ma_grant_have_proposal___1"
           value="1"
           label="I have a grant proposal I can upload"
         />
         <FileUpload name="ma_grant_proposal_upload" label="Grant Proposal file" />
-        <Checkbox name="ma_grant_need_dmp___1" value="1" label="I need a Data Management Plan (DMP)" />
-        <Checkbox name="ma_grant_need_los___1" value="1" label="I need a Letter of Support (LoS)" />
+        <Checkbox
+          name="ma_grant_need_dmp___1"
+          value="1"
+          label="I need a Data Management Plan (DMP)"
+        />
+        <Checkbox
+          name="ma_grant_need_los___1"
+          value="1"
+          label="I need a Letter of Support (LoS)"
+        />
         <CheckboxGroup
           name="ma_grant_methods"
           label="Do you require support with methods section development for grant application?"
           options={[
-            { value: 'review', label: 'Review of existing methods section/research design/statistical plan' },
+            {
+              value: 'review',
+              label:
+                'Review of existing methods section/research design/statistical plan',
+            },
             {
               value: 'dev',
               label: 'Co-development of methods section/research design/statistical plan',
