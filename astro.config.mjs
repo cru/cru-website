@@ -8,17 +8,15 @@ import netlify from '@astrojs/netlify'
 
 // https://astro.build/config
 export default defineConfig({
+  prefetch: true,
   integrations: [mdx(), solidJs()],
-
   vite: {
     plugins: [tailwindcss()],
   },
-
   redirects: {
     '/services-and-pricing/edc-services': '/data-capture/pricing',
   },
-
   adapter: netlify({
-    imageCDN: false,
+    imageCDN: false
   }),
 })

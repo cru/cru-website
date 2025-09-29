@@ -215,7 +215,7 @@ const IntakeForm = () => {
               </p>
               <div class="animate-delay-300">
                 <dotlottie-wc
-                  src="assets/lottie/intakeSubmit.lottie"
+                  src="/assets/lottie/intakeSubmit.lottie"
                   autoplay="true"
                   loop="true"
                   class="mx-auto size-56"

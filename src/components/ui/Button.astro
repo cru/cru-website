@@ -12,6 +12,7 @@ const { href, primary = false, block = false, className, ...attrs } = Astro.prop
 ---
 
 <a
+  data-astro-prefetch
   href={href}
   {...attrs}
   class=`block font-medium rounded-lg text-sm text-center cursor-pointer px-5 py-2.5 mr-2 mb-2 border border-brand-primary-700 focus:ring-4 focus:ring-brand-primary-900 ease-in-out duration-100  ${primary ? 'text-white bg-brand-primary-700 hover:bg-brand-primary-800' : 'text-brand-primary-700 bg-white hover:bg-brand-primary-50'} ${block ? 'w-full' : 'w-fit'} ${className} `
