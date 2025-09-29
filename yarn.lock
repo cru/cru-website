@@ -1530,7 +1530,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lottiefiles/dotlottie-wc@npm:^0.8.2":
+"@lottiefiles/dotlottie-wc@npm:0.8.2":
   version: 0.8.2
   resolution: "@lottiefiles/dotlottie-wc@npm:0.8.2"
   dependencies:
@@ -3664,7 +3664,7 @@ __metadata:
     "@astrojs/solid-js": "npm:5.1.0"
     "@awesome.me/webawesome": "npm:3.0.0-beta.4"
     "@biomejs/biome": "npm:2.2.2"
-    "@lottiefiles/dotlottie-wc": "npm:^0.8.2"
+    "@lottiefiles/dotlottie-wc": "npm:0.8.2"
     "@tailwindcss/vite": "npm:4.1.11"
     astro: "npm:5.11.0"
     astro-navbar: "npm:2.3.9"

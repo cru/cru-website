@@ -1,6 +1,8 @@
 import '@awesome.me/webawesome/dist/components/button/button.js'
+import '@awesome.me/webawesome/dist/components/spinner/spinner.js'
+import '@lottiefiles/dotlottie-wc'
 import { actions } from 'astro:actions'
-import { createEffect, createSignal, For } from 'solid-js'
+import { createEffect, createSignal, For, Switch, Match } from 'solid-js'
 import { createStore } from 'solid-js/store'
 import { Dynamic } from 'solid-js/web'
 import AccountCreation from './sub-sections/AccountCreation'
@@ -19,7 +21,15 @@ import ResearchPurpose from './sub-sections/ResearchPurpose'
 import ServiceType from './sub-sections/ServiceType'
 import SolidSteps from './ui/SolidSteps'
 
+enum formStatus {
+  IDLE = 'idle',
+  SUBMITTING = 'submitting',
+  SUCCESS = 'success',
+  ERROR = 'error',
+}
+
 const IntakeForm = () => {
+  const [submitState, setSubmitState] = createSignal(formStatus.SUCCESS)
   const [activeStep, setActiveStep] = createSignal(0)
   const [branchTriggers, setBranchTriggers] = createSignal({})
   const [steps, setSteps] = createStore([
@@ -142,8 +152,8 @@ const IntakeForm = () => {
     })
   })
 
-  const handleFormEvent = (e) => {
-    const fieldName = e.target.name
+  const handleFormEvent = (e: Event) => {
+    const fieldName = (e.target as HTMLInputElement).name
     let fieldValue = null
     for (const step of availableSteps()) {
       if (!step.form) continue
@@ -164,7 +174,7 @@ const IntakeForm = () => {
     if (form && form.reportValidity()) setActiveStep(activeStep() + 1)
   }
 
-  const registerForm = (name, form) => {
+  const registerForm = (name: string, form: HTMLFormElement) => {
     if (!name || !form) return
     setSteps((step) => step.name === name, 'form', form)
   }
@@ -181,9 +191,9 @@ const IntakeForm = () => {
       }
     })
 
-    const { data, error } = await actions.submitIntakeForm(formData)
-    console.log(error)
-    if (!error) alert(data)
+    setSubmitState(formStatus.SUBMITTING)
+    const { error } = await actions.submitIntakeForm(formData)
+    setSubmitState(error ? formStatus.ERROR : formStatus.SUCCESS)
   }
 
   return (
@@ -194,35 +204,58 @@ const IntakeForm = () => {
       />
 
       <div class="mx-auto w-full space-y-6">
-        <For each={availableSteps()}>
-          {(step, index) => (
-            <Dynamic
-              component={step.Component}
-              form={step.form}
-              hidden={activeStep() !== index()}
-              setFormRef={(form) => registerForm(step.name, form)}
-              onSubmit={handleSubmit}
-            />
-          )}
-        </For>
-        <div class="flex justify-between">
-          <wa-button
-            size="small"
-            appearance="filled"
-            disabled={activeStep() === 0}
-            on:click={() => setActiveStep(activeStep() - 1)}
-          >
-            Previous
-          </wa-button>
-          <wa-button
-            size="small"
-            appearance="accent"
-            disabled={activeStep() === availableSteps().length - 1}
-            on:click={handleNext}
-          >
-            Next
-          </wa-button>
-        </div>
+        <Switch>
+          <Match when={submitState() === formStatus.SUCCESS}>
+            <div>
+              <h4 class="text-emerald-600">Success!</h4>
+              <small>
+                Your request has been sent. We will carefully review your request and will
+                be in touch soon.
+              </small>
+              <dotlottie-wc
+                src="assets/lottie/intakeSubmit.lottie"
+                autoplay="true"
+                loop="true"
+                class="size-92"
+              ></dotlottie-wc>
+            </div>
+          </Match>
+          {/* <Match when={submitState() === formStatus.SUBMITTING}>
+              <h4 class="text-emerald-600">Submitting...</h4>
+              <wa-spinner class="text-6xl"></wa-spinner>
+          </Match> */}
+          <Match when={submitState() === formStatus.IDLE}>
+            <For each={availableSteps()}>
+              {(step, index) => (
+                <Dynamic
+                  component={step.Component}
+                  form={step.form}
+                  hidden={activeStep() !== index()}
+                  setFormRef={(form) => registerForm(step.name, form)}
+                  onSubmit={handleSubmit}
+                />
+              )}
+            </For>
+            <div class="flex justify-between">
+              <wa-button
+                size="small"
+                appearance="filled"
+                disabled={activeStep() === 0}
+                on:click={() => setActiveStep(activeStep() - 1)}
+              >
+                Previous
+              </wa-button>
+              <wa-button
+                size="small"
+                appearance="accent"
+                disabled={activeStep() === availableSteps().length - 1}
+                on:click={handleNext}
+              >
+                Next
+              </wa-button>
+            </div>
+          </Match>
+        </Switch>
       </div>
     </article>
   )

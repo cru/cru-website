@@ -3,14 +3,17 @@
 {
   "name": "cru-website",
   "image": "node:lts",
-  "forwardPorts": [4321],
+  "forwardPorts": [
+    4321
+  ],
   "customizations": {
     "vscode": {
       "extensions": [
         "ecmel.vscode-html-css",
         "bradlc.vscode-tailwindcss",
         "astro-build.astro-vscode",
-        "unifiedjs.vscode-mdx"
+        "unifiedjs.vscode-mdx",
+        "esbenp.prettier-vscode"
       ]
     }
   },
