@@ -14,17 +14,17 @@
     "@astrojs/netlify": "6.5.10",
     "@astrojs/solid-js": "5.1.0",
     "@awesome.me/webawesome": "3.0.0-beta.4",
-    "@tailwindcss/vite": "4.1.11",
+    "@lottiefiles/dotlottie-wc": "^0.8.2",
     "astro": "5.11.0",
     "astro-navbar": "2.3.9",
     "axios": "1.12.1",
-    "lottie-web": "5.12.2",
     "solid-js": "1.9.9",
     "tailwindcss": "4.1.11",
     "typescript": "5.7.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.2",
+    "@tailwindcss/vite": "4.1.11",
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "0.6.14"

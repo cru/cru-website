@@ -2,10 +2,17 @@
 import SectionHeading from '../ui/SectionHeading.astro'
 import Background from '../ui/Background.astro'
 import InternalLink from '../ui/InternalLink.astro'
+import { Picture } from 'astro:assets'
+import cloudImage from '../../assets/cloud.svg'
+import reportImage from '../../assets/report.svg'
+import apiImage from '../../assets/api.svg'
+import securityImage from '../../assets/lock.svg'
 interface Props {}
 
 const {} = Astro.props
 ---
+
+<script src="https://animatedicons.co/scripts/embed-animated-icons.js"></script>
 
 <section class="mx-auto max-w-7xl space-y-16">
   <Background type={1} />
@@ -27,9 +34,9 @@ const {} = Astro.props
       <div id="dataCapture" class="relative pl-16">
         <dt class="text-base leading-7 font-semibold text-gray-900">
           <div
-            class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black"
+            class="absolute top-0 left-0 flex size-12 items-center justify-center rounded-lg bg-black"
           >
-            <figure id="lottieCloudIcon"></figure>
+            <Picture src={cloudImage} alt="electronic data capture" class="p-1" />
           </div>
           <InternalLink href="data-capture">Electronic Data Capture →</InternalLink>
         </dt>
@@ -41,9 +48,9 @@ const {} = Astro.props
       <div id="methodsAnalytics" class="relative pl-16">
         <dt class="text-base leading-7 font-semibold text-gray-900">
           <div
-            class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black"
+            class="absolute top-0 left-0 flex size-12 items-center justify-center rounded-lg bg-black"
           >
-            <figure id="lottieReportIcon"></figure>
+            <Picture src={reportImage} alt="methods & analytics" class="p-1" />
           </div>
           <InternalLink href="/methods-and-analytics">Methods & Analytics →</InternalLink>
         </dt>
@@ -56,9 +63,9 @@ const {} = Astro.props
       <div id="customSoftware" class="relative pl-16">
         <dt class="text-base leading-7 font-semibold text-gray-900">
           <div
-            class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black"
+            class="absolute top-0 left-0 flex size-12 items-center justify-center rounded-lg bg-black"
           >
-            <figure id="lottieApiIcon"></figure>
+            <Picture src={apiImage} alt="custom software development" class="p-1" />
           </div>
           <InternalLink href="/custom-software">Custom Software →</InternalLink>
         </dt>
@@ -72,9 +79,9 @@ const {} = Astro.props
       <div id="advancedSecurity" class="relative pl-16">
         <dt class="text-base leading-7 font-semibold text-gray-900">
           <div
-            class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-black"
+            class="absolute top-0 left-0 flex size-12 items-center justify-center rounded-lg bg-black"
           >
-            <figure id="lottieSecurityIcon"></figure>
+            <Picture src={securityImage} alt="data security" class="p-1" />
           </div>
           <InternalLink href="/data-capture/data-security-and-lifecycle">
             Advanced Security →
@@ -87,69 +94,4 @@ const {} = Astro.props
       </div>
     </dl>
   </div>
-  <script>
-    import lottie from 'lottie-web'
-
-    const lottieCloudIcon = document.getElementById('lottieCloudIcon')
-    const lottieReportIcon = document.getElementById('lottieReportIcon')
-    const lottieApiIcon = document.getElementById('lottieApiIcon')
-    const lottieSecurityIcon = document.getElementById('lottieSecurityIcon')
-
-    if (lottieCloudIcon) {
-      lottie.loadAnimation({
-        name: 'dataCapture',
-        container: lottieCloudIcon,
-        renderer: 'svg',
-        loop: true,
-        autoplay: false,
-        path: 'lottie-cloud.json',
-      })
-
-      const dc = document.getElementById('dataCapture')
-      dc?.addEventListener('mouseover', () => lottie.play('dataCapture'))
-      dc?.addEventListener('mouseout', () => lottie.stop('dataCapture'))
-    }
-    if (lottieReportIcon) {
-      lottie.loadAnimation({
-        name: 'methodsAnalytics',
-        container: lottieReportIcon,
-        renderer: 'svg',
-        loop: true,
-        autoplay: false,
-        path: 'lottie-report.json',
-      })
-
-      const ma = document.getElementById('methodsAnalytics')
-      ma?.addEventListener('mouseover', () => lottie.play('methodsAnalytics'))
-      ma?.addEventListener('mouseout', () => lottie.stop('methodsAnalytics'))
-    }
-    if (lottieApiIcon) {
-      lottie.loadAnimation({
-        name: 'customSoftware',
-        container: lottieApiIcon,
-        renderer: 'svg',
-        loop: true,
-        autoplay: false,
-        path: 'lottie-api.json',
-      })
-
-      const cs = document.getElementById('customSoftware')
-      cs?.addEventListener('mouseover', () => lottie.play('customSoftware'))
-      cs?.addEventListener('mouseout', () => lottie.stop('customSoftware'))
-    }
-    if (lottieSecurityIcon) {
-      lottie.loadAnimation({
-        name: 'advancedSecurity',
-        container: lottieSecurityIcon,
-        renderer: 'svg',
-        loop: true,
-        autoplay: false,
-        path: 'lottie-security.json',
-      })
-
-      const as = document.getElementById('advancedSecurity')
-      as?.addEventListener('mouseover', () => lottie.play('advancedSecurity'))
-      as?.addEventListener('mouseout', () => lottie.stop('advancedSecurity'))
-    }
-  </script>
 </section>

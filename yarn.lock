@@ -1530,6 +1530,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lottiefiles/dotlottie-wc@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "@lottiefiles/dotlottie-wc@npm:0.8.2"
+  dependencies:
+    "@lottiefiles/dotlottie-web": "npm:0.53.0"
+    lit: "npm:^3.2.1"
+  checksum: 10c0/207cac8cbf15414f1817da919c4faa4f4272b9bf0e55f3e2b45a8af1227a74ecdfb8fec4828e60424d7de19f6517777741a6994bcb71a59e62eb290df62107e3
+  languageName: node
+  linkType: hard
+
+"@lottiefiles/dotlottie-web@npm:0.53.0":
+  version: 0.53.0
+  resolution: "@lottiefiles/dotlottie-web@npm:0.53.0"
+  checksum: 10c0/f354f0f5427b184def632bb74f05aa13636955d792a82d45c7f9723a948709eaeb5d14a20a6038f0e82e69b3a3abdb64e27ea8f7721ff38b54784ccc1385aeb7
+  languageName: node
+  linkType: hard
+
 "@mapbox/node-pre-gyp@npm:^2.0.0":
   version: 2.0.0
   resolution: "@mapbox/node-pre-gyp@npm:2.0.0"
@@ -3647,11 +3664,11 @@ __metadata:
     "@astrojs/solid-js": "npm:5.1.0"
     "@awesome.me/webawesome": "npm:3.0.0-beta.4"
     "@biomejs/biome": "npm:2.2.2"
+    "@lottiefiles/dotlottie-wc": "npm:^0.8.2"
     "@tailwindcss/vite": "npm:4.1.11"
     astro: "npm:5.11.0"
     astro-navbar: "npm:2.3.9"
     axios: "npm:1.12.1"
-    lottie-web: "npm:5.12.2"
     prettier: "npm:3.6.2"
     prettier-plugin-astro: "npm:0.14.1"
     prettier-plugin-tailwindcss: "npm:0.6.14"
@@ -6540,13 +6557,6 @@ __metadata:
   version: 3.1.0
   resolution: "longest-streak@npm:3.1.0"
   checksum: 10c0/7c2f02d0454b52834d1bcedef79c557bd295ee71fdabb02d041ff3aa9da48a90b5df7c0409156dedbc4df9b65da18742652aaea4759d6ece01f08971af6a7eaa
-  languageName: node
-  linkType: hard
-
-"lottie-web@npm:5.12.2":
-  version: 5.12.2
-  resolution: "lottie-web@npm:5.12.2"
-  checksum: 10c0/0aeaf631b10a76afd025df70c2a1486543530708e07a316946c08e55891dac483ffbaf2bf3648ae0b9c54c733118a0a086fd150aa76f7848606214c67ad72c30
   languageName: node
   linkType: hard
 
