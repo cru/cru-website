@@ -1,5 +1,4 @@
 import '@awesome.me/webawesome/dist/components/button/button.js'
-import '@awesome.me/webawesome/dist/components/spinner/spinner.js'
 import '@lottiefiles/dotlottie-wc'
 import { actions } from 'astro:actions'
 import { createEffect, createSignal, For, Switch, Match } from 'solid-js'
@@ -206,24 +205,24 @@ const IntakeForm = () => {
       <div class="mx-auto w-full space-y-6">
         <Switch>
           <Match when={submitState() === formStatus.SUCCESS}>
-            <div>
-              <h4 class="text-emerald-600">Success!</h4>
-              <small>
+            <div class="animate-fade-in-up space-y-6 py-12 text-center">
+              <h4 class="animate-delay-100 text-3xl font-bold text-emerald-600">
+                Success!
+              </h4>
+              <p class="animate-delay-200 mx-auto max-w-md text-lg text-gray-600">
                 Your request has been sent. We will carefully review your request and will
                 be in touch soon.
-              </small>
-              <dotlottie-wc
-                src="assets/lottie/intakeSubmit.lottie"
-                autoplay="true"
-                loop="true"
-                class="size-92"
-              ></dotlottie-wc>
+              </p>
+              <div class="animate-delay-300">
+                <dotlottie-wc
+                  src="assets/lottie/intakeSubmit.lottie"
+                  autoplay="true"
+                  loop="true"
+                  class="mx-auto size-56"
+                ></dotlottie-wc>
+              </div>
             </div>
           </Match>
-          {/* <Match when={submitState() === formStatus.SUBMITTING}>
-              <h4 class="text-emerald-600">Submitting...</h4>
-              <wa-spinner class="text-6xl"></wa-spinner>
-          </Match> */}
           <Match when={submitState() === formStatus.IDLE}>
             <For each={availableSteps()}>
               {(step, index) => (
