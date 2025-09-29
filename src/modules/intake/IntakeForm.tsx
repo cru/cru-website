@@ -28,7 +28,7 @@ enum formStatus {
 }
 
 const IntakeForm = () => {
-  const [submitState, setSubmitState] = createSignal(formStatus.SUCCESS)
+  const [submitState, setSubmitState] = createSignal(formStatus.IDLE)
   const [activeStep, setActiveStep] = createSignal(0)
   const [branchTriggers, setBranchTriggers] = createSignal({})
   const [steps, setSteps] = createStore([
@@ -221,6 +221,21 @@ const IntakeForm = () => {
                   class="mx-auto size-56"
                 ></dotlottie-wc>
               </div>
+            </div>
+          </Match>
+          <Match when={submitState() === formStatus.ERROR}>
+            <div class="animate-fade-in-up space-y-6 py-12 text-center">
+              <h4 class="animate-delay-100 text-3xl font-bold">Error</h4>
+              <p class="animate-delay-200 mx-auto max-w-md text-lg text-gray-600">
+                There was an error submitting your request. Please try again, and if the
+                problem persists, contact us directly at{' '}
+                <a
+                  href="mailto:cru@ucalgary.ca"
+                  class="text-brand-primary-500 cursor-pointer"
+                >
+                  cru@ucalgary.ca
+                </a>
+              </p>
             </div>
           </Match>
           <Match when={submitState() === formStatus.IDLE}>
