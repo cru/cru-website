@@ -206,9 +206,7 @@ const IntakeForm = () => {
         <Switch>
           <Match when={submitState() === formStatus.SUCCESS}>
             <div class="animate-fade-in-up space-y-6 py-12 text-center">
-              <h4 class="animate-delay-100 text-3xl font-bold text-emerald-600">
-                Success!
-              </h4>
+              <h3 class="animate-delay-100text-emerald-600">Success!</h3>
               <p class="animate-delay-200 mx-auto max-w-md text-lg text-gray-600">
                 Your request has been sent. We will carefully review your request and will
                 be in touch soon.
@@ -238,13 +236,18 @@ const IntakeForm = () => {
               </p>
             </div>
           </Match>
-          <Match when={submitState() === formStatus.IDLE}>
+          <Match
+            when={
+              submitState() === formStatus.IDLE || submitState() === formStatus.SUBMITTING
+            }
+          >
             <For each={availableSteps()}>
               {(step, index) => (
                 <Dynamic
                   component={step.Component}
                   form={step.form}
                   hidden={activeStep() !== index()}
+                  status={submitState()}
                   setFormRef={(form) => registerForm(step.name, form)}
                   onSubmit={handleSubmit}
                 />
