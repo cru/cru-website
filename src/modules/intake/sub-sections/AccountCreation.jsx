@@ -1,8 +1,20 @@
+import { createEffect, createSignal, For } from 'solid-js'
 import SubSection from '../SubSection'
 import Checkbox from '../ui/Checkbox'
 import Input from '../ui/Input'
 
 const AccountCreation = (props) => {
+  const [numAccounts, setNumAccounts] = createSignal([1])
+
+  createEffect(() => {
+    if (!props.form) return
+
+    props.form.addEventListener('input', (e) => {
+      if (e.target.name === 'user_account_num')
+        setNumAccounts(Array(Number(e.target.value)).fill(0))
+    })
+  })
+
   return (
     <SubSection {...props} title="New REDCap user account">
       <div class="space-y-4">
@@ -13,22 +25,39 @@ const AccountCreation = (props) => {
           required
           min="1"
           max="15"
-          defaultValue="1"
+          value="1"
         />
         {/* <Checkbox
             name="user_1_is_requester___1"
             value="1"
             label="This account is for myself"
           /> */}
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-3" id="user_1_fields">
-          <Input name="user_1_fname" label="User 1 First Name" />
-          <Input name="user_1_lname" label="User 1 Last Name" />
-          <Input name="user_1_email" label="User 1 Email" type="email" />
-        </div>
-        {/* <!-- Additional user fields (2-15) would be generated dynamically --> */}
-        <div id="additional_users">
-          {/* Users 2-15 will be added via JavaScript based on user_account_num selection */}
-        </div>
+        <table class="w-full border-collapse">
+          <thead class="text-left text-sm">
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <For each={numAccounts()}>
+              {(_, index) => (
+                <tr>
+                  <td>
+                    <Input name={`user_${index() + 1}_fname`} required />
+                  </td>
+                  <td class="px-3 py-2">
+                    <Input name={`user_${index() + 1}_lname`} required />
+                  </td>
+                  <td>
+                    <Input name={`user_${index() + 1}_email`} type="email" required />
+                  </td>
+                </tr>
+              )}
+            </For>
+          </tbody>
+        </table>
         <Checkbox
           name="user_notify___1"
           value="1"
