@@ -9,10 +9,10 @@ const SubSection = (props) => {
 
   return (
     <section
-      class={`space-y-8 overflow-hidden p-1 transition-all duration-700 ease-in-out ${
+      class={`space-y-8 overflow-x-hidden p-1 transition-all duration-700 ease-in-out ${
         props.hidden
           ? 'pointer-events-none absolute bottom-0 h-0 opacity-0'
-          : 'max-h-screen opacity-100'
+          : 'opacity-100'
       }`}
     >
       <h4>{props.title}</h4>

@@ -45,13 +45,15 @@ export default function Redcap(props) {
             { value: 'cctt', label: 'CCTT' },
           ]}
         />
-        <Input
-          name="rc_participant_num"
-          label="Number of Expected Study Participants"
-          type="number"
-          min="0"
-        />
-        <Input name="rc_site_num" label="Number of Study Sites" type="number" min="0" />
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <Input
+            name="rc_participant_num"
+            label="Number of Expected Study Participants"
+            type="number"
+            min="0"
+          />
+          <Input name="rc_site_num" label="Number of Study Sites" type="number" min="0" />
+        </div>
         <Checkbox
           name="rc_have_international_sites___1"
           value="1"
@@ -107,7 +109,8 @@ export default function Redcap(props) {
         <Checkbox
           name="rc_econsent_build"
           value="1"
-          label="I would like CHI's support with my eConsent (ex. build support, consultation, implementation review)"
+          label="I would like CHI's support with my eConsent "
+          hint="(ex. build support, consultation, implementation review)"
         />
         <Input name="rc_econsent_title" label="eConsent project title" />
         <CheckboxGroup

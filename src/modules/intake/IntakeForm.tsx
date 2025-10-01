@@ -170,7 +170,15 @@ const IntakeForm = () => {
 
   const handleNext = () => {
     const form = availableSteps()[activeStep()].form
-    if (form && form.reportValidity()) setActiveStep(activeStep() + 1)
+    if (form && form.reportValidity()) {
+      setActiveStep(activeStep() + 1)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  const handlePrevious = () => {
+    setActiveStep(activeStep() - 1)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const registerForm = (name: string, form: HTMLFormElement) => {
@@ -257,7 +265,7 @@ const IntakeForm = () => {
                 size="small"
                 appearance="filled"
                 disabled={activeStep() === 0}
-                on:click={() => setActiveStep(activeStep() - 1)}
+                on:click={handlePrevious}
               >
                 Previous
               </wa-button>
