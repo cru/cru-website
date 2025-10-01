@@ -1,16 +1,14 @@
 {
-    "name": "chi-website",
-    "main": "./dist/_worker.js/index.js",
-    // Update to today's date
-    "compatibility_date": "2025-10-01",
-    "compatibility_flags": [
-        "nodejs_compat"
-    ],
-    "assets": {
-        "binding": "ASSETS",
-        "directory": "./dist",
-    },
-    "observability": {
-        "enabled": true,
-    },
+  "name": "chi-website",
+  "main": "./dist/_worker.js/index.js",
+  // Update to today's date
+  "compatibility_date": "2025-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist",
+  },
+  "observability": {
+    "enabled": true,
+  },
 }
