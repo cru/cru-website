@@ -225,8 +225,7 @@ const IntakeForm = () => {
             <div class="animate-fade-in-up space-y-6 py-12 text-center">
               <h4 class="animate-delay-100 text-3xl font-bold">Error</h4>
               <p class="animate-delay-200 mx-auto max-w-md text-lg text-gray-600">
-                There was an error submitting your request. Please try again, and if the
-                problem persists, contact us directly at{' '}
+                There was an error submitting your request. Please contact us directly at{' '}
                 <a
                   href="mailto:cru@ucalgary.ca"
                   class="text-brand-primary-500 cursor-pointer"
