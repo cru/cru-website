@@ -1,4 +1,4 @@
-# cru.ucalgary.ca
+# chi.ucalgary.ca
 
 Inspired by: https://github.com/eavinti/astro-landing and https://tailus.io/blocks
 

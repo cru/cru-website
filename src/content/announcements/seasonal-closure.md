@@ -15,6 +15,6 @@ The CRU office will be closed from Monday, December 23, 2024 through Friday, Jan
 
 While we will provide intermittent support for critical interventions, response times may be slower than usual. We will prioritize urgent requests such as password resets and access to REDCap. To help us identify these, please include "URGENT" in your email subject line. We aim to address such requests within 3–4 days during the closure.
 
-We appreciate your understanding and cooperation during this holiday period. If you have any questions or concerns, please don’t hesitate contact us at cru@ucalgary.ca.
+We appreciate your understanding and cooperation during this holiday period. If you have any questions or concerns, please don’t hesitate contact us at chi@ucalgary.ca.
 
 Happy holidays!
