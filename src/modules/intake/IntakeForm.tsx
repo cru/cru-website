@@ -235,10 +235,10 @@ const IntakeForm = () => {
               <p class="animate-delay-200 mx-auto max-w-md text-lg text-gray-600">
                 There was an error submitting your request. Please contact us directly at{' '}
                 <a
-                  href="mailto:cru@ucalgary.ca"
+                  href="mailto:chi@ucalgary.ca"
                   class="text-brand-primary-500 cursor-pointer"
                 >
-                  cru@ucalgary.ca
+                  chi@ucalgary.ca
                 </a>
               </p>
             </div>
