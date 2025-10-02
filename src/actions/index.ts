@@ -23,10 +23,6 @@ export const server = {
         }
       }
 
-      // Process your data and files
-      // console.log('Data:', data)
-      console.log('Files:', files)
-
       try {
         const dataPayload = {
           token: token,
@@ -52,7 +48,6 @@ export const server = {
             fileFormData.append('file', file)
 
             console.log(`Uploading file for field: ${fieldName}`)
-
             try {
               const fileRes = await axios.post(url, fileFormData, {
                 headers: {
