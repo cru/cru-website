@@ -13,7 +13,7 @@ tags: ['christmas', 'holidays']
 
 The University of Calgary and Centre for Health Informatics (CHI) will be closed from noon December 24th 2025 through January 1st 2026 (inclusive). Our team will be monitoring for time-sensitive requests, only. Response times may take up to 5 business days. All other requests will be handled in 2026.
 
-We appreciate your understanding and cooperation during this holiday period. If you have any questions or concerns, please don’t hesitate contact us at chi@ucalgary.ca. 
+We appreciate your understanding and cooperation during this holiday period. If you have any questions or concerns, please don’t hesitate contact us at chi@ucalgary.ca.
 
 If you require urgent support during this time, please include “Urgent” in the subject of your request.
 
