@@ -1,8 +1,6 @@
 ---
-// import { Picture } from 'astro:assets'
 import { Astronav, MenuItems, MenuIcon } from 'astro-navbar'
 import Dropdown from './Dropdown.astro'
-// import logoImage from '../../assets/logo.png'
 import Button from '../ui/Button.astro'
 
 const menuitems = [
@@ -32,8 +30,8 @@ const menuitems = [
     ],
   },
   {
-    title: 'Our Story',
-    path: '/our-story',
+    title: 'Our Mission',
+    path: 'https://cumming.ucalgary.ca/centres/centre-health-informatics/about/vision-mission-and-values',
   },
   {
     title: 'Announcements',
@@ -50,13 +48,6 @@ const menuitems = [
     <div class="flex items-center justify-between lg:flex-1">
       <a href="/" class="-m-1.5 p-1.5">
         <span class="sr-only">Centre for Health Informatics</span>
-        <!-- <Picture
-          src={logoImage}
-          formats={['avif', 'webp']}
-          width={200}
-          alt='logo image'
-          class='h-8 w-auto'
-        /> -->
         <h3 class="m-0">CHI</h3>
       </a>
       <div class="flex flex-1 justify-end lg:hidden">
@@ -80,6 +71,8 @@ const menuitems = [
               {!item.children && (
                 <a
                   href={item.path}
+                  target={item.path.includes('http') ? '_blank' : '_self'}
+                  rel="noopener noreferrer"
                   class="block py-2 text-sm leading-6 font-semibold text-gray-900"
                 >
                   <span> {item.title}</span>
