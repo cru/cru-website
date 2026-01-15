@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: 'Seasonal Closure'
 publishDate: 2025-12-17
 description: 'The University of Calgary and Centre for Health Informatics will be closed during the holidays'
