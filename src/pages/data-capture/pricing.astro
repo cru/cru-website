@@ -66,7 +66,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
             </th>
             <th class="space-y-2 p-2">
               <div>
-                <h4>CCTT</h4>
+                <a href="#cctt"><h4>CCTT</h4></a>
                 <span class="text-gray-500">
                   $2,200<small>/year</small>
                 </span>
@@ -278,7 +278,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           </tr>
           <tr class="hover:bg-brand-primary-50">
             <td class="w-72 bg-gray-50 p-6" id="advancedSupport" class="w-72">
-              Advanced support</td
+              <a href="#advancedsupport">Advanced support</a></td
             >
             <td class="w-56 border-gray-900/10 p-6 text-center">
               Up to 2
@@ -308,7 +308,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
       </div>
     </section>
 
-    <section class="space-y-8">
+    <section class="space-y-8" id="advancedsupport">
       <h2>Advanced Support, Loyalty Discount & More!</h2>
       <div class="space-y-8 text-left">
         <section class="space-y-2">
@@ -382,6 +382,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
 
     <section
       class="space-y-4 rounded-2xl border border-gray-100 bg-gray-100/50 p-8 shadow-2xl shadow-gray-600/10"
+      id="cctt"
     >
       <h2>Compliant Clinical Trial Tier (CCTT)</h2>
       <p>
@@ -396,7 +397,8 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
       <span>The CCTT includes: </span>
       <ul>
         <li>
-          Data Management Plan (DMP) <i>(updated yearly and available upon request)</i>
+          <a href="#dmp">Data Management Plan (DMP)</a>
+          <i>(updated yearly and available upon request)</i>
         </li>
         <li>
           Validation documentation certifying and describing the validation of the CHI’s
@@ -405,18 +407,20 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
             trials and is investigated in the event of an audit)</i
           >
         </li>
-        <li>{' '}REDCap Training</li>
+        <li>{' '}<a href="#rctraining">REDCap Training</a></li>
         <li>
-          REDCap Best Practice Guidelines <i
-            >(updated yearly and available upon request)
-          </i>
+          <a href="#rcguidelines">REDCap Best Practice Guidelines</a>
+          <i>(updated yearly and available upon request) </i>
         </li>
         <li>
-          REDCap Project Review <i
-            >(up to 2 hours of time used prior to the start of data collection)
-          </i>
+          <a href="#rcreview"> REDCap Project Review</a>
+          <i>(up to 2 hours of time used prior to the start of data collection) </i>
         </li>
-        <li>{' '}40% discount on DataXplor Subscription</li>
+        <li>
+          {' '}<ExternalLink href="https://dataxplor.researchcalgary.ca/pricing"
+            >40% discount on DataXplor Subscription</ExternalLink
+          >
+        </li>
       </ul>
     </section>
 
@@ -469,7 +473,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
               </td>
             </tr>
             <tr class="hover:bg-brand-primary-50 align-text-top">
-              <td class="w-56 bg-gray-50 p-6">REDCap Project Review</td>
+              <td class="w-56 bg-gray-50 p-6" id="rcreview">REDCap Project Review</td>
               <td class="w-5xl border-gray-900/10 p-6">
                 <p>
                   Want to build your own REDCap project, but also want to make sure you
@@ -551,7 +555,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           </thead>
           <tbody>
             <tr class="hover:bg-brand-primary-50 align-text-top">
-              <td class="w-56 bg-gray-50 p-6">REDCap Training</td>
+              <td class="w-56 bg-gray-50 p-6" id="rctraining">REDCap Training</td>
               <td class="w-5xl border-gray-900/10 p-6">
                 <p>
                   One of the best ways to generate a clean dataset is to ensure consistent
@@ -578,7 +582,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
               </td>
             </tr>
             <tr class="hover:bg-brand-primary-50 align-text-top">
-              <td class="w-56 bg-gray-50 p-6">Data Management Plan (DMP)</td>
+              <td class="w-56 bg-gray-50 p-6" id="dmp">Data Management Plan (DMP)</td>
               <td class="w-5xl border-gray-900/10 p-6">
                 <p>
                   Ensure your study runs smoothly with a tailored DMP for CHI’s REDCap
@@ -591,7 +595,8 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
               </td>
             </tr>
             <tr class="hover:bg-brand-primary-50 align-text-top">
-              <td class="w-56 bg-gray-50 p-6">REDCap Security Overview</td>
+              <td class="w-56 bg-gray-50 p-6" id="rcsecurity">REDCap Security Overview</td
+              >
               <td class="w-5xl border-gray-900/10 p-6">
                 <p>
                   Want the essential security and privacy info for the CHI’s REDCap
@@ -603,7 +608,9 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
               <td class="w-72 border-l border-gray-900/10 p-6"> $75 </td>
             </tr>
             <tr class="hover:bg-brand-primary-50 align-text-top">
-              <td class="w-56 bg-gray-50 p-6">REDCap Best Practice Guidelines</td>
+              <td class="w-56 bg-gray-50 p-6" id="rcguidelines"
+                >REDCap Best Practice Guidelines</td
+              >
               <td class="w-5xl border-gray-900/10 p-6">
                 <span>
                   Written by CHI’s expert REDCap developers, these Best Practice
@@ -652,8 +659,8 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
         <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
           <dt class="leading-7 font-semibold lg:col-span-5">
             I still want some of the perks included in the Regulatory Bundle, like the
-            REDCap Training and Data Management Plan (DMP). Can I purchase these items
-            individually?
+            REDCap Training and <a href="#dmp">Data Management Plan (DMP)</a>. Can I
+            purchase these items individually?
           </dt>
           <dd class="mt-4 lg:col-span-7 lg:mt-0">
             <p class="leading-7 text-gray-600">
