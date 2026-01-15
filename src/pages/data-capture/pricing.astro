@@ -3,12 +3,13 @@ import Layout from '../../layouts/Layout.astro'
 import CheckIcon from '../../components/ui/icons/CheckIcon.astro'
 import XIcon from '../../components/ui/icons/XIcon.astro'
 import Button from '../../components/ui/Button.astro'
+import ExternalLink from '../../components/ui/ExternalLink.astro'
 ---
 
 <Layout title="Data Capture Pricing">
   <h1 class="text-center">Predictable pricing to meet your needs</h1>
   <div class="mt-32 space-y-32">
-    <div class="overflow-x-auto">
+    <section class="space-y-4 overflow-x-auto">
       <table class="mx-auto border-collapse border-spacing-6">
         <thead>
           <tr>
@@ -251,33 +252,24 @@ import Button from '../../components/ui/Button.astro'
             >
           </tr>
           <tr class="hover:bg-brand-primary-50">
-            <td class="w-72 bg-gray-50 p-6" id="managementPlan"> Data management plan</td>
+            <td class="w-72 bg-gray-50 p-6" id="validationDocumentation">
+              Validation Documentation</td
+            >
             <td class="w-56 border-gray-900/10 p-6 text-center"
-              ><div class="flex justify-center">$150</div></td
-            >
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center"
-              ><div class="flex justify-center">$150</div></td
-            >
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center"
-              ><div class="flex justify-center">$150</div></td
+              ><div class="flex justify-center">
+                <XIcon />
+              </div></td
             >
             <td class="w-56 border-l border-gray-900/10 p-6 text-center"
               ><div class="flex justify-center">
-                <CheckIcon />
+                <XIcon />
               </div></td
             >
-          </tr>
-          <tr class="hover:bg-brand-primary-50">
-            <td class="w-72 bg-gray-50 p-6" id="registryaddon">Regulatory Bundle</td>
-            <td class="w-56 border-gray-900/10 p-6 text-center">
-              $500 <small class="text-gray-500">/year</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              $500 <small class="text-gray-500">/year</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              $500 <small class="text-gray-500">/year</small>
-            </td>
+            <td class="w-56 border-l border-gray-900/10 p-6 text-center"
+              ><div class="flex justify-center">
+                <XIcon />
+              </div></td
+            >
             <td class="w-56 border-l border-gray-900/10 p-6 text-center"
               ><div class="flex justify-center">
                 <CheckIcon />
@@ -305,193 +297,440 @@ import Button from '../../components/ui/Button.astro'
               <small class="text-gray-500"> hours/year</small>
             </td>
           </tr>
-          <tr class="hover:bg-brand-primary-50">
-            <td class="w-72 bg-gray-50 p-6" id="additionalSupport">
-              Additional support</td
-            >
-            <td class="w-56 border-gray-900/10 p-6 text-center">
-              $150 <small class="text-gray-500">/hour</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              $150 <small class="text-gray-500">/hour</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              $150 <small class="text-gray-500">/hour</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              $150 <small class="text-gray-500">/hour</small>
-            </td>
-          </tr>
-          <tr class="hover:bg-brand-primary-50">
-            <td class="w-72 bg-gray-50 p-6" id="response"> Response times</td>
-            <td class="w-56 border-gray-900/10 p-6 text-center">
-              Basic
-              <br />
-              <small class="text-gray-500">first come, first serve</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              Intermediate
-              <br />
-              <small class="text-gray-500">2-3 business days</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              Priority
-              <br />
-              <small class="text-gray-500">1 business day</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              Priority
-              <br />
-              <small class="text-gray-500">1 business day</small>
-            </td>
-          </tr>
-          <tr class="hover:bg-brand-primary-50">
-            <td class="text-brand-primary-500 w-72 bg-gray-50 p-6" id="discount">
-              Loyalty discount</td
-            >
-            <td class="w-56 border-gray-900/10 p-6 text-center">
-              <b class="text-brand-primary-500">15%</b>
-              <br />
-              <small class="text-gray-500">3+ REDCap projects</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              <b class="text-brand-primary-500">15%</b>
-              <br />
-              <small class="text-gray-500">3+ REDCap projects</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              <b class="text-brand-primary-500">15%</b>
-              <br />
-              <small class="text-gray-500">3+ REDCap projects</small>
-            </td>
-            <td class="w-56 border-l border-gray-900/10 p-6 text-center">
-              <b class="text-brand-primary-500">15%</b>
-              <br />
-              <small class="text-gray-500">3+ REDCap projects</small>
-            </td>
-          </tr>
         </tbody>
       </table>
-    </div>
-
-    <div class="mx-auto space-y-16 px-6">
-      <h2 class="text-center">Additional Add-ons</h2>
-      <div class="grid grid-cols-1 justify-center gap-6 lg:grid-cols-3">
-        <div
-          class="rounded-2xl border border-gray-100 bg-gray-50 p-8 shadow-2xl shadow-gray-600/10"
-        >
-          <h4>PDF Reports</h4>
-          <p class="text-sm">
-            Custom tailored reports generated on-the-fly for an overview of your project
-            and participants
-          </p>
-        </div>
-        <div
-          class="rounded-2xl border border-gray-100 bg-gray-50 p-8 shadow-2xl shadow-gray-600/10"
-        >
-          <h4>DataViz</h4>
-          <p class="text-sm">
-            Easily create custom visualizations of your REDCap data in real-time
-          </p>
-        </div>
-        <div
-          class="rounded-2xl border border-gray-100 bg-gray-50 p-8 shadow-2xl shadow-gray-600/10"
-        >
-          <h4>DataLytics</h4>
-          <p class="text-sm">
-            A real-time monitoring tool that provides a comprehensive view of your
-            research study
-          </p>
-        </div>
+      <div class="border-brand-primary-300 bg-brand-primary-300/30 rounded-md border p-6">
+        <p>
+          As of January 1, 2026, hosting a project on our REDCap platform is now more
+          affordable. We've lowered the cost to run any registry or non-regulated clinical
+          trial by removing the Regulatory Bundle and the associated $500 annual fee.
+        </p>
       </div>
-    </div>
-    <div class="divide-y divide-gray-900/10">
-      <h2 class="py-8">Frequently asked questions</h2>
+    </section>
+
+    <section class="space-y-8">
+      <h2>Advanced Support, Loyalty Discount & More!</h2>
+      <div class="space-y-8 text-left">
+        <section class="space-y-2">
+          <div class="flex items-center space-x-4">
+            <div
+              aria-hidden="true"
+              class="bg-brand-primary-50 flex h-10 w-10 items-center justify-center rounded-full dark:bg-gray-700"
+            >
+              <span class="text-brand-primary-600 dark:text-brand-primary-300 font-bold"
+                >1</span
+              >
+            </div>
+            <h4>Advanced Support</h4>
+          </div>
+          <p>
+            Advanced suport hours allow researchers to access expert REDCap support from
+            the CHI across a wide variety of topics including:
+          </p>
+          <ul>
+            <li>Consultation on overall project setup and design</li><li>
+              Exploring REDCap capabilities and functionalities to meet a specific
+              workflow need
+            </li>
+            <li>Consultation on feature or module implementation</li>
+            <li>Troubleshooting project specific issues</li>
+            <li>And much more! Contact us for more information.</li>
+          </ul>
+          <i
+            >Advanced support hours renew each year upon payment of the annual platform
+            fee, and do not roll over from year to year.
+          </i>
+        </section>
+        <section class="space-y-2">
+          <div class="flex items-center space-x-4">
+            <div
+              aria-hidden="true"
+              class="bg-brand-primary-50 flex h-10 w-10 items-center justify-center rounded-full dark:bg-gray-700"
+            >
+              <span class="text-brand-primary-600 dark:text-brand-primary-300 font-bold"
+                >2</span
+              >
+            </div>
+            <h4>Additional Support</h4>
+          </div>
+          <p>
+            Additional CHI support is always available when the annual advanced support
+            hours for a project have been used. Such support is scoped and estimated at
+            our hourly rate of $150.
+          </p>
+        </section>
+        <section class="space-y-2">
+          <div class="flex items-center space-x-4">
+            <div
+              aria-hidden="true"
+              class="bg-brand-primary-50 flex h-10 w-10 items-center justify-center rounded-full dark:bg-gray-700"
+            >
+              <span class="text-brand-primary-600 dark:text-brand-primary-300 font-bold"
+                >3</span
+              >
+            </div>
+            <h4>Loyalty Discount</h4>
+          </div>
+          <p>
+            Researchers with 3 or more projects on the CHI’s REDCap platform will have a
+            <strong class="text-brand-primary-500">15%</strong> discount applied to all annual
+            platform fees!
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section
+      class="space-y-4 rounded-2xl border border-gray-100 bg-gray-100/50 p-8 shadow-2xl shadow-gray-600/10"
+    >
+      <h2>Compliant Clinical Trial Tier (CCTT)</h2>
+      <p>
+        The Compliant Clinical Trial Tier (CCTT) meets the specific requirements of Health
+        Canada or FDA regulated clinical trials.
+      </p>
+      <p>
+        Health Canada or FDA regulated clinical trails are required to subscribe to the
+        CCTT. This ensures that all regulatory requirements are met and that we can best
+        support in the event of an audit.
+      </p>
+      <span>The CCTT includes: </span>
+      <ul>
+        <li>
+          Data Management Plan (DMP) <i>(updated yearly and available upon request)</i>
+        </li>
+        <li>
+          Validation documentation certifying and describing the validation of the CHI’s
+          REDCap platform <i
+            >(platform validation is required by Health Canada for regulated clinical
+            trials and is investigated in the event of an audit)</i
+          >
+        </li>
+        <li>{' '}REDCap Training</li>
+        <li>
+          REDCap Best Practice Guidelines <i
+            >(updated yearly and available upon request)
+          </i>
+        </li>
+        <li>
+          REDCap Project Review <i
+            >(up to 2 hours of time used prior to the start of data collection)
+          </i>
+        </li>
+        <li>{' '}40% discount on DataXplor Subscription</li>
+      </ul>
+    </section>
+
+    <section class="mx-auto space-y-16">
+      <h2 class="text-center">Expert REDCap Services & Custom Add-Ons</h2>
+      <div class="overflow-x-auto">
+        <table class="mx-auto border-collapse border-spacing-6">
+          <thead>
+            <tr>
+              <th class="p-2">
+                <h4>Service</h4>
+              </th>
+              <th class="p-2">
+                <h4>Description</h4>
+              </th>
+              <th class="p-2">
+                <h4>Cost</h4>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-brand-primary-50 align-text-top">
+              <td class="w-56 bg-gray-50 p-6">CHI Supported REDCap Build</td>
+              <td class="w-5xl border-gray-900/10 p-6">
+                <p>
+                  CHI REDCap developers take study specific data collection and workflow
+                  requirements and design a REDCap project perfectly tailored to a study’s
+                  individual needs!
+                </p>
+                <p>Benefits of a CHI Supported REDCap Build:</p>
+                <ul>
+                  <li>
+                    Frees up study team resources to focus on other role specific tasks
+                  </li>
+                  <li>
+                    REDCap developers are trained to build projects to ensure the highest
+                    level of data completeness and accuracy
+                  </li>
+                  <li>
+                    Data entry and study workflows are streamlined due to REDCap
+                    developers’ intricate knowledge of REDCap functionality
+                  </li>
+                </ul>
+              </td>
+              <td class="w-72 border-l border-gray-900/10 p-6">
+                Submit an <br />
+                <ExternalLink href="https://redcap.ucalgary.ca/surveys/?s=7L49EPE94D">
+                  intake form
+                </ExternalLink> to receive a project specific estimate!
+              </td>
+            </tr>
+            <tr class="hover:bg-brand-primary-50 align-text-top">
+              <td class="w-56 bg-gray-50 p-6">REDCap Project Review</td>
+              <td class="w-5xl border-gray-900/10 p-6">
+                <p>
+                  Want to build your own REDCap project, but also want to make sure you
+                  are adhering to best practices? No problem! The CHI can review and
+                  provide feedback on REDCap projects built by study teams prior to the
+                  start of data collection.
+                </p>
+                <p>
+                  Review and feedback can be tailored to a project’s specific needs, and
+                  may include:
+                </p>
+                <ul>
+                  <li>Implementation of field validation</li>
+                  <li>Survey set-up structure and implementation</li>
+                  <li>Privacy considerations (e.g., user rights and permissions)</li>
+                  <li>And much more!</li>
+                </ul>
+              </td>
+              <td class="w-72 border-l border-gray-900/10 p-6">
+                Starting at <br /> $450
+              </td>
+            </tr>
+            <tr class="hover:bg-brand-primary-50 align-text-top">
+              <td class="w-56 bg-gray-50 p-6">One-Pager Reports</td>
+              <td class="w-5xl border-gray-900/10 p-6">
+                <p>
+                  Get an overview of patient specific or project level data at the click
+                  of a button!
+                </p>
+                <p>
+                  Review and feedback can be tailored to a project’s specific needs, and
+                  may include:
+                </p>
+                <p>
+                  One-pagers are a customizable tool directly linked to an individual
+                  REDCap project that allows study teams to consolidate and visualize
+                  important data either at the patient or the project level. These PDF,
+                  Word or HTML exports can be used as patient chart notes, to monitor data
+                  throughout the course of a study, and so much more.
+                </p>
+              </td>
+              <td class="w-72 border-l border-gray-900/10 p-6">
+                Starting at <br />$5,000
+              </td>
+            </tr>
+            <tr class="hover:bg-brand-primary-50 align-text-top">
+              <td class="w-56 bg-gray-50 p-6">DataXplor</td>
+              <td class="w-5xl border-gray-900/10 p-6">
+                <p>
+                  A data visualization and analytics suite comprised of two tools designed
+                  empower your REDCap project!
+                </p>
+              </td>
+              <td class="w-72 border-l border-gray-900/10 p-6">
+                Starting at <br /> $17<small>/month</small>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mx-auto space-y-16">
+      <h2 class="text-center">Individual Documents & Services</h2>
+      <div class="overflow-x-auto">
+        <table class="mx-auto border-collapse border-spacing-6">
+          <thead>
+            <tr>
+              <th class="p-2">
+                <h4>Service</h4>
+              </th>
+              <th class="p-2">
+                <h4>Description</h4>
+              </th>
+              <th class="p-2">
+                <h4>Cost</h4>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-brand-primary-50 align-text-top">
+              <td class="w-56 bg-gray-50 p-6">REDCap Training</td>
+              <td class="w-5xl border-gray-900/10 p-6">
+                <p>
+                  One of the best ways to generate a clean dataset is to ensure consistent
+                  and complete data entry.
+                </p>
+                <p>
+                  CHI’s REDCap Training is designed to teach study teams about entering
+                  data in REDCap and the associated features, including:
+                </p>
+                <ul>
+                  <li>The Record Status Dashboard and associated icons</li>
+                  <li>How to create, rename and delete records</li>
+                  <li>Data entry in different field types</li>
+                  <li>Data queries and comment resolution</li>
+                  <li>And more!</li>
+                </ul>
+                <p>
+                  Individuals who successfully complete CHI’s REDCap Training will receive
+                  a Certificate of Completion recognizing their achievement.
+                </p>
+              </td>
+              <td class="w-72 border-l border-gray-900/10 p-6">
+                $250<small>/year</small>
+              </td>
+            </tr>
+            <tr class="hover:bg-brand-primary-50 align-text-top">
+              <td class="w-56 bg-gray-50 p-6">Data Management Plan (DMP)</td>
+              <td class="w-5xl border-gray-900/10 p-6">
+                <p>
+                  Ensure your study runs smoothly with a tailored DMP for CHI’s REDCap
+                  platform. Let us provide the REDCap platform information, leaving your
+                  team to develop only the project specific information.
+                </p>
+              </td>
+              <td class="w-72 border-l border-gray-900/10 p-6">
+                $150 <small>(one-time provision)</small>
+              </td>
+            </tr>
+            <tr class="hover:bg-brand-primary-50 align-text-top">
+              <td class="w-56 bg-gray-50 p-6">REDCap Security Overview</td>
+              <td class="w-5xl border-gray-900/10 p-6">
+                <p>
+                  Want the essential security and privacy info for the CHI’s REDCap
+                  platform - without a full DMP? This summary document makes it easy to
+                  write and support data sharing agreements, transfers, ethics
+                  applications, and more!
+                </p>
+              </td>
+              <td class="w-72 border-l border-gray-900/10 p-6"> $75 </td>
+            </tr>
+            <tr class="hover:bg-brand-primary-50 align-text-top">
+              <td class="w-56 bg-gray-50 p-6">REDCap Best Practice Guidelines</td>
+              <td class="w-5xl border-gray-900/10 p-6">
+                <span>
+                  Written by CHI’s expert REDCap developers, these Best Practice
+                  Guidelines empower teams to build their own REDCap projects by providing
+                  important information on the following topics:
+                </span>
+                <ul>
+                  <li>Ensure data integrity and completeness</li><li>
+                    Validate your REDCap project prior to active data collection
+                  </li>
+                  <li>Maintain project security through user rights and permissions</li>
+                  <li>
+                    Make post-production changes without compromising collected data
+                  </li>
+                </ul>
+              </td>
+              <td class="w-72 border-l border-gray-900/10 p-6"> $150 </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="divide-y divide-gray-900/10">
+      <h2 class="pb-8">Frequently asked questions</h2>
       <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
         <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
-          <dt class="leading-7 font-semibold lg:col-span-5">What is the CCTT plan?</dt>
+          <dt class="leading-7 font-semibold lg:col-span-5">
+            Why do you charge an annual fee for the use of REDCap?
+          </dt>
           <dd class="mt-4 lg:col-span-7 lg:mt-0">
             <p class="leading-7 text-gray-600">
-              The <b>Compliant Clinical Trial Tier</b> is designed to meet the specific requirements
-              of Health Canada or FDA regulated clinical trials.
+              The CHI is a cost recovery unit, and we do not generate profit from the
+              REDCap annual fees we collect, or the expert support we provide to
+              researchers. We work hard to keep our fees and support estimates as low as
+              possible with an awareness of limited research budgets, while also ensuring
+              we can cover our operating costs and continue to provide our services to
+              researchers across the university.
+            </p>
+            <p class="leading-7 text-gray-600">
+              If you have any questions about the cost of our services or REDCap annual
+              fees, please do not hesitate to contact us at chi@ucalgary.ca.
             </p>
           </dd>
         </div>
         <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
           <dt class="leading-7 font-semibold lg:col-span-5">
-            If my project is a regulated clinical trial, am I required to subscribe to the
-            CCTT?
+            I still want some of the perks included in the Regulatory Bundle, like the
+            REDCap Training and Data Management Plan (DMP). Can I purchase these items
+            individually?
           </dt>
           <dd class="mt-4 lg:col-span-7 lg:mt-0">
             <p class="leading-7 text-gray-600">
-              Yes, regulated clinical trials are required to subscribe to the CCTT. This
-              ensures all regulatory requirements are met and we can best support in case
-              of an audit.
+              Yes, you absolutely can! We've split those items into individual purchases
+              so you can easily customize your purchase and only buy exactly what you
+              need.
             </p>
           </dd>
         </div>
         <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
           <dt class="leading-7 font-semibold lg:col-span-5">
-            What is included in the Regulatory Bundle?
-          </dt>
-          <dd class="mt-4 lg:col-span-7 lg:mt-0">
-            <ul class="list-outside leading-7 text-gray-600">
-              <li>
-                Reports describing the validation of REDCap and platform security measures
-              </li>
-              <li>
-                Best practice guidance documents to empower the research team, including
-                for project-level validation, project security, and maintaining data
-                integrity
-              </li>
-              <li>
-                Training support for REDCap, including a training course and user manual
-              </li>
-            </ul>
-          </dd>
-        </div>
-        <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
-          <dt class="leading-7 font-semibold lg:col-span-5">
-            What is included with Advanced Support?
-          </dt>
-          <dd class="mt-4 lg:col-span-7 lg:mt-0">
-            <ul class="list-outside leading-7 text-gray-600">
-              <li>Consultation on how to implement a specific feature or module</li>
-              <li>
-                Consultation on overall project setup and design (e.g., instruments, arms)
-              </li>
-              <li>Writing custom branching logic for a specific project</li>
-              <li>Exploring REDCap’s capabilities to meet a specific workflow need</li>
-              <li>Configuring and setting up an eConsent module</li>
-              <li>Letters of support for grant applications</li>
-              <li>And much more! Contact us for more information.</li>
-            </ul>
-          </dd>
-        </div>
-        <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
-          <dt class="leading-7 font-semibold lg:col-span-5">
-            If I don't need REDCap for a full year, can I get a discount?
+            If I don’t need REDCap for a full year, can I get a discount?
           </dt>
           <dd class="mt-4 lg:col-span-7 lg:mt-0">
             <p class="leading-7 text-gray-600">
-              In some cases, annual maintenance fees can be pro-rated for less than a
-              year. Please reach out to us at{' '}
-              <a href="mailto:cru.finance@ucalgary.ca">cru.finance@ucalgary.ca</a> to discuss
-              further.
+              In some cases, annual REDCap fees can be pro-rated for less than a year.
+              Please reach out to us at chi@ucalgary.ca to be connected with our finance
+              team.
             </p>
           </dd>
         </div>
         <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
           <dt class="leading-7 font-semibold lg:col-span-5">
-            My project has closed but I don't want to lose my data, what are my options?
+            I paid for a REDCap project but now I don’t need it. Can I get a refund?
           </dt>
           <dd class="mt-4 lg:col-span-7 lg:mt-0">
             <p class="leading-7 text-gray-600">
-              The fee for archived projects is $200/year. No support hours are provided.
+              Unfortunately, the CHI is not able to offer refunds of any kind.
+            </p>
+          </dd>
+        </div>
+        <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="leading-7 font-semibold lg:col-span-5">
+            Can I transfer my REDCap fee to a different REDCap project?
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="leading-7 text-gray-600">No, REDCap fees are non-transferrable.</p>
+          </dd>
+        </div>
+        <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="leading-7 font-semibold lg:col-span-5">
+            Can I change my service tier if my project needs change?
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="leading-7 text-gray-600">
+              Service tiers (Basic, Plus, Premium) can be changed up to one month prior to
+              renewal of the annual REDCap fee for the project. The CCTT, however, cannot
+              be changed.
+            </p>
+          </dd>
+        </div>
+        <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="leading-7 font-semibold lg:col-span-5">
+            I have exported my data, and I would like to close my REDCap project. What are
+            the next steps?
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="leading-7 text-gray-600">
+              Please send us an email at chi@ucalgary.ca. You will be asked to complete a
+              project closure form prior to project deletion.
+            </p>
+          </dd>
+        </div>
+        <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
+          <dt class="leading-7 font-semibold lg:col-span-5">
+            My project is complete, but I don’t want to lose my data. What are my options?
+          </dt>
+          <dd class="mt-4 lg:col-span-7 lg:mt-0">
+            <p class="leading-7 text-gray-600">
+              Projects can be archived for $200/year, but please note that the CHI and our
+              REDCap platform are not intended for long term storage. Study teams do not
+              have direct access to archived REDCap projects, and the CHI can support with
+              any required exports. No support hours are included in this fee.
             </p>
           </dd>
         </div>
       </dl>
-    </div>
+    </section>
   </div>
 </Layout>
