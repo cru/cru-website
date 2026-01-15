@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <section class="mx-auto my-20 space-y-12 pt-16 lg:max-w-6xl">
+  <section class="mx-auto my-20 space-y-12 pt-16 lg:max-w-5xl lg:px-8">
     <h1>{frontmatter.title}</h1>
     <article class="space-y-4">
       <slot />
