@@ -4,6 +4,7 @@ import CheckIcon from '../../components/ui/icons/CheckIcon.astro'
 import XIcon from '../../components/ui/icons/XIcon.astro'
 import Button from '../../components/ui/Button.astro'
 import ExternalLink from '../../components/ui/ExternalLink.astro'
+import InternalLink from '../../components/ui/InternalLink.astro'
 ---
 
 <Layout title="Data Capture Pricing">
@@ -66,7 +67,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
             </th>
             <th class="space-y-2 p-2">
               <div>
-                <a href="#cctt"><h4>CCTT</h4></a>
+                <InternalLink href="#cctt"><h4>CCTT</h4></InternalLink>
                 <span class="text-gray-500">
                   $2,200<small>/year</small>
                 </span>
@@ -278,7 +279,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           </tr>
           <tr class="hover:bg-brand-primary-50">
             <td class="w-72 bg-gray-50 p-6" id="advancedSupport" class="w-72">
-              <a href="#advancedsupport">Advanced support</a></td
+              <InternalLink href="#advancedsupport">Advanced support</InternalLink></td
             >
             <td class="w-56 border-gray-900/10 p-6 text-center">
               Up to 2
@@ -315,11 +316,9 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           <div class="flex items-center space-x-4">
             <div
               aria-hidden="true"
-              class="bg-brand-primary-50 flex h-10 w-10 items-center justify-center rounded-full dark:bg-gray-700"
+              class="bg-brand-primary-50 flex h-10 w-10 items-center justify-center rounded-full"
             >
-              <span class="text-brand-primary-600 dark:text-brand-primary-300 font-bold"
-                >1</span
-              >
+              <span class="text-brand-primary-600 font-bold">1</span>
             </div>
             <h4>Advanced Support</h4>
           </div>
@@ -345,11 +344,9 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           <div class="flex items-center space-x-4">
             <div
               aria-hidden="true"
-              class="bg-brand-primary-50 flex h-10 w-10 items-center justify-center rounded-full dark:bg-gray-700"
+              class="bg-brand-primary-50 flex h-10 w-10 items-center justify-center rounded-full"
             >
-              <span class="text-brand-primary-600 dark:text-brand-primary-300 font-bold"
-                >2</span
-              >
+              <span class="text-brand-primary-600 font-bold">2</span>
             </div>
             <h4>Additional Support</h4>
           </div>
@@ -363,11 +360,9 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
           <div class="flex items-center space-x-4">
             <div
               aria-hidden="true"
-              class="bg-brand-primary-50 flex h-10 w-10 items-center justify-center rounded-full dark:bg-gray-700"
+              class="bg-brand-primary-50 flex h-10 w-10 items-center justify-center rounded-full"
             >
-              <span class="text-brand-primary-600 dark:text-brand-primary-300 font-bold"
-                >3</span
-              >
+              <span class="text-brand-primary-600 font-bold">3</span>
             </div>
             <h4>Loyalty Discount</h4>
           </div>
@@ -397,7 +392,7 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
       <span>The CCTT includes: </span>
       <ul>
         <li>
-          <a href="#dmp">Data Management Plan (DMP)</a>
+          <InternalLink href="#dmp">Data Management Plan (DMP)</InternalLink>
           <i>(updated yearly and available upon request)</i>
         </li>
         <li>
@@ -407,13 +402,14 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
             trials and is investigated in the event of an audit)</i
           >
         </li>
-        <li>{' '}<a href="#rctraining">REDCap Training</a></li>
+        <li><InternalLink href="#rctraining">REDCap Training</InternalLink></li>
         <li>
-          <a href="#rcguidelines">REDCap Best Practice Guidelines</a>
+          <InternalLink href="#rcguidelines">REDCap Best Practice Guidelines</InternalLink
+          >
           <i>(updated yearly and available upon request) </i>
         </li>
         <li>
-          <a href="#rcreview"> REDCap Project Review</a>
+          <InternalLink href="#rcreview"> REDCap Project Review</InternalLink>
           <i>(up to 2 hours of time used prior to the start of data collection) </i>
         </li>
         <li>
@@ -658,8 +654,8 @@ import ExternalLink from '../../components/ui/ExternalLink.astro'
         </div>
         <div class="py-8 lg:grid lg:grid-cols-12 lg:gap-8">
           <dt class="leading-7 font-semibold lg:col-span-5">
-            I still want some of the perks included in the Regulatory Bundle, like the
-            REDCap Training and <a href="#dmp">Data Management Plan (DMP)</a>. Can I
+            I still want some of the perks included in the CCTT, like the REDCap Training
+            and <InternalLink href="#dmp">Data Management Plan (DMP)</InternalLink>. Can I
             purchase these items individually?
           </dt>
           <dd class="mt-4 lg:col-span-7 lg:mt-0">
