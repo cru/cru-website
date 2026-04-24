@@ -1,0 +1,32 @@
+name: Format
+on: push
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+
+      - name: Install Prettier
+        run: |
+          corepack enable
+          yes | yarn set version stable
+          yarn install
+
+      - name: Format with Prettier
+        run: yarn pretty
+
+      - name: Update remote with changes
+        run: |
+          git pull
+          git config user.name "GitHub Actions"
+          git config user.email noreply@github.com
+          git add .
+          git commit -m "CI format & lint" || echo "No changes"
+          git push
